@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IELTS_UNITS } from '../../data/units';
+import { Timer } from 'lucide-react';
 import { Unit, Lesson } from '../../lib/types';
 import { useApp } from '../../lib/store';
 import { UnitHeader } from './UnitHeader';
@@ -47,6 +48,32 @@ export const LearningPath: React.FC<LearningPathProps> = ({ onStartLesson }) => 
           </p>
         </div>
         <MascotSvg mood="encouraging" size={100} className="shrink-0 -my-2" />
+      </div>
+
+      {/* Full IELTS Mock Exam Banner */}
+      <div 
+        onClick={() => onStartLesson({
+          id: 'mock-exam-full',
+          title: 'Full IELTS Mock Exam',
+          type: 'practice',
+          xpReward: 100
+        })}
+        className="mb-10 cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.98]"
+      >
+        <div className="p-5 rounded-3xl bg-gradient-to-br from-blue-900 to-teal-700 shadow-lg flex items-center justify-between border border-blue-800">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-white/15 rounded-2xl">
+              <Timer className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <h3 className="text-lg md:text-xl font-black text-white">Full IELTS Mock Exam</h3>
+              <p className="text-xs md:text-sm text-blue-100 font-semibold mt-0.5">Timed 4-Skill Simulation (L → R → W → S)</p>
+            </div>
+          </div>
+          <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white">
+            ❯
+          </div>
+        </div>
       </div>
 
       {/* Units Loop */}
