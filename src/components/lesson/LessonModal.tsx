@@ -170,8 +170,28 @@ export const LessonModal: React.FC<LessonModalProps> = ({ lesson, onClose }) => 
 
   return (
     <div className="fixed inset-0 z-50 bg-white flex flex-col justify-between overflow-y-auto select-none">
+      {/* 0. Empty Questions Fallback */}
+      {questionsQueue.length === 0 && (
+        <div className="flex-1 flex flex-col items-center justify-center p-6 bg-slate-50 text-center">
+          <MascotSvg mood="encouraging" size={130} className="mb-6" />
+          <h2 className="text-2xl font-black text-slate-800 mb-2">Module Coming Soon!</h2>
+          <p className="text-slate-600 font-medium mb-8 max-w-md">
+            This interactive module is currently being built. Please check back later.
+          </p>
+          <button
+            onClick={() => {
+              sound.playClick();
+              onClose();
+            }}
+            className="btn-duo-white py-3 px-8 text-sm uppercase tracking-wider font-black"
+          >
+            RETURN TO DASHBOARD
+          </button>
+        </div>
+      )}
+
       {/* 1. Out of Hearts Screen */}
-      {isOutOfHearts && (
+      {isOutOfHearts && questionsQueue.length > 0 && (
         <div className="flex-1 flex items-center justify-center p-6 bg-slate-50">
           <div className="card-duo max-w-md w-full p-8 text-center animate-bounceSmall shadow-xl">
             <MascotSvg mood="crying" size={130} className="mx-auto mb-4" />
@@ -214,7 +234,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({ lesson, onClose }) => 
       )}
 
       {/* 2. Victory / Lesson Completed Summary Screen */}
-      {isCompleted && !isOutOfHearts && (
+      {isCompleted && !isOutOfHearts && questionsQueue.length > 0 && (
         <div className="flex-1 flex items-center justify-center p-6 bg-gradient-to-b from-emerald-50/50 to-white">
           <div className="max-w-lg w-full text-center space-y-6 animate-bounceSmall">
             <MascotSvg mood="celebrating" size={160} className="mx-auto" />
@@ -274,7 +294,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({ lesson, onClose }) => 
       )}
 
       {/* 3. Active Quiz Question View */}
-      {!isCompleted && !isOutOfHearts && currentQ && (
+      {!isCompleted && !isOutOfHearts && questionsQueue.length > 0 && currentQ && (
         <>
           {/* Top Progress Header */}
           <ProgressBar
