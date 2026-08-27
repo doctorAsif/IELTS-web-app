@@ -55,6 +55,11 @@ const DEFAULT_STATS: UserStats = {
   freeReadingUsed: 0,
   freeMockTestsUsed: 0,
   freeTrialDate: new Date().toISOString().split('T')[0],
+  aiMonthlyCredits: 100,
+  aiUsedCredits: 0,
+  aiRemainingCredits: 100,
+  aiOverageAllowed: false,
+  aiOverageLimit: 0,
 };
 
 const AppContext = createContext<AppContextType | null>(null);

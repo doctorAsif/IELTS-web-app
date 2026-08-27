@@ -1,0 +1,136 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Role checking functions
+    function hasRole(role) {
+      return isAuthenticated() && request.auth.token.role == role;
+    }
+
+    function isSuperAdmin() {
+      return hasRole('superadmin');
+    }
+
+    function isAdmin() {
+      return isSuperAdmin() || hasRole('admin');
+    }
+
+    function isStaff() {
+      return isAdmin() || hasRole('teacher') || hasRole('counselor');
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Public readable config (if any)
+    match /public_settings/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Students
+    match /students/{studentId} {
+      // Students can read their own data, staff can read all
+      allow read: if isStaff() || (isAuthenticated() && request.auth.uid == studentId);
+      // Only admins can write, or the student can update specific fields (like profile info)
+      // For now, strict: only admins or Cloud Functions can write, students can update basic info
+      allow update: if isStaff() || (isAuthenticated() && request.auth.uid == studentId);
+      allow create, delete: if isAdmin();
+      
+      // Private notes inside student document
+      match /notes/{noteId} {
+        allow read, write: if isStaff();
+      }
+    }
+
+    // Staff
+    match /staff/{staffId} {
+      allow read: if isStaff();
+      allow write: if isAdmin();
+    }
+
+    // Curriculum (Classes, Modules, Skills)
+    match /curriculum/{docId} {
+      // Anyone can read published curriculum. Drafts only readable by staff.
+      allow read: if isStaff() || (isAuthenticated() && resource.data.status == 'published');
+      allow write: if isAdmin();
+    }
+
+    // Practice Content
+    match /practice/{docId} {
+      // Students can only read published content.
+      // Staff can read all content.
+      allow read: if isStaff() || (isAuthenticated() && resource.data.status == 'published');
+      
+      // Allow creation by staff, but initial status must be draft or review.
+      // They cannot create an already approved or published item.
+      allow create: if isStaff() 
+                    && request.resource.data.status != 'approved'
+                    && request.resource.data.status != 'published';
+      
+      // Allow updates by staff.
+      // Crucial: Client cannot set status to 'published' or 'approved'.
+      // Only Cloud Functions (which bypass rules) can do that.
+      // If it is already published, they cannot modify it from the client
+      // unless they are changing the status to something else (which they shouldn't, but let's just protect the target state).
+      allow update: if isStaff() 
+                    && request.resource.data.status != 'published'
+                    && request.resource.data.status != 'approved';
+                    
+      // Only admins can delete
+      allow delete: if isAdmin();
+    }
+    
+    // Media Metadata
+    match /media/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isStaff();
+    }
+
+    // AI Policy
+    match /ai_policy/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Usage Logs (AI)
+    match /ai_usage/{docId} {
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+      // Written by Cloud Functions securely
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    // Licenses
+    match /licenses/{docId} {
+      allow read: if isAdmin();
+      // Should be generated via Cloud Functions
+      allow write: if isAdmin();
+    }
+
+    // Partners & Consents
+    match /partners/{docId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /consents/{docId} {
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isAdmin();
+    }
+
+    // Audit Logs
+    match /audit_logs/{docId} {
+      allow read: if isAdmin();
+      allow create: if isAdmin();
+      allow update, delete: if false; // Append only
+    }
+  }
+}

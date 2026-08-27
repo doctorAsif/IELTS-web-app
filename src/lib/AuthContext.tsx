@@ -10,8 +10,11 @@ import {
 } from 'firebase/auth';
 import { auth, googleProvider } from './firebase';
 
+export type UserRole = 'student' | 'teacher' | 'counselor' | 'admin' | 'superadmin' | null;
+
 interface AuthContextType {
   user: User | null;
+  role: UserRole;
   loading: boolean;
   login: (email: string, pass: string) => Promise<void>;
   signup: (email: string, pass: string) => Promise<void>;
@@ -23,11 +26,26 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [role, setRole] = useState<UserRole>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
+      if (currentUser) {
+        // Fetch custom claims to determine role
+        try {
+          const idTokenResult = await currentUser.getIdTokenResult();
+          const customRole = idTokenResult.claims.role as UserRole;
+          // Default to student if no role is found
+          setRole(customRole || 'student');
+        } catch (e) {
+          console.error("Failed to get token result", e);
+          setRole('student');
+        }
+      } else {
+        setRole(null);
+      }
       setLoading(false);
     });
     return unsubscribe;
@@ -50,7 +68,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, signup, logout, loginWithGoogle }}>
+    <AuthContext.Provider value={{ user, role, loading, login, signup, logout, loginWithGoogle }}>
       {children}
     </AuthContext.Provider>
   );

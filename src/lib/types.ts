@@ -136,6 +136,28 @@ export interface UserStats {
   freeReadingUsed: number;
   freeMockTestsUsed: number;
   freeTrialDate: string; // YYYY-MM-DD format
+  // AI Entitlements
+  aiMonthlyCredits: number;
+  aiUsedCredits: number;
+  aiRemainingCredits: number;
+  aiOverageAllowed: boolean;
+  aiOverageLimit: number;
+}
+
+export interface AIUsageRecord {
+  id?: string;
+  userId: string;
+  userPlan: string;
+  taskType: string;
+  provider: string; // 'gemini', 'openai', 'claude', 'local'
+  model: string;
+  inputTokens?: number;
+  outputTokens?: number;
+  estimatedCost: number; // in cents or USD
+  timestamp: string; // ISO String
+  latencyMs: number;
+  success: boolean;
+  errorMessage?: string;
 }
 
 export interface Quest {
@@ -172,3 +194,37 @@ export interface LeaderboardUser {
 }
 
 export type LeagueTier = 'Bronze' | 'Silver' | 'Gold' | 'Sapphire' | 'Ruby' | 'Diamond';
+
+export type PracticeStatus = 'draft' | 'ai_review' | 'human_review' | 'approved' | 'published' | 'retired';
+
+export interface PracticeItem {
+  id: string;
+  title: string;
+  skill: SkillType;
+  part: string; // e.g. "Part 1", "Section 2"
+  questionType: QuestionType;
+  topic: string;
+  difficulty: 'easy' | 'medium' | 'hard';
+  targetBandMin: number;
+  targetBandMax: number;
+  curriculumClass: string; // references a curriculum mapping
+  objective: string;
+  instructions: string;
+  questions: Question[]; // reusing the existing Question types
+  answerKey: any; // specific structure depends on questionType, but typically mapped to questions
+  explanations: string;
+  transcript?: string; // for listening
+  audioPath?: string; // for listening
+  sourceType: 'original' | 'adapted' | 'past_paper';
+  sourceReferences?: string;
+  status: PracticeStatus;
+  version: number;
+  createdBy: string;
+  createdAt: string; // ISO string
+  updatedBy: string;
+  updatedAt: string; // ISO string
+  approvedBy?: string;
+  approvedAt?: string; // ISO string
+  publishedAt?: string; // ISO string
+  publishedBy?: string;
+}

@@ -7,6 +7,12 @@ import { LessonModal } from './components/lesson/LessonModal';
 import { Lesson } from './lib/types';
 import { Loader2, Menu } from 'lucide-react';
 import { DashboardView } from './components/dashboard/DashboardView';
+import { LocalAIPoc } from './components/interactive/LocalAIPoc';
+import { ReadingModule } from './components/interactive/ReadingModule';
+import { WritingModule } from './components/interactive/WritingModule';
+import { SpeakingModule } from './components/interactive/SpeakingModule';
+import { ListeningModule } from './components/interactive/ListeningModule';
+import { AdminApp } from './components/admin/AdminApp';
 
 const AppContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
@@ -46,7 +52,7 @@ const AppContent: React.FC = () => {
     setMobileMenuOpen(false);
     
     // Launch practice modals directly from sidebar clicks
-    if (['speaking', 'writing', 'reading', 'listening', 'mock_exam'].includes(tab)) {
+    if (['mock_exam'].includes(tab)) {
       const category = tab === 'mock_exam' ? 'mock' : tab as any;
       handleStartLesson({
         id: `practice-${tab}`,
@@ -112,7 +118,13 @@ const AppContent: React.FC = () => {
           )}
 
           {/* Fallback for other tabs */}
-          {['ai_tutor', 'ai_setup', 'founder', 'study_abroad', 'license', 'register', 'admin'].includes(activeTab) && (
+          {activeTab === 'ai_tutor' && <LocalAIPoc />}
+          {activeTab === 'reading' && <ReadingModule />}
+          {activeTab === 'writing' && <WritingModule />}
+          {activeTab === 'speaking' && <SpeakingModule />}
+          {activeTab === 'listening' && <ListeningModule />}
+          {activeTab === 'admin' && <AdminApp />}
+          {['ai_setup', 'founder', 'study_abroad', 'license', 'register'].includes(activeTab) && (
             <div className="p-6 text-center text-[#94A3B8]">
               <h2 className="text-2xl font-bold text-white mb-2">{activeTab.replace('_', ' ').toUpperCase()}</h2>
               <p>This module is currently under construction in the web version.</p>
