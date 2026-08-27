@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { AppProvider, useApp } from './lib/store';
 import { AuthProvider, useAuth } from './lib/AuthContext';
 import { AuthModal } from './components/auth/AuthModal';
-import { PremiumModal } from './components/auth/PremiumModal';
 import { ActiveTab, Sidebar } from './components/layout/Sidebar';
 import { RightSidebar } from './components/layout/RightSidebar';
 import { TopHeader } from './components/layout/TopHeader';
@@ -21,7 +20,6 @@ const AppContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('learn');
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const [showPremiumModal, setShowPremiumModal] = useState(false);
   const { user, loading } = useAuth();
   const { stats, incrementFreeTrials } = useApp();
 
@@ -35,18 +33,15 @@ const AppContent: React.FC = () => {
 
   const handleStartLesson = (lesson: Lesson) => {
     if (!user) {
-      if (stats.freeTrialsUsed >= 2) {
+      const today = new Date().toISOString().split('T')[0];
+      const trialsUsedToday = stats.freeTrialDate === today ? stats.freeTrialsUsed : 0;
+      
+      if (trialsUsedToday >= 2) {
         setShowAuthModal(true);
         return;
       }
+      incrementFreeTrials();
     }
-    
-    if (stats.freeTrialsUsed >= 3) {
-      setShowPremiumModal(true);
-      return;
-    }
-
-    incrementFreeTrials();
     setActiveLesson(lesson);
   };
 
@@ -65,15 +60,16 @@ const AppContent: React.FC = () => {
         )}
 
         {activeTab === 'practice' && <PracticeHub onStartPractice={() => {
-          if (!user && stats.freeTrialsUsed >= 2) {
-            setShowAuthModal(true);
-            return false;
+          if (!user) {
+            const today = new Date().toISOString().split('T')[0];
+            const trialsUsedToday = stats.freeTrialDate === today ? stats.freeTrialsUsed : 0;
+            
+            if (trialsUsedToday >= 2) {
+              setShowAuthModal(true);
+              return false;
+            }
+            incrementFreeTrials();
           }
-          if (stats.freeTrialsUsed >= 3) {
-            setShowPremiumModal(true);
-            return false;
-          }
-          incrementFreeTrials();
           return true;
         }} />}
 
@@ -105,10 +101,6 @@ const AppContent: React.FC = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <AuthModal />
         </div>
-      )}
-
-      {showPremiumModal && (
-        <PremiumModal onClose={() => setShowPremiumModal(false)} />
       )}
     </div>
   );

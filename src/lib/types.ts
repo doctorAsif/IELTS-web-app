@@ -131,6 +131,7 @@ export interface UserStats {
   dailyGoalXp: number;
   todayEarnedXp: number;
   freeTrialsUsed: number;
+  freeTrialDate: string; // YYYY-MM-DD format
 }
 
 export interface Quest {

@@ -34,7 +34,7 @@ const DEFAULT_STATS: UserStats = {
   streak: 5,
   lastActiveDate: new Date().toISOString().split('T')[0],
   completedLessonIds: ['u1-l1'],
-  unlockedUnitId: 2,
+  unlockedUnitId: 999,
   streakFreezeActive: false,
   doubleXpActive: false,
   soundEnabled: true,
@@ -50,6 +50,7 @@ const DEFAULT_STATS: UserStats = {
   dailyGoalXp: 50,
   todayEarnedXp: 20,
   freeTrialsUsed: 0,
+  freeTrialDate: new Date().toISOString().split('T')[0],
 };
 
 const AppContext = createContext<AppContextType | null>(null);
@@ -229,7 +230,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         gems: prev.gems + gemsReward,
         todayEarnedXp: prev.todayEarnedXp + finalXp,
         completedLessonIds: completed,
-        unlockedUnitId: Math.min(6, nextUnit),
+        unlockedUnitId: Math.max(prev.unlockedUnitId, nextUnit),
         drillsCompleted: prev.drillsCompleted + 1,
         estimatedBand: {
           ...prev.estimatedBand,
@@ -325,7 +326,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const incrementFreeTrials = () => {
-    setStats(prev => ({ ...prev, freeTrialsUsed: (prev.freeTrialsUsed || 0) + 1 }));
+    const today = new Date().toISOString().split('T')[0];
+    setStats(prev => {
+      const isNewDay = prev.freeTrialDate !== today;
+      return {
+        ...prev,
+        freeTrialsUsed: isNewDay ? 1 : (prev.freeTrialsUsed || 0) + 1,
+        freeTrialDate: today
+      };
+    });
   };
 
   const resetProgress = () => {

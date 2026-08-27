@@ -24,21 +24,17 @@ export const MascotSvg: React.FC<MascotProps> = ({
         className="transition-transform duration-300 transform hover:scale-105"
       >
         <defs>
-          <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#78d800" />
-            <stop offset="100%" stopColor="#58a700" />
+          <linearGradient id="dogBody" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f5b041" />
+            <stop offset="100%" stopColor="#e67e22" />
           </linearGradient>
-          <linearGradient id="bellyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#a3f52a" />
-            <stop offset="100%" stopColor="#78d800" />
+          <linearGradient id="dogBelly" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#fef9e7" />
+            <stop offset="100%" stopColor="#fad7a1" />
           </linearGradient>
-          <linearGradient id="beakGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#ffb300" />
-            <stop offset="100%" stopColor="#ff8c00" />
-          </linearGradient>
-          <linearGradient id="hatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1cb0f6" />
-            <stop offset="100%" stopColor="#0b84cb" />
+          <linearGradient id="dogEar" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#d35400" />
+            <stop offset="100%" stopColor="#a04000" />
           </linearGradient>
           <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
             <feDropShadow dx="0" dy="4" stdDeviation="3" floodOpacity="0.15" />
@@ -48,123 +44,128 @@ export const MascotSvg: React.FC<MascotProps> = ({
         {/* Soft shadow base */}
         <ellipse cx="100" cy="180" rx="60" ry="12" fill="#000000" fillOpacity="0.1" />
 
-        {/* Little Owl Feet */}
-        <ellipse cx="75" cy="176" rx="14" ry="7" fill="#ff8c00" />
-        <ellipse cx="125" cy="176" rx="14" ry="7" fill="#ff8c00" />
-        <ellipse cx="68" cy="178" rx="5" ry="4" fill="#e07900" />
-        <ellipse cx="75" cy="179" rx="5" ry="4" fill="#e07900" />
-        <ellipse cx="82" cy="178" rx="5" ry="4" fill="#e07900" />
-        <ellipse cx="118" cy="178" rx="5" ry="4" fill="#e07900" />
-        <ellipse cx="125" cy="179" rx="5" ry="4" fill="#e07900" />
-        <ellipse cx="132" cy="178" rx="5" ry="4" fill="#e07900" />
+        {/* Tail (wagging if happy/celebrating/waving) */}
+        {mood === 'happy' || mood === 'celebrating' || mood === 'waving' ? (
+          <path d="M140 140 Q170 120 160 90 Q150 110 130 130 Z" fill="url(#dogBody)" className="origin-[140px_140px] animate-[wiggle_1s_ease-in-out_infinite]" />
+        ) : mood === 'crying' ? (
+          <path d="M140 140 Q160 160 150 175 Q135 160 125 145 Z" fill="url(#dogBody)" />
+        ) : (
+          <path d="M140 140 Q165 145 160 120 Q145 130 130 135 Z" fill="url(#dogBody)" />
+        )}
+
+        {/* Back legs */}
+        <ellipse cx="65" cy="165" rx="18" ry="24" fill="url(#dogBody)" filter="url(#dropShadow)" />
+        <ellipse cx="135" cy="165" rx="18" ry="24" fill="url(#dogBody)" filter="url(#dropShadow)" />
+        {/* Paws */}
+        <ellipse cx="60" cy="180" rx="14" ry="8" fill="#fef9e7" />
+        <ellipse cx="140" cy="180" rx="14" ry="8" fill="#fef9e7" />
 
         {/* Main Body */}
-        <ellipse cx="100" cy="115" rx="72" ry="62" fill="url(#bodyGrad)" filter="url(#dropShadow)" />
-
-        {/* Owl Ear Tufts */}
-        <path d="M42 75 C30 50, 48 35, 62 60 Z" fill="#58a700" />
-        <path d="M158 75 C170 50, 152 35, 138 60 Z" fill="#58a700" />
-
+        <ellipse cx="100" cy="125" rx="55" ry="60" fill="url(#dogBody)" filter="url(#dropShadow)" />
+        
         {/* Inner Belly */}
-        <ellipse cx="100" cy="128" rx="46" ry="38" fill="url(#bellyGrad)" />
-        {/* Subtle Belly Feathers */}
-        <path d="M85 125 Q100 135 115 125" stroke="#58a700" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.6" />
-        <path d="M90 138 Q100 146 110 138" stroke="#58a700" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.6" />
+        <ellipse cx="100" cy="135" rx="35" ry="45" fill="url(#dogBelly)" />
 
-        {/* Left & Right Wings */}
-        {mood === 'celebrating' ? (
+        {/* Front legs */}
+        {mood === 'celebrating' || mood === 'waving' ? (
           <>
-            {/* Raised Wings in Joy */}
-            <path d="M35 115 C20 80, 25 50, 45 45 C50 65, 45 95, 38 115 Z" fill="#4fa000" />
-            <path d="M165 115 C180 80, 175 50, 155 45 C150 65, 155 95, 162 115 Z" fill="#4fa000" />
-          </>
-        ) : mood === 'waving' ? (
-          <>
-            <path d="M38 120 C18 100, 20 70, 35 60 C42 80, 42 105, 40 120 Z" fill="#4fa000" />
-            <path d="M162 125 C175 135, 178 150, 160 155 C150 145, 152 135, 160 125 Z" fill="#4fa000" />
+            <path d="M85 110 Q70 80 50 70 Q40 90 75 120 Z" fill="url(#dogBody)" />
+            <path d="M115 110 Q130 80 150 70 Q160 90 125 120 Z" fill="url(#dogBody)" />
           </>
         ) : (
           <>
-            {/* Resting wings */}
-            <path d="M36 120 C22 135, 25 155, 42 155 C48 145, 46 130, 40 120 Z" fill="#4fa000" />
-            <path d="M164 120 C178 135, 175 155, 158 155 C152 145, 154 130, 160 120 Z" fill="#4fa000" />
+            <path d="M85 130 Q80 170 75 180 Q95 180 95 140 Z" fill="url(#dogBody)" />
+            <path d="M115 130 Q120 170 125 180 Q105 180 105 140 Z" fill="url(#dogBody)" />
+            <ellipse cx="85" cy="182" rx="12" ry="6" fill="#fef9e7" />
+            <ellipse cx="115" cy="182" rx="12" ry="6" fill="#fef9e7" />
           </>
         )}
 
-        {/* Large Expressive Eyes (Outer White Rings) */}
-        <circle cx="68" cy="98" r="26" fill="#ffffff" filter="url(#dropShadow)" />
-        <circle cx="132" cy="98" r="26" fill="#ffffff" filter="url(#dropShadow)" />
+        {/* Head */}
+        <ellipse cx="100" cy="80" rx="50" ry="45" fill="url(#dogBody)" filter="url(#dropShadow)" />
+        
+        {/* Snout Area */}
+        <ellipse cx="100" cy="95" rx="25" ry="18" fill="url(#dogBelly)" />
+
+        {/* Floppy Ears */}
+        {mood === 'celebrating' ? (
+          <>
+            <path d="M60 55 C40 40, 20 60, 35 95 C45 80, 55 70, 60 55 Z" fill="url(#dogEar)" />
+            <path d="M140 55 C160 40, 180 60, 165 95 C155 80, 145 70, 140 55 Z" fill="url(#dogEar)" />
+          </>
+        ) : mood === 'crying' ? (
+          <>
+            <path d="M55 70 C30 80, 25 110, 45 125 C55 100, 60 85, 55 70 Z" fill="url(#dogEar)" />
+            <path d="M145 70 C170 80, 175 110, 155 125 C145 100, 140 85, 145 70 Z" fill="url(#dogEar)" />
+          </>
+        ) : (
+          <>
+            <path d="M55 60 C30 65, 30 105, 45 115 C55 90, 60 75, 55 60 Z" fill="url(#dogEar)" />
+            <path d="M145 60 C170 65, 170 105, 155 115 C145 90, 140 75, 145 60 Z" fill="url(#dogEar)" />
+          </>
+        )}
+
+        {/* Nose */}
+        <ellipse cx="100" cy="90" rx="8" ry="5" fill="#3b2b1a" />
+        <path d="M100 95 Q100 105 92 105 M100 95 Q100 105 108 105" stroke="#3b2b1a" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+        
+        {/* Tongue sticking out for happy/celebrating */}
+        {(mood === 'happy' || mood === 'celebrating' || mood === 'waving') && (
+          <path d="M96 104 Q100 115 104 104 Z" fill="#ff7676" />
+        )}
+
+        {/* Eyes (Outer White) */}
+        <circle cx="78" cy="72" r="14" fill="#ffffff" />
+        <circle cx="122" cy="72" r="14" fill="#ffffff" />
 
         {/* Iris / Pupils based on mood */}
         {mood === 'happy' || mood === 'celebrating' || mood === 'waving' ? (
           <>
-            {/* Sparkling Happy Eyes */}
-            <circle cx="72" cy="98" r="14" fill="#3b2b1a" />
-            <circle cx="128" cy="98" r="14" fill="#3b2b1a" />
-            {/* Eye Highlights */}
-            <circle cx="68" cy="93" r="5" fill="#ffffff" />
-            <circle cx="76" cy="103" r="2.5" fill="#ffffff" />
-            <circle cx="124" cy="93" r="5" fill="#ffffff" />
-            <circle cx="132" cy="103" r="2.5" fill="#ffffff" />
+            <circle cx="80" cy="72" r="8" fill="#3b2b1a" />
+            <circle cx="120" cy="72" r="8" fill="#3b2b1a" />
+            <circle cx="78" cy="69" r="3" fill="#ffffff" />
+            <circle cx="118" cy="69" r="3" fill="#ffffff" />
           </>
         ) : mood === 'encouraging' ? (
           <>
-            {/* Determined / Focused Eyes */}
-            <circle cx="70" cy="96" r="13" fill="#3b2b1a" />
-            <circle cx="130" cy="96" r="13" fill="#3b2b1a" />
-            <circle cx="68" cy="92" r="4.5" fill="#ffffff" />
-            <circle cx="128" cy="92" r="4.5" fill="#ffffff" />
+            <circle cx="80" cy="72" r="8" fill="#3b2b1a" />
+            <circle cx="120" cy="72" r="8" fill="#3b2b1a" />
+            <path d="M68 62 Q78 58 88 62" stroke="#3b2b1a" strokeWidth="3" strokeLinecap="round" fill="none" />
+            <path d="M112 62 Q122 58 132 62" stroke="#3b2b1a" strokeWidth="3" strokeLinecap="round" fill="none" />
           </>
         ) : mood === 'thinking' ? (
           <>
-            {/* Looking upward in thought */}
-            <circle cx="70" cy="90" r="12" fill="#3b2b1a" />
-            <circle cx="130" cy="90" r="12" fill="#3b2b1a" />
-            <circle cx="68" cy="87" r="4" fill="#ffffff" />
-            <circle cx="128" cy="87" r="4" fill="#ffffff" />
+            <circle cx="78" cy="68" r="7" fill="#3b2b1a" />
+            <circle cx="122" cy="68" r="7" fill="#3b2b1a" />
+            <path d="M70 60 Q80 55 90 65" stroke="#3b2b1a" strokeWidth="3" strokeLinecap="round" fill="none" />
           </>
         ) : mood === 'crying' ? (
           <>
-            {/* Sad / Tearful Eyes */}
-            <path d="M56 102 Q68 90 80 102" stroke="#3b2b1a" strokeWidth="5" strokeLinecap="round" fill="none" />
-            <path d="M120 102 Q132 90 144 102" stroke="#3b2b1a" strokeWidth="5" strokeLinecap="round" fill="none" />
+            <path d="M70 75 Q78 68 86 75" stroke="#3b2b1a" strokeWidth="3" strokeLinecap="round" fill="none" />
+            <path d="M114 75 Q122 68 130 75" stroke="#3b2b1a" strokeWidth="3" strokeLinecap="round" fill="none" />
             {/* Blue Tear Drops */}
-            <ellipse cx="60" cy="115" rx="4" ry="7" fill="#1cb0f6" />
-            <ellipse cx="140" cy="115" rx="4" ry="7" fill="#1cb0f6" />
+            <ellipse cx="78" cy="85" rx="3" ry="5" fill="#1cb0f6" />
+            <ellipse cx="122" cy="85" rx="3" ry="5" fill="#1cb0f6" />
           </>
         ) : (
           <>
-            {/* Studying / Glasses */}
-            <circle cx="70" cy="98" r="13" fill="#3b2b1a" />
-            <circle cx="130" cy="98" r="13" fill="#3b2b1a" />
-            <circle cx="67" cy="94" r="4.5" fill="#ffffff" />
-            <circle cx="127" cy="94" r="4.5" fill="#ffffff" />
+            <circle cx="78" cy="72" r="8" fill="#3b2b1a" />
+            <circle cx="122" cy="72" r="8" fill="#3b2b1a" />
+            {/* Glasses */}
+            <circle cx="78" cy="72" r="16" stroke="#1cb0f6" strokeWidth="3" fill="none" />
+            <circle cx="122" cy="72" r="16" stroke="#1cb0f6" strokeWidth="3" fill="none" />
+            <line x1="94" y1="72" x2="106" y2="72" stroke="#1cb0f6" strokeWidth="3" />
           </>
         )}
 
-        {/* Orange Beak */}
-        <polygon points="100,104 88,118 112,118" fill="url(#beakGrad)" filter="url(#dropShadow)" />
-        <path d="M92 114 Q100 119 108 114" stroke="#d97706" strokeWidth="2" fill="none" />
-
-        {/* Blush Cheeks */}
-        {(mood === 'happy' || mood === 'celebrating' || mood === 'waving') && (
-          <>
-            <ellipse cx="48" cy="112" rx="9" ry="5" fill="#ff7676" fillOpacity="0.45" />
-            <ellipse cx="152" cy="112" rx="9" ry="5" fill="#ff7676" fillOpacity="0.45" />
-          </>
-        )}
-
-        {/* Academic IELTS Graduation Cap for Academic Vibe */}
-        <g transform="translate(100, 52)">
-          {/* Mortarboard Diamond Top */}
-          <polygon points="0,-18 42,0 0,14 -42,0" fill="#1e293b" />
-          <polygon points="0,-18 42,0 0,-8 -42,0" fill="#334155" />
-          {/* Cap Skull base */}
-          <path d="M-22 1 C-22 12, 22 12, 22 1 Z" fill="#0f172a" />
-          {/* Golden Button & Tassel */}
-          <circle cx="0" cy="-2" r="3" fill="#ffc800" />
-          <path d="M0 -2 Q24 2 28 20" stroke="#ffc800" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-          <polygon points="26,18 30,18 31,27 25,27" fill="#e5a500" />
+        {/* Academic Cap */}
+        <g transform="translate(100, 35)">
+          <polygon points="0,-16 38,0 0,12 -38,0" fill="#1e293b" />
+          <polygon points="0,-16 38,0 0,-7 -38,0" fill="#334155" />
+          <path d="M-20 1 C-20 10, 20 10, 20 1 Z" fill="#0f172a" />
+          <circle cx="0" cy="-2" r="2.5" fill="#ffc800" />
+          <path d="M0 -2 Q22 2 25 18" stroke="#ffc800" strokeWidth="2" strokeLinecap="round" fill="none" />
+          <polygon points="23,16 27,16 28,24 22,24" fill="#e5a500" />
         </g>
       </svg>
     </div>

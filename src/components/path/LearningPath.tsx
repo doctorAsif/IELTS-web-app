@@ -52,7 +52,7 @@ export const LearningPath: React.FC<LearningPathProps> = ({ onStartLesson }) => 
       {/* Units Loop */}
       <div className="space-y-12">
         {IELTS_UNITS.map((unit, unitIdx) => {
-          const isUnitUnlocked = unit.id <= stats.unlockedUnitId;
+          const isUnitUnlocked = true; // unit.id <= stats.unlockedUnitId;
           const isUnitCompleted = unit.lessons.every(l => stats.completedLessonIds.includes(l.id));
 
           return (
@@ -69,8 +69,8 @@ export const LearningPath: React.FC<LearningPathProps> = ({ onStartLesson }) => 
               <div className="relative flex flex-col items-center py-4">
                 {unit.lessons.map((lesson, lessonIdx) => {
                   const isLessonCompleted = stats.completedLessonIds.includes(lesson.id);
-                  const isLessonActive = lesson.id === currentActiveLessonId && isUnitUnlocked;
-                  const isLessonLocked = !isUnitUnlocked || (!isLessonCompleted && !isLessonActive && !stats.completedLessonIds.includes(lesson.id));
+                  const isLessonActive = lesson.id === currentActiveLessonId;
+                  const isLessonLocked = false;
 
                   const offsetIndex = zigzagOffsets[(unitIdx * 3 + lessonIdx) % zigzagOffsets.length];
 
