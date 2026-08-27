@@ -21,7 +21,7 @@ const AppContent: React.FC = () => {
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const { user, loading } = useAuth();
-  const { stats, incrementFreeTrials } = useApp();
+  const { stats, incrementCategoryTrial } = useApp();
 
   if (loading) {
     return (
@@ -34,13 +34,13 @@ const AppContent: React.FC = () => {
   const handleStartLesson = (lesson: Lesson) => {
     if (!user) {
       const today = new Date().toISOString().split('T')[0];
-      const trialsUsedToday = stats.freeTrialDate === today ? stats.freeTrialsUsed : 0;
+      const trialsUsedToday = stats.freeTrialDate === today ? stats.freeMockTestsUsed : 0;
       
       if (trialsUsedToday >= 2) {
         setShowAuthModal(true);
         return;
       }
-      incrementFreeTrials();
+      incrementCategoryTrial('mock');
     }
     setActiveLesson(lesson);
   };
@@ -59,16 +59,20 @@ const AppContent: React.FC = () => {
           <LearningPath onStartLesson={handleStartLesson} />
         )}
 
-        {activeTab === 'practice' && <PracticeHub onStartPractice={() => {
+        {activeTab === 'practice' && <PracticeHub onStartPractice={(category) => {
           if (!user) {
             const today = new Date().toISOString().split('T')[0];
-            const trialsUsedToday = stats.freeTrialDate === today ? stats.freeTrialsUsed : 0;
+            const key = category === 'mock' ? 'freeMockTestsUsed' : 
+                       category === 'speaking' ? 'freeSpeakingUsed' :
+                       category === 'writing' ? 'freeWritingUsed' :
+                       category === 'listening' ? 'freeListeningUsed' : 'freeReadingUsed';
+            const trialsUsedToday = stats.freeTrialDate === today ? stats[key] : 0;
             
             if (trialsUsedToday >= 2) {
               setShowAuthModal(true);
               return false;
             }
-            incrementFreeTrials();
+            incrementCategoryTrial(category);
           }
           return true;
         }} />}

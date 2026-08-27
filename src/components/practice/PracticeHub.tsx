@@ -21,7 +21,7 @@ import { SpeakingTimer } from '../interactive/SpeakingTimer';
 import { AudioPlayer } from '../interactive/AudioPlayer';
 
 interface PracticeHubProps {
-  onStartPractice?: () => boolean;
+  onStartPractice?: (category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock') => boolean;
 }
 
 export const PracticeHub: React.FC<PracticeHubProps> = ({ onStartPractice }) => {
@@ -152,7 +152,13 @@ export const PracticeHub: React.FC<PracticeHubProps> = ({ onStartPractice }) => 
                 <div
                   key={mod.id}
                   onClick={() => {
-                    if (onStartPractice && !onStartPractice()) return;
+                    let category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock' = 'mock';
+                    if (mod.icon === 'Mic') category = 'speaking';
+                    else if (mod.icon === 'PenTool') category = 'writing';
+                    else if (mod.icon === 'Headphones') category = 'listening';
+                    else if (mod.icon === 'Eye') category = 'reading';
+
+                    if (onStartPractice && !onStartPractice(category)) return;
                     sound.playVictory();
                     gainXp(mod.xpReward);
                     refillHearts();

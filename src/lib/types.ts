@@ -130,7 +130,11 @@ export interface UserStats {
   drillsCompleted: number;
   dailyGoalXp: number;
   todayEarnedXp: number;
-  freeTrialsUsed: number;
+  freeSpeakingUsed: number;
+  freeWritingUsed: number;
+  freeListeningUsed: number;
+  freeReadingUsed: number;
+  freeMockTestsUsed: number;
   freeTrialDate: string; // YYYY-MM-DD format
 }
 

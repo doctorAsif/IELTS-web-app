@@ -22,8 +22,8 @@ interface AppContextType {
   buyShopItem: (itemId: string, gemCost: number) => boolean;
   toggleSound: () => void;
   updateTargetBand: (band: number) => void;
+  incrementCategoryTrial: (category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock') => void;
   resetProgress: () => void;
-  incrementFreeTrials: () => void;
 }
 
 const DEFAULT_STATS: UserStats = {
@@ -49,7 +49,11 @@ const DEFAULT_STATS: UserStats = {
   drillsCompleted: 12,
   dailyGoalXp: 50,
   todayEarnedXp: 20,
-  freeTrialsUsed: 0,
+  freeSpeakingUsed: 0,
+  freeWritingUsed: 0,
+  freeListeningUsed: 0,
+  freeReadingUsed: 0,
+  freeMockTestsUsed: 0,
   freeTrialDate: new Date().toISOString().split('T')[0],
 };
 
@@ -325,13 +329,23 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setStats(prev => ({ ...prev, targetBand: band }));
   };
 
-  const incrementFreeTrials = () => {
+  const incrementCategoryTrial = (category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock') => {
     const today = new Date().toISOString().split('T')[0];
     setStats(prev => {
       const isNewDay = prev.freeTrialDate !== today;
+      const key = category === 'mock' ? 'freeMockTestsUsed' : 
+                 category === 'speaking' ? 'freeSpeakingUsed' :
+                 category === 'writing' ? 'freeWritingUsed' :
+                 category === 'listening' ? 'freeListeningUsed' : 'freeReadingUsed';
+                 
       return {
         ...prev,
-        freeTrialsUsed: isNewDay ? 1 : (prev.freeTrialsUsed || 0) + 1,
+        freeSpeakingUsed: isNewDay ? 0 : (prev.freeSpeakingUsed || 0),
+        freeWritingUsed: isNewDay ? 0 : (prev.freeWritingUsed || 0),
+        freeListeningUsed: isNewDay ? 0 : (prev.freeListeningUsed || 0),
+        freeReadingUsed: isNewDay ? 0 : (prev.freeReadingUsed || 0),
+        freeMockTestsUsed: isNewDay ? 0 : (prev.freeMockTestsUsed || 0),
+        [key]: isNewDay ? 1 : (prev[key] || 0) + 1,
         freeTrialDate: today
       };
     });
@@ -362,8 +376,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         buyShopItem,
         toggleSound,
         updateTargetBand,
+        incrementCategoryTrial,
         resetProgress,
-        incrementFreeTrials,
       }}
     >
       {children}
