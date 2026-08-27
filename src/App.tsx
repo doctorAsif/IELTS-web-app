@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppProvider, useApp } from './lib/store';
 import { AuthProvider, useAuth } from './lib/AuthContext';
 import { AuthModal } from './components/auth/AuthModal';
+import { PremiumModal } from './components/auth/PremiumModal';
 import { ActiveTab, Sidebar } from './components/layout/Sidebar';
 import { RightSidebar } from './components/layout/RightSidebar';
 import { TopHeader } from './components/layout/TopHeader';
@@ -19,7 +20,10 @@ import { Loader2 } from 'lucide-react';
 const AppContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('learn');
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
   const { user, loading } = useAuth();
+  const { stats, incrementFreeTrials } = useApp();
 
   if (loading) {
     return (
@@ -29,9 +33,22 @@ const AppContent: React.FC = () => {
     );
   }
 
-  if (!user) {
-    return <AuthModal />;
-  }
+  const handleStartLesson = (lesson: Lesson) => {
+    if (!user) {
+      if (stats.freeTrialsUsed >= 2) {
+        setShowAuthModal(true);
+        return;
+      }
+    }
+    
+    if (stats.freeTrialsUsed >= 3) {
+      setShowPremiumModal(true);
+      return;
+    }
+
+    incrementFreeTrials();
+    setActiveLesson(lesson);
+  };
 
   return (
     <div className="min-h-screen bg-[#f7f7f7] flex flex-col md:flex-row font-sans text-duo-charcoal antialiased">
@@ -44,10 +61,21 @@ const AppContent: React.FC = () => {
       {/* Main Content Area */}
       <main className="flex-1 min-h-screen pb-20 md:pb-8 overflow-y-auto">
         {activeTab === 'learn' && (
-          <LearningPath onStartLesson={lesson => setActiveLesson(lesson)} />
+          <LearningPath onStartLesson={handleStartLesson} />
         )}
 
-        {activeTab === 'practice' && <PracticeHub />}
+        {activeTab === 'practice' && <PracticeHub onStartPractice={() => {
+          if (!user && stats.freeTrialsUsed >= 2) {
+            setShowAuthModal(true);
+            return false;
+          }
+          if (stats.freeTrialsUsed >= 3) {
+            setShowPremiumModal(true);
+            return false;
+          }
+          incrementFreeTrials();
+          return true;
+        }} />}
 
         {activeTab === 'leaderboard' && <LeaderboardView />}
 
@@ -70,6 +98,17 @@ const AppContent: React.FC = () => {
           lesson={activeLesson}
           onClose={() => setActiveLesson(null)}
         />
+      )}
+
+      {/* Auth Modals */}
+      {showAuthModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <AuthModal />
+        </div>
+      )}
+
+      {showPremiumModal && (
+        <PremiumModal onClose={() => setShowPremiumModal(false)} />
       )}
     </div>
   );

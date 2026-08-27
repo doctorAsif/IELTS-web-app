@@ -23,6 +23,7 @@ interface AppContextType {
   toggleSound: () => void;
   updateTargetBand: (band: number) => void;
   resetProgress: () => void;
+  incrementFreeTrials: () => void;
 }
 
 const DEFAULT_STATS: UserStats = {
@@ -48,6 +49,7 @@ const DEFAULT_STATS: UserStats = {
   drillsCompleted: 12,
   dailyGoalXp: 50,
   todayEarnedXp: 20,
+  freeTrialsUsed: 0,
 };
 
 const AppContext = createContext<AppContextType | null>(null);
@@ -322,6 +324,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setStats(prev => ({ ...prev, targetBand: band }));
   };
 
+  const incrementFreeTrials = () => {
+    setStats(prev => ({ ...prev, freeTrialsUsed: (prev.freeTrialsUsed || 0) + 1 }));
+  };
+
   const resetProgress = () => {
     localStorage.removeItem(STORAGE_KEY_STATS);
     localStorage.removeItem(STORAGE_KEY_QUESTS);
@@ -348,6 +354,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         toggleSound,
         updateTargetBand,
         resetProgress,
+        incrementFreeTrials,
       }}
     >
       {children}

@@ -130,6 +130,7 @@ export interface UserStats {
   drillsCompleted: number;
   dailyGoalXp: number;
   todayEarnedXp: number;
+  freeTrialsUsed: number;
 }
 
 export interface Quest {

@@ -20,7 +20,11 @@ import { speakText } from '../../lib/speech';
 import { SpeakingTimer } from '../interactive/SpeakingTimer';
 import { AudioPlayer } from '../interactive/AudioPlayer';
 
-export const PracticeHub: React.FC = () => {
+interface PracticeHubProps {
+  onStartPractice?: () => boolean;
+}
+
+export const PracticeHub: React.FC<PracticeHubProps> = ({ onStartPractice }) => {
   const { stats, gainXp, refillHearts } = useApp();
   const [activeTab, setActiveTab] = useState<'modules' | 'flashcards'>('modules');
 
@@ -148,6 +152,7 @@ export const PracticeHub: React.FC = () => {
                 <div
                   key={mod.id}
                   onClick={() => {
+                    if (onStartPractice && !onStartPractice()) return;
                     sound.playVictory();
                     gainXp(mod.xpReward);
                     refillHearts();
