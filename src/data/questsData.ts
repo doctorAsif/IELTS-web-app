@@ -1,0 +1,145 @@
+import { Quest, ShopItem } from '../lib/types';
+
+export const INITIAL_QUESTS: Quest[] = [
+  {
+    id: 'q1',
+    title: 'Daily IELTS Scholar',
+    description: 'Earn 50 XP today through lessons or practice drills',
+    target: 50,
+    current: 0,
+    xpReward: 30,
+    gemsReward: 15,
+    iconName: 'Zap',
+    completed: false,
+  },
+  {
+    id: 'q2',
+    title: 'Speaking Fluency Champion',
+    description: 'Complete 2 Speaking pronunciation or Cue Card exercises',
+    target: 2,
+    current: 0,
+    xpReward: 40,
+    gemsReward: 20,
+    iconName: 'Mic',
+    completed: false,
+  },
+  {
+    id: 'q3',
+    title: 'Lexical Maestro',
+    description: 'Match 10 academic synonym pairs or collocations correctly',
+    target: 10,
+    current: 0,
+    xpReward: 35,
+    gemsReward: 15,
+    iconName: 'BookOpen',
+    completed: false,
+  },
+  {
+    id: 'q4',
+    title: 'Flawless Accuracy',
+    description: 'Score 100% accuracy on any IELTS lesson without losing a single heart',
+    target: 1,
+    current: 0,
+    xpReward: 50,
+    gemsReward: 25,
+    iconName: 'ShieldCheck',
+    completed: false,
+  }
+];
+
+export const BADGES = [
+  {
+    id: 'b1',
+    title: '7-Day Band Booster',
+    description: 'Maintain a 7-day study streak without breaking it',
+    icon: '🔥',
+    unlocked: true,
+    tier: 'Gold',
+  },
+  {
+    id: 'b2',
+    title: 'Band 8.0 Vocabulary Master',
+    description: 'Master 100+ academic IELTS synonyms and collocations',
+    icon: '💎',
+    unlocked: true,
+    tier: 'Diamond',
+  },
+  {
+    id: 'b3',
+    title: 'Speaking Maverick',
+    description: 'Score 90%+ in 15 Speaking mic challenges',
+    icon: '🎙️',
+    unlocked: false,
+    tier: 'Sapphire',
+  },
+  {
+    id: 'b4',
+    title: 'Reading Speedster',
+    description: 'Solve 20 True/False/Not Given questions in under 10 minutes',
+    icon: '⚡',
+    unlocked: false,
+    tier: 'Ruby',
+  },
+  {
+    id: 'b5',
+    title: 'Writing Task 2 Strategist',
+    description: 'Master all 5 Task 2 essay templates and cohesive devices',
+    icon: '✍️',
+    unlocked: false,
+    tier: 'Silver',
+  },
+  {
+    id: 'b6',
+    title: 'Diamond League Victor',
+    description: 'Finish in the Top 3 of the Diamond League',
+    icon: '👑',
+    unlocked: false,
+    tier: 'Diamond',
+  }
+];
+
+export const SHOP_ITEMS: ShopItem[] = [
+  {
+    id: 'heart_refill',
+    title: 'Heart Refill',
+    description: 'Instantly restore all 5 hearts so you can keep practicing without waiting.',
+    gemCost: 50,
+    icon: '❤️',
+    type: 'heart_refill',
+    popular: true,
+  },
+  {
+    id: 'streak_freeze',
+    title: 'Streak Freeze',
+    description: 'Protects your streak for 1 full day if you forget to practice.',
+    gemCost: 100,
+    icon: '🧊',
+    type: 'streak_freeze',
+    popular: true,
+  },
+  {
+    id: 'double_xp',
+    title: 'Double XP Potion (15 mins)',
+    description: 'Earn 2x XP on all completed lessons and practice drills for 15 minutes!',
+    gemCost: 80,
+    icon: '⚡',
+    type: 'double_xp',
+  },
+  {
+    id: 'band_booster',
+    title: 'Band 8.5 Master Diagnostic',
+    description: 'Unlocks advanced predictive sub-scores for Listening, Reading, Writing, Speaking.',
+    gemCost: 150,
+    icon: '🎯',
+    type: 'band_booster',
+  },
+  {
+    id: 'super_ielts',
+    title: 'Super IELTS Duo Pass',
+    description: 'Unlimited hearts, zero ads, exclusive Band 9 mock examinations!',
+    gemCost: 350,
+    icon: '🌟',
+    type: 'super_ielts',
+    popular: true,
+  }
+];

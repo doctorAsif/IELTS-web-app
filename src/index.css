@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Nunito', 'DIN Round Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* Duolingo 3D Button styles */
+  .btn-duo-green {
+    @apply bg-duo-green text-white font-bold border-b-4 border-duo-green-border hover:bg-duo-green-light active:border-b-0 active:translate-y-1 transition-all rounded-2xl;
+  }
+  .btn-duo-blue {
+    @apply bg-duo-blue text-white font-bold border-b-4 border-duo-blue-dark hover:bg-duo-blue-light active:border-b-0 active:translate-y-1 transition-all rounded-2xl;
+  }
+  .btn-duo-purple {
+    @apply bg-duo-purple text-white font-bold border-b-4 border-duo-purple-dark hover:brightness-110 active:border-b-0 active:translate-y-1 transition-all rounded-2xl;
+  }
+  .btn-duo-red {
+    @apply bg-duo-red text-white font-bold border-b-4 border-duo-red-dark hover:brightness-110 active:border-b-0 active:translate-y-1 transition-all rounded-2xl;
+  }
+  .btn-duo-gold {
+    @apply bg-duo-gold text-yellow-950 font-bold border-b-4 border-duo-gold-dark hover:brightness-105 active:border-b-0 active:translate-y-1 transition-all rounded-2xl;
+  }
+  .btn-duo-orange {
+    @apply bg-duo-orange text-white font-bold border-b-4 border-duo-orange-dark hover:brightness-105 active:border-b-0 active:translate-y-1 transition-all rounded-2xl;
+  }
+  .btn-duo-white {
+    @apply bg-white text-duo-charcoal font-bold border-2 border-duo-gray border-b-4 hover:bg-gray-50 active:border-b-2 active:translate-y-0.5 transition-all rounded-2xl;
+  }
+  .btn-duo-ghost {
+    @apply bg-transparent text-duo-gray-dark font-bold hover:bg-gray-100 hover:text-duo-charcoal transition-all rounded-2xl;
+  }
+
+  /* Card 3D effect */
+  .card-duo {
+    @apply bg-white rounded-2xl border-2 border-duo-gray border-b-4 transition-all;
+  }
+
+  .card-duo-interactive {
+    @apply bg-white rounded-2xl border-2 border-duo-gray border-b-4 hover:border-duo-blue hover:bg-blue-50/20 active:border-b-2 active:translate-y-0.5 transition-all cursor-pointer;
+  }
+
+  /* Word tile styles */
+  .word-tile {
+    @apply inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-bold text-base md:text-lg border-2 border-duo-gray border-b-4 bg-white text-duo-charcoal cursor-pointer active:border-b-2 active:translate-y-0.5 transition-all shadow-sm select-none;
+  }
+  .word-tile:hover {
+    @apply bg-gray-50 border-gray-300;
+  }
+  .word-tile-selected {
+    @apply bg-duo-blue/10 border-duo-blue text-duo-blue;
+  }
+  .word-tile-placeholder {
+    @apply inline-flex items-center justify-center px-4 py-2.5 rounded-xl border-2 border-dashed border-gray-300 bg-gray-100/70 text-transparent select-none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}

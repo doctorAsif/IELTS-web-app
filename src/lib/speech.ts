@@ -1,0 +1,154 @@
+// Speech Synthesis (TTS) and Speech Recognition (STT) helpers for IELTS drills
+
+export function speakText(
+  text: string,
+  rate: number = 0.95,
+  lang: string = 'en-GB',
+  onEnd?: () => void
+): void {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    console.warn('Speech synthesis not supported');
+    onEnd?.();
+    return;
+  }
+
+  // Cancel any ongoing speech
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = rate;
+  utterance.pitch = 1.0;
+  utterance.lang = lang;
+
+  // Try to pick a natural British or Australian or US voice if available
+  const voices = window.speechSynthesis.getVoices();
+  const preferredVoice = voices.find(
+    v => (v.lang === lang || v.lang.startsWith(lang.split('-')[0])) && (v.name.includes('Natural') || v.name.includes('Daniel') || v.name.includes('Google') || v.name.includes('Serena'))
+  ) || voices.find(v => v.lang.startsWith('en'));
+
+  if (preferredVoice) {
+    utterance.voice = preferredVoice;
+  }
+
+  if (onEnd) {
+    utterance.onend = () => onEnd();
+    utterance.onerror = () => onEnd();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+export function stopSpeaking(): void {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+export interface SpeechRecognitionResultState {
+  transcript: string;
+  isListening: boolean;
+  error?: string;
+  isSupported: boolean;
+}
+
+export class SpeechRecognizer {
+  private recognition: any = null;
+  private isSupported: boolean = false;
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      const SpeechRecognition =
+        (window as any).SpeechRecognition ||
+        (window as any).webkitSpeechRecognition;
+
+      if (SpeechRecognition) {
+        this.recognition = new SpeechRecognition();
+        this.recognition.continuous = false;
+        this.recognition.interimResults = true;
+        this.recognition.lang = 'en-US';
+        this.isSupported = true;
+      }
+    }
+  }
+
+  public getIsSupported(): boolean {
+    return this.isSupported;
+  }
+
+  public startListening(
+    onResult: (transcript: string, isFinal: boolean) => void,
+    onError: (error: string) => void,
+    onEnd: () => void
+  ): boolean {
+    if (!this.recognition) {
+      onError('Speech recognition is not supported in this browser.');
+      return false;
+    }
+
+    try {
+      this.recognition.onresult = (event: any) => {
+        let interimTranscript = '';
+        let finalTranscript = '';
+
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          } else {
+            interimTranscript += event.results[i][0].transcript;
+          }
+        }
+
+        const text = finalTranscript || interimTranscript;
+        onResult(text, !!finalTranscript);
+      };
+
+      this.recognition.onerror = (event: any) => {
+        onError(event.error || 'Microphone error');
+      };
+
+      this.recognition.onend = () => {
+        onEnd();
+      };
+
+      this.recognition.start();
+      return true;
+    } catch (e: any) {
+      onError(e.message || 'Failed to start microphone');
+      return false;
+    }
+  }
+
+  public stopListening(): void {
+    if (this.recognition) {
+      try {
+        this.recognition.stop();
+      } catch (e) {
+        // ignore
+      }
+    }
+  }
+}
+
+// Helper to calculate similarity / match between spoken words and target keywords
+export function calculateKeywordMatch(
+  spoken: string,
+  targetKeywords: string[]
+): { score: number; matchedKeywords: string[]; missingKeywords: string[] } {
+  const normalizedSpoken = spoken.toLowerCase().replace(/[^a-z0-9\s]/g, '');
+  const spokenTokens = normalizedSpoken.split(/\s+/);
+
+  const matched: string[] = [];
+  const missing: string[] = [];
+
+  targetKeywords.forEach(kw => {
+    const cleanKw = kw.toLowerCase().trim();
+    if (normalizedSpoken.includes(cleanKw) || spokenTokens.some(t => t.startsWith(cleanKw.slice(0, 4)))) {
+      matched.push(kw);
+    } else {
+      missing.push(kw);
+    }
+  });
+
+  const score = targetKeywords.length > 0 ? Math.round((matched.length / targetKeywords.length) * 100) : 100;
+  return { score, matchedKeywords: matched, missingKeywords: missing };
+}
