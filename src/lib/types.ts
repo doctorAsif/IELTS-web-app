@@ -79,7 +79,7 @@ export type Question =
   | SpeakingQuestion
   | FillInBlankQuestion;
 
-export type LessonType = 'standard' | 'chest' | 'trophy' | 'speaking' | 'listening' | 'writing' | 'reading';
+export type LessonType = 'standard' | 'chest' | 'trophy' | 'speaking' | 'listening' | 'writing' | 'reading' | 'practice';
 
 export interface Lesson {
   id: string;
