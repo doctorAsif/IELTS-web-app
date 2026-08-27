@@ -69,10 +69,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
     { id: 'license', label: 'Activate License Code', icon: Key, color: '#F59E0B' },
   ];
 
-  if (isGuest) {
-    navItemsBottom.push({ id: 'register', label: 'Register Student Account', icon: UserPlus, color: '#38BDF8' });
-  }
-
   navItemsBottom.push({ id: 'admin', label: isAdmin ? 'Admin CRM Dashboard' : 'Faculty / Admin Portal', icon: Shield, color: '#60A5FA' });
 
   const renderNavItem = (item: { id: string; label: string; icon: any; color: string }) => {
@@ -119,7 +115,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
         >
           <User className="w-[13px] h-[13px] mr-1.5 shrink-0" style={{ color: isGuest ? '#F59E0B' : '#34D399' }} />
           <span className="text-[11px] font-bold truncate" style={{ color: isGuest ? '#F59E0B' : '#34D399' }}>
-            {isGuest ? 'Guest Mode (2/2 Daily Quota)' : `${user?.displayName || 'Student'} (Band ${stats.targetBand.toFixed(1)})`}
+            {isGuest ? 'Guest Mode' : `${user?.displayName || 'Student'} (Band ${stats.targetBand.toFixed(1)})`}
           </span>
         </div>
       </div>

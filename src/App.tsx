@@ -33,11 +33,8 @@ const AppContent: React.FC = () => {
   const handleStartLesson = (lesson: Lesson, category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock' = 'mock') => {
     if (!user) {
       const today = new Date().toISOString().split('T')[0];
-      const key = category === 'mock' ? 'freeMockTestsUsed' : 
-                 category === 'speaking' ? 'freeSpeakingUsed' :
-                 category === 'writing' ? 'freeWritingUsed' :
-                 category === 'listening' ? 'freeListeningUsed' : 'freeReadingUsed';
-      const trialsUsedToday = stats.freeTrialDate === today ? stats[key] : 0;
+      const trialsUsedToday = stats.freeTrialDate === today ? 
+        (stats.freeMockTestsUsed + stats.freeSpeakingUsed + stats.freeWritingUsed + stats.freeListeningUsed + stats.freeReadingUsed) : 0;
       
       if (trialsUsedToday >= 2) {
         setShowAuthModal(true);
@@ -50,6 +47,23 @@ const AppContent: React.FC = () => {
 
   const handleSelectTab = (tab: ActiveTab) => {
     setMobileMenuOpen(false);
+    
+    // Check global free trial limit for practice modules
+    const practiceTabs = ['speaking', 'writing', 'reading', 'listening', 'mock_exam'];
+    if (practiceTabs.includes(tab) && !user) {
+      const today = new Date().toISOString().split('T')[0];
+      const trialsUsedToday = stats.freeTrialDate === today ? 
+        (stats.freeMockTestsUsed + stats.freeSpeakingUsed + stats.freeWritingUsed + stats.freeListeningUsed + stats.freeReadingUsed) : 0;
+      
+      if (trialsUsedToday >= 2) {
+        setShowAuthModal(true);
+        return;
+      }
+      // Increment trial when they enter the tab, except for mock_exam which increments in handleStartLesson
+      if (tab !== 'mock_exam') {
+        incrementCategoryTrial(tab as any);
+      }
+    }
     
     // Launch practice modals directly from sidebar clicks
     if (['mock_exam'].includes(tab)) {
