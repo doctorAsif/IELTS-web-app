@@ -1,74 +1,80 @@
-# Android Content Inventory
+# ANDROID CONTENT INVENTORY
 
-This document provides an inventory of the JSON content files found in the Android project repository at `<ANDROID_PROJECT>/assets/database/`.
+## Files Analyzed
 
-## Inventory Summary
+### curriculum_master.json
+- **Top-level structure**: Object
+- **Keys**: `akhl_ielts_master_curriculum`
+- **Curriculum sections**: `executive_curriculum_map, source_document_analysis, sixteen_class_curriculum, pre_ielts_foundation, speaking_curriculum, writing_curriculum, reading_curriculum, listening_curriculum, vocabulary_curriculum, grammar_curriculum, practice_bank, homework_bank, error_remediation_framework, ai_teacher_rules, missing_or_ambiguous_source_information, metadata, retrieval_index, blank_field_policy`
+- **Record count**: 1 (Master object)
 
-Total JSON files found: **8**
-Files with media references: **0**
+**Classification:** SHARED_CONTENT (Pending verification)
 
-All 8 files have been classified as `SHARED_CONTENT`. None of the files appear to be `ANDROID_SPECIFIC`, `DUPLICATE`, or `OBSOLETE`.
+### grammar_modules.json
+- **Top-level structure**: Object
+- **Keys**: `modules`
+- **Record count**: 31
+- **Schema (first record)**: `practiceId, skill, part, questionType, topic, difficulty, targetBand, instructions, questions, rubric, explanation, sourceReferences, estimatedTime, status`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Grammar']
 
-### 1. curriculum_master.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object containing a master array (`akhl_ielts_master_curriculum`)
-- **Record Count:** 18 items
-- **Content Type:** Curriculum stage definitions and expected mastery.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+**Classification:** SHARED_CONTENT (Pending verification)
 
-### 2. grammar_modules.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object with a `modules` array.
-- **Record Count:** 31 items
-- **Content Type:** Grammar practice items and concepts.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+### listening_modules.json
+- **Top-level structure**: Object
+- **Keys**: `modules`
+- **Record count**: 25
+- **Schema (first record)**: `practiceId, skill, part, questionType, topic, difficulty, targetBand, instructions, script, questions, answerKey, explanation, sourceReferences, curriculumAlignment, estimatedTime, status`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Listening']
 
-### 3. listening_modules.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object with a `modules` array.
-- **Record Count:** 25 items
-- **Content Type:** Listening scripts, parts, questions, and answer keys.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+**Classification:** SHARED_CONTENT (Pending verification)
 
-### 4. practice_sessions.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Array of objects.
-- **Record Count:** 12 items
-- **Content Type:** Multi-part practice sessions with AI rubrics and questions.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+### practice_sessions.json
+- **Top-level structure**: Array
+- **Record count**: 12
+- **Schema (first record)**: `session_id, target_band, module, topic_tag, content_payload, questions, answer_key, ai_rubric`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Speaking', 'Writing', 'Reading', 'Listening']
 
-### 5. reading_modules.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object with a `modules` array.
-- **Record Count:** 25 items
-- **Content Type:** Reading passages, questions, and strategies.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+**Classification:** SHARED_CONTENT (Pending verification)
 
-### 6. speaking_modules.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object with a `modules` array.
-- **Record Count:** 110 items
-- **Content Type:** Speaking prompts, models, and scoring criteria.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+### reading_modules.json
+- **Top-level structure**: Object
+- **Keys**: `modules`
+- **Record count**: 25
+- **Schema (first record)**: `practiceId, skill, part, questionType, topic, difficulty, targetBand, instructions, passage, questions, answerKey, evidenceSpans, explanation, sourceReferences, curriculumAlignment, estimatedTime, status`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Reading']
 
-### 7. vocabulary_modules.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object with a `modules` array.
-- **Record Count:** 105 items
-- **Content Type:** Vocabulary sets and usage examples.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+**Classification:** SHARED_CONTENT (Pending verification)
 
-### 8. writing_modules.json
-- **Classification:** `SHARED_CONTENT`
-- **Schema Shape:** Object with a `modules` array.
-- **Record Count:** 48 items
-- **Content Type:** Writing Task 1/2 prompts, models, and strategies.
-- **Reusable for Web:** Yes
-- **Dependencies:** None
+### speaking_modules.json
+- **Top-level structure**: Object
+- **Keys**: `modules`
+- **Record count**: 110
+- **Schema (first record)**: `practiceId, skill, part, questionType, topic, difficulty, targetBand, instructions, questions, rubric, explanation, sourceReferences, estimatedTime, status`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Speaking']
+
+**Classification:** SHARED_CONTENT (Pending verification)
+
+### vocabulary_modules.json
+- **Top-level structure**: Object
+- **Keys**: `modules`
+- **Record count**: 105
+- **Schema (first record)**: `practiceId, skill, part, questionType, topic, difficulty, targetBand, instructions, questions, rubric, explanation, sourceReferences, estimatedTime, status`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Vocabulary']
+
+**Classification:** SHARED_CONTENT (Pending verification)
+
+### writing_modules.json
+- **Top-level structure**: Object
+- **Keys**: `modules`
+- **Record count**: 48
+- **Schema (first record)**: `practiceId, skill, part, questionType, topic, difficulty, targetBand, instructions, questions, rubric, explanation, sourceReferences, estimatedTime, status`
+- **Duplicate IDs**: None
+- **Skill/Module Types**: ['Writing']
+
+**Classification:** SHARED_CONTENT (Pending verification)

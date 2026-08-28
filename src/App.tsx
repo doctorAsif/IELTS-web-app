@@ -20,7 +20,7 @@ const AppContent: React.FC = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, loading } = useAuth();
-  const { stats, incrementCategoryTrial } = useApp();
+  const { stats, consumeTrialCredit } = useApp();
 
   if (loading) {
     return (
@@ -30,42 +30,51 @@ const AppContent: React.FC = () => {
     );
   }
 
-  const handleStartLesson = (lesson: Lesson, category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock' = 'mock') => {
+  const [showTrialCompleteModal, setShowTrialCompleteModal] = useState(false);
+
+  const handleStartLesson = async (lesson: Lesson, category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock' = 'mock') => {
     if (!user) {
-      const today = new Date().toISOString().split('T')[0];
-      const trialsUsedToday = stats.freeTrialDate === today ? 
-        (stats.freeMockTestsUsed + stats.freeSpeakingUsed + stats.freeWritingUsed + stats.freeListeningUsed + stats.freeReadingUsed) : 0;
-      
-      if (trialsUsedToday >= 2) {
-        setShowAuthModal(true);
-        return;
-      }
-      incrementCategoryTrial(category);
+      setShowAuthModal(true);
+      return;
     }
-    setActiveLesson(lesson);
+    
+    const requiredCredits = category === 'mock' ? 5 : 20;
+    if (stats.trialCreditsRemaining < requiredCredits) {
+      setShowTrialCompleteModal(true);
+      return;
+    }
+
+    const success = await consumeTrialCredit(category === 'mock' ? 'mock_exam' : category);
+    if (success) {
+      setActiveLesson(lesson);
+    } else {
+      setShowTrialCompleteModal(true);
+    }
   };
 
-  const handleSelectTab = (tab: ActiveTab) => {
+  const handleSelectTab = async (tab: ActiveTab) => {
     setMobileMenuOpen(false);
     
-    // Check global free trial limit for practice modules
-    const practiceTabs = ['speaking', 'writing', 'reading', 'listening', 'mock_exam'];
-    if (practiceTabs.includes(tab) && !user) {
-      const today = new Date().toISOString().split('T')[0];
-      const trialsUsedToday = stats.freeTrialDate === today ? 
-        (stats.freeMockTestsUsed + stats.freeSpeakingUsed + stats.freeWritingUsed + stats.freeListeningUsed + stats.freeReadingUsed) : 0;
-      
-      if (trialsUsedToday >= 2) {
+    const practiceTabs = ['speaking', 'writing', 'reading', 'listening'];
+    
+    if (practiceTabs.includes(tab)) {
+      if (!user) {
         setShowAuthModal(true);
         return;
       }
-      // Increment trial when they enter the tab, except for mock_exam which increments in handleStartLesson
-      if (tab !== 'mock_exam') {
-        incrementCategoryTrial(tab as any);
+      
+      if (stats.trialCreditsRemaining < 20) {
+        setShowTrialCompleteModal(true);
+        return;
+      }
+      
+      const success = await consumeTrialCredit(tab);
+      if (!success) {
+        setShowTrialCompleteModal(true);
+        return;
       }
     }
     
-    // Launch practice modals directly from sidebar clicks
     if (['mock_exam'].includes(tab)) {
       const category = tab === 'mock_exam' ? 'mock' : tab as any;
       handleStartLesson({
@@ -79,7 +88,7 @@ const AppContent: React.FC = () => {
         description: `Practice your ${tab} skills.`,
         questions: []
       }, category);
-      return; // Keep current active tab behind the modal
+      return;
     }
     
     setActiveTab(tab);
@@ -159,6 +168,34 @@ const AppContent: React.FC = () => {
       {showAuthModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md">
           <AuthModal />
+        </div>
+      )}
+
+      {/* Trial Complete Modal */}
+      {showTrialCompleteModal && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-md">
+          <div className="bg-[#1E293B] p-6 rounded-2xl max-w-sm w-full mx-4 border border-[#38BDF8]/20 text-center shadow-2xl">
+            <h3 className="text-xl font-bold text-white mb-2">Free Trial Complete</h3>
+            <p className="text-[#94A3B8] mb-6">
+              Your free trial credits are complete. Activate AKHL IELTS for unlimited access to all features.
+            </p>
+            <div className="flex flex-col gap-3">
+              <button 
+                onClick={() => {
+                  setShowTrialCompleteModal(false);
+                }}
+                className="w-full bg-[#38BDF8] hover:bg-[#0284C7] text-white font-bold py-3 px-4 rounded-xl transition-colors"
+              >
+                [ Activate AKHL IELTS ]
+              </button>
+              <button 
+                onClick={() => setShowTrialCompleteModal(false)}
+                className="w-full bg-transparent hover:bg-white/5 text-[#94A3B8] font-medium py-3 px-4 rounded-xl transition-colors"
+              >
+                Maybe Later
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

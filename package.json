@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "import-content": "ts-node scripts/import_android_content.ts"
+    "import-content": "tsx scripts/import-akhl-content.ts"
   },
   "dependencies": {
     "@mlc-ai/web-llm": "^0.2.84",

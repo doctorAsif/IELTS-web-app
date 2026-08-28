@@ -9,4 +9,5 @@ if (!admin.apps.length) {
 export * from './roles';
 export * from './content';
 export * from './aiExecute';
+export * from './TrialCreditPolicy';
 // More functions can be exported here as they are added (e.g. licenses, analytics)

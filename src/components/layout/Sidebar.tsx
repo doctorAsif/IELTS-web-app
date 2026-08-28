@@ -118,6 +118,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
             {isGuest ? 'Guest Mode' : `${user?.displayName || 'Student'} (Band ${stats.targetBand.toFixed(1)})`}
           </span>
         </div>
+
+        {/* Free Trial Badge */}
+        {!isGuest && (
+          <div className="mt-2 px-2.5 py-1 rounded-full border flex items-center w-max max-w-full bg-[#F59E0B]/10 border-[#F59E0B]/30">
+            <Timer className="w-[13px] h-[13px] mr-1.5 shrink-0 text-[#F59E0B]" />
+            <span className="text-[11px] font-bold truncate text-[#F59E0B]">
+              FREE TRIAL: {stats.trialCreditsRemaining ?? 0} credits
+            </span>
+          </div>
+        )}
       </div>
 
       {/* 2. Navigation Items List (Scrollable) */}

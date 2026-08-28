@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { db } from './firebase';
+import { httpsCallable } from 'firebase/functions';
+import { db, functions } from './firebase';
 import { useAuth } from './AuthContext';
 import { UserStats, Quest, LeagueTier } from './types';
 import { INITIAL_QUESTS } from '../data/questsData';
@@ -22,7 +23,7 @@ interface AppContextType {
   buyShopItem: (itemId: string, gemCost: number) => boolean;
   toggleSound: () => void;
   updateTargetBand: (band: number) => void;
-  incrementCategoryTrial: (category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock') => void;
+  consumeTrialCredit: (activityType: string) => Promise<boolean>;
   resetProgress: () => void;
 }
 
@@ -49,11 +50,9 @@ const DEFAULT_STATS: UserStats = {
   drillsCompleted: 12,
   dailyGoalXp: 50,
   todayEarnedXp: 20,
-  freeSpeakingUsed: 0,
-  freeWritingUsed: 0,
-  freeListeningUsed: 0,
-  freeReadingUsed: 0,
-  freeMockTestsUsed: 0,
+  trialCreditsTotal: 20,
+  trialCreditsUsed: 0,
+  trialCreditsRemaining: 20,
   freeTrialDate: new Date().toISOString().split('T')[0],
   aiMonthlyCredits: 100,
   aiUsedCredits: 0,
@@ -334,26 +333,34 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setStats(prev => ({ ...prev, targetBand: band }));
   };
 
-  const incrementCategoryTrial = (category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock') => {
-    const today = new Date().toISOString().split('T')[0];
-    setStats(prev => {
-      const isNewDay = prev.freeTrialDate !== today;
-      const key = category === 'mock' ? 'freeMockTestsUsed' : 
-                 category === 'speaking' ? 'freeSpeakingUsed' :
-                 category === 'writing' ? 'freeWritingUsed' :
-                 category === 'listening' ? 'freeListeningUsed' : 'freeReadingUsed';
-                 
-      return {
-        ...prev,
-        freeSpeakingUsed: isNewDay ? 0 : (prev.freeSpeakingUsed || 0),
-        freeWritingUsed: isNewDay ? 0 : (prev.freeWritingUsed || 0),
-        freeListeningUsed: isNewDay ? 0 : (prev.freeListeningUsed || 0),
-        freeReadingUsed: isNewDay ? 0 : (prev.freeReadingUsed || 0),
-        freeMockTestsUsed: isNewDay ? 0 : (prev.freeMockTestsUsed || 0),
-        [key]: isNewDay ? 1 : (prev[key] || 0) + 1,
-        freeTrialDate: today
-      };
-    });
+  const consumeTrialCredit = async (activityType: string): Promise<boolean> => {
+    if (!user) return false;
+    
+    // Check locally first
+    const cost = activityType === 'mock_exam' || activityType === 'daily_teacher' ? 5 : 20;
+    if (stats.trialCreditsRemaining < cost) {
+      return false;
+    }
+
+    try {
+      const debitTrialCredit = httpsCallable(functions, 'debitTrialCredit');
+      const result = await debitTrialCredit({ activityType });
+      const data = result.data as any;
+      
+      if (data.success) {
+        // Optimistically update local state so the UI reacts instantly
+        setStats(prev => ({
+          ...prev,
+          trialCreditsUsed: data.trialCreditsUsed,
+          trialCreditsRemaining: data.trialCreditsRemaining
+        }));
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error("Error debiting trial credit:", error);
+      return false;
+    }
   };
 
   const resetProgress = () => {
@@ -381,7 +388,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         buyShopItem,
         toggleSound,
         updateTargetBand,
-        incrementCategoryTrial,
+        consumeTrialCredit,
         resetProgress,
       }}
     >

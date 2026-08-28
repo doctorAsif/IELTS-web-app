@@ -1,0 +1,779 @@
+{
+  "modules": [
+    {
+      "practiceId": "AKHL-GR-100",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Strategic Modals and Deontic Modality in Boardroom Negotiations",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the high-stakes corporate communication context. Select or construct syntactic structures utilizing advanced modal verbs to convey authority, diplomacy, and strategic persuasion without sounding overly prescriptive.",
+      "questions": [
+        "1. Which modal structure best communicates firm non-negotiable policy compliance while maintaining professional diplomatic tone during a vendor dispute?",
+        "2. Transform the direct directive - We must cut the budget immediately - into an executive-level nuanced strategic proposition using modal inversion or past-tense distancing.",
+        "3. Evaluate the pragmatic implication of utilizing 'should' versus 'shall' in international corporate governance contracts."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates absolute control over pragmatic force, distinguishing between epistemic possibility and deontic necessity in high-level corporate interactions.",
+        "coherenceAndCohesion": "Seamless integration of syntactic hedging, concession clauses, and authoritative stance markers.",
+        "lexicalResource": "Advanced corporate terminology - e.g., 'deontic necessity', 'epistemic framing', 'diplomatic hedging', 'governance compliance', 'strategic leverage'.",
+        "grammaticalRange": "Mastery of modal verbs, past-tense distancing (e.g., 'I was hoping we might...'), and syntactic inversion for emphasis."
+      },
+      "explanation": "At the C2 executive level, grammar is not about avoiding basic errors; it is about manipulating pragmatic force. Leaders use modal shading and past-tense distancing to negotiate power dynamics delicately.",
+      "sourceReferences": "Corporate Discourse Analysis and Applied Corpus Linguistics Frameworks.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-101",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Strategic Agency Concealment via Passive Voice in PR Crises",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the corporate crisis communication scenario. Reformulate the given active statement using strategic passive constructions to decouple blame from specific executives while maintaining legal transparency.",
+      "questions": [
+        "1. Reformulate the statement - Our engineering team failed to secure the server logs - using a truncated passive construction to defocus personal agency during a press briefing.",
+        "2. Explain how agentless passives function as a mitigation strategy when addressing external stakeholders during a data breach.",
+        "3. Identify the legal and rhetorical risks of overusing passive voice in regulatory compliance filings."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates mastery of strategic agent deletion, shifting the discursive focus from human accountability to systemic event processing.",
+        "coherenceAndCohesion": "Maintains organizational flow and objective professional distance without sounding evasive or legally negligent.",
+        "lexicalResource": "Corporate crisis lexicon - e.g., 'agent suppression', 'rhetorical distancing', 'systemic accountability', 'regulatory transparency', 'exonerative syntax'.",
+        "grammaticalRange": "Advanced manipulation of truncated passives, past participles, and impersonal subject insertion (e.g., 'It has been determined that...')."
+      },
+      "explanation": "In high-stakes corporate crisis communication, the omission of the agent through passive structures allows organizations to address failures objectively without triggering immediate legal liability or personal scapegoating.",
+      "sourceReferences": "Critical Discourse Analysis in Corporate Crisis Management Frameworks.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-102",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Mitigating Liability Through Impersonal Passives in Product Recalls",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Examine the draft of a public product recall notice. Rewrite the communication utilizing impersonal passive structures and anticipatory 'it' subjects to soften the punitive impact on brand equity.",
+      "questions": [
+        "1. Convert the direct active sentence - We recalled 50,000 defective units because our testing protocols lapsed - into an impersonal passive announcement emphasizing product safety rather than internal error.",
+        "2. Evaluate the syntactic utility of 'It has been noted that...' versus 'We discovered that...' in shareholder communications.",
+        "3. Construct a high-level corporate apology utilizing passive voice for corrective actions already initiated."
+      ],
+      "rubric": {
+        "taskResponse": "Accurately applies impersonal syntax to transition consumer focus from corporate fault to remediation measures.",
+        "coherenceAndCohesion": "Ensures seamless logical continuity between acknowledging a defect and outlining corrective logistics.",
+        "lexicalResource": "Corporate PR terminology - e.g., 'impersonal framing', 'remedial logistics', 'brand equity preservation', 'anticipatory subject', 'mitigative syntax'.",
+        "grammaticalRange": "Flawless deployment of anticipatory 'it' constructions, passive infinitives, and stative passive verbs (e.g., 'It is understood that...')."
+      },
+      "explanation": "Impersonal passives allow corporate communications to center the objective reality of a hazard or recall rather than the subjective corporate entities responsible, minimizing emotional friction with consumers.",
+      "sourceReferences": "Applied Linguistics in Public Relations and Crisis Mitigation.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-103",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Diplomatic De-escalation via Reciprocal and Stative Passives",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Review the hostile stakeholder exchange. Apply stative passives and indirect recipient positioning to de-escalate tension during an activist investor confrontation.",
+      "questions": [
+        "1. Transform the confrontational clause - You ignored our restructuring demands - into a stative passive framing focusing on the current state of review - e.g., 'Our restructuring strategy is positioned for review...'",
+        "2. Analyze how stative passives alter the perceived urgency and emotional charge of corporate grievances.",
+        "3. Construct a diplomatic response to a hostile media inquiry using third-person passive distancing."
+      ],
+      "rubric": {
+        "taskResponse": "Effectively neutralizes aggressive stakeholder rhetoric by substituting dynamic active verbs with stative passive conditions.",
+        "coherenceAndCohesion": "Maintains an unshakeable, corporate-statutory tone under adversarial questioning.",
+        "lexicalResource": "Executive negotiation vocabulary - e.g., 'stative framing', 'adversarial neutralization', 'de-escalatory syntax', 'statutory posture', 'emotional decoupling'.",
+        "grammaticalRange": "Advanced control of stative passives (e.g., 'is concerned', 'remains positioned') and participial adjectives functioning as mitigators."
+      },
+      "explanation": "Stative passives describe a condition rather than an action performed by an actor, making them exceptionally powerful tools for neutralizing blame and projecting institutional stability during crises.",
+      "sourceReferences": "Executive Rhetoric and Conflict Resolution in Corporate Governance.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-104",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Regulatory Compliance and the Mandated Passive in Audit Memos",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the internal audit deficiency report. Rewrite the findings using the mandated regulatory passive voice to establish objective adherence to international compliance standards.",
+      "questions": [
+        "1. Rewrite the finding - The compliance officer failed to file the quarterly disclosures - using a mandated regulatory passive to focus strictly on the procedural breach.",
+        "2. Explain why financial auditing bodies historically favor agentless passives for reporting discrepancies.",
+        "3. Formulate an executive summary for a board audit committee utilizing mandatory compliance syntax."
+      ],
+      "rubric": {
+        "taskResponse": "Strictly adheres to audit-reporting conventions, prioritizing procedural violation over individual reprimand.",
+        "coherenceAndCohesion": "Maintains rigorous structural alignment across multi-point deficiency memoranda.",
+        "lexicalResource": "Auditing and compliance terminology - e.g., 'procedural breach', 'mandated compliance syntax', 'discrepancy reporting', 'institutional objectivity', 'audit trail'.",
+        "grammaticalRange": "Mastery of institutional passive voice structures coupled with modal obligations (e.g., 'must be rectified', 'shall be audited')."
+      },
+      "explanation": "In formal auditing and compliance contexts, the passive voice is not used to evade responsibility, but rather to institutionalize objectivity, ensuring that audits evaluate procedural integrity rather than personal politics.",
+      "sourceReferences": "International Financial Reporting Standards Syntax and Discourse Standards.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-105",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Media Training - Balancing Passive Mitigation with Active Reassurance",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Evaluate the television interview transcript regarding a toxic workplace scandal. Redesign the executive's talking points to strategically blend passive mitigation for past incidents with active voice commitments for future remediation.",
+      "questions": [
+        "1. Critique the linguistic balance in the statement - Mistakes were made, but we will fix them - and upgrade it for a Fortune 500 CEO briefing.",
+        "2. Formulate a three-sentence crisis soundbite that transitions seamlessly from an agentless passive (acknowledging the issue) to a strong active declaration (promising reform).",
+        "3. Assess the psychological impact on investors when passive mitigation is deployed without a corresponding active commitment."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates elite media-training linguistic competence by perfectly calibrating the passive-to-active ratio for maximum stakeholder trust.",
+        "coherenceAndCohesion": "Delivers fluid rhetorical transitions between past liability management and future forward-looking assurance.",
+        "lexicalResource": "Media training and PR vocabulary - e.g., 'rhetorical calibration', 'stakeholder trust restoration', 'forward-looking assurance', 'accountability bridge', 'crisis soundbite'.",
+        "grammaticalRange": "Advanced syntactic pairing of past passive clauses with future active volitional verbs (e.g., 'While protocols were breached, executive leadership will enforce...')."
+      },
+      "explanation": "The pinnacle of corporate crisis communication syntax is the 'accountability bridge'\u2014using passive voice to neutrally acknowledge past failures without opening legal floodgates, immediately followed by active voice to project decisive, trustworthy leadership.",
+      "sourceReferences": "Executive Media Training and Crisis Response Corpus.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-106",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Nominalization Strategies in Due Diligence Indemnity Clauses",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the draft M&A indemnity clause. Compress the expanded subordinate clauses into dense nominalized phrases to establish absolute legal binding precision and eliminate ambiguity regarding contingency triggers.",
+      "questions": [
+        "1. Compress the clause - If the target company fails to disclose any environmental liabilities before the closing date, then the acquiring firm may seek financial compensation - into a tightly nominalized legal term using nouns such as 'failure', 'disclosure', and 'indemnification'.",
+        "2. Explain how nominalization enhances the enforceability and formal objectivity of transactional legal briefs by removing personal subject-verb action.",
+        "3. Identify the potential syntactic risks of excessive nominalization\u2014often referred to as 'legalese' overload\u2014on non-legal executive stakeholders during deal reviews."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates mastery of transforming verbal actions into abstract institutional nouns, optimizing the text for contractual density and legal impermeability.",
+        "coherenceAndCohesion": "Maintains uncompromising logical tightness across complex multi-conditional legal stipulations.",
+        "lexicalResource": "M&A legal lexicon - e.g., 'nominalization', 'indemnity clause', 'contingency trigger', 'contractual density', 'lexical condensation'.",
+        "grammaticalRange": "Advanced conversion of verb phrases and relative clauses into prepositional noun adjuncts and compound nominals."
+      },
+      "explanation": "In M&A legal briefs, nominalization transforms dynamic actions into static legal concepts, converting contingent events into absolute contractual objects that can be governed, insured, or indemnified against.",
+      "sourceReferences": "Advanced Legal Drafting and Corporate Contract Syntax Standards.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-107",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Subordinate Clause Compression via Participial Adjuncts in Share Purchase Agreements",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Examine the verbose share purchase agreement draft. Compress non-defining relative clauses and adverbial clauses of time into participial phrases (-ing / -ed adjuncts) to maximize document efficiency.",
+      "questions": [
+        "1. Compress the sentence - Because the buyer has reviewed all proprietary financial records and has found them compliant, the buyer shall execute the transfer - into a compressed participial construction beginning with 'Having reviewed...'.",
+        "2. Analyze how participial adjunct compression eliminates temporal ambiguity in cross-border asset acquisitions.",
+        "3. Construct a complex transactional condition precedent utilizing past participial compression (e.g., 'Subject to conditions precedent having been satisfied...')."
+      ],
+      "rubric": {
+        "taskResponse": "Effectively condenses lengthy adverbial frameworks into streamlined participial adjuncts without losing chronological or conditional accuracy.",
+        "coherenceAndCohesion": "Ensures fluid structural hierarchy while drastically reducing word count in dense legal documents.",
+        "lexicalResource": "Transactional syntax terminology - e.g., 'participial adjunct', 'clause compression', 'condition precedent', 'chronological precision', 'syntactic economy'.",
+        "grammaticalRange": "Flawless deployment of present and past participial phrases acting as clausal modifiers in professional legal writing."
+      },
+      "explanation": "Participial clause compression allows high-level legal drafters to pack background conditions, prerequisites, and timelines into compact modifiers, keeping the core executive obligations front and center.",
+      "sourceReferences": "Corpus Linguistics in Corporate Contractual Architecture.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-108",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Absolute Constructions for Risk Allocation in Merger Covenants",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Review the risk-allocation covenant in the merger agreement. Implement absolute constructions (noun phrase plus participle) to encapsulate unpredictable external market contingencies.",
+      "questions": [
+        "1. Reformulate the conditional clause - If regulatory approvals are delayed beyond the third quarter, then financing terms will be renegotiated - into an absolute construction - e.g., 'Regulatory approvals being delayed beyond the third quarter, financing terms shall be renegotiated.'",
+        "2. Evaluate the syntactic superiority of absolute constructions over standard conditional 'if-then' clauses when framing uncontrollable market risks.",
+        "3. Draft an executive covenant for a hostile takeover defense utilizing a double absolute modifier."
+      ],
+      "rubric": {
+        "taskResponse": "Skillfully isolates independent sub-conditions using absolute phrases, establishing clear frameworks for external market contingencies.",
+        "coherenceAndCohesion": "Maintains structural detachment for conditional triggers, separating background market states from active corporate obligations.",
+        "lexicalResource": "M&A risk vocabulary - e.g., 'absolute construction', 'market contingency', 'risk allocation', 'independent sub-condition', 'merger covenant'.",
+        "grammaticalRange": "Advanced execution of nominative absolute phrases (noun + participle/adjective) operating outside standard subject-verb main clauses."
+      },
+      "explanation": "Absolute constructions provide M&A drafters with a syntactic tool to describe environmental or market states of affairs without locking them into active agent-driven conditional loops.",
+      "sourceReferences": "Advanced Syntax and Risk Distribution in International Corporate Law.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-109",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Gerundial Compression and Prepositional Density in Non-Compete Clauses",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the restrictive covenant regarding executive non-compete parameters. Compress multi-verb action clauses into gerundial phrases governed by legal prepositions to tighten enforcement boundaries.",
+      "questions": [
+        "1. Compress the prohibition clause - The executive must not solicit former clients, nor must the executive disclose trade secrets, for a period of two years - into a prepositional gerundial structure - e.g., 'Upon termination, the executive is strictly prohibited from soliciting... and from disclosing...'.",
+        "2. Explain how gerundial compaction prevents semantic loopholes that defendants typically exploit in restrictive covenant litigation.",
+        "3. Formulate an executive retention clause utilizing continuous gerundial objects of limitation."
+      ],
+      "rubric": {
+        "taskResponse": "Syntactically seals off loophole opportunities by binding multiple prohibitions into continuous gerundial chains.",
+        "coherenceAndCohesion": "Provides uniform structural rhythm to complex executive restriction lists.",
+        "lexicalResource": "Employment and contract lexicon - e.g., 'restrictive covenant', 'gerundial compaction', 'semantic loophole', 'prepositional governance', 'enforcement boundary'.",
+        "grammaticalRange": "Advanced coordination of multiple gerund phrases governed by strict prepositional anchors (e.g., 'prohibited from engaging in...', 'subject to refraining from...')."
+      },
+      "explanation": "Gerundial compression turns extended verb phrases into durable legal objects, ensuring that limitations on executive behavior post-merger are airtight and resistant to narrow literal interpretations in court.",
+      "sourceReferences": "Executive Compensation and Restrictive Covenant Syntax Studies.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-110",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Syntactic Synthesis - Balancing Nominalization and Readability in Executive Summaries",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Critique an overly dense M&A executive summary suffering from severe nominalization fatigue. Apply structural editing principles to balance high-density compression with executive cognitive readability.",
+      "questions": [
+        "1. Deconstruct the hyper-nominalized sentence - The implementation of the operational integration strategy necessitated the execution of structural consolidation - into a balanced executive hybrid featuring controlled active verbs.",
+        "2. Formulate a framework for assessing when a legal brief has crossed the threshold from 'precise nominalization' to 'obscure legalese'.",
+        "3. Rewrite a complex asset transfer summary for the board of directors, combining compressed subordinate clauses with clear executive prose."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates sophisticated editorial judgment, successfully negotiating the trade-off between legal security (density) and executive comprehension (clarity).",
+        "coherenceAndCohesion": "Restores narrative and logical flow to overly congested institutional text without sacrificing professional weight.",
+        "lexicalResource": "Executive editing lexicon - e.g., 'nominalization fatigue', 'syntactic synthesis', 'cognitive readability', 'institutional prose', 'lexical transparency'.",
+        "grammaticalRange": "Mastery of mixing compressed subordinate structures with crisp, active executive prose to guide high-level decision-makers."
+      },
+      "explanation": "While legal briefs require heavy nominalization and clause compression for binding security, executive summaries demand syntactic synthesis\u2014balancing dense technical security with clear readability for board-level decision-making.",
+      "sourceReferences": "Executive Communications and Legal Plain Language Frameworks.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-111",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Strategic Focus Shifting via It-Clefts in Boardroom Defenses",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the defensive boardroom scenario. Deploy it-cleft structures to subtly shift stakeholder focus away from internal vulnerabilities and toward external market factors.",
+      "questions": [
+        "1. Reformulate the defensive statement - Our outdated supply chain caused the quarterly loss - into an it-cleft that shifts the focus to global logistics failures - e.g., 'It was the unprecedented disruption in global logistics, rather than our internal supply chain, that impacted our quarterly margins.'",
+        "2. Explain how the 'It is X that Y' structure psychologically forces the listener to accept 'Y' as an established presupposition while debating 'X'.",
+        "3. Construct a rebuttal to an aggressive shareholder using an it-cleft to redefine the root cause of a delayed product launch."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates elite control over rhetorical focus, using syntax to dictate what information the board perceives as new versus given.",
+        "coherenceAndCohesion": "Seamlessly integrates the it-cleft into a broader defensive narrative without appearing evasive.",
+        "lexicalResource": "Executive defense lexicon - e.g., 'rhetorical focus', 'presupposition', 'information packaging', 'market volatility', 'stakeholder redirection'.",
+        "grammaticalRange": "Mastery of cleft sentences beginning with dummy 'it' to foreground specific noun phrases or adverbial clauses."
+      },
+      "explanation": "In high-stakes corporate defense, it-clefts are powerful tools of information packaging. By placing the favorable or external factor in the focus position - It is the market volatility that... - the executive frames the negative outcome as an unquestionable background fact, shifting debate entirely to the external cause.",
+      "sourceReferences": "Applied Corpus Pragmatics in Executive Persuasion and Information Packaging.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-112",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Establishing Executive Priorities using Wh-Clefts (Pseudo-Clefts)",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Evaluate the fragmented project pitch. Utilize Wh-cleft sentences to create authoritative, highly focused statements that command the boardroom's attention and establish immediate strategic priorities.",
+      "questions": [
+        "1. Transform the flat directive - We must immediately restructure the European division to prevent further losses - into a high-impact Wh-cleft - e.g., 'What we must immediately prioritize is the restructuring of the European division.'",
+        "2. Analyze how starting a sentence with a 'What' clause builds rhetorical suspense and anchors the listener's attention on the executive's proposed solution.",
+        "3. Draft a three-sentence opening for an M&A proposal utilizing sequential Wh-clefts to outline the rationale, the target, and the projected synergy."
+      ],
+      "rubric": {
+        "taskResponse": "Effectively utilizes pseudo-clefts to build rhetorical momentum, ensuring the board's attention is focused exactly on the executive's core value proposition.",
+        "coherenceAndCohesion": "Maintains a commanding, visionary rhythm suitable for opening a major corporate presentation.",
+        "lexicalResource": "Visionary leadership terminology - e.g., 'strategic priority', 'rhetorical suspense', 'value proposition', 'synergistic potential', 'executive mandate'.",
+        "grammaticalRange": "Flawless execution of Wh-cleft structures - What + clause + be + focus - to separate given background context from new strategic directives."
+      },
+      "explanation": "Wh-clefts (or pseudo-clefts) act as syntactic spotlights. By delaying the core message until after the 'to be' verb, an executive builds a micro-second of suspense that commands boardroom attention and frames the subsequent action as the only logical priority.",
+      "sourceReferences": "Syntactic Emphasizers in Corporate Leadership and Pitch Dynamics.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-113",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Minimizing Concessions via All-Cleft Constructions in High-Stakes Pitches",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Review the negotiation transcript. Deploy 'All-cleft' sentences to downplay the severity of the firm's demands and minimize the perceived risk to the counterparty.",
+      "questions": [
+        "1. Compress the demanding request - We require an additional 5 million dollars in seed capital and a seat on the board before we can proceed - into a minimizing All-cleft - e.g., 'All we require to proceed is a minor capital adjustment and standard board representation.'",
+        "2. Explain the psychological effect of replacing 'The only thing we need is...' with the more absolute yet dismissive 'All we are asking for is...'",
+        "3. Formulate a response to a hesitant angel investor utilizing an All-cleft to frame the investment risk as negligible."
+      ],
+      "rubric": {
+        "taskResponse": "Successfully deploys exclusivizing syntax to shrink the perceived magnitude of corporate requests or concessions during negotiations.",
+        "coherenceAndCohesion": "Pairs the syntactically minimized request with reassuring, forward-looking business outcomes.",
+        "lexicalResource": "Negotiation and persuasion lexicon - e.g., 'exclusivizing syntax', 'risk minimization', 'capital adjustment', 'perceived magnitude', 'counterparty assurance'.",
+        "grammaticalRange": "Advanced control of All-cleft structures - All + subject + verb + be + focus - to imply singularity and ease of execution."
+      },
+      "explanation": "The 'All-cleft' is the ultimate syntactic tool for minimizing friction in negotiations. By framing a multimillion-dollar request with 'All we need...', the executive linguistically shrinks the ask, making it feel like a minor administrative hurdle rather than a major financial concession.",
+      "sourceReferences": "Linguistic Framing and Concession Management in Corporate Negotiations.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-114",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Reverse Wh-Clefts for Conclusive Framing and Rebuttal in Negotiations",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the adversarial board meeting dialogue. Utilize Reverse Wh-cleft sentences to decisively shut down counter-arguments and firmly frame the final executive stance.",
+      "questions": [
+        "1. Reformulate the weak rebuttal - We intend to aggressively acquire their market share, which is our strategy - into a dominant Reverse Wh-cleft - e.g., 'An aggressive acquisition of their market share - that is exactly what we intend to execute.'",
+        "2. Analyze how reversing the cleft structure (placing the focus first, followed by the Wh-clause) provides an air of finality and indisputable authority to a boardroom statement.",
+        "3. Construct a definitive closing statement for a hostile takeover pitch using sequential Reverse Wh-clefts to summarize the firm's inevitable success."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates commanding rhetorical presence by front-loading critical information, leaving the opposition with no syntactic room for rebuttal.",
+        "coherenceAndCohesion": "Creates a staccato, definitive rhythm that signals the end of a debate and the beginning of executive action.",
+        "lexicalResource": "Executive dominance terminology - e.g., 'conclusive framing', 'hostile takeover', 'rhetorical finality', 'strategic acquisition', 'indisputable authority'.",
+        "grammaticalRange": "Mastery of Reverse Wh-clefts - Focus + be + Wh-clause - utilizing demonstrative pronouns (e.g., 'That is why...', 'This is how...')."
+      },
+      "explanation": "While standard Wh-clefts build suspense, Reverse Wh-clefts are designed for impact and finality. By fronting the crucial information and following it with 'that is what/why/how', an executive creates a closed rhetorical loop that sounds absolute, objective, and resistant to further debate.",
+      "sourceReferences": "Discourse Markers of Authority and Finality in Corporate Governance.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-115",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Syntactic Synthesis - End-Weight and Information Packaging for Maximum Persuasion",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Critique an overly complex and poorly paced executive pitch. Apply the principles of End-Weight and End-Focus, combining cleft sentences and fronting to optimize the delivery of a multi-million dollar proposal.",
+      "questions": [
+        "1. Restructure the top-heavy sentence - The fact that we have completely overhauled our proprietary algorithmic trading software over the last six months is the primary reason for our projected 40 percent revenue surge - using clefting and the End-Weight principle to place the most crucial and heaviest information at the end.",
+        "2. Formulate a framework explaining how the human brain processes 'new' versus 'given' information in high-stress corporate environments, and how syntax must accommodate this.",
+        "3. Rewrite a disjointed three-paragraph venture capital pitch, employing thematic fronting, it-clefts for problem identification, and Wh-clefts for the ultimate solution delivery."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates holistic mastery of information packaging, deliberately structuring sentences so that the most impactful data lands exactly at the point of maximum cognitive retention.",
+        "coherenceAndCohesion": "Produces a seamless, highly persuasive pitch narrative that guides the investor's psychology through syntax.",
+        "lexicalResource": "Advanced rhetorical terminology - e.g., 'end-weight principle', 'end-focus', 'thematic fronting', 'algorithmic trading', 'cognitive retention', 'syntactic synthesis'.",
+        "grammaticalRange": "Flawless integration of fronting (moving adverbials to the start), clefting, and extraposition to balance long subjects and complex predicates."
+      },
+      "explanation": "The End-Weight and End-Focus principles dictate that 'heavy' (complex) and 'new' (critical) information should be placed at the end of a sentence for maximum impact. By synthesizing clefts, fronting, and extraposition, executives can script their boardroom pitches to perfectly align with investor psychology.",
+      "sourceReferences": "Cognitive Grammar and Information Packaging in High-Stakes Financial Pitches.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-116",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Inverted Conditionals for Formal Scenario Planning in Risk Management",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the financial risk assessment report. Elevate standard conditional clauses by utilizing syntactic inversion to project a highly formal, authoritative tone suitable for institutional investors and regulatory bodies.",
+      "questions": [
+        "1. Transform the standard conditional - If the central bank were to raise interest rates, our debt servicing costs would double - into a formal inverted conditional structure without using the word 'if'.",
+        "2. Explain how omitting 'if' and inverting the subject and auxiliary verb (e.g., 'Had we known...', 'Should inflation rise...') alters the rhetorical weight and professional distance of a financial forecast.",
+        "3. Draft a three-scenario contingency outline for a board of directors using 'Should', 'Were', and 'Had' inversions to model future market volatility."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates elite control over formal conditional inversion, eliminating colloquial 'if' structures to elevate the institutional credibility of the forecast.",
+        "coherenceAndCohesion": "Maintains an unshakeable, highly objective cadence across multiple predictive scenarios.",
+        "lexicalResource": "Financial forecasting lexicon - e.g., 'syntactic inversion', 'debt servicing', 'market volatility', 'contingency outline', 'institutional credibility'.",
+        "grammaticalRange": "Mastery of conditional inversions for first, second, and third conditionals (e.g., 'Should the market correct', 'Were the merger to fail', 'Had the audit revealed')."
+      },
+      "explanation": "In high-level corporate risk modeling, inverted conditionals replace standard 'if' clauses to strip away colloquial hypotheticals, replacing them with a syntactic structure that sounds statutory, mathematically rigorous, and professionally detached.",
+      "sourceReferences": "Corpus Analysis of Predictive Discourse in Global Financial Reporting.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-117",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Mixed Conditionals for Cross-Temporal Financial Impact Analysis",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Evaluate the post-mortem financial analysis. Apply advanced mixed conditionals to accurately map how past strategic failures are actively degrading current liquidity and future market positioning.",
+      "questions": [
+        "1. Correct and elevate the mismatched conditional - If we secured the Series B funding last year, our current runway will be stable - into a precise mixed conditional mapping a past unreal condition to a present unreal result.",
+        "2. Analyze the strategic value of using mixed conditionals (Past Condition / Present Result vs. Present Condition / Past Result) when defending executive decision-making during a shareholder revolt.",
+        "3. Formulate a defensive fiscal statement explaining how a permanent macroeconomic state (present condition) dictated a historical capital allocation error (past result)."
+      ],
+      "rubric": {
+        "taskResponse": "Flawlessly maps complex cross-temporal cause and effect, accurately linking historical corporate actions to ongoing financial realities.",
+        "coherenceAndCohesion": "Ensures temporal logic remains pristine even when navigating deeply nested hypothetical timelines.",
+        "lexicalResource": "Executive finance vocabulary - e.g., 'liquidity', 'runway', 'macroeconomic state', 'capital allocation', 'cross-temporal impact', 'post-mortem analysis'.",
+        "grammaticalRange": "Advanced execution of mixed conditional frameworks - e.g., 'Had we secured the funding [past], our runway would currently be stable [present]'."
+      },
+      "explanation": "Corporate financial realities rarely fit neatly into standard conditional timelines. Executives must master mixed conditionals to explain how historical decisions impact present balance sheets, or how permanent market conditions forced historical compromises.",
+      "sourceReferences": "Advanced Temporal Syntax in Corporate Financial Post-Mortems.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-118",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Implied Conditionals and Prepositional Triggers in Algorithmic Forecasting",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Review the lengthy algorithmic trading brief. Compress verbose hypothetical scenarios into sleek, implied conditionals using prepositional and adverbial triggers to accelerate executive reading speed.",
+      "questions": [
+        "1. Compress the bulky conditional clause - If we do not have the immediate intervention of the federal reserve, the banking sector will face systemic collapse - using the prepositional trigger 'But for...'.",
+        "2. Evaluate the syntactic efficiency and psychological impact of replacing 'If X happens' with implied conditional triggers like 'Given...', 'Without...', 'Otherwise...', and 'Assuming...'.",
+        "3. Draft a high-density risk summary for a hedge fund portfolio utilizing three different hidden conditional structures to project market downside."
+      ],
+      "rubric": {
+        "taskResponse": "Successfully condenses bloated hypothetical scenarios into sharp, high-density prepositional phrases that maintain absolute predictive accuracy.",
+        "coherenceAndCohesion": "Creates a rapid, analytical rhythm optimized for time-poor financial executives.",
+        "lexicalResource": "Algorithmic and hedge fund terminology - e.g., 'systemic collapse', 'implied conditional', 'prepositional trigger', 'market downside', 'syntactic efficiency'.",
+        "grammaticalRange": "Mastery of implied conditional markers - e.g., 'But for their intervention, we would have defaulted', 'Given current inflation, growth is untenable'."
+      },
+      "explanation": "Executive financial briefs demand extreme syntactic economy. Implied conditionals allow forecasters to communicate complex risk models without the word count drag of full 'if-then' dependent clauses, substituting them with powerful prepositional anchors.",
+      "sourceReferences": "Syntactic Economy in High-Frequency Trading and Financial Memoranda.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-119",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Continuous and Perfect Conditional Aspects in Macroeconomic Projections",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the macroeconomic forecasting model. Integrate continuous and perfect conditional aspects to accurately portray ongoing market volatility and overlapping timeline dependencies.",
+      "questions": [
+        "1. Upgrade the static conditional - If competitors lower their prices, we will lose market share - into a continuous conditional reflecting an ongoing, dynamic market threat - e.g., 'If competitors were to be continually lowering their prices...'",
+        "2. Explain how the perfect conditional aspect - e.g., 'If the audit should have been completed by Q3...' - communicates epistemic uncertainty regarding third-party compliance.",
+        "3. Construct a complex financial projection for a shareholder meeting utilizing both continuous and perfect conditional aspects to model supply chain disruptions."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates absolute precision in modeling dynamic, non-static financial risks using progressive and perfect hypothetical structures.",
+        "coherenceAndCohesion": "Maintains clarity despite the heavy cognitive load of tracking multiple ongoing hypothetical timelines.",
+        "lexicalResource": "Macroeconomic and supply chain vocabulary - e.g., 'epistemic uncertainty', 'progressive hypothetical', 'timeline dependency', 'market volatility', 'compliance'.",
+        "grammaticalRange": "Advanced manipulation of aspect within conditionals - e.g., 'If they are currently restructuring, we should be preparing a hostile bid'."
+      },
+      "explanation": "Financial markets do not stop moving. Standard simple conditionals fail to capture the reality of ongoing, overlapping economic events. Executives must use continuous and perfect conditional aspects to model risks that are currently unfolding or theoretically completed.",
+      "sourceReferences": "Temporal Dynamics and Epistemic Modality in Economic Forecasting.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-120",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Syntactic Synthesis - Multi-Layered Contingency Trees in Boardroom Stress Tests",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Critique an overly simplistic corporate stress test presentation. Apply a synthesis of inverted, mixed, and implied conditionals to build a multi-layered linguistic contingency tree capable of framing catastrophic economic fallout.",
+      "questions": [
+        "1. Deconstruct the tiered conditional statement - Had the board approved the merger, we would currently be dominating the sector, provided that regulatory bodies had not intervened - mapping the grammatical dependencies of the past, present, and implied conditions.",
+        "2. Formulate a framework for avoiding 'conditional collapse' - the point at which too many nested hypotheticals render a financial forecast incomprehensible to stakeholders.",
+        "3. Rewrite a flat executive summary of a corporate stress test, deploying a strategic mix of inversions, implied prepositional triggers, and mixed temporal outcomes to model a worst-case fiscal scenario."
+      ],
+      "rubric": {
+        "taskResponse": "Synthesizes the entirety of the conditional grammatical spectrum into a single, cohesive, and deeply persuasive boardroom stress test.",
+        "coherenceAndCohesion": "Guides the listener flawlessly through a labyrinth of multi-variable financial hypotheticals without inducing cognitive overload.",
+        "lexicalResource": "Executive stress-testing lexicon - e.g., 'contingency tree', 'conditional collapse', 'catastrophic fallout', 'nested hypothetical', 'syntactic synthesis'.",
+        "grammaticalRange": "Mastery of layering complex grammatical structures - mixing inversions (Had we...), with implied limits (provided that...), and cross-temporal results (we would currently be...)."
+      },
+      "explanation": "The pinnacle of grammatical risk modeling is the contingency tree. Executives must syntactically nest multiple variables\u2014past failures, ongoing threats, and future regulatory actions\u2014into a single, unified forecast that remains rhetorically powerful and logically unassailable.",
+      "sourceReferences": "Advanced Linguistic Modeling in Corporate Financial Stress Testing.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-121",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Epistemic Hedging in Initial Hostile Bid Rejections",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the hostile takeover approach. Deploy epistemic hedging to reject the initial bid without closing the door to future, more lucrative negotiations and without triggering shareholder lawsuits.",
+      "questions": [
+        "1. Transform the blunt rejection - We reject your offer because it undervalues the company - into a strategically hedged statement using epistemic verbs and modal adjuncts - e.g., 'The board is of the view that the current proposal arguably fails to reflect the intrinsic value of our assets.'",
+        "2. Explain how lexical verbs like 'appear', 'suggest', and 'indicate' function as legal and rhetorical shields in preliminary M&A correspondence.",
+        "3. Draft a press release excerpt rejecting a hostile bid, utilizing double-hedging to protect board members from fiduciary liability claims."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates elite control over epistemic modality, effectively stalling a hostile bid while maintaining fiduciary flexibility.",
+        "coherenceAndCohesion": "Blends firm rejection with calculated linguistic ambiguity.",
+        "lexicalResource": "M&A defense lexicon - e.g., 'epistemic hedging', 'intrinsic value', 'fiduciary liability', 'modal adjunct', 'hostile bid'.",
+        "grammaticalRange": "Mastery of epistemic lexical verbs, modal adverbs (e.g., 'arguably', 'conceivably'), and distancing phrases."
+      },
+      "explanation": "In hostile M&A, outright rejection can trigger shareholder lawsuits if a premium was offered. Epistemic hedging allows a board to dismiss an offer as 'seemingly inadequate' without making a legally binding definitive statement that could corner them later.",
+      "sourceReferences": "Corpus Pragmatics in Corporate Governance and M&A Defense Strategies.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-122",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Adversarial Discourse Markers in Proxy Fight Communications",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Review the draft letter to shareholders during a proxy fight. Insert and manipulate adversarial discourse markers to undermine the activist investor's credibility while elevating the incumbent board's authority.",
+      "questions": [
+        "1. Upgrade the transition - They want to sell the company, but we want to grow it - using advanced adversarial markers - e.g., 'Conversely, whereas the activist faction seeks a short-term liquidation, incumbent leadership remains strictly committed to sustainable growth.'",
+        "2. Analyze the psychological impact of fronting a sentence with dismissive markers like 'Be that as it may' or 'Notwithstanding their claims' in a proxy circular.",
+        "3. Rewrite a defense brief paragraph deploying 'nevertheless', 'on the contrary', and 'yet' to systematically dismantle a hostile bidder's financial track record."
+      ],
+      "rubric": {
+        "taskResponse": "Executes a flawless rhetorical counter-offensive, using discourse markers to structurally subordinate the opponent's arguments.",
+        "coherenceAndCohesion": "Creates a highly persuasive, adversarial rhythm that guides shareholder logic toward the incumbent board.",
+        "lexicalResource": "Proxy fight terminology - e.g., 'activist faction', 'adversarial marker', 'incumbent leadership', 'proxy circular', 'rhetorical subordination'.",
+        "grammaticalRange": "Advanced deployment of contrastive and concessive conjuncts to manage complex argumentation."
+      },
+      "explanation": "Proxy fights are battles for shareholder perception. Adversarial discourse markers act as syntactic weapons, allowing executives to contrast their stable vision with the 'reckless' nature of the hostile bidder, guiding the reader's logical conclusions.",
+      "sourceReferences": "Rhetorical Aggression and Syntax in Corporate Proxy Contests.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-123",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Strategic Ambiguity and Modal Hedging in M&A Leaks",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Respond to a media inquiry regarding a leaked hostile takeover attempt. Utilize modal hedging and strategic ambiguity to satisfy public relations demands without violating SEC non-disclosure regulations.",
+      "questions": [
+        "1. Compress the dangerous admission - We are talking to them about a merger - into a legally compliant, hedged statement - e.g., 'It is our standing policy not to comment on market speculation, though we continuously evaluate all avenues that might theoretically enhance shareholder value.'",
+        "2. Evaluate the syntactic utility of non-committal adverbs (e.g., 'virtually', 'broadly', 'potentially') in deflecting direct journalistic inquiries.",
+        "3. Construct a holding statement for a financial news network that uses conditional hedging to neither confirm nor deny an imminent acquisition."
+      ],
+      "rubric": {
+        "taskResponse": "Navigates severe regulatory constraints by deploying syntactic ambiguity, entirely avoiding actionable or market-moving confirmations.",
+        "coherenceAndCohesion": "Maintains a fluid, corporate-diplomatic tone that sounds cooperative while revealing absolutely nothing.",
+        "lexicalResource": "Crisis PR and SEC compliance lexicon - e.g., 'strategic ambiguity', 'market speculation', 'non-committal adverb', 'holding statement', 'fiduciary duty'.",
+        "grammaticalRange": "Mastery of conditional hedging, passive deflection, and abstract noun phrases to obscure active developments."
+      },
+      "explanation": "When M&A talks leak, executives are trapped between media pressure and strict financial regulations. Strategic ambiguity via modal hedging allows leaders to speak at length on camera without ever committing to a legally binding or market-manipulating fact.",
+      "sourceReferences": "Linguistic Ambiguity and Securities Exchange Commission Compliance Protocols.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-124",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Concessive Discourse Markers in Bear Hug Letters",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Draft a 'Bear Hug' letter to a target company's board. Utilize concessive discourse markers to acknowledge the target's past successes while simultaneously emphasizing their current vulnerabilities and the inevitability of the acquisition.",
+      "questions": [
+        "1. Refine the aggressive statement - You are failing, so you must accept our buyout - using a concessive framework - e.g., 'While we recognize your historical market dominance, the current macroeconomic headwinds render our premium offer the only viable path forward for your shareholders.'",
+        "2. Explain how concessive markers (e.g., 'Albeit', 'Notwithstanding', 'Granted that') function to disarm the target board's ego before delivering an ultimatum.",
+        "3. Formulate the opening paragraph of a hostile bid letter utilizing a 'while/admittedly... nevertheless' structure to box in the target's CEO."
+      ],
+      "rubric": {
+        "taskResponse": "Perfectly balances corporate flattery with hostile leverage, using syntax to force the target board into a logical corner.",
+        "coherenceAndCohesion": "Executes a seamless transition from concession (praise) to assertion (threat) without breaking professional decorum.",
+        "lexicalResource": "M&A aggression terminology - e.g., 'bear hug letter', 'concessive framework', 'macroeconomic headwinds', 'ultimatum', 'hostile leverage'.",
+        "grammaticalRange": "Advanced control of subordinate concessive clauses and linking adverbials to manage the flow of corporate diplomacy."
+      },
+      "explanation": "A 'Bear Hug' letter is a hostile M&A tactic designed to sound friendly but act as a financial threat. Concessive discourse markers are essential here; they allow the acquiring executive to stroke the target's ego (concession) just before dropping the financial hammer (assertion).",
+      "sourceReferences": "The Syntax of Coercion - Linguistic Strategies in Hostile M&A Communications.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-125",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Syntactic Synthesis - Combining Hedging and Assertive Markers in Poison Pill Defenses",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Critique a draft announcement of a Shareholder Rights Plan (Poison Pill). Synthesize protective hedging regarding the board's flexibility with aggressive, assertive discourse markers directed at the hostile bidder.",
+      "questions": [
+        "1. Deconstruct the mixed-message sentence - We might activate the poison pill, and we will definitely stop the takeover - and restructure it to balance fiduciary hedging with boardroom dominance - e.g., 'Although the Board retains absolute discretion to review bona fide offers, make no mistake- any coercive acquisition attempts will trigger immediate and proportionate dilution measures.'",
+        "2. Formulate a framework for alternating between 'soft' epistemic hedges (when addressing legal obligations) and 'hard' assertive markers (when addressing the hostile predator).",
+        "3. Rewrite an executive summary of a Poison Pill deployment, seamlessly weaving legal conditionality with aggressive defensive posturing."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates the pinnacle of corporate linguistic mastery by simultaneously executing defensive legal hedging and offensive rhetorical aggression in the same paragraph.",
+        "coherenceAndCohesion": "Maintains a flawless, authoritative tone that reassures friendly shareholders while explicitly threatening hostile actors.",
+        "lexicalResource": "Advanced corporate defense lexicon - e.g., 'poison pill', 'bona fide offer', 'proportionate dilution', 'coercive acquisition', 'fiduciary hedging', 'syntactic synthesis'.",
+        "grammaticalRange": "Flawless integration of epistemic modality (for legal cover) and deontic necessity (for offensive posturing) managed via complex discourse markers."
+      },
+      "explanation": "Announcing a Poison Pill defense is the linguistic equivalent of walking a tightrope. Executives must use hedging to satisfy the SEC that they are still open to 'fair' offers, while simultaneously using assertive discourse markers to threaten the hostile bidder with total financial dilution.",
+      "sourceReferences": "Corporate Defense Mechanisms and Advanced Syntactic Balancing.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-126",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Syntactic Parallelism for Visionary Alignment in Shareholder Keynotes",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the disjointed corporate vision statement. Apply strict syntactic parallelism to align the executive imperatives, creating a rhythmic and highly memorable corporate mandate.",
+      "questions": [
+        "1. Restructure the uncoordinated mandate - We need to drive revenue, sustainability is also a focus, and we must be innovating the product line - into a flawless parallel structure using infinitive phrases - e.g., 'To drive revenue, to champion sustainability, and to pioneer innovation.'",
+        "2. Explain how grammatical symmetry in a keynote address reduces cognitive load for the audience and projects decisive leadership.",
+        "3. Draft a three-pillar corporate strategy for an annual general meeting utilizing parallel gerund phrases - e.g., 'Expanding our reach, optimizing our core, and empowering our people.'"
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates elite control over grammatical symmetry, transforming fragmented corporate goals into a unified, rhythmic chant.",
+        "coherenceAndCohesion": "Maintains an unshakeable structural cadence that naturally builds rhetorical momentum.",
+        "lexicalResource": "Keynote and vision lexicon - e.g., 'syntactic parallelism', 'grammatical symmetry', 'rhetorical momentum', 'cognitive load', 'executive mandate'.",
+        "grammaticalRange": "Mastery of parallel phrasing across infinitives, gerunds, and prepositional phrases without structural deviation."
+      },
+      "explanation": "In executive keynotes, disjointed grammar signals disjointed thinking. Syntactic parallelism forces ideas into identical grammatical structures, creating a rhythm that sounds inevitable, highly organized, and deeply persuasive to shareholders and employees alike.",
+      "sourceReferences": "Executive Oratory and Cognitive Syntax in Corporate Leadership.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-127",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "The Rhetorical Tricolon for Maximum Impact in Product Launches",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Evaluate the flat product launch script. Deploy the rhetorical tricolon - the rule of three - to engineer highly quotable soundbites that will dominate press headlines and investor summaries.",
+      "questions": [
+        "1. Transform the lengthy description - Our new software is faster than the old one, it also looks better, and it doesn't cost as much - into a punchy, staccato tricolon - e.g., 'Unprecedented speed, uncompromising design, unbeatable value.'",
+        "2. Analyze why the human brain is neurologically predisposed to retain information packaged in clusters of three during high-stakes presentations.",
+        "3. Construct a closing keynote statement for a tech CEO utilizing a tricolon crescendo, where each of the three clauses increases in length and rhetorical weight."
+      ],
+      "rubric": {
+        "taskResponse": "Effectively harnesses the 'rule of three' to distill complex corporate achievements into universally memorable soundbites.",
+        "coherenceAndCohesion": "Creates a hypnotic, driving rhythm that naturally cues applause and media quotation.",
+        "lexicalResource": "Oratory and marketing terminology - e.g., 'rhetorical tricolon', 'tricolon crescendo', 'rule of three', 'staccato rhythm', 'quotable soundbite'.",
+        "grammaticalRange": "Advanced execution of asyndeton - omitting conjunctions between parallel clauses to accelerate pacing - e.g., 'We adapted, we executed, we delivered.'"
+      },
+      "explanation": "The tricolon is the most powerful tool in executive oratory. Patterning ideas in threes satisfies the brain's desire for completion and rhythm. When combined with parallelism, a tricolon transforms a standard business update into a historic keynote.",
+      "sourceReferences": "The Syntax of Steve Jobs and Elite Corporate Product Keynotes.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-128",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Structural Antithesis in Corporate Turnaround Narratives",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Review the defensive speech draft regarding a recent corporate crisis. Apply structural antithesis - placing contrasting ideas in parallel grammatical structures - to frame the failure as a definitive turning point for future success.",
+      "questions": [
+        "1. Upgrade the passive apology - We had a bad year, but we hope next year will be better - into a powerful antithetical statement - e.g., 'We are defined not by the depth of our recent challenges, but by the scale of our impending recovery.'",
+        "2. Explain how syntactic antithesis utilizes contrast to psychologically distance a brand from past failures while anchoring it to future resilience.",
+        "3. Rewrite a CEO's message to a demoralized workforce using a 'Not X, but Y' parallel structure to redefine a major market setback as a strategic pivot."
+      ],
+      "rubric": {
+        "taskResponse": "Skillfully uses grammatical opposition to reframe corporate narratives, turning defensive apologies into offensive rallies.",
+        "coherenceAndCohesion": "Ensures perfect structural mirroring between the negative past clause and the positive future clause.",
+        "lexicalResource": "Crisis leadership lexicon - e.g., 'structural antithesis', 'narrative reframing', 'grammatical opposition', 'strategic pivot', 'resilience'.",
+        "grammaticalRange": "Flawless deployment of correlative conjunctions - e.g., 'not only... but also', 'neither... nor', 'not... but' - to balance opposing abstract nouns."
+      },
+      "explanation": "Antithesis relies on identical grammatical architecture to highlight a stark contrast in meaning. In corporate turnarounds, executives use antithesis to acknowledge a harsh reality while instantly juxtaposing it against an inspiring vision, asserting total control over the brand narrative.",
+      "sourceReferences": "Rhetorical Reframing and Antithetical Syntax in Crisis Management.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-129",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Chiasmus and Reverse Parallelism in Executive Branding",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Analyze the company's core mission statement. Employ chiasmus - a reverse parallel structure (A-B-B-A) - to create a philosophically profound and instantly iconic corporate mantra.",
+      "questions": [
+        "1. Elevate the generic mission - We use technology to help people work better - into a memorable chiasmus - e.g., 'We do not just build software for our people; we build our people through software.'",
+        "2. Analyze the persuasive power of reversing syntactic order to challenge industry conventions and establish thought leadership.",
+        "3. Draft a provocative opening statement for an industry conference using reverse parallelism to disrupt traditional assumptions about artificial intelligence."
+      ],
+      "rubric": {
+        "taskResponse": "Executes complex reverse parallelism to elevate standard corporate jargon into high-level philosophical thought leadership.",
+        "coherenceAndCohesion": "Maintains perfect conceptual inversion, ensuring the second half of the sentence flawlessly mirrors and flips the first.",
+        "lexicalResource": "Thought leadership terminology - e.g., 'chiasmus', 'reverse parallelism', 'conceptual inversion', 'corporate mantra', 'disruptive syntax'.",
+        "grammaticalRange": "Advanced manipulation of subject-object inversion across two conjoined independent clauses."
+      },
+      "explanation": "Chiasmus is the hallmark of elite oratory. By presenting a phrase and then perfectly inverting its grammatical structure, an executive forces the audience to stop and process the paradox. It transforms mundane mission statements into profound industry maxims.",
+      "sourceReferences": "Advanced Syntactic Figures in Visionary Corporate Branding.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-GR-130",
+      "skill": "Grammar",
+      "part": "Corporate Mastery",
+      "questionType": "Executive Syntax Optimization",
+      "topic": "Syntactic Synthesis - Anadiplosis and Tricolon Crescendo in Keynote Finales",
+      "difficulty": "Expert",
+      "targetBand": "C1 to C2 Executive",
+      "instructions": "Critique a lackluster conclusion to a global shareholder summit. Synthesize anadiplosis - starting a clause with the last word of the previous clause - with a tricolon crescendo to engineer a massive, emotionally resonant rhetorical climax.",
+      "questions": [
+        "1. Deconstruct the flat ending - We will grow our profits, keep our values, and be a great company - and reconstruct it using anadiplosis and crescendo - e.g., 'We will fight for our market share, share our unprecedented success, and succeed in redefining the future of this industry.'",
+        "2. Formulate a framework explaining why linking the end of one clause to the beginning of the next creates an unstoppable sense of logical momentum in a keynote finale.",
+        "3. Rewrite the final paragraph of a merger announcement speech, combining parallel infinitives, anadiplosis, and a culminating tricolon to bring the audience to their feet."
+      ],
+      "rubric": {
+        "taskResponse": "Demonstrates the absolute zenith of corporate oratory, synthesizing multiple complex rhetorical and grammatical structures into a single, breathtaking finale.",
+        "coherenceAndCohesion": "Generates extreme rhetorical momentum, chaining ideas together so seamlessly that the conclusion feels both inevitable and inspiring.",
+        "lexicalResource": "Advanced oratory lexicon - e.g., 'anadiplosis', 'tricolon crescendo', 'rhetorical climax', 'logical momentum', 'syntactic chaining'.",
+        "grammaticalRange": "Flawless integration of chained subordinate clauses, parallel syntax, and ascending syllabic weight to craft the perfect ending."
+      },
+      "explanation": "Anadiplosis chains ideas together by making the end of one thought the beginning of the next, creating a staircase of logic. When synthesized with a tricolon crescendo - where each step gets longer and heavier - the grammar itself builds the applause, cementing the executive's status as a visionary leader.",
+      "sourceReferences": "The Architecture of Applause - Syntactic Synthesis in Executive Finales.",
+      "estimatedTime": "45 minutes",
+      "status": "draft"
+    }
+  ]
+}
