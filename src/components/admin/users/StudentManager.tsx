@@ -28,13 +28,19 @@ export const StudentManager: React.FC = () => {
         
         querySnapshot.forEach((doc) => {
           const data = doc.data();
+          let lastActiveStr = 'Never';
+          if (data.stats?.lastActiveDate) {
+            const dateObj = data.stats.lastActiveDate.toDate ? data.stats.lastActiveDate.toDate() : new Date(data.stats.lastActiveDate);
+            lastActiveStr = dateObj.toLocaleDateString();
+          }
+
           loadedStudents.push({
             id: doc.id,
             name: data.profile?.name || 'Unknown Student',
             email: data.profile?.email || 'No Email',
             targetBand: data.stats?.targetBand || '-',
             status: data.stats?.lastActiveDate ? 'Active' : 'New',
-            lastActive: data.stats?.lastActiveDate || 'Never'
+            lastActive: lastActiveStr
           });
         });
         

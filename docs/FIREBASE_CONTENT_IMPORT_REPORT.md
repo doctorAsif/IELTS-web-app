@@ -1,4 +1,4 @@
-# FIREBASE CONTENT IMPORT REPORT (Dry Run: true)
+# FIREBASE CONTENT IMPORT REPORT (Dry Run: false)
 
 ## Summary
 - Files Processed: 8
