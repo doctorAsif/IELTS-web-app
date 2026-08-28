@@ -1,18 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, Filter, MoreVertical, Shield } from 'lucide-react';
 import { useAuth } from '../../../lib/AuthContext';
+import { collection, getDocs, query, limit } from 'firebase/firestore';
+import { db } from '../../../lib/firebase';
 
-// Mock data to represent what would come from Firestore
-const MOCK_STUDENTS = [
-  { id: '1', name: 'Alice Chen', email: 'alice@example.com', targetBand: 7.5, status: 'Active', lastActive: '2 hours ago' },
-  { id: '2', name: 'Bob Smith', email: 'bob.smith@example.com', targetBand: 6.5, status: 'Inactive', lastActive: '5 days ago' },
-  { id: '3', name: 'Carlos Rodriguez', email: 'carlos@example.com', targetBand: 8.0, status: 'Active', lastActive: 'Just now' },
-  { id: '4', name: 'Diana Prince', email: 'diana@example.com', targetBand: 7.0, status: 'Suspended', lastActive: '2 weeks ago' },
-];
+interface StudentData {
+  id: string;
+  name: string;
+  email: string;
+  targetBand: number | string;
+  status: string;
+  lastActive: string;
+}
 
 export const StudentManager: React.FC = () => {
   const { role } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
+  const [students, setStudents] = useState<StudentData[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchStudents = async () => {
+      try {
+        const q = query(collection(db, 'users'), limit(50));
+        const querySnapshot = await getDocs(q);
+        const loadedStudents: StudentData[] = [];
+        
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          loadedStudents.push({
+            id: doc.id,
+            name: data.profile?.name || 'Unknown Student',
+            email: data.profile?.email || 'No Email',
+            targetBand: data.stats?.targetBand || '-',
+            status: data.stats?.lastActiveDate ? 'Active' : 'New',
+            lastActive: data.stats?.lastActiveDate || 'Never'
+          });
+        });
+        
+        setStudents(loadedStudents);
+      } catch (error) {
+        console.error("Error fetching students:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStudents();
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -62,7 +97,15 @@ export const StudentManager: React.FC = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-[#334155]">
-              {MOCK_STUDENTS.map((student) => (
+              {loading ? (
+                <tr>
+                  <td colSpan={5} className="p-4 text-center text-[#94A3B8]">Loading students...</td>
+                </tr>
+              ) : students.length === 0 ? (
+                <tr>
+                  <td colSpan={5} className="p-4 text-center text-[#94A3B8]">No students found.</td>
+                </tr>
+              ) : students.map((student) => (
                 <tr key={student.id} className="hover:bg-[#334155]/30 transition-colors">
                   <td className="p-4">
                     <p className="text-white font-medium">{student.name}</p>

@@ -1,5 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { initializeApp, getApps } from 'firebase-admin/app';
+import { getFirestore } from 'firebase-admin/firestore';
+
+// Initialize firebase admin using Application Default Credentials
+if (!getApps().length) {
+  initializeApp({
+    projectId: "ielts-traning-app",
+  });
+}
+const db = getFirestore();
 
 import { fileURLToPath } from 'url';
 
@@ -71,7 +81,7 @@ function getRecordId(record: any, filename: string): string | null {
   return record.practiceId || record.moduleId || record.id || null;
 }
 
-function processRecord(record: any, filename: string, collection: string) {
+async function processRecord(record: any, filename: string, collection: string) {
   report.recordsFound++;
   
   const recordId = getRecordId(record, filename);
@@ -100,12 +110,11 @@ function processRecord(record: any, filename: string, collection: string) {
     schemaVersion: 1,
     contentVersion: 1,
     importedAt: new Date().toISOString(),
-    status: "draft"
+    status: "published"
   };
 
   if (!isDryRun) {
-    // This is where Firebase Admin SDK would be used to save `transformed` to Firestore
-    // e.g. await db.collection(collection).doc(recordId).set(transformed);
+    await db.collection(collection).doc(recordId).set(transformed);
   }
 }
 
@@ -135,16 +144,20 @@ async function run() {
       const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
       
       if (filename === 'curriculum_master.json') {
-        processRecord(data.akhl_ielts_master_curriculum || data, filename, collection);
+        await processRecord(data.akhl_ielts_master_curriculum || data, filename, collection);
       } else if (filename === 'practice_sessions.json') {
         if (Array.isArray(data)) {
-          data.forEach(item => processRecord(item, filename, collection));
+          for (const item of data) {
+            await processRecord(item, filename, collection);
+          }
         } else {
           report.warnings.push(`[${filename}] Expected array for practice sessions`);
         }
       } else {
         if (data.modules && Array.isArray(data.modules)) {
-          data.modules.forEach((item: any) => processRecord(item, filename, collection));
+          for (const item of data.modules) {
+            await processRecord(item, filename, collection);
+          }
         } else {
           report.warnings.push(`[${filename}] Expected 'modules' array`);
         }

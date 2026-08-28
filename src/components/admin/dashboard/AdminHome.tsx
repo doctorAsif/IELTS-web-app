@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Users, Activity, Target, BrainCircuit, Cloud, Cpu, FileText } from 'lucide-react';
+import { collection, getCountFromServer } from 'firebase/firestore';
+import { db } from '../../../lib/firebase';
 
 export const AdminHome: React.FC = () => {
-  // In a real implementation, these would be fetched from Firestore aggregations
+  const [totalStudents, setTotalStudents] = useState<number | string>('...');
+  const [totalPractice, setTotalPractice] = useState<number | string>('...');
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const usersSnap = await getCountFromServer(collection(db, 'users'));
+        setTotalStudents(usersSnap.data().count);
+        
+        const practiceSnap = await getCountFromServer(collection(db, 'practice'));
+        setTotalPractice(practiceSnap.data().count);
+      } catch (error) {
+        console.error("Error fetching stats:", error);
+      }
+    };
+    fetchStats();
+  }, []);
+
   const stats = [
-    { label: 'Total Students', value: '1,248', icon: Users, color: 'text-blue-400', bg: 'bg-blue-400/10' },
+    { label: 'Total Students', value: totalStudents, icon: Users, color: 'text-blue-400', bg: 'bg-blue-400/10' },
     { label: 'Active Today', value: '342', icon: Activity, color: 'text-green-400', bg: 'bg-green-400/10' },
     { label: 'Avg Target Band', value: '7.5', icon: Target, color: 'text-purple-400', bg: 'bg-purple-400/10' },
-    { label: 'Practice Attempts', value: '15,892', icon: FileText, color: 'text-orange-400', bg: 'bg-orange-400/10' },
+    { label: 'Practice Attempts', value: totalPractice, icon: FileText, color: 'text-orange-400', bg: 'bg-orange-400/10' },
   ];
 
   const aiStats = [

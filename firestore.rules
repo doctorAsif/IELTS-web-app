@@ -35,16 +35,16 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
-    // Students
-    match /students/{studentId} {
-      // Students can read their own data, staff can read all
-      allow read: if isStaff() || (isAuthenticated() && request.auth.uid == studentId);
-      // Only admins can write, or the student can update specific fields (like profile info)
-      // For now, strict: only admins or Cloud Functions can write, students can update basic info
-      allow update: if isStaff() || (isAuthenticated() && request.auth.uid == studentId);
+    // Users
+    match /users/{userId} {
+      // Users can read their own data, staff can read all
+      allow read: if isStaff() || (isAuthenticated() && request.auth.uid == userId);
+      // Only admins can write, or the user can update specific fields (like profile info)
+      // For now, strict: only admins or Cloud Functions can write, users can update basic info
+      allow update: if isStaff() || (isAuthenticated() && request.auth.uid == userId);
       allow create, delete: if isAdmin();
       
-      // Private notes inside student document
+      // Private notes inside user document
       match /notes/{noteId} {
         allow read, write: if isStaff();
       }
