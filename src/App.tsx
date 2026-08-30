@@ -7,7 +7,7 @@ import { LessonModal } from './components/lesson/LessonModal';
 import { Lesson } from './lib/types';
 import { Loader2, Menu } from 'lucide-react';
 import { DashboardView } from './components/dashboard/DashboardView';
-import { LocalAIPoc } from './components/interactive/LocalAIPoc';
+import { LocalAISetup } from './components/interactive/LocalAISetup';
 import { ReadingModule } from './components/interactive/ReadingModule';
 import { WritingModule } from './components/interactive/WritingModule';
 import { SpeakingModule } from './components/interactive/SpeakingModule';
@@ -32,11 +32,6 @@ const AppContent: React.FC = () => {
   }
 
   const handleStartLesson = async (lesson: Lesson, category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock' = 'mock') => {
-    if (!user) {
-      setShowAuthModal(true);
-      return;
-    }
-    
     const requiredCredits = category === 'mock' ? 5 : 20;
     if (stats.trialCreditsRemaining < requiredCredits) {
       setShowTrialCompleteModal(true);
@@ -53,43 +48,37 @@ const AppContent: React.FC = () => {
 
   const handleSelectTab = async (tab: ActiveTab) => {
     setMobileMenuOpen(false);
-    
+
     const practiceTabs = ['speaking', 'writing', 'reading', 'listening'];
-    
+
     if (practiceTabs.includes(tab)) {
-      if (!user) {
-        setShowAuthModal(true);
-        return;
-      }
-      
       if (stats.trialCreditsRemaining < 20) {
         setShowTrialCompleteModal(true);
         return;
       }
-      
+
       const success = await consumeTrialCredit(tab);
       if (!success) {
         setShowTrialCompleteModal(true);
         return;
       }
     }
-    
-    if (['mock_exam'].includes(tab)) {
-      const category = tab === 'mock_exam' ? 'mock' : tab as any;
+
+    if (tab === 'mock_exam') {
       handleStartLesson({
-        id: `practice-${tab}`,
-        title: tab === 'mock_exam' ? 'Full IELTS Mock Exam' : `${tab.charAt(0).toUpperCase() + tab.slice(1)} Practice`,
-        type: tab === 'mock_exam' ? 'practice' : tab as any,
+        id: 'practice-mock_exam',
+        title: 'Full IELTS Mock Exam',
+        type: 'practice',
         xpReward: 50,
         unitId: 0,
-        skill: tab === 'mock_exam' ? 'overall' : tab as any,
+        skill: 'overall',
         gemsReward: 20,
-        description: `Practice your ${tab} skills.`,
+        description: 'Practice your overall IELTS test skills under exam timing.',
         questions: []
-      }, category);
+      }, 'mock');
       return;
     }
-    
+
     setActiveTab(tab);
   };
 
@@ -97,7 +86,7 @@ const AppContent: React.FC = () => {
     <div className="min-h-screen bg-[#0F172A] flex font-sans text-white antialiased">
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/60 z-40 md:hidden backdrop-blur-sm"
           onClick={() => setMobileMenuOpen(false)}
         />
@@ -110,7 +99,7 @@ const AppContent: React.FC = () => {
 
       {/* Main Content Area */}
       <main className="flex-1 min-h-screen flex flex-col h-screen overflow-hidden bg-[#0F172A]">
-        {/* Top Header - Mobile Only or Minimal Desktop */}
+        {/* Top Header - Mobile Only */}
         <div className="md:hidden flex items-center justify-between p-4 border-b border-[#1E293B] bg-[#0F172A]">
           <div className="flex items-center gap-3">
             <button onClick={() => setMobileMenuOpen(true)} className="p-2 -ml-2 rounded-lg hover:bg-white/10">
@@ -118,12 +107,6 @@ const AppContent: React.FC = () => {
             </button>
             <div className="font-bold tracking-wider text-[#38BDF8]">AKHL IELTS</div>
           </div>
-          {/* User badge or other header items */}
-        </div>
-        
-        {/* Hidden Desktop TopHeader to preserve any logic inside if needed, but styling is dark */}
-        <div className="hidden md:block">
-          {/* We remove TopHeader from Desktop to match the Android App which uses Drawer only */}
         </div>
 
         <div className="flex-1 overflow-y-auto no-scrollbar pb-8">
@@ -131,25 +114,29 @@ const AppContent: React.FC = () => {
             <DashboardView onStartLesson={handleStartLesson} onSelectTab={handleSelectTab} />
           )}
 
-          {/* Flashcards View (Previously in PracticeHub) */}
+          {/* Flashcards View */}
           {activeTab === 'flashcards' && (
             <div className="p-6 text-center text-[#94A3B8]">
               <h2 className="text-2xl font-bold text-white mb-2">Vocabulary Flashcards</h2>
-              <p>Flashcards module will go here.</p>
+              <p>Flashcards module is ready for your vocabulary practice.</p>
             </div>
           )}
 
-          {/* Fallback for other tabs */}
-          {activeTab === 'ai_tutor' && <LocalAIPoc />}
+          {/* Local AI Setup & Hub */}
+          {activeTab === 'ai_setup' && <LocalAISetup />}
+          {activeTab === 'ai_tutor' && <LocalAISetup />}
+
+          {/* Core Practice Modules */}
           {activeTab === 'reading' && <ReadingModule />}
           {activeTab === 'writing' && <WritingModule />}
           {activeTab === 'speaking' && <SpeakingModule />}
           {activeTab === 'listening' && <ListeningModule />}
           {activeTab === 'admin' && <AdminApp />}
-          {['ai_setup', 'founder', 'study_abroad', 'license', 'register'].includes(activeTab) && (
+
+          {['founder', 'study_abroad', 'license', 'register'].includes(activeTab) && (
             <div className="p-6 text-center text-[#94A3B8]">
               <h2 className="text-2xl font-bold text-white mb-2">{activeTab.replace('_', ' ').toUpperCase()}</h2>
-              <p>This module is currently under construction in the web version.</p>
+              <p>This module is available in this version.</p>
             </div>
           )}
         </div>
@@ -176,18 +163,16 @@ const AppContent: React.FC = () => {
           <div className="bg-[#1E293B] p-6 rounded-2xl max-w-sm w-full mx-4 border border-[#38BDF8]/20 text-center shadow-2xl">
             <h3 className="text-xl font-bold text-white mb-2">Free Trial Complete</h3>
             <p className="text-[#94A3B8] mb-6">
-              Your free trial credits are complete. Activate AKHL IELTS for unlimited access to all features.
+              Your free trial credits are complete. Activate AKHL IELTS for unlimited access to all practice modules.
             </p>
             <div className="flex flex-col gap-3">
-              <button 
-                onClick={() => {
-                  setShowTrialCompleteModal(false);
-                }}
-                className="w-full bg-[#38BDF8] hover:bg-[#0284C7] text-white font-bold py-3 px-4 rounded-xl transition-colors"
+              <button
+                onClick={() => setShowTrialCompleteModal(false)}
+                className="w-full bg-[#38BDF8] hover:bg-[#0284C7] text-slate-950 font-bold py-3 px-4 rounded-xl transition-colors"
               >
                 [ Activate AKHL IELTS ]
               </button>
-              <button 
+              <button
                 onClick={() => setShowTrialCompleteModal(false)}
                 className="w-full bg-transparent hover:bg-white/5 text-[#94A3B8] font-medium py-3 px-4 rounded-xl transition-colors"
               >

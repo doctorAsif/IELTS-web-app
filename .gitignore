@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary test & debug scripts/artifacts
+*.png
+*.txt
+check-*.js
+test-*.js
+debug-*.js
+crawl.js
+find-*.js
+find_*.js
+check_*.js
+fix_*.cjs
+find-*.cjs
+check-*.cjs
+network-test.js
+vercel_bundle.js
+dev-dist/

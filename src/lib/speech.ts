@@ -1,4 +1,5 @@
 // Speech Synthesis (TTS) and Speech Recognition (STT) helpers for IELTS drills
+// Note: LLM is strictly used for text evaluation, NOT for audio synthesis or acoustic STT.
 
 export function speakText(
   text: string,
@@ -7,7 +8,7 @@ export function speakText(
   onEnd?: () => void
 ): void {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
-    console.warn('Speech synthesis not supported');
+    console.warn('Speech synthesis not supported in this browser.');
     onEnd?.();
     return;
   }
@@ -20,10 +21,11 @@ export function speakText(
   utterance.pitch = 1.0;
   utterance.lang = lang;
 
-  // Try to pick a natural British or Australian or US voice if available
+  // Try to pick a natural British or standard English voice if available
   const voices = window.speechSynthesis.getVoices();
   const preferredVoice = voices.find(
-    v => (v.lang === lang || v.lang.startsWith(lang.split('-')[0])) && (v.name.includes('Natural') || v.name.includes('Daniel') || v.name.includes('Google') || v.name.includes('Serena'))
+    v => (v.lang === lang || v.lang.startsWith(lang.split('-')[0])) &&
+         (v.name.includes('Natural') || v.name.includes('Daniel') || v.name.includes('Google') || v.name.includes('Serena'))
   ) || voices.find(v => v.lang.startsWith('en'));
 
   if (preferredVoice) {
@@ -49,6 +51,7 @@ export interface SpeechRecognitionResultState {
   isListening: boolean;
   error?: string;
   isSupported: boolean;
+  confidence?: number;
 }
 
 export class SpeechRecognizer {
@@ -63,9 +66,9 @@ export class SpeechRecognizer {
 
       if (SpeechRecognition) {
         this.recognition = new SpeechRecognition();
-        this.recognition.continuous = false;
+        this.recognition.continuous = true;
         this.recognition.interimResults = true;
-        this.recognition.lang = 'en-US';
+        this.recognition.lang = 'en-GB';
         this.isSupported = true;
       }
     }
@@ -76,12 +79,12 @@ export class SpeechRecognizer {
   }
 
   public startListening(
-    onResult: (transcript: string, isFinal: boolean) => void,
+    onResult: (transcript: string, isFinal: boolean, confidence?: number) => void,
     onError: (error: string) => void,
     onEnd: () => void
   ): boolean {
     if (!this.recognition) {
-      onError('Speech recognition is not supported in this browser.');
+      onError('Speech recognition is not supported in this browser. Please use Chrome/Edge or type your response manually.');
       return false;
     }
 
@@ -89,21 +92,27 @@ export class SpeechRecognizer {
       this.recognition.onresult = (event: any) => {
         let interimTranscript = '';
         let finalTranscript = '';
+        let lastConfidence: number | undefined;
 
         for (let i = event.resultIndex; i < event.results.length; ++i) {
-          if (event.results[i].isFinal) {
-            finalTranscript += event.results[i][0].transcript;
+          const item = event.results[i];
+          if (item.isFinal) {
+            finalTranscript += item[0].transcript;
+            lastConfidence = item[0].confidence;
           } else {
-            interimTranscript += event.results[i][0].transcript;
+            interimTranscript += item[0].transcript;
           }
         }
 
         const text = finalTranscript || interimTranscript;
-        onResult(text, !!finalTranscript);
+        onResult(text, !!finalTranscript, lastConfidence);
       };
 
       this.recognition.onerror = (event: any) => {
-        onError(event.error || 'Microphone error');
+        const errorMsg = event.error === 'not-allowed'
+          ? 'Microphone access was denied. Please allow microphone permissions.'
+          : (event.error || 'Microphone capture error');
+        onError(errorMsg);
       };
 
       this.recognition.onend = () => {
@@ -113,7 +122,7 @@ export class SpeechRecognizer {
       this.recognition.start();
       return true;
     } catch (e: any) {
-      onError(e.message || 'Failed to start microphone');
+      onError(e.message || 'Failed to initialize microphone');
       return false;
     }
   }
@@ -129,7 +138,9 @@ export class SpeechRecognizer {
   }
 }
 
-// Helper to calculate similarity / match between spoken words and target keywords
+/**
+ * Helper to calculate keyword overlap for speaking exercises.
+ */
 export function calculateKeywordMatch(
   spoken: string,
   targetKeywords: string[]

@@ -1,59 +1,29 @@
-import { AIRouter } from '../ai/AIRouter';
-import { SPEAKING_EXAMINER_PROMPT_V1 } from '../ai/prompts/prompts';
+import { aiRouter } from '../ai/gateway/AIProviderRouter';
+import { SpeakingEvaluation } from '../ai/gateway/AIProvider';
+import { LocalRAGEngine } from './LocalRAGEngine';
 
-export interface SpeakingEvaluation {
-  fluency: number;
-  coherence: number;
-  vocabulary: number;
-  grammar: number;
-  pronunciation: number;
-  estimatedBand: number;
-  feedback: string;
-}
+export type { SpeakingEvaluation };
 
 export class SpeakingEngine {
   /**
-   * Evaluates an IELTS speaking transcript using structured output from the Local AI.
-   * Note: Acoustic pronunciation analysis is handled separately; this engine evaluates the textual transcript and extracted signals.
+   * Evaluates an IELTS speaking transcript using the authoritative AI router.
+   * Note: Speech recognition and acoustic signals are handled separately via Web Speech API.
    */
   static async evaluateSpeaking(
-    transcript: string, 
-    taskPrompt: string, 
-    acousticSignals?: { pauses: number, wpm: number }
-  ): Promise<SpeakingEvaluation | null> {
-    const router = AIRouter.getInstance();
-    
-    const prompt = `
-Task Prompt: ${taskPrompt}
-Student Transcript: ${transcript}
-Acoustic Signals: Pauses: ${acousticSignals?.pauses ?? 'Unknown'}, WPM: ${acousticSignals?.wpm ?? 'Unknown'}
+    transcript: string,
+    taskPrompt: string,
+    acousticSignals?: { pauses: number; wpm: number }
+  ): Promise<SpeakingEvaluation> {
+    const ragContext = LocalRAGEngine.retrieveContext(taskPrompt);
+    const targetCriteria = {
+      taskPrompt,
+      ragContext,
+      acousticSignals: {
+        pauses: acousticSignals?.pauses ?? 0,
+        estimatedWPM: acousticSignals?.wpm ?? 120
+      }
+    };
 
-Evaluate this speaking performance according to official IELTS criteria.
-Return ONLY valid JSON matching this schema, no markdown blocks, just the raw JSON:
-{
-  "fluency": number (0-9),
-  "coherence": number (0-9),
-  "vocabulary": number (0-9),
-  "grammar": number (0-9),
-  "pronunciation": number (0-9),
-  "estimatedBand": number (0-9),
-  "feedback": "string"
-}
-    `;
-
-    try {
-      const response = await router.chat([
-        { role: 'system', content: SPEAKING_EXAMINER_PROMPT_V1 },
-        { role: 'user', content: prompt }
-      ]);
-      
-      const cleaned = response.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
-      const evaluation = JSON.parse(cleaned) as SpeakingEvaluation;
-      
-      return evaluation;
-    } catch (e) {
-      console.error("Failed to evaluate speaking or parse JSON:", e);
-      return null;
-    }
+    return aiRouter.evaluateSpeaking(transcript, targetCriteria);
   }
 }

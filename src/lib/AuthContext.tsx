@@ -6,7 +6,8 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   signInWithPopup,
-  GoogleAuthProvider
+  GoogleAuthProvider,
+  signInAnonymously
 } from 'firebase/auth';
 import { auth, googleProvider } from './firebase';
 
@@ -25,7 +26,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>({ uid: "test" } as User);
   const [role, setRole] = useState<UserRole>(null);
   const [loading, setLoading] = useState(true);
 
@@ -45,6 +46,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
       } else {
         setRole(null);
+        // Automatically sign in anonymously for trial progress
+        signInAnonymously(auth).catch((error) => {
+          console.error("Anonymous sign in failed:", error);
+        });
       }
       setLoading(false);
     });
