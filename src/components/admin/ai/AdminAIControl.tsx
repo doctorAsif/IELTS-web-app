@@ -46,15 +46,16 @@ export const AdminAIControl = () => {
   const toggleProvider = (provider: string) => {
     const isEnabled = settings.enabledProviders.includes(provider);
     let newProviders = [...settings.enabledProviders];
+    let newDefault = settings.defaultProvider;
     if (isEnabled) {
       newProviders = newProviders.filter(p => p !== provider);
       if (settings.defaultProvider === provider) {
-        settings.defaultProvider = newProviders[0] || '';
+        newDefault = newProviders[0] || '';
       }
     } else {
       newProviders.push(provider);
     }
-    setSettings({ ...settings, enabledProviders: newProviders });
+    setSettings({ ...settings, defaultProvider: newDefault, enabledProviders: newProviders });
   };
 
   if (loading) return <div className="p-8">Loading AI Control Panel...</div>;

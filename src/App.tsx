@@ -19,6 +19,7 @@ const AppContent: React.FC = () => {
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showTrialCompleteModal, setShowTrialCompleteModal] = useState(false);
   const { user, loading } = useAuth();
   const { stats, consumeTrialCredit } = useApp();
 
@@ -29,8 +30,6 @@ const AppContent: React.FC = () => {
       </div>
     );
   }
-
-  const [showTrialCompleteModal, setShowTrialCompleteModal] = useState(false);
 
   const handleStartLesson = async (lesson: Lesson, category: 'speaking' | 'writing' | 'listening' | 'reading' | 'mock' = 'mock') => {
     if (!user) {
