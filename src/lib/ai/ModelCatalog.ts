@@ -16,6 +16,22 @@ export interface WebModelConfig {
 }
 
 export const APPROVED_WEB_MODELS: Record<string, WebModelConfig> = {
+  'Llama-3.2-3B-Instruct-q4f16_1-MLC': {
+    modelId: 'Llama-3.2-3B-Instruct-q4f16_1-MLC',
+    name: 'Llama 3.2 3B Instruct',
+    family: 'llama',
+    version: '3.2',
+    runtime: 'webgpu',
+    format: 'mlc',
+    quantization: 'q4f16_1',
+    sizeBytes: 2341203968, // ~2.18 GiB (~2.34 GB)
+    vramRequiredMB: 2400, // ~2.4 GB VRAM/RAM required
+    contextWindow: 4096,
+    temperature: 0.7,
+    benchmarkStatus: 'validated',
+    productionStatus: 'active',
+    description: 'Primary approved desktop WebLLM model with sub-400ms TTFT for live speaking examiner roleplay and Band 8.0+ essay critique.'
+  },
   'Qwen2.5-1.5B-Instruct-q4f16_1-MLC': {
     modelId: 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC',
     name: 'Qwen 2.5 1.5B Instruct',
@@ -25,13 +41,16 @@ export const APPROVED_WEB_MODELS: Record<string, WebModelConfig> = {
     format: 'mlc',
     quantization: 'q4f16_1',
     sizeBytes: 1196766496, // ~1.12 GiB (~1.2 GB)
-    vramRequiredMB: 1800,
+    vramRequiredMB: 1800, // ~1.8 GB RAM required
     contextWindow: 4096,
     temperature: 0.7,
     benchmarkStatus: 'validated',
     productionStatus: 'active',
-    description: 'Primary approved WebLLM model for student-facing browser-local IELTS practice.'
+    description: 'Lightweight approved WebLLM model optimized for mobile browsers, tablets, and resource-constrained laptops.'
   }
 };
 
-export const DEFAULT_LOCAL_MODEL_ID = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC';
+export const DESKTOP_LOCAL_MODEL_ID = 'Llama-3.2-3B-Instruct-q4f16_1-MLC';
+export const MOBILE_LOCAL_MODEL_ID = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC';
+export const DEFAULT_LOCAL_MODEL_ID = DESKTOP_LOCAL_MODEL_ID;
+

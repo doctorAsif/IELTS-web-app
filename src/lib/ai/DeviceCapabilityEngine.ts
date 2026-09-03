@@ -13,6 +13,7 @@ export interface DeviceCapabilities {
   os: string;
   browser: string;
   isMobile: boolean;
+  deviceMemoryGB?: number;
   storageEstimateMB: number;
   storageQuotaMB: number;
   storageUsageMB: number;
@@ -21,6 +22,7 @@ export interface DeviceCapabilities {
   maxComputeInvocationsPerWorkgroup: number;
   maxBufferSizeMB: number;
   supportedModels: string[];
+  recommendedModelId: string;
   incompatibilityReason?: string;
 }
 
@@ -83,30 +85,42 @@ export class DeviceCapabilityEngine {
     const os = this.detectOS();
     const browser = this.detectBrowser();
     const isBrowserSupported = ['Chrome', 'Edge', 'Opera', 'Firefox', 'Safari'].includes(browser);
+    const deviceMemoryGB = typeof navigator !== 'undefined' && (navigator as any).deviceMemory
+      ? (navigator as any).deviceMemory
+      : undefined;
 
     let tier = LocalAITier.CLOUD_ONLY;
     let incompatibilityReason: string | undefined;
     const supportedModels: string[] = [];
+    let recommendedModelId = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC';
 
-    // Required storage for 1.5B model is ~1.2GB; safety threshold is ~1.8GB free
-    const REQUIRED_STORAGE_MB = 1800;
+    // Required storage for 1.5B model is ~1.2GB; for 3B model is ~2.4GB (safety margin ~4GB free)
+    const REQUIRED_MIN_STORAGE_MB = 1800;
+    const DESKTOP_STORAGE_MB = 4000;
 
     if (!hasWebGPU || !adapterAvailable) {
       tier = LocalAITier.CLOUD_ONLY;
       incompatibilityReason = 'WebGPU is not available or disabled in this browser. Cloud AI will be used.';
-    } else if (storageEstimateMB > 0 && storageEstimateMB < REQUIRED_STORAGE_MB) {
+      recommendedModelId = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC';
+    } else if (storageEstimateMB > 0 && storageEstimateMB < REQUIRED_MIN_STORAGE_MB) {
       tier = LocalAITier.LEVEL_C;
-      incompatibilityReason = `Insufficient storage space (~${storageEstimateMB} MB available, ~${REQUIRED_STORAGE_MB} MB recommended).`;
-    } else if (maxComputeInvocationsPerWorkgroup >= 256) {
-      if (storageEstimateMB >= 3000 && !isMobile) {
+      incompatibilityReason = `Insufficient storage space (~${storageEstimateMB} MB available, ~${REQUIRED_MIN_STORAGE_MB} MB recommended).`;
+      recommendedModelId = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC';
+    } else {
+      supportedModels.push('Qwen2.5-1.5B-Instruct-q4f16_1-MLC');
+      supportedModels.push('Llama-3.2-3B-Instruct-q4f16_1-MLC');
+
+      // Desktop Tier: PC/Laptop, WebGPU, and >= 8GB Native Shared RAM (or sufficient storage quota)
+      const hasHighMemory = deviceMemoryGB ? deviceMemoryGB >= 8 : true; // Heuristic: default true if not mobile
+      const hasDesktopStorage = storageEstimateMB === 0 || storageEstimateMB >= DESKTOP_STORAGE_MB;
+
+      if (!isMobile && hasHighMemory && hasDesktopStorage && maxComputeInvocationsPerWorkgroup >= 256) {
         tier = LocalAITier.LEVEL_A;
+        recommendedModelId = 'Llama-3.2-3B-Instruct-q4f16_1-MLC';
       } else {
         tier = LocalAITier.LEVEL_B;
+        recommendedModelId = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC';
       }
-      supportedModels.push('Qwen2.5-1.5B-Instruct-q4f16_1-MLC');
-    } else {
-      tier = LocalAITier.LEVEL_C;
-      supportedModels.push('Qwen2.5-1.5B-Instruct-q4f16_1-MLC');
     }
 
     const caps: DeviceCapabilities = {
@@ -117,6 +131,7 @@ export class DeviceCapabilityEngine {
       os,
       browser,
       isMobile,
+      deviceMemoryGB,
       storageEstimateMB,
       storageQuotaMB,
       storageUsageMB,
@@ -125,6 +140,7 @@ export class DeviceCapabilityEngine {
       maxComputeInvocationsPerWorkgroup,
       maxBufferSizeMB,
       supportedModels,
+      recommendedModelId,
       incompatibilityReason
     };
 

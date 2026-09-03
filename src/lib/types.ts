@@ -193,7 +193,7 @@ export interface LeaderboardUser {
 
 export type LeagueTier = 'Bronze' | 'Silver' | 'Gold' | 'Sapphire' | 'Ruby' | 'Diamond';
 
-export type PracticeStatus = 'draft' | 'ai_review' | 'human_review' | 'approved' | 'published' | 'retired';
+export type PracticeStatus = 'draft' | 'ai_review' | 'human_review' | 'faculty_review' | 'approved' | 'published' | 'retired';
 
 export interface PracticeItem {
   id: string;
@@ -211,9 +211,11 @@ export interface PracticeItem {
   questions: Question[]; // reusing the existing Question types
   answerKey: any; // specific structure depends on questionType, but typically mapped to questions
   explanations: string;
+  passage?: string | string[]; // for reading
+  script?: any; // for listening
   transcript?: string; // for listening
   audioPath?: string; // for listening
-  sourceType: 'original' | 'adapted' | 'past_paper';
+  sourceType?: 'original' | 'adapted' | 'past_paper';
   sourceReferences?: string;
   status: PracticeStatus;
   version: number;

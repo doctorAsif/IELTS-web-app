@@ -18,25 +18,48 @@ export interface ChatMessage {
   content: string;
 }
 
+export interface SpeakingCriteria {
+  fluencyCoherence: { band: number; feedback: string; fillerCount: number };
+  lexicalResource: { band: number; feedback: string; advancedCollocations: string[] };
+  grammaticalRange: { band: number; feedback: string; complexSentenceRatio: number };
+  pronunciation: { band: number; feedback: string };
+}
+
 export interface SpeakingEvaluation {
-  fluency: number;
-  coherence: number;
-  vocabulary: number;
-  grammar: number;
-  pronunciation: number;
-  estimatedBand: number;
-  feedback: string;
+  overallBand: number;
+  criteria: SpeakingCriteria;
+  actionableRemediation: string[];
+  suggestedBandUpgrade: string;
+  // Backward compatibility fields
+  fluency?: number;
+  coherence?: number;
+  vocabulary?: number;
+  grammar?: number;
+  pronunciation?: number;
+  estimatedBand?: number;
+  feedback?: string;
   strengths?: string[];
   weaknesses?: string[];
 }
 
+export interface WritingCriteria {
+  taskResponse: { band: number; feedback: string; wordCount: number; meetsWordCount: boolean };
+  coherenceCohesion: { band: number; feedback: string; transitionWordCount: number; cohesionRating: string };
+  lexicalResource: { band: number; feedback: string; repetitiveWords: string[]; c1c2Upgrades: { original: string; suggested: string }[] };
+  grammaticalRange: { band: number; feedback: string; complexSentencesRatio: number };
+}
+
 export interface WritingEvaluation {
+  overallBand: number;
+  estimatedBand: number;
   taskResponse: number;
   coherenceCohesion: number;
   lexicalResource: number;
   grammar: number;
-  estimatedBand: number;
   confidence: number;
+  criteria?: WritingCriteria;
+  zeroNumberOverviewVerified?: boolean;
+  zeroNumberOverviewWarning?: string;
   strengths: string[];
   weaknesses: string[];
   corrections: string[];

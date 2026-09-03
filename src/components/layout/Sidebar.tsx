@@ -15,12 +15,16 @@ import {
   UserPlus,
   Shield,
   User,
+  Sparkles
 } from 'lucide-react';
 import { useAuth } from '../../lib/AuthContext';
 import { useApp } from '../../lib/store';
 
 export type ActiveTab = 
   | 'dashboard' 
+  | 'daily_teacher'
+  | 'path'
+  | 'scaffolding'
   | 'ai_tutor' 
   | 'ai_setup' 
   | 'mock_exam' 
@@ -52,21 +56,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
   };
 
   const navItemsTop = [
-    { id: 'dashboard', label: 'Dashboard & Daily Plan', icon: LayoutDashboard, color: '#38BDF8' },
-    { id: 'ai_tutor', label: 'Offline AI Tutor Hub', icon: Brain, color: '#818CF8' },
-    { id: 'ai_setup', label: 'Offline AI Model Setup', icon: Download, color: '#38BDF8' },
-    { id: 'mock_exam', label: 'Full IELTS Mock Exam', icon: Timer, color: '#34D399' },
+    { id: 'dashboard', label: 'Dashboard Overview', icon: LayoutDashboard, color: '#38BDF8' },
+    { id: 'daily_teacher', label: 'Autonomous Daily AI Teacher', icon: Brain, color: '#38BDF8' },
+    { id: 'path', label: '6-Unit Learning Path', icon: Layers, color: '#34D399' },
+    { id: 'scaffolding', label: '3-Tier Scaffolding (Bands 3-8+)', icon: Sparkles, color: '#A855F7' },
     { id: 'speaking', label: 'Speaking Trainer', icon: Mic, color: '#F43F5E' },
     { id: 'writing', label: 'Writing Evaluator', icon: PenTool, color: '#FB923C' },
     { id: 'reading', label: 'Reading Practice', icon: BookOpen, color: '#A855F7' },
     { id: 'listening', label: 'Listening Practice', icon: Headphones, color: '#06B6D4' },
-    { id: 'flashcards', label: 'Vocabulary Flashcards', icon: Layers, color: '#38BDF8' },
+    { id: 'mock_exam', label: 'Full IELTS Mock Exam', icon: Timer, color: '#34D399' },
+    { id: 'ai_setup', label: 'On-Device Edge AI Setup', icon: Download, color: '#818CF8' },
   ];
 
   const navItemsBottom = [
+    { id: 'license', label: 'Hardware UUID & License', icon: Key, color: '#F59E0B' },
     { id: 'founder', label: 'Founder & CEO Biography', icon: GraduationCap, color: '#38BDF8' },
     { id: 'study_abroad', label: 'Study Abroad (Student World)', icon: Globe, color: '#34D399' },
-    { id: 'license', label: 'Activate License Code', icon: Key, color: '#F59E0B' },
   ];
 
   navItemsBottom.push({ id: 'admin', label: isAdmin ? 'Admin CRM Dashboard' : 'Faculty / Admin Portal', icon: Shield, color: '#60A5FA' });
@@ -83,12 +88,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
         }`}
       >
         <div 
-          className="p-1.5 rounded-lg flex items-center justify-center"
+          className="p-1.5 rounded-lg flex items-center justify-center shrink-0"
           style={{ backgroundColor: `${item.color}26` }} // 15% opacity hex
         >
           <Icon className="w-[18px] h-[18px]" style={{ color: item.color }} />
         </div>
-        <span className="text-white text-[13px] font-semibold tracking-wide">{item.label}</span>
+        <span className="text-white text-[13px] font-semibold tracking-wide truncate">{item.label}</span>
       </button>
     );
   };
@@ -143,7 +148,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
       <div className="p-3">
         <div className="bg-[#1E293B] rounded-xl border border-[#334155] p-3 flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-blue-900 overflow-hidden shrink-0 flex items-center justify-center">
-            {/* Fallback avatar */}
             <User className="w-6 h-6 text-blue-300" />
           </div>
           <div className="overflow-hidden">

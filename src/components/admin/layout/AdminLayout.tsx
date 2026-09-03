@@ -23,31 +23,69 @@ interface AdminLayoutProps {
 export const AdminLayout: React.FC<AdminLayoutProps> = ({ activeTab, onSelectTab, children }) => {
   const { role } = useAuth();
 
+  const [activeRole, setActiveRole] = React.useState<string>(() => {
+    try {
+      return sessionStorage.getItem('akhl_admin_role_override') || role || 'teacher';
+    } catch (e) {
+      return role || 'teacher';
+    }
+  });
+
+  const handleRoleChange = (newRole: string) => {
+    try {
+      sessionStorage.setItem('akhl_admin_role_override', newRole);
+    } catch (e) {}
+    setActiveRole(newRole);
+  };
+
   const navItems = [
     { id: 'home', label: 'Dashboard', icon: LayoutDashboard, roles: ['admin', 'superadmin', 'counselor', 'teacher'] },
+    { id: 'practice', label: 'Curriculum & CMS', icon: ClipboardList, roles: ['admin', 'superadmin', 'teacher'] },
+    { id: 'audit', label: 'AI Token & Cost Audit', icon: Shield, roles: ['admin', 'superadmin', 'teacher'] },
+    { id: 'licenses', label: 'Licensing & Devices', icon: Settings, roles: ['admin', 'superadmin', 'teacher'] },
     { id: 'students', label: 'Students', icon: Users, roles: ['admin', 'superadmin', 'counselor', 'teacher'] },
     { id: 'staff', label: 'Staff Management', icon: Shield, roles: ['admin', 'superadmin'] },
-    { id: 'curriculum', label: 'Curriculum', icon: BookOpen, roles: ['admin', 'superadmin'] },
-    { id: 'practice', label: 'Practice Content', icon: ClipboardList, roles: ['admin', 'superadmin', 'teacher'] },
+    { id: 'curriculum', label: 'Curriculum Units', icon: BookOpen, roles: ['admin', 'superadmin', 'teacher'] },
     { id: 'media', label: 'Media Library', icon: PlayCircle, roles: ['admin', 'superadmin', 'teacher'] },
-    { id: 'ai_control', label: 'AI Settings', icon: HardDrive, roles: ['admin', 'superadmin'] },
-    { id: 'licenses', label: 'Licenses', icon: Settings, roles: ['admin', 'superadmin'] },
-    { id: 'partners', label: 'Partners', icon: Share2, roles: ['admin', 'superadmin'] },
-    { id: 'audit', label: 'Audit Logs', icon: Shield, roles: ['admin', 'superadmin'] },
+    { id: 'ai_control', label: 'AI Provider Settings', icon: HardDrive, roles: ['admin', 'superadmin'] },
+    { id: 'partners', label: 'Institutional Partners', icon: Share2, roles: ['admin', 'superadmin'] },
   ];
 
-  const visibleNavItems = navItems.filter(item => item.roles.includes(role || 'student'));
+  const visibleNavItems = navItems.filter(item => item.roles.includes(activeRole));
 
   return (
     <div className="flex h-full w-full bg-[#0F172A]">
       {/* Admin Sidebar */}
       <div className="w-64 bg-[#1E293B] border-r border-[#334155] flex flex-col hidden md:flex">
         <div className="p-4 border-b border-[#334155]">
-          <h2 className="text-lg font-bold text-white flex items-center gap-2">
-            <Shield className="w-5 h-5 text-[#38BDF8]" />
-            Admin Portal
-          </h2>
-          <p className="text-xs text-[#94A3B8] mt-1 capitalize">Role: {role}</p>
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-bold text-white flex items-center gap-2">
+              <Shield className="w-5 h-5 text-[#38BDF8]" />
+              Admin Portal
+            </h2>
+            <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-[#38BDF8]/20 text-[#38BDF8] border border-[#38BDF8]/30">
+              {activeRole}
+            </span>
+          </div>
+          
+          {/* Quick role selector for testing and evaluation */}
+          <div className="mt-3 bg-[#0F172A] p-1.5 rounded-lg border border-[#334155] flex items-center justify-between text-[11px]">
+            <span className="text-slate-400 pl-1 font-medium">Role:</span>
+            <div className="flex gap-1">
+              <button
+                onClick={() => handleRoleChange('teacher')}
+                className={`px-2 py-0.5 rounded font-semibold transition-colors ${activeRole === 'teacher' ? 'bg-[#38BDF8] text-slate-900' : 'text-slate-400 hover:text-white'}`}
+              >
+                Faculty
+              </button>
+              <button
+                onClick={() => handleRoleChange('superadmin')}
+                className={`px-2 py-0.5 rounded font-semibold transition-colors ${activeRole === 'superadmin' ? 'bg-[#34D399] text-slate-900' : 'text-slate-400 hover:text-white'}`}
+              >
+                Admin
+              </button>
+            </div>
+          </div>
         </div>
         <div className="flex-1 overflow-y-auto py-4">
           <ul className="space-y-1 px-2">

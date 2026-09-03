@@ -101,6 +101,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     sound.setSoundEnabled(stats.soundEnabled);
   }, [stats.soundEnabled]);
 
+  // Automatic 30-minute heart regeneration (up to max 5 hearts)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStats(prev => {
+        if (prev.hearts < prev.maxHearts) {
+          return { ...prev, hearts: Math.min(prev.maxHearts, prev.hearts + 1) };
+        }
+        return prev;
+      });
+    }, 30 * 60 * 1000); // 30 minutes
+    return () => clearInterval(interval);
+  }, []);
+
   // Fetch from Firestore on load
   useEffect(() => {
     const fetchUserData = async () => {

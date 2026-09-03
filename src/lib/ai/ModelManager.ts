@@ -89,6 +89,10 @@ export class ModelManager {
         return;
       }
 
+      if (this.deviceCapabilities.recommendedModelId && APPROVED_WEB_MODELS[this.deviceCapabilities.recommendedModelId]) {
+        this.activeModel = APPROVED_WEB_MODELS[this.deviceCapabilities.recommendedModelId];
+      }
+
       // Check if model is already cached in IndexedDB
       const cached = await this.checkModelCached();
       this.isCached = cached;

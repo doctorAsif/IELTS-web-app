@@ -102,8 +102,8 @@ export const SHOP_ITEMS: ShopItem[] = [
   {
     id: 'heart_refill',
     title: 'Heart Refill',
-    description: 'Instantly restore all 5 hearts so you can keep practicing without waiting.',
-    gemCost: 50,
+    description: 'Instantly restore all 5 hearts to max capacity so you can practice without delay.',
+    gemCost: 350,
     icon: '❤️',
     type: 'heart_refill',
     popular: true,

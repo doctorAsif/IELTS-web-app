@@ -1,10 +1,10 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager } from 'firebase/firestore';
 import { getFunctions } from 'firebase/functions';
+import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
-// Please replace these with your actual Firebase config values
 const firebaseConfig = {
   apiKey: "AIzaSyC4uEAGZQdH7kB6xn1l14yjZqmbk-phMjQ",
   authDomain: "ielts-traning-app.firebaseapp.com",
@@ -18,6 +18,14 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+
+// Initialize Cloud Firestore with offline persistence enabled
+export const db = initializeFirestore(app, {
+  localCache: persistentLocalCache({
+    tabManager: persistentMultipleTabManager()
+  })
+});
+
+export const storage = getStorage(app);
 export const functions = getFunctions(app);
 export const googleProvider = new GoogleAuthProvider();

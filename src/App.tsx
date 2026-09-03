@@ -7,11 +7,15 @@ import { LessonModal } from './components/lesson/LessonModal';
 import { Lesson } from './lib/types';
 import { Loader2, Menu } from 'lucide-react';
 import { DashboardView } from './components/dashboard/DashboardView';
+import { DailyTeacherView } from './components/dashboard/DailyTeacherView';
+import { LearningPath } from './components/path/LearningPath';
+import { ScaffoldingPractice } from './components/practice/ScaffoldingPractice';
 import { LocalAISetup } from './components/interactive/LocalAISetup';
 import { ReadingModule } from './components/interactive/ReadingModule';
 import { WritingModule } from './components/interactive/WritingModule';
 import { SpeakingModule } from './components/interactive/SpeakingModule';
 import { ListeningModule } from './components/interactive/ListeningModule';
+import { LicenseView } from './components/license/LicenseView';
 import { AdminApp } from './components/admin/AdminApp';
 
 const AppContent: React.FC = () => {
@@ -114,6 +118,18 @@ const AppContent: React.FC = () => {
             <DashboardView onStartLesson={handleStartLesson} onSelectTab={handleSelectTab} />
           )}
 
+          {activeTab === 'daily_teacher' && (
+            <DailyTeacherView onSelectTab={handleSelectTab} />
+          )}
+
+          {activeTab === 'path' && (
+            <LearningPath onStartLesson={handleStartLesson} />
+          )}
+
+          {activeTab === 'scaffolding' && (
+            <ScaffoldingPractice />
+          )}
+
           {/* Flashcards View */}
           {activeTab === 'flashcards' && (
             <div className="p-6 text-center text-[#94A3B8]">
@@ -131,9 +147,14 @@ const AppContent: React.FC = () => {
           {activeTab === 'writing' && <WritingModule />}
           {activeTab === 'speaking' && <SpeakingModule />}
           {activeTab === 'listening' && <ListeningModule />}
+
+          {/* Hardware UUID Slot & Offline License */}
+          {activeTab === 'license' && <LicenseView />}
+
+          {/* Faculty & Administrator Portal */}
           {activeTab === 'admin' && <AdminApp />}
 
-          {['founder', 'study_abroad', 'license', 'register'].includes(activeTab) && (
+          {['founder', 'study_abroad', 'register'].includes(activeTab) && (
             <div className="p-6 text-center text-[#94A3B8]">
               <h2 className="text-2xl font-bold text-white mb-2">{activeTab.replace('_', ' ').toUpperCase()}</h2>
               <p>This module is available in this version.</p>
@@ -167,10 +188,13 @@ const AppContent: React.FC = () => {
             </p>
             <div className="flex flex-col gap-3">
               <button
-                onClick={() => setShowTrialCompleteModal(false)}
+                onClick={() => {
+                  setShowTrialCompleteModal(false);
+                  setActiveTab('license');
+                }}
                 className="w-full bg-[#38BDF8] hover:bg-[#0284C7] text-slate-950 font-bold py-3 px-4 rounded-xl transition-colors"
               >
-                [ Activate AKHL IELTS ]
+                [ Activate AKHL IELTS License ]
               </button>
               <button
                 onClick={() => setShowTrialCompleteModal(false)}

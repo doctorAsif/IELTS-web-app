@@ -5,11 +5,15 @@ export function speakText(
   text: string,
   rate: number = 0.95,
   lang: string = 'en-GB',
+  pitchOrOnEnd: number | (() => void) = 1.0,
   onEnd?: () => void
 ): void {
+  const pitch = typeof pitchOrOnEnd === 'number' ? pitchOrOnEnd : 1.0;
+  const callback = typeof pitchOrOnEnd === 'function' ? pitchOrOnEnd : onEnd;
+
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     console.warn('Speech synthesis not supported in this browser.');
-    onEnd?.();
+    callback?.();
     return;
   }
 
@@ -18,15 +22,16 @@ export function speakText(
 
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.rate = rate;
-  utterance.pitch = 1.0;
+  utterance.pitch = pitch;
   utterance.lang = lang;
 
-  // Try to pick a natural British or standard English voice if available
+  // Try to pick a natural British (en-GB) examiner voice if available
   const voices = window.speechSynthesis.getVoices();
   const preferredVoice = voices.find(
-    v => (v.lang === lang || v.lang.startsWith(lang.split('-')[0])) &&
-         (v.name.includes('Natural') || v.name.includes('Daniel') || v.name.includes('Google') || v.name.includes('Serena'))
-  ) || voices.find(v => v.lang.startsWith('en'));
+    v => (v.lang === lang || v.lang.replace('_', '-').startsWith('en-GB')) &&
+         (v.name.includes('Natural') || v.name.includes('Daniel') || v.name.includes('George') || v.name.includes('Arthur') || v.name.includes('Google UK') || v.name.includes('Serena'))
+  ) || voices.find(v => v.lang.startsWith('en-GB'))
+    || voices.find(v => v.lang.startsWith('en'));
 
   if (preferredVoice) {
     utterance.voice = preferredVoice;

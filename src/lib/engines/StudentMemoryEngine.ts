@@ -20,10 +20,12 @@ export class StudentMemoryEngine {
   private static readonly STORAGE_KEY = 'ielts_student_memory';
   
   static loadProfile(): StudentProfile {
-    const data = localStorage.getItem(this.STORAGE_KEY);
-    if (data) {
+    if (typeof window !== 'undefined' && window.localStorage) {
       try {
-        return JSON.parse(data);
+        const data = localStorage.getItem(this.STORAGE_KEY);
+        if (data) {
+          return JSON.parse(data);
+        }
       } catch (e) {
         console.warn("Failed to parse student memory", e);
       }
@@ -32,7 +34,13 @@ export class StudentMemoryEngine {
   }
 
   static saveProfile(profile: StudentProfile) {
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profile));
+    if (typeof window !== 'undefined' && window.localStorage) {
+      try {
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profile));
+      } catch (e) {
+        console.warn("Failed to save student memory", e);
+      }
+    }
   }
 
   static recordMistake(skill: keyof WeaknessProfile, subCategory: string, severity: number = 0.1) {
