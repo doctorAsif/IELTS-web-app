@@ -1,0 +1,18 @@
+# Replace with your custom domain (e.g. ielts.studentworldbd.com) or Oracle Public IP
+:80 {
+    # Reverse proxy API requests to FastAPI backend container
+    handle /api/* {
+        reverse_proxy backend:8000
+    }
+    
+    handle /health {
+        reverse_proxy backend:8000
+    }
+
+    # Serve static web frontend
+    handle {
+        root * /usr/share/caddy
+        file_server
+        try_files {path} /index.html
+    }
+}

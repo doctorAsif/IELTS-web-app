@@ -1,0 +1,1186 @@
+{
+  "akhl_ielts_master_curriculum": {
+    "executive_curriculum_map": [
+      {
+        "stage": "Pre-IELTS Foundation",
+        "prerequisite": "Entry Band 3.5",
+        "expected_mastery": "Basic SVO sentence formation, core action verbs, and basic tenses",
+        "next_skill": "Class 1 - Introduction & Reading Strategies"
+      },
+      {
+        "stage": "Classes 1-4 (Receptive Foundations)",
+        "prerequisite": "Band 5.0 - 5.5",
+        "expected_mastery": "Time-boxing, evidence hunting without translation, and grammatical audio prediction",
+        "next_skill": "Class 5 - Writing Task 1 Academic"
+      },
+      {
+        "stage": "Classes 5-8 (Productive Foundations)",
+        "prerequisite": "Class 4 completion",
+        "expected_mastery": "Logical structured writing templates - Zero-Number overviews, P-E-E paragraphs, Cause-Solution alignment",
+        "next_skill": "Class 9 - Speaking Part 1"
+      },
+      {
+        "stage": "Classes 9-11 (Verbal Frameworks)",
+        "prerequisite": "Class 8 completion",
+        "expected_mastery": "Eliminating one-word answers, building 2-minute stamina, depersonalized discussion",
+        "next_skill": "Class 12 - Grammar & Vocabulary Clinic"
+      },
+      {
+        "stage": "Classes 12-13 (Advanced Syntactic/Receptive Upgrades)",
+        "prerequisite": "Class 11 completion",
+        "expected_mastery": "Complex sentence generation and high-pressure distractor navigation",
+        "next_skill": "Class 14 - Full Mock Test 1"
+      },
+      {
+        "stage": "Classes 14-16 (Simulation & Diagnostics)",
+        "prerequisite": "Class 13 completion",
+        "expected_mastery": "Exam endurance, strict discipline, and silly mistake elimination via Error Journals",
+        "next_skill": "Target Band Preparation"
+      }
+    ],
+    "source_document_analysis": [
+      {
+        "source": "16 classes IELTS.docx",
+        "purpose": "Core syllabus outlining the 16-class progression for IELTS mastery",
+        "target_level": "Intermediate to Advanced - Band 6.5 to 8.0+",
+        "teaching_philosophy": "High-pressure pacing, logic-driven deduction, zero-translation, and structured formulaic execution",
+        "major_topics": "Skimming/Scanning, T/F/NG Logic, Map/Process writing, PEE framework, ARE/5W1H speaking",
+        "ielts_skills_covered": "Reading, Listening, Writing, Speaking",
+        "lesson_class_structure": "Learning Style, Core Learning Content, Learning Materials, Practice Sheet & Drill, Homework Assignment & Target Goals",
+        "vocabulary_content": "Directional vocabulary, Transformation verbs, Linking words",
+        "grammar_content": "Active to Passive voice, Parts-of-speech prediction, Relative Clauses, Conditionals",
+        "speaking_methodology": "ARE Formula, 5W1H Method, 4-Part Response Framework",
+        "writing_methodology": "4-Paragraph Architecture, PEE Structure, Direct Cause-to-Solution Alignment",
+        "reading_methodology": "Macro-Keyword Scanning, Comparative Textual Analysis",
+        "listening_methodology": "Grammatical Gap Prediction, Distractor Elimination Logic",
+        "practice_methodology": "In-Class targeted drills with specific time limits",
+        "homework_methodology": "Strict time-boxed Cambridge test assignments",
+        "source_id": "source_01"
+      },
+      {
+        "source": "IELTS Preparation Handout 2026.docx",
+        "purpose": "Student-facing handouts, mock test logistics, and a comprehensive pedagogical/logistical limitation checklist",
+        "target_level": "Intermediate to Advanced",
+        "teaching_philosophy": "Error tracking, strict exam discipline, and strategy-focused learning over rote memorization",
+        "major_topics": "Identical 16-class breakdown with added classroom drills and logistical checklists",
+        "ielts_skills_covered": "Reading, Listening, Writing, Speaking",
+        "lesson_class_structure": "Format breakdown, Strategy explanation, In-Class Practice Exercise, Homework Assignment",
+        "vocabulary_content": "Trend vocabulary, Connectors, Advantages/Disadvantages",
+        "grammar_content": "Complex sentence structures, Pronunciation of endings",
+        "speaking_methodology": "No One-Word rule, Time-buying phrases, PEEL framework",
+        "writing_methodology": "Zero-Number Rule, 2-to-1 outweigh planning, Paraphrasing",
+        "reading_methodology": "Move On rule, Keyword Trap awareness",
+        "listening_methodology": "Rule of Elimination, Audio navigation",
+        "practice_methodology": "Pair work, 60-Minute simulated drills",
+        "homework_methodology": "Audio-recorded speaking homework, continuous exam simulation",
+        "source_id": "source_02"
+      },
+      {
+        "source": "PRE IELTS foundation .docx",
+        "purpose": "Foundation building for weaker students",
+        "target_level": "Band 3.5 transition to IELTS Academic",
+        "teaching_philosophy": "Fixing broken fragments using strict sentence formulas, auditory survival, and active vocabulary use",
+        "major_topics": "SVO Blueprint, Tenses, Wh-Questions, Pronunciation, Top 200 Core Vocabulary",
+        "ielts_skills_covered": "Basic Sentence Construction, Conversational Speaking, Survival Reading/Listening",
+        "lesson_class_structure": "Objective, Golden Formula, Classroom Drill, Mini-stories",
+        "vocabulary_content": "Top 200 Core Vocabulary - Action Verbs, Academic Nouns, Adjectives & Connectors",
+        "grammar_content": "Subject-Verb-Object, Present/Past Simple, Present Continuous, Future Simple",
+        "speaking_methodology": "Asking Wh-Questions, Exaggerating 'S' and 'ED' ending sounds",
+        "writing_methodology": "Fixing the missing 'Be' verb",
+        "reading_methodology": "Hunting for Nouns and Verbs without translating",
+        "listening_methodology": "No Translation rule, Number catching",
+        "practice_methodology": "5-Word Challenge, Audio Survival Tasks",
+        "homework_methodology": "Not specified in source",
+        "source_id": "source_03"
+      },
+      {
+        "source": "practice sheet 5 practice each.docx",
+        "purpose": "Drill and practice bank containing exactly 5 unique, professional exercises per class",
+        "target_level": "Aligned with the 16-class progression",
+        "teaching_philosophy": "Repetitive, timed, focused execution of AKHL frameworks",
+        "major_topics": "5 unique drills per class reinforcing rules like Zero-Number Rule, PEE, ARE, and Distractor Traps",
+        "ielts_skills_covered": "Reading, Listening, Writing, Speaking",
+        "lesson_class_structure": "5 specialized drills with exact time constraints and answer keys",
+        "vocabulary_content": "Advanced synonyms and corporate vocabulary",
+        "grammar_content": "Subject-verb agreement proofreading, passive transformations",
+        "speaking_methodology": "Keyword drafting for 5W1H, 3-sentence generation for ARE",
+        "writing_methodology": "Step-by-step PEE paragraph drafting, thesis formulation",
+        "reading_methodology": "Proof-sentence extraction",
+        "listening_methodology": "Grammar logic guessing for missed OMR boxes",
+        "practice_methodology": "Super Professional Drills with integrated master answer keys",
+        "homework_methodology": "Not specified in source",
+        "source_id": "source_04"
+      }
+    ],
+    "sixteen_class_curriculum": [
+      {
+        "class_number": 1,
+        "title": "Introduction & Reading Strategies",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Band 5.0 - 5.5",
+        "learning_objectives": [
+          "Macro-structural orientation",
+          "Active time-boxing",
+          "Non-translation skimming drills"
+        ],
+        "ielts_skills": "Reading",
+        "grammar": "Soft vs Absolute Modifiers",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "Not specified in source",
+        "reading": "Skimming, Scanning, 20-minute rule",
+        "listening": "Not specified in source",
+        "practice_activities": "5-minute paragraph skimming challenge; identifying core topics and specific cities",
+        "homework": "Cambridge Reading Passage 1 under strict 20-minute timer",
+        "expected_outcome": "Eliminate mental translation habits and drastically increase scanning speed",
+        "id": "class_01",
+        "source_documents": []
+      },
+      {
+        "class_number": 2,
+        "title": "Reading Deep Dive - True / False / Not Given",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 1",
+        "learning_objectives": [
+          "Logical deduction",
+          "Comparative textual analysis",
+          "Evidence hunting"
+        ],
+        "ielts_skills": "Reading",
+        "grammar": "Not specified in source",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "Not specified in source",
+        "reading": "T/F/NG Logic Breakdown, Matching Headings",
+        "listening": "Not specified in source",
+        "practice_activities": "15-question targeted drill with exact proof-sentence underlining",
+        "homework": "15 T/F/NG questions; proof-sentence underlining mandatory",
+        "expected_outcome": "Eliminate guessing and master logical evidence hunting",
+        "id": "class_02",
+        "source_documents": []
+      },
+      {
+        "class_number": 3,
+        "title": "Listening Fundamentals - Section 1 & 4",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 2",
+        "learning_objectives": [
+          "Auditory pattern recognition",
+          "Grammatical gap prediction",
+          "Real-time note-taking"
+        ],
+        "ielts_skills": "Listening",
+        "grammar": "Parts-of-speech identification - Articles, Prepositions, Adjectives",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "Not specified in source",
+        "reading": "Not specified in source",
+        "listening": "Form completion rules, Pre-reading audit strategies, Section 4 gap prediction",
+        "practice_activities": "Grammar Prediction Worksheet - 10 gaps without audio; Section 1 Form Fill-up",
+        "homework": "Cambridge Section 1 & 4; predict gaps before playing audio",
+        "expected_outcome": "Bring spelling mistakes to zero, achieve 100% gap prediction accuracy",
+        "id": "class_03",
+        "source_documents": []
+      },
+      {
+        "class_number": 4,
+        "title": "Listening Advanced - Maps & Multiple Choice",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 3",
+        "learning_objectives": [
+          "Spatial mapping",
+          "Multi-clause tracking",
+          "Distractor elimination logic"
+        ],
+        "ielts_skills": "Listening",
+        "grammar": "Not specified in source",
+        "vocabulary": "Directional Vocabulary - Adjacent, Opposite, Intersection, Beyond",
+        "speaking": "Not specified in source",
+        "writing": "Not specified in source",
+        "reading": "Not specified in source",
+        "listening": "Tracking spatial orientation from 'You are here', MCQ Distractor Cross-out Method - The But/However Rule",
+        "practice_activities": "Campus Map-Tracing Simulation; 5-Question MCQ Elimination Drill",
+        "homework": "Two Maps and 10 MCQs from Cambridge; physically cross out wrong options",
+        "expected_outcome": "Track directions without stopping the pencil; instantly cross out two distractor options",
+        "id": "class_04",
+        "source_documents": []
+      },
+      {
+        "class_number": 5,
+        "title": "Writing Task 1 Academic - Charts & Graphs",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 4",
+        "learning_objectives": [
+          "Objective data summarization",
+          "Macro-trend grouping",
+          "Structural template execution"
+        ],
+        "ielts_skills": "Writing",
+        "grammar": "Not specified in source",
+        "vocabulary": "Trend vocabulary - Plunge, surge, fluctuate, soar, decline, level off, peak",
+        "speaking": "Not specified in source",
+        "writing": "The 4-Paragraph Architecture, Introduction Paraphrasing, Macro-overview Formulation utilizing the Zero Number Rule",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "Paraphrasing drill; 15-Minute Overview-Writing Sprint using the Magic Formula",
+        "homework": "Two complete Task 1 reports - Line and Bar - using the 4-paragraph structure",
+        "expected_outcome": "Writing perfect macro-overviews without numbers; logically sorting data",
+        "id": "class_05",
+        "source_documents": []
+      },
+      {
+        "class_number": 6,
+        "title": "Writing Task 1 Complex - Process, Maps, & Multi-Charts",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 5",
+        "learning_objectives": [
+          "Grammatical transformation",
+          "Spatial vocabulary mapping",
+          "Sequential data linking"
+        ],
+        "ielts_skills": "Writing",
+        "grammar": "Active to Passive voice conversion",
+        "vocabulary": "Spatial Transformation Verbs - Demolished, Converted, Expanded, Constructed, Replaced; Sequential Linking Words",
+        "speaking": "Not specified in source",
+        "writing": "Applying passive voice for process flows; using specific verbs for map transformations",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "Passive Voice Sentence-Conversion; 20-Minute Process Sequence Writing Drill",
+        "homework": "One Map and one Process Diagram; mandatory use of passive voice and transformation verbs",
+        "expected_outcome": "Accurately convert active to passive sentences; master advanced spatial vocabulary",
+        "id": "class_06",
+        "source_documents": []
+      },
+      {
+        "class_number": 7,
+        "title": "Writing Task 2 Basics - Opinion & Discussion",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 6",
+        "learning_objectives": [
+          "Critical thinking",
+          "Prompt dissection",
+          "Argumentative scaffolding"
+        ],
+        "ielts_skills": "Writing",
+        "grammar": "Academic Hedging",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "The 5-Minute Brainstorming Rule, Thesis Statement Formulation, The P-E-E Structure - Point, Explain, Example",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "5-minute brainstorming drill; Body Paragraph Drafting Sheet step-by-step using P-E-E",
+        "homework": "One Opinion and one Discuss both views essay; mandatory PEE usage",
+        "expected_outcome": "Eliminate fear of getting stuck; build highly logical PEE body paragraphs",
+        "id": "class_07",
+        "source_documents": []
+      },
+      {
+        "class_number": 8,
+        "title": "Writing Task 2 Advanced - Problem/Solution & Outweigh",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 7",
+        "learning_objectives": [
+          "Complex multi-variable problem analysis",
+          "Cause-effect mapping",
+          "Defensible stance-taking"
+        ],
+        "ielts_skills": "Writing",
+        "grammar": "Academic Hedging",
+        "vocabulary": "Advantages - benefits, merits; Disadvantages - drawbacks, demerits; Cohesive Devices",
+        "speaking": "Not specified in source",
+        "writing": "Direct Cause-to-Solution Alignment, Clear Position Maintenance - Outweigh, 2-to-1 Paragraph Planning",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "Problem/Solution Outlining Worksheet; matching causes with direct solutions",
+        "homework": "One Problem/Solution and one Outweigh essay; mandatory cause/solution mapping",
+        "expected_outcome": "Identify exact causes and provide highly specific, aligned solutions",
+        "id": "class_08",
+        "source_documents": []
+      },
+      {
+        "class_number": 9,
+        "title": "Speaking Part 1 - The Interview",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 8",
+        "learning_objectives": [
+          "Conversational expansion",
+          "Natural rhythm development",
+          "Formulaic fluency"
+        ],
+        "ielts_skills": "Speaking",
+        "grammar": "Not specified in source",
+        "vocabulary": "Not specified in source",
+        "speaking": "The A-R-E Formula - Answer, Reason, Example; The No One-Word Rule; Wh-Question Expansion",
+        "writing": "Not specified in source",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "3-Sentence Response Generation on 5 familiar topics; Mock Interview",
+        "homework": "Self-record 10 Part 1 questions on a smartphone using the A-R-E formula",
+        "expected_outcome": "Eliminate one-word answers; fluently answer any question in 3-4 sentences",
+        "id": "class_09",
+        "source_documents": []
+      },
+      {
+        "class_number": 10,
+        "title": "Speaking Part 2 - The Long Turn",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 9",
+        "learning_objectives": [
+          "Timed narrative construction",
+          "Keyword note-taking",
+          "Continuous speech stamina"
+        ],
+        "ielts_skills": "Speaking",
+        "grammar": "Not specified in source",
+        "vocabulary": "Not specified in source",
+        "speaking": "1-minute cue card scratchpad planning - No Full Sentences rule; The 5W1H Expansion Method - Who, What, Where, When, Why, How",
+        "writing": "Not specified in source",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "1-Minute Keyword Drill; 2-Minute Uninterrupted Speech Marathon; Intonation and Delivery Drill",
+        "homework": "Practice 5 cue cards with 1-min notes and 2-min recorded speech",
+        "expected_outcome": "Stamina to speak fluently for 2 minutes using the 5W1H method without running out of words",
+        "id": "class_10",
+        "source_documents": []
+      },
+      {
+        "class_number": 11,
+        "title": "Speaking Part 3 - Two-Way Discussion",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 10",
+        "learning_objectives": [
+          "Abstract sociological debate",
+          "Depersonalized argumentation",
+          "Structured delivery"
+        ],
+        "ielts_skills": "Speaking",
+        "grammar": "Not specified in source",
+        "vocabulary": "Time-buying phrases",
+        "speaking": "Shifting from Personal to Societal Perspectives - no I or Me; The 4-Part Response Framework merged with P-E-E-L",
+        "writing": "Not specified in source",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "Societal Argument Mapping Sheet; converting personal examples to general ones",
+        "homework": "Draft 4-part framework grids on 5 abstract questions and self-record",
+        "expected_outcome": "Speak like a scholar using universal language, replacing personal emotions",
+        "id": "class_11",
+        "source_documents": []
+      },
+      {
+        "class_number": 12,
+        "title": "Grammar & Vocabulary Clinic",
+        "target_level": "Band 7.0+",
+        "prerequisites": "Class 11",
+        "learning_objectives": [
+          "Syntactic upgrading",
+          "Error correction",
+          "Stylistic polishing"
+        ],
+        "ielts_skills": "Writing, Speaking",
+        "grammar": "Relative Clause Injection - Who, Which, That; Conditional Structures - First/Second Conditionals; Active to Passive",
+        "vocabulary": "Advanced Paraphrasing Techniques - Change Word Form",
+        "speaking": "Utilize complex structures",
+        "writing": "Utilize complex structures",
+        "reading": "Not specified in source",
+        "listening": "Not specified in source",
+        "practice_activities": "Simple-to-Complex Sentence Conversion; Error-spotting benchmark cards; Paraphrasing Masterclass",
+        "homework": "Find 5 simple sentences from an old Task 2 essay and convert to complex using relative clauses/conditionals",
+        "expected_outcome": "Elevate writing to Band 7.0+ via structural changes without forced memorization of difficult vocabulary",
+        "id": "class_12",
+        "source_documents": []
+      },
+      {
+        "class_number": 13,
+        "title": "Advanced Reading & Listening",
+        "target_level": "Band 6.5+",
+        "prerequisites": "Class 12",
+        "learning_objectives": [
+          "High-pressure pacing",
+          "Grammar prediction integration",
+          "Distractor navigation"
+        ],
+        "ielts_skills": "Reading, Listening",
+        "grammar": "Grammar prediction for summary completion - Box vs No-Box",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "Not specified in source",
+        "reading": "Executing the Move On Rule",
+        "listening": "Tracking audio paraphrasing, Executing the Move On Rule",
+        "practice_activities": "25-Minute Combined Receptive Simulation - Listening Sec 3 Summary + Reading Passage 3 T/F/NG",
+        "homework": "Complete one Reading Passage 3 and one Listening Section 3 under timed conditions applying the Move On rule",
+        "expected_outcome": "Comprehend complex paraphrasing and maintain calm under extreme time pressure",
+        "id": "class_13",
+        "source_documents": []
+      },
+      {
+        "class_number": 14,
+        "title": "Full Mock Test 1 - Simulated Environment",
+        "target_level": "Assessment",
+        "prerequisites": "Class 13",
+        "learning_objectives": [
+          "High-stakes performance",
+          "Physical endurance",
+          "Strict exam discipline"
+        ],
+        "ielts_skills": "Writing, Reading, Listening",
+        "grammar": "Not specified in source",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "60-Minute Continuous Writing Module Mock Test - Task 1 & 2",
+        "reading": "Strict 60-min timing",
+        "listening": "10-min transfer timing",
+        "practice_activities": "60-min in-class Writing mock test using official OMR booklets and strict stop-writing rules",
+        "homework": "Full Listening and Reading Mock Test at home",
+        "expected_outcome": "Endure the physical/mental toll of a continuous exam; eliminate fear of missing answers",
+        "id": "class_14",
+        "source_documents": []
+      },
+      {
+        "class_number": 15,
+        "title": "Mock Test Analysis & Error Correction",
+        "target_level": "All levels",
+        "prerequisites": "Class 14",
+        "learning_objectives": [
+          "Diagnostic self-audit",
+          "Objective root-cause categorization",
+          "Error tracking"
+        ],
+        "ielts_skills": "All modules",
+        "grammar": "Resolving Spelling and Plural - s/es errors",
+        "vocabulary": "Resolving Vocabulary Gaps",
+        "speaking": "Analysis applied to all errors",
+        "writing": "Analysis applied to all errors",
+        "reading": "Analysis applied to all errors",
+        "listening": "Analysis applied to all errors",
+        "practice_activities": "Error Journal Logging Exercise - categorizing scenarios into Vocabulary Gap, Time Pressure, Distractor Trap",
+        "homework": "Update personal Error Journal for every single wrong answer from the Mock Test",
+        "expected_outcome": "100% awareness of mistake patterns; guaranteeing the same mistake is never repeated",
+        "id": "class_15",
+        "source_documents": []
+      },
+      {
+        "class_number": 16,
+        "title": "Final Readiness & Exam Day Psychology",
+        "target_level": "All levels",
+        "prerequisites": "Class 15",
+        "learning_objectives": [
+          "Psychological grounding",
+          "Emergency troubleshooting",
+          "Final logistical verification"
+        ],
+        "ielts_skills": "All modules",
+        "grammar": "Not specified in source",
+        "vocabulary": "Not specified in source",
+        "speaking": "Not specified in source",
+        "writing": "The 5-Minute Proofreading Rule",
+        "reading": "Educated Guessing for Blank OMR Boxes",
+        "listening": "The Let It Go Mindset",
+        "practice_activities": "15-Minute Proofreading Drill; Emergency What If Scenario Drill",
+        "homework": "Review Error Journal, organize passport/pencils, sleep at least 8 hours",
+        "expected_outcome": "Enter the exam hall with 100% confidence",
+        "id": "class_16",
+        "source_documents": []
+      }
+    ],
+    "pre_ielts_foundation": {
+      "entry_level": "Band 3.5 to 4.5",
+      "progression": [
+        {
+          "stage": "Week 1 - Sentence Architecture & Core Vocabulary",
+          "topics": [
+            "Day 1 - The SVO Blueprint - Subject-Verb-Object",
+            "Day 2 - Time Travel Part 1 - Present Simple vs. Past Simple",
+            "Day 3 - Core Vocabulary Builder - Active Sentences",
+            "Day 4 - Auditory Immersion - Listening for Survival"
+          ],
+          "errors_addressed": [
+            "Dropping the be verb",
+            "Audio panic"
+          ],
+          "id": "foundation_stage_01",
+          "week": "Week 1 - Sentence Architecture & Core Vocabulary"
+        },
+        {
+          "stage": "Week 2 - Tense Expansion & Question Formulation",
+          "topics": [
+            "Day 5 - Time Travel Part 2 - Present Continuous, Future Simple",
+            "Day 6 - The Art of Asking - Wh- Questions",
+            "Day 7 - Reading for Survival - Nouns & Verbs scanning",
+            "Day 8 - Pronunciation Clinic - Ending Sounds S & ED"
+          ],
+          "errors_addressed": [
+            "One-word answers",
+            "Missing plural/past sounds"
+          ],
+          "id": "foundation_stage_02",
+          "week": "Week 2 - Tense Expansion & Question Formulation"
+        }
+      ],
+      "pipeline_transition": "Provides structural mechanics needed to survive the advanced paraphrasing and PEE methodology introduced in Class 1"
+    },
+    "speaking_curriculum": {
+      "part_1": {
+        "framework": "The A-R-E Formula - Answer, Reason, Example",
+        "what_it_teaches": "Conversational expansion without memorization",
+        "when_to_use": "Part 1 general questions",
+        "common_mistake": "Giving one-word answers or just saying Yes/No",
+        "practice": "3-Sentence Response Generation on familiar topics",
+        "homework": "Self-record answers using smartphone voice recorder"
+      },
+      "part_2": {
+        "framework": "1-Minute Cue Card Scratchpad Planning & The 5W1H Expansion Method",
+        "what_it_teaches": "Timed narrative construction, continuous speech stamina",
+        "when_to_use": "2-minute long turn",
+        "common_mistake": "Writing full sentences during the 1-minute prep",
+        "practice": "1-Minute Keyword Drill, 2-Minute Uninterrupted Speech Drill",
+        "homework": "Practice 5 cue cards with 1-min notes and 2-min recording"
+      },
+      "part_3": {
+        "framework": "The 4-Part Response Framework merged with P-E-E-L. P = General Statement, E = Reason, E = Societal Example, L = Consequence",
+        "what_it_teaches": "Abstract sociological debate, depersonalized argumentation",
+        "when_to_use": "Two-way discussion",
+        "common_mistake": "Using I or Me extensively",
+        "practice": "Societal Argument Mapping Sheet",
+        "homework": "Draft 4-part framework grids on 5 abstract questions and self-record"
+      }
+    },
+    "writing_curriculum": {
+      "task_1": {
+        "task_types": "Line Graphs, Bar Charts, Pie Charts, Tables, Process Diagrams, Maps, Multiple Charts. GT Adaptation - Formal/Informal Letter",
+        "structures": "The 4-Paragraph Architecture",
+        "planning_methods": "Introduction Paraphrasing Rules",
+        "overview_methodology": "Macro-overview Formulation utilizing the Zero-Number Rule",
+        "vocabulary": "Spatial Transformation Verbs - Maps; Sequential Linking Words - Process",
+        "grammar": "Active-to-Passive voice conversion - Process",
+        "common_mistakes": "Copying the prompt exactly, putting numbers in the overview",
+        "practice": "Passive Voice Sentence-Conversion, 15-Minute Overview Sprint"
+      },
+      "task_2": {
+        "task_types": "Opinion, Discussion, Problem/Solution, Outweigh",
+        "structures": "The 5-Minute Brainstorming Rule, Thesis Statement Formulation",
+        "paragraph_organization": "The P-E-E Structure - Point, Explain, Example",
+        "argument_development": "Direct Cause-to-Solution Alignment, 2-to-1 Paragraph Planning - Outweigh",
+        "cohesion": "Connecting ideas logically using cohesive devices",
+        "grammar": "Conditional Structures - If/Unless, Relative Clauses - Who/Which/That",
+        "common_mistakes": "Starting to write without planning, mismatched solutions, staying neutral in Outweigh",
+        "practice": "Body Paragraph Drafting Sheet - PEE method, Matrix Outlining"
+      }
+    },
+    "reading_curriculum": {
+      "skills": "Non-translation reading, Time-boxing, Logical deduction",
+      "strategies": "Skimming - Topic Sentences, Scanning - Keywords, The Move On Rule, The 20-Minute Rule per passage",
+      "question_types": [
+        "True/False/Not Given - Trap: General knowledge assumption or Modifier traps",
+        "Matching Headings - Read list of headings first",
+        "Summary Completion Box vs No-Box - Grammar prediction integration"
+      ],
+      "practice": "5-min skimming challenges; T/F/NG proof-sentence underlining drills; Mini mock tests",
+      "homework": "Timed 20-minute passage runs; Full 60-min tests",
+      "progression": "Moves from basic skimming/scanning to logical T/F/NG to advanced paraphrased summaries"
+    },
+    "listening_curriculum": {
+      "sections_covered": "All 4 Sections",
+      "skills": "Auditory pattern recognition, Real-time note-taking, Spatial orientation tracking",
+      "strategies": "Pre-reading Audit, Grammatical Gap Prediction, Pencil Movement on maps",
+      "question_types": [
+        "Form/Summary Completion - Strict word count limits",
+        "Maps/Plan Labelling - Tracking from You are here",
+        "Multiple Choice Questions - MCQ Distractor Cross-out Method / The But/However Rule. Trap: Mentioning all 3 options"
+      ],
+      "practice": "Grammar prediction worksheets without audio; Map-tracing simulations; MCQ elimination drills",
+      "homework": "Section 1 & 4 gap prediction; Section 2 & 3 Map/MCQ drills; Full 40-min tests"
+    },
+    "vocabulary_curriculum": [
+      {
+        "category": "Top 200 Core Vocabulary",
+        "context": "Pre-IELTS Band 3.5 foundation",
+        "target_skill": "Basic sentence construction",
+        "class": "Foundation",
+        "source": "PRE IELTS foundation .docx",
+        "id": "vocab_001"
+      },
+      {
+        "category": "Directional Vocabulary",
+        "examples": "Adjacent, Opposite, Intersection, Beyond, North-East",
+        "target_skill": "Listening Maps",
+        "class": "Class 4",
+        "source": "16 classes IELTS.docx",
+        "id": "vocab_002"
+      },
+      {
+        "category": "Trend Vocabulary",
+        "examples": "Plunge, surge, fluctuate, soar, decline, drop, level off, peak",
+        "target_skill": "Writing Task 1 Charts",
+        "class": "Class 5",
+        "source": "IELTS Preparation Handout 2026.docx",
+        "id": "vocab_003"
+      },
+      {
+        "category": "Spatial Transformation Verbs",
+        "examples": "Demolished, Converted, Expanded, Constructed, Replaced",
+        "target_skill": "Writing Task 1 Maps",
+        "class": "Class 6",
+        "source": "16 classes IELTS.docx",
+        "id": "vocab_004"
+      },
+      {
+        "category": "Sequential Linking Words",
+        "examples": "Initially, Subsequently, Following this, Ultimately",
+        "target_skill": "Writing Task 1 Process",
+        "class": "Class 6",
+        "source": "16 classes IELTS.docx",
+        "id": "vocab_005"
+      },
+      {
+        "category": "Cohesive Devices",
+        "examples": "Furthermore, Moreover, However, Consequently, Therefore",
+        "target_skill": "Writing Task 2",
+        "class": "Class 8",
+        "source": "IELTS Preparation Handout 2026.docx",
+        "id": "vocab_006"
+      }
+    ],
+    "grammar_curriculum": [
+      {
+        "concept": "Subject-Verb-Object formula",
+        "common_error": "Dropping the Be verb",
+        "ielts_relevance": "Prevents broken sentences",
+        "class": "Foundation Day 1",
+        "source": "PRE IELTS foundation .docx",
+        "id": "grammar_001"
+      },
+      {
+        "concept": "Passive Voice",
+        "example": "Object + am/is/are + V3",
+        "ielts_relevance": "Writing Task 1 Process diagrams",
+        "class": "Class 6",
+        "source": "16 classes IELTS.docx",
+        "id": "grammar_002"
+      },
+      {
+        "concept": "Relative Clauses",
+        "example": "Who, Which, That",
+        "ielts_relevance": "Syntactic upgrading from simple to complex",
+        "class": "Class 12",
+        "source": "16 classes IELTS.docx",
+        "id": "grammar_003"
+      },
+      {
+        "concept": "Conditionals",
+        "example": "First Conditional for real solutions; Second Conditional for hypothetical solutions",
+        "ielts_relevance": "Writing Task 2 problem solving",
+        "class": "Class 12",
+        "source": "16 classes IELTS.docx",
+        "id": "grammar_004"
+      }
+    ],
+    "practice_bank": [
+      {
+        "skill": "Reading",
+        "task_type": "Skimming/Scanning",
+        "class": "Class 1",
+        "objective": "Extract main idea and scan for exact numbers/locations",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_001"
+      },
+      {
+        "skill": "Reading",
+        "task_type": "T/F/NG",
+        "class": "Class 2",
+        "objective": "Determine T/F/NG and provide exact proof-sentence",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_002"
+      },
+      {
+        "skill": "Listening",
+        "task_type": "Gaps",
+        "class": "Class 3",
+        "objective": "Grammar prediction step, followed by gap fill",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_003"
+      },
+      {
+        "skill": "Listening",
+        "task_type": "Maps/MCQs",
+        "class": "Class 4",
+        "objective": "Map matchings and MCQ Distractor elimination logics",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_004"
+      },
+      {
+        "skill": "Writing Task 1",
+        "task_type": "Intro/Overview",
+        "class": "Class 5",
+        "objective": "Paraphrasing and Zero-Number macro-overviews",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_005"
+      },
+      {
+        "skill": "Writing Task 1",
+        "task_type": "Complex",
+        "class": "Class 6",
+        "objective": "Passive voice conversion; Spatial verbs blank-filling",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_006"
+      },
+      {
+        "skill": "Writing Task 2",
+        "task_type": "Basics",
+        "class": "Class 7",
+        "objective": "Thesis statement generation; Step-by-step PEE paragraph drafting",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_007"
+      },
+      {
+        "skill": "Writing Task 2",
+        "task_type": "Advanced",
+        "class": "Class 8",
+        "objective": "Matrix outlining; Aligning specific causes with direct solutions",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_008"
+      },
+      {
+        "skill": "Speaking Part 1",
+        "task_type": "Interview",
+        "class": "Class 9",
+        "objective": "5 prompts applying A-R-E formula",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_009"
+      },
+      {
+        "skill": "Speaking Part 2",
+        "task_type": "Long Turn",
+        "class": "Class 10",
+        "objective": "5 Cue Cards applying 5W1H keyword mapping",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_010"
+      },
+      {
+        "skill": "Speaking Part 3",
+        "task_type": "Discussion",
+        "class": "Class 11",
+        "objective": "5 prompts applying the 4-Part Response Framework",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_011"
+      },
+      {
+        "skill": "Grammar",
+        "task_type": "Complex sentences",
+        "class": "Class 12",
+        "objective": "5 Simple-to-Complex conversions - Who, Which, If",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_012"
+      },
+      {
+        "skill": "Reading/Listening",
+        "task_type": "Advanced Summaries",
+        "class": "Class 13",
+        "objective": "Box and No-Box summary completion; Move On scenario drills",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_013"
+      },
+      {
+        "skill": "Writing",
+        "task_type": "Mock Test",
+        "class": "Class 14",
+        "objective": "5 distinct Writing Sets - Task 1 & 2 - under simulated 60-min timing",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_014"
+      },
+      {
+        "skill": "Analysis",
+        "task_type": "Diagnostics",
+        "class": "Class 15",
+        "objective": "5 Error Scenarios diagnosing Root Causes - Vocabulary, Distractor, Time, Spelling",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_015"
+      },
+      {
+        "skill": "Readiness",
+        "task_type": "Proofreading",
+        "class": "Class 16",
+        "objective": "5 Proofreading drills identifying Subject-Verb, Past Tense, and Spelling silly mistakes",
+        "source": "practice sheet 5 practice each.docx",
+        "id": "practice_016"
+      }
+    ],
+    "homework_bank": [
+      {
+        "class": "Class 1",
+        "skill": "Reading",
+        "task": "Cambridge Reading Passage 1 under strict 20-minute timer",
+        "id": "homework_001",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 2",
+        "skill": "Reading",
+        "task": "15 T/F/NG questions; mandatory proof-sentence underlining",
+        "id": "homework_002",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 3",
+        "skill": "Listening",
+        "task": "Section 1 & 4; mandatory grammar gap prediction",
+        "id": "homework_003",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 4",
+        "skill": "Listening",
+        "task": "Two Maps and 10 MCQs; physically crossing out distractors",
+        "id": "homework_004",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 5",
+        "skill": "Writing Task 1",
+        "task": "Complete one Line Graph and one Bar Chart - 150 words",
+        "id": "homework_005",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 6",
+        "skill": "Writing Task 1",
+        "task": "Complete one Map and one Process Diagram - 150 words",
+        "id": "homework_006",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 7",
+        "skill": "Writing Task 2",
+        "task": "One Opinion and one Discussion essay; mandatory PEE usage",
+        "id": "homework_007",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 8",
+        "skill": "Writing Task 2",
+        "task": "One Problem/Solution and one Outweigh essay; mandatory cause/solution mapping",
+        "id": "homework_008",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 9",
+        "skill": "Speaking Part 1",
+        "task": "Self-record 10 Part 1 questions on smartphone using ARE formula",
+        "id": "homework_009",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 10",
+        "skill": "Speaking Part 2",
+        "task": "5 Cue cards; 1-min note, 2-min recording",
+        "id": "homework_010",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 11",
+        "skill": "Speaking Part 3",
+        "task": "5 Abstract Part 3 questions using 4-Part/PEEL framework on smartphone",
+        "id": "homework_011",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 12",
+        "skill": "Grammar",
+        "task": "Convert 5 simple sentences from old essays into complex ones",
+        "id": "homework_012",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 13",
+        "skill": "Reading/Listening",
+        "task": "Complete Reading Pass 3 and Listening Sec 3 with Move On rule",
+        "id": "homework_013",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 14",
+        "skill": "Mock Test",
+        "task": "Full Listening and Reading Mock Test at home in silence",
+        "id": "homework_014",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 15",
+        "skill": "Analysis",
+        "task": "Update Error Journal for every wrong mock test answer",
+        "id": "homework_015",
+        "source": "Not specified in source"
+      },
+      {
+        "class": "Class 16",
+        "skill": "Readiness",
+        "task": "Review Error Journal, organize passport, sleep 8 hours",
+        "id": "homework_016",
+        "source": "Not specified in source"
+      }
+    ],
+    "error_remediation_framework": [
+      {
+        "error": "Vocabulary Gap",
+        "why_it_matters": "Prevents synonym matching in Reading/Listening",
+        "example": "Not knowing abandoned means halted",
+        "remediation": "Log word and synonym in Error Journal; practice synonym hunting",
+        "id": "error_001",
+        "source": "Not specified in source"
+      },
+      {
+        "error": "Distractor Trap",
+        "why_it_matters": "Students select the first option they hear",
+        "example": "Ticking option A before hearing 'However, we chose C'",
+        "remediation": "Master the But/However rule; physically cross out options",
+        "id": "error_002",
+        "source": "Not specified in source"
+      },
+      {
+        "error": "Time Pressure / Pacing",
+        "why_it_matters": "Leaves boxes blank, causing cascading failures",
+        "example": "Spending 9 minutes on one Reading question, missing the last 4",
+        "remediation": "Strict execution of the Move On rule; educated guessing",
+        "id": "error_003",
+        "source": "Not specified in source"
+      },
+      {
+        "error": "Spelling and Plural 's' / 'es'",
+        "why_it_matters": "Zero marks even if the correct word is heard",
+        "example": "Writing 'luxury bus' instead of 'luxury buses'",
+        "remediation": "Pronunciation clinic - Ending sounds; Error Journal highlighting",
+        "id": "error_004",
+        "source": "Not specified in source"
+      },
+      {
+        "error": "Grammar Breakdown - Task 1 & 2",
+        "why_it_matters": "Caps Band Score at 5.5",
+        "example": "Using simple sentences constantly without relative clauses",
+        "remediation": "Syntactic upgrading via Relative Clauses and Conditionals",
+        "id": "error_005",
+        "source": "Not specified in source"
+      }
+    ],
+    "ai_teacher_rules": [
+      "1. Follow Position - The AI must track the student's exact position in the 16-Class or Foundation curriculum map.",
+      "2. Check Prerequisites - Before presenting Class 7 PEE method, the AI must verify SVO sentence mastery from Foundation Day 1.",
+      "3. Identify Weakest Skill - The AI must categorize student errors using the 4 Root Causes - Vocabulary, Distractor, Time, Spelling - from Class 15.",
+      "4. Select Objective - Align AI instruction strictly with the specific Class objective.",
+      "5. Prefer Existing Practice - The AI must utilize the 5 specific drills from Source 4 before generating new ones.",
+      "6. Generate Aligned Variations - If the student exhausts Source 4 drills, the AI must generate new tasks adhering strictly to AKHL frameworks - Zero-Number Rule, ARE, 5W1H, PEE.",
+      "7. Give Targeted Homework - Assign time-boxed homework exactly as dictated in Sources 1 and 2.",
+      "8. Reassess Mastery - Use the Error Journal rubric to grade outputs.",
+      "9. Sequential Movement - The AI must not randomly jump topics."
+    ],
+    "missing_or_ambiguous_source_information": {
+      "notes": [
+        "Source-supported content - All curriculum structures, teaching methodologies, drill practices, vocabulary lists, grammar foundations, and error remediations in this document have been explicitly extracted and cited from the 4 provided source documents.",
+        "Areas where additional curriculum material would be required - Specific prerequisites mapping individual Band scores directly to Class entry points are not specified in the source. General Training material is explicitly omitted in Source 3. Comprehensive reading passages and listening audio files for full mock tests must be sourced externally."
+      ]
+    },
+    "metadata": {
+      "schema_version": "1.1",
+      "curriculum_name": "AKHL IELTS Master Curriculum",
+      "language": "en",
+      "source_of_truth": "Uploaded AKHL IELTS curriculum materials",
+      "source_documents": [
+        "16 classes IELTS.docx",
+        "IELTS Preparation Handout 2026.docx",
+        "PRE IELTS foundation .docx",
+        "practice sheet 5 practice each.docx"
+      ],
+      "source_document_count": 4,
+      "content_policy": {
+        "invent_unsupported_content": false,
+        "mark_missing_content": "Not specified in source",
+        "preserve_source_sequence": true,
+        "preserve_source_traceability": true
+      },
+      "ai_usage": {
+        "local_model": "Qwen2.5-1.5B-Instruct-GGUF",
+        "design_context_limit_tokens": 1024,
+        "provider_agnostic": true
+      }
+    },
+    "retrieval_index": {
+      "by_class": {
+        "1": {
+          "class_id": "class_01",
+          "title": "Introduction & Reading Strategies",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Band 5.0 - 5.5",
+          "skills": "Reading"
+        },
+        "2": {
+          "class_id": "class_02",
+          "title": "Reading Deep Dive - True / False / Not Given",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 1",
+          "skills": "Reading"
+        },
+        "3": {
+          "class_id": "class_03",
+          "title": "Listening Fundamentals - Section 1 & 4",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 2",
+          "skills": "Listening"
+        },
+        "4": {
+          "class_id": "class_04",
+          "title": "Listening Advanced - Maps & Multiple Choice",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 3",
+          "skills": "Listening"
+        },
+        "5": {
+          "class_id": "class_05",
+          "title": "Writing Task 1 Academic - Charts & Graphs",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 4",
+          "skills": "Writing"
+        },
+        "6": {
+          "class_id": "class_06",
+          "title": "Writing Task 1 Complex - Process, Maps, & Multi-Charts",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 5",
+          "skills": "Writing"
+        },
+        "7": {
+          "class_id": "class_07",
+          "title": "Writing Task 2 Basics - Opinion & Discussion",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 6",
+          "skills": "Writing"
+        },
+        "8": {
+          "class_id": "class_08",
+          "title": "Writing Task 2 Advanced - Problem/Solution & Outweigh",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 7",
+          "skills": "Writing"
+        },
+        "9": {
+          "class_id": "class_09",
+          "title": "Speaking Part 1 - The Interview",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 8",
+          "skills": "Speaking"
+        },
+        "10": {
+          "class_id": "class_10",
+          "title": "Speaking Part 2 - The Long Turn",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 9",
+          "skills": "Speaking"
+        },
+        "11": {
+          "class_id": "class_11",
+          "title": "Speaking Part 3 - Two-Way Discussion",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 10",
+          "skills": "Speaking"
+        },
+        "12": {
+          "class_id": "class_12",
+          "title": "Grammar & Vocabulary Clinic",
+          "target_level": "Band 7.0+",
+          "prerequisites": "Class 11",
+          "skills": "Writing, Speaking"
+        },
+        "13": {
+          "class_id": "class_13",
+          "title": "Advanced Reading & Listening",
+          "target_level": "Band 6.5+",
+          "prerequisites": "Class 12",
+          "skills": "Reading, Listening"
+        },
+        "14": {
+          "class_id": "class_14",
+          "title": "Full Mock Test 1 - Simulated Environment",
+          "target_level": "Assessment",
+          "prerequisites": "Class 13",
+          "skills": "Writing, Reading, Listening"
+        },
+        "15": {
+          "class_id": "class_15",
+          "title": "Mock Test Analysis & Error Correction",
+          "target_level": "All levels",
+          "prerequisites": "Class 14",
+          "skills": "All modules"
+        },
+        "16": {
+          "class_id": "class_16",
+          "title": "Final Readiness & Exam Day Psychology",
+          "target_level": "All levels",
+          "prerequisites": "Class 15",
+          "skills": "All modules"
+        }
+      },
+      "by_skill": {
+        "Reading": [
+          "practice_001",
+          "practice_002",
+          "homework_001",
+          "homework_002"
+        ],
+        "Listening": [
+          "practice_003",
+          "practice_004",
+          "homework_003",
+          "homework_004"
+        ],
+        "Writing Task 1": [
+          "practice_005",
+          "practice_006",
+          "homework_005",
+          "homework_006"
+        ],
+        "Writing Task 2": [
+          "practice_007",
+          "practice_008",
+          "homework_007",
+          "homework_008"
+        ],
+        "Speaking Part 1": [
+          "practice_009",
+          "homework_009"
+        ],
+        "Speaking Part 2": [
+          "practice_010",
+          "homework_010"
+        ],
+        "Speaking Part 3": [
+          "practice_011",
+          "homework_011"
+        ],
+        "Grammar": [
+          "practice_012",
+          "homework_012"
+        ],
+        "Reading/Listening": [
+          "practice_013",
+          "homework_013"
+        ],
+        "Writing": [
+          "practice_014"
+        ],
+        "Analysis": [
+          "practice_015",
+          "homework_015"
+        ],
+        "Readiness": [
+          "practice_016",
+          "homework_016"
+        ],
+        "Mock Test": [
+          "homework_014"
+        ]
+      }
+    },
+    "blank_field_policy": {
+      "default_text": "Not specified in source",
+      "do_not_invent": true,
+      "preserve_unknown_as_unknown": true
+    }
+  }
+}

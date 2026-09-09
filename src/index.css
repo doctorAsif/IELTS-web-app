@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ielts-obsidian text-slate-100 font-sans antialiased selection:bg-ielts-royalPurple selection:text-white;
+    background-color: #0B0F19;
+  }
+}
+
+/* Liquid UI Specular Highlight & Glassmorphism */
+.liquid-glass-card {
+  background: rgba(19, 27, 46, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.liquid-elevated-pill {
+  box-shadow: 0 8px 20px -4px rgba(139, 92, 246, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+.liquid-glow-emerald {
+  box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+.liquid-glow-crimson {
+  box-shadow: 0 8px 20px -4px rgba(225, 29, 72, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Custom crisp dark scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

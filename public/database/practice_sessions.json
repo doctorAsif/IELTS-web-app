@@ -1,0 +1,316 @@
+[
+  {
+    "session_id": "SWB-LS-6.0-S01",
+    "target_band": "Band 6.0",
+    "module": "Listening",
+    "topic_tag": "HR Agency Staffing",
+    "content_payload": "[Male Agent] Good morning, HR Agency Limited. You are speaking with David. How can I help you?\n[Female Caller] Hi David. I am calling to inquire about the remote staffing positions you advertised last week. I am interested in the Digital Marketing role.\n[Male Agent] Excellent. Let me take down your details to create a profile. What is your full name?\n[Female Caller] It is Sarah Jenkins.\n[Male Agent] Can you spell your surname for me?\n[Female Caller] Yes, it is J-E-N-K-I-N-S.\n[Male Agent] Great. And what is your best contact number?\n[Female Caller] My mobile number is 077-543-9218.\n[Male Agent] Thank you. Now, regarding your work experience, do you have a background in social media?\n[Female Caller] Actually, I spent the last three years working specifically on email campaigns for a clothing brand.\n[Male Agent] What is your primary qualification?\n[Female Caller] I graduated with a bachelor's degree in Economics.\n[Male Agent] What is your expected monthly salary?\n[Female Caller] I was hoping for around twelve hundred dollars, but I am willing to accept one thousand dollars to start.\n[Male Agent] We will put down $1000 for the initial probation period. Finally, who should we contact for a reference?\n[Female Caller] You can contact my previous manager, Mr. Thompson.",
+    "questions": [
+      {
+        "index": 1,
+        "type": "note_completion",
+        "prompt": "Full Name - Sarah [ 1 ] ________"
+      },
+      {
+        "index": 2,
+        "type": "note_completion",
+        "prompt": "Contact Number - [ 2 ] ________"
+      },
+      {
+        "index": 3,
+        "type": "note_completion",
+        "prompt": "Main Work Experience - Handled [ 3 ] ________ for three years"
+      },
+      {
+        "index": 4,
+        "type": "note_completion",
+        "prompt": "Primary Degree - Bachelor's in [ 4 ] ________"
+      },
+      {
+        "index": 5,
+        "type": "note_completion",
+        "prompt": "Starting Salary Expected - $ [ 5 ] ________ per month"
+      },
+      {
+        "index": 6,
+        "type": "note_completion",
+        "prompt": "Reference Contact - Mr. [ 6 ] ________"
+      }
+    ],
+    "answer_key": {
+      "1": "Jenkins",
+      "2": "077-543-9218",
+      "3": "email campaigns",
+      "4": "Economics",
+      "5": "1000/1,000/one thousand",
+      "6": "Thompson"
+    },
+    "ai_rubric": null
+  },
+  {
+    "session_id": "SWB-LS-7.0-S01",
+    "target_band": "Band 7.0",
+    "module": "Listening",
+    "topic_tag": "Distribution Logistics & Facility Map",
+    "content_payload": "[Male Manager] Welcome, everyone, to the new Tulip Style central distribution warehouse. Let me give you a quick orientation of the facility map. You are currently standing at the Main Entrance, facing north. If you walk straight down the main central corridor, the very last room at the end is our Dispatch Area, labeled A on your map.\nJust before you reach the Dispatch Area, there is a hallway to your right. Take that right turn, and the first room you see is the Packaging Station, labeled B. Now, if you go back to the Main Entrance, the large room immediately on your left side is our Quality Control center, labeled C.\nRegarding our new policies, we originally planned to offer free lunch to all warehouse staff. However, due to budget cuts, we will instead provide free transport passes. Also, please note that mobile phones are strictly prohibited on the warehouse floor due to safety protocols.",
+    "questions": [
+      {
+        "index": 1,
+        "type": "map",
+        "prompt": "Dispatch Area - Location [ 1 ] (A, B, or C)"
+      },
+      {
+        "index": 2,
+        "type": "map",
+        "prompt": "Packaging Station - Location [ 2 ] (A, B, or C)"
+      },
+      {
+        "index": 3,
+        "type": "map",
+        "prompt": "Quality Control Center - Location [ 3 ] (A, B, or C)"
+      },
+      {
+        "index": 4,
+        "type": "mcq",
+        "prompt": "What benefit is the company currently offering to its warehouse staff?",
+        "options": ["A) Free lunch", "B) Free transport passes", "C) Safety equipment"]
+      },
+      {
+        "index": 5,
+        "type": "mcq",
+        "prompt": "What item is strictly banned on the warehouse floor?",
+        "options": ["A) Food and drinks", "B) Mobile phones", "C) Heavy bags"]
+      }
+    ],
+    "answer_key": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "B",
+      "5": "B"
+    },
+    "ai_rubric": null
+  },
+  {
+    "session_id": "SWB-LS-8.0-S01",
+    "target_band": "Band 8.0+",
+    "module": "Listening",
+    "topic_tag": "Corporate Tech & Cloud Security",
+    "content_payload": "[Male Professor] Welcome to today's lecture on the evolution of corporate technology. In the past, multinational corporations relied on physical servers, which required massive amounts of electricity and constant manual maintenance. Today, the adoption of cloud ecosystems, specifically the Google Cloud Platform, has revolutionized data storage. The most significant advantage is absolute security. Furthermore, keeping track of command-line logging strings allows cybersecurity teams to predict data breaches before they occur. However, the biggest vulnerability remains human negligence, not system failure.",
+    "questions": [
+      {
+        "index": 1,
+        "type": "note_completion",
+        "prompt": "Physical servers required massive amounts of [ 1 ] ________ to operate."
+      },
+      {
+        "index": 2,
+        "type": "note_completion",
+        "prompt": "Cloud platforms revolutionized corporate data [ 2 ] ________."
+      },
+      {
+        "index": 3,
+        "type": "note_completion",
+        "prompt": "Analyzing logging strings helps predict a data [ 3 ] ________."
+      },
+      {
+        "index": 4,
+        "type": "note_completion",
+        "prompt": "The primary ongoing vulnerability is human [ 4 ] ________."
+      }
+    ],
+    "answer_key": {
+      "1": "electricity",
+      "2": "storage",
+      "3": "breach/breaches",
+      "4": "negligence"
+    },
+    "ai_rubric": null
+  },
+  {
+    "session_id": "SWB-RD-6.0-S01",
+    "target_band": "Band 6.0",
+    "module": "Reading",
+    "topic_tag": "Student World Australia Branch Launch",
+    "content_payload": "Student World Australia recently opened a new franchise branch in Bangladesh. The inauguration program was held on the 13th of August, 2025. This new branch aims to help local students apply to universities in Sydney and Melbourne. Many students struggle with the visa process, so the consultancy provides free initial counseling to everyone. Additionally, intensive IELTS prep batches are conducted on weekends.",
+    "questions": [
+      {
+        "index": 1,
+        "type": "tfng",
+        "prompt": "The new branch in Bangladesh was opened in September 2025."
+      },
+      {
+        "index": 2,
+        "type": "tfng",
+        "prompt": "The consultancy charges a small fee for the first counseling session."
+      },
+      {
+        "index": 3,
+        "type": "tfng",
+        "prompt": "Most students prefer to study in Sydney rather than Melbourne."
+      }
+    ],
+    "answer_key": {
+      "1": "FALSE",
+      "2": "FALSE",
+      "3": "NOT GIVEN"
+    },
+    "ai_rubric": null
+  },
+  {
+    "session_id": "SWB-RD-7.0-S01",
+    "target_band": "Band 7.0",
+    "module": "Reading",
+    "topic_tag": "Commercial Studio Infrastructure",
+    "content_payload": "In the realm of commercial photography, maintaining absolute color consistency is paramount. Relying on natural sunlight is highly unpredictable due to shifting weather patterns. Consequently, professional studios are heavily equipped with artificial strobe lighting, specifically Godox systems. These setups require a mandatory security deposit before renting, as the equipment is extremely fragile and expensive.",
+    "questions": [
+      {
+        "index": 1,
+        "type": "summary",
+        "prompt": "Photographers avoid natural sunlight because it is highly [ 1 ] ________."
+      },
+      {
+        "index": 2,
+        "type": "summary",
+        "prompt": "Commercial studios use Godox setups to guarantee color [ 2 ] ________."
+      },
+      {
+        "index": 3,
+        "type": "summary",
+        "prompt": "Clients must provide a [ 3 ] ________ before utilizing the studio equipment."
+      }
+    ],
+    "answer_key": {
+      "1": "unpredictable",
+      "2": "consistency",
+      "3": "security deposit"
+    },
+    "ai_rubric": null
+  },
+  {
+    "session_id": "SWB-RD-8.0-S01",
+    "target_band": "Band 8.0+",
+    "module": "Reading",
+    "topic_tag": "Open-Source Architecture in Enterprise",
+    "content_payload": "While commercial operating systems dominate consumer electronics due to optimized user interfaces, enterprise IT departments are increasingly migrating to open-source environments. The primary catalyst for this shift is not cost reduction, as is commonly assumed, but rather the desperate need for absolute architectural transparency. Open-source platforms permit cybersecurity experts to independently audit core code for dormant vulnerabilities without relying on vendor assertions.",
+    "questions": [
+      {
+        "index": 1,
+        "type": "mcq",
+        "prompt": "What is the primary motivation for enterprises adopting open-source systems?",
+        "options": [
+          "A) To significantly lower overall software licensing costs.",
+          "B) Because open-source systems provide superior graphical interfaces.",
+          "C) To gain architectural transparency and independently audit system code.",
+          "D) Because commercial vendors no longer offer security updates."
+        ]
+      },
+      {
+        "index": 2,
+        "type": "mcq",
+        "prompt": "What is the writer's main objective in this passage?",
+        "options": [
+          "A) To criticize consumer preferences for proprietary software.",
+          "B) To elucidate the security rationales behind an enterprise shift.",
+          "C) To demonstrate that open-source software is cheaper to operate.",
+          "D) To advocate for a single open-source distribution."
+        ]
+      }
+    ],
+    "answer_key": {
+      "1": "C",
+      "2": "B"
+    },
+    "ai_rubric": null
+  },
+  {
+    "session_id": "SWB-WR-6.0-S01",
+    "target_band": "Band 6.0",
+    "module": "Writing",
+    "topic_tag": "Line Graph - Remote Staffing Hires",
+    "content_payload": "Task 1 Prompt: The line graph shows the number of remote staff hired by HR Agency Limited across three sectors (Information Technology, Digital Marketing, Customer Support) between 2019 and 2024.\n- IT: Started at 500 in 2019 and grew steadily to 1,500 in 2024 (highest continuous growth).\n- Customer Support: Began at 1,000 in 2019, peaked at 1,200 in 2021, and declined to 800 in 2024.\n- Digital Marketing: Stable at 300 until 2022, then rapidly increased to 900 by 2024.\n\nSummarize the information and make comparisons. Write at least 150 words.",
+    "questions": [],
+    "answer_key": {},
+    "ai_rubric": {
+      "required_vocabulary": ["witnessed", "experienced", "steady increase", "gradual decline", "surged rapidly"],
+      "structural_rules": "Clear macro-overview without any numbers, followed by two cohesive body paragraphs comparing trends.",
+      "penalty_triggers": {"Numbers-in-Overview": -1.0, "Under-150-words": -1.0},
+      "sample_ideal_answer": "Overall, it is clear that while Information Technology and Digital Marketing experienced significant growth over the six-year period, Customer Support saw an overall decline."
+    }
+  },
+  {
+    "session_id": "SWB-WR-7.0-S01",
+    "target_band": "Band 7.0",
+    "module": "Writing",
+    "topic_tag": "Remote Working vs Office Collaboration",
+    "content_payload": "Task 2 Prompt: Some experts believe that remote working models provide employees with the best work-life balance and significantly increase overall productivity. However, others argue that working in a traditional physical office is strictly essential for teamwork and long-term professional growth.\n\nDiscuss both these views and give your own opinion. Write at least 250 words.",
+    "questions": [],
+    "answer_key": {},
+    "ai_rubric": {
+      "required_vocabulary": ["work-life balance", "corporate synergy", "infrastructure", "subsequently", "indispensable"],
+      "structural_rules": "Strict P-E-E Method across 4 or 5 paragraphs, with a clearly stated opinion in both introduction and conclusion.",
+      "penalty_triggers": {"Subject-Verb-Agreement": -0.5, "No-Stance-Intro": -1.0, "Under-250-words": -1.0},
+      "sample_ideal_answer": "This essay strongly argues that while traditional offices cultivate team cohesion, remote working fundamentally enhances worker productivity and personal well-being."
+    }
+  },
+  {
+    "session_id": "SWB-WR-8.0-S01",
+    "target_band": "Band 8.0+",
+    "module": "Writing",
+    "topic_tag": "Automation & Administrative Displacement",
+    "content_payload": "Task 2 Prompt: In many modern corporate workplaces, artificial intelligence and automated algorithms are increasingly replacing human administrative roles. Do the advantages of this development outweigh the disadvantages?\n\nWrite at least 250 words with advanced cohesive devices and nuanced argumentation.",
+    "questions": [],
+    "answer_key": {},
+    "ai_rubric": {
+      "required_vocabulary": ["operational velocity", "mitigate", "technological unemployment", "paradigm shift", "administrative redundancy"],
+      "structural_rules": "Maintain an explicit 2-to-1 argumentative stance ratio with complex thesis statement formulation.",
+      "penalty_triggers": {"Neutral-Stance-Penalty": -1.0, "Repetitive-Connectors": -0.5},
+      "sample_ideal_answer": "This essay asserts that the economic and operational advantages of workplace automation substantially outweigh the drawbacks of transitional labor disruption."
+    }
+  },
+  {
+    "session_id": "SWB-SP-6.0-S01",
+    "target_band": "Band 6.0",
+    "module": "Speaking",
+    "topic_tag": "Hobbies & Photography",
+    "content_payload": "Part 1 Prompt: Are you interested in taking photographs when you visit new places? Explain why and give an example using the A-R-E formula (Answer, Reason, Example).",
+    "questions": [],
+    "answer_key": {},
+    "ai_rubric": {
+      "required_vocabulary": ["fascinated", "preserve memories", "scenic views"],
+      "structural_rules": "A-R-E Formula: Answer the question directly, provide a logical reason, and illustrate with a real-life example.",
+      "penalty_triggers": {"One-Word-Answer": -1.0, "Hesitation-Over-4s": -0.5},
+      "sample_ideal_answer": "Yes, I am deeply fascinated by photography because it allows me to preserve memories of new cultures, such as the photographs I took during my trip to Malaysia."
+    }
+  },
+  {
+    "session_id": "SWB-SP-7.0-S01",
+    "target_band": "Band 7.0",
+    "module": "Speaking",
+    "topic_tag": "Cue Card - Organizing an Inauguration Event",
+    "content_payload": "Part 2 Cue Card: Describe an important event you helped organize.\nYou should say:\n- What the event was\n- When and where it took place\n- What your exact role was\n- And explain how successful the event was.\n\nSpeak for up to 2 minutes using narrative past tenses and sequential transitions.",
+    "questions": [],
+    "answer_key": {},
+    "ai_rubric": {
+      "required_vocabulary": ["inauguration", "franchise branch", "coordination", "logistics", "subsequently"],
+      "structural_rules": "5W1H Method covering all 4 cue card bullet points systematically with consistent past tense usage.",
+      "penalty_triggers": {"Tense-Inconsistency": -0.5, "Under-1-Minute-Speech": -1.0},
+      "sample_ideal_answer": "I had the privilege of organizing the grand inauguration of our new franchise branch in August 2025..."
+    }
+  },
+  {
+    "session_id": "SWB-SP-8.0-S01",
+    "target_band": "Band 8.0+",
+    "module": "Speaking",
+    "topic_tag": "Future of AI in Education Consultancies",
+    "content_payload": "Part 3 Prompt: Considering the rapid development of generative AI in handling admissions and visa documentation, what role will human consultants play in the future of international education?",
+    "questions": [],
+    "answer_key": {},
+    "ai_rubric": {
+      "required_vocabulary": ["administrative automation", "pivot", "human empathy", "personalized mentorship", "indispensable"],
+      "structural_rules": "Hypothetical reasoning utilizing Second Conditional structures (If + Past Simple, would + Verb) and abstract societal viewpoints.",
+      "penalty_triggers": {"Lack-Of-Conditionals": -0.5, "Hesitation": -0.5},
+      "sample_ideal_answer": "If AI took over repetitive paperwork, consultancies would survive by offering human empathy and personalized career mentorship that algorithms cannot replicate."
+    }
+  }
+]

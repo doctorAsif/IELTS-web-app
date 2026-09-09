@@ -1,0 +1,747 @@
+{
+  "modules": [
+    {
+      "practiceId": "AKHL-LS-001",
+      "skill": "Listening",
+      "part": "Part 1",
+      "questionType": "Form Completion",
+      "topic": "Booking a Community Hall",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Agent", "text": "Good morning, Southwood Community Center, how can I help?" },
+        { "speaker": "Caller", "text": "Hi, I'd like to inquire about booking the main hall for a retirement party." },
+        { "speaker": "Agent", "text": "Certainly. What date were you looking at?" },
+        { "speaker": "Caller", "text": "It’s for next month. The 14th of November. Actually, wait, that's a Thursday. It needs to be the Friday, so the 15th." },
+        { "speaker": "Agent", "text": "The 15th of November... yes, that's available. And whose name should I put the booking under?" },
+        { "speaker": "Caller", "text": "It’s Arthur Pendelton." },
+        { "speaker": "Agent", "text": "Could you spell your surname for me, please?" },
+        { "speaker": "Caller", "text": "Yes, it’s P-E-N-D-E-L-T-O-N." },
+        { "speaker": "Agent", "text": "Great. And what is the best contact number for you?" },
+        { "speaker": "Caller", "text": "My mobile is 07700 900 415. Oh, sorry, I just changed networks. It's 07700 900 485." }
+      ],
+      "questions": [
+        "Date of booking - 1. ________ November",
+        "Name - Arthur 2. ________",
+        "Contact Number - 3. ________"
+      ],
+      "answerKey": {
+        "1": ["15th", "15"],
+        "2": ["Pendelton"],
+        "3": ["07700 900 485"]
+      },
+      "explanation": "Q1 contains a self-correction distractor (14th to 15th). Q2 tests phonetic spelling accuracy. Q3 contains a number-change distractor, a classic IELTS Part 1 trap.",
+      "sourceReferences": "Official IELTS Part 1 Form Completion mechanics.",
+      "curriculumAlignment": "Identifying self-corrections, phonetic spelling, numerical data.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-002",
+      "skill": "Listening",
+      "part": "Part 1",
+      "questionType": "Table Completion",
+      "topic": "City Tour Options",
+      "difficulty": "Easy to Medium",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Write ONE WORD AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Guide", "text": "We have two main tours. The first is the Harbor Cruise. That departs at 10.15 AM." },
+        { "speaker": "Tourist", "text": "Is there an afternoon option for the cruise?" },
+        { "speaker": "Guide", "text": "There used to be, but for the winter season, it's just the morning one. The second option is the Walking Tour. That starts at 2.30 PM in the town square." },
+        { "speaker": "Tourist", "text": "How much are the tickets?" },
+        { "speaker": "Guide", "text": "The cruise is $25 per adult, but if you're a student, it drops to $18." },
+        { "speaker": "Tourist", "text": "I'm not a student, unfortunately. What about the walking tour?" },
+        { "speaker": "Guide", "text": "That one is $15 for everyone. Oh, and for the walking tour, make sure you bring an umbrella, as the forecast predicts rain." }
+      ],
+      "questions": [
+        "Tour Type | Departure Time | Adult Price | Note",
+        "Harbor Cruise | 1. ________ AM | $25 | Morning only",
+        "Walking Tour | 2.30 PM | $ 2. ________ | Bring an 3. ________"
+      ],
+      "answerKey": {
+        "1": ["10.15"],
+        "2": ["15", "fifteen"],
+        "3": ["umbrella"]
+      },
+      "explanation": "Q1 tests time formatting. Q2 uses a distractor ($18 student price) before confirming the adult price is $15. Q3 requires catching a specific singular noun ('umbrella').",
+      "sourceReferences": "British Council table completion formats.",
+      "curriculumAlignment": "Scanning tables, distinguishing between categories (adult vs student).",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-003",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Multiple Choice",
+      "topic": "New Staff Orientation",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Choose the correct letter, A, B, or C.",
+      "script": [
+        { "speaker": "Manager", "text": "Welcome to your first day at Greenfield Supermarket. Before we head to the shop floor, let's talk about your uniforms. You'll all be provided with two green polo shirts. You might have seen some staff wearing blue jackets, but those are exclusively for the warehouse team. You are responsible for washing your own shirts, but if they get damaged, speak to HR for a replacement. Now, regarding breaks, you get a 30-minute lunch. The staff canteen is on the first floor. We used to offer free meals, but due to budget cuts, you now get a 20% discount on hot food instead." }
+      ],
+      "questions": [
+        "1. What uniform will the new staff wear?\nA. A blue jacket\nB. A green shirt\nC. A jacket and a shirt",
+        "2. What is the current policy for staff lunches?\nA. Meals are provided for free.\nB. Staff must bring their own food.\nC. Staff receive a price reduction on meals."
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"]
+      },
+      "explanation": "Q1 mentions 'blue jackets' as a distractor for a different department. Q2 uses paraphrasing ('price reduction' for '20% discount') and a past-tense distractor ('used to offer free meals').",
+      "sourceReferences": "IELTS.org Multiple Choice distractors.",
+      "curriculumAlignment": "Recognizing past vs present states, identifying exclusions.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-004",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Map Labelling",
+      "topic": "Music Festival Layout",
+      "difficulty": "Medium to High",
+      "targetBand": "6.5 to 7.5",
+      "instructions": "Write the correct letter (A-E) next to questions 1 and 2.",
+      "script": [
+        { "speaker": "Announcer", "text": "Let’s look at the festival map. You are currently standing at the Main Entrance at the South Gate. If you walk straight ahead, past the central fountain, you'll see a large circular tent on your left. That is the Acoustic Stage. Now, for the food stalls, don't go to the east side of the park—that area is closed for construction this year. Instead, from the fountain, turn right and walk towards the trees. The food stalls are situated right in front of the woodland area." }
+      ],
+      "questions": [
+        "Visual Reference: A is circular tent on left, B is square tent on right, C is food stalls by trees, D is east side construction, E is north gate.",
+        "1. Acoustic Stage - ________",
+        "2. Food Stalls - ________"
+      ],
+      "answerKey": {
+        "1": ["A"],
+        "2": ["C"]
+      },
+      "explanation": "Tests spatial awareness and directional vocabulary (straight ahead, on your left, turn right). It actively warns the listener away from a distractor (east side/D).",
+      "sourceReferences": "IDP spatial/map labelling formats.",
+      "curriculumAlignment": "Following directional audio, eliminating negative cues.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-005",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Matching",
+      "topic": "University Assignment Roles",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Who will do the following tasks? Write A (Sarah), B (John), or C (Both).",
+      "script": [
+        { "speaker": "Sarah", "text": "So John, for our marketing presentation, we need to divide the work. I don't mind doing the background research." },
+        { "speaker": "John", "text": "Actually, Sarah, I've already collected most of the articles we need from the library. Why don't I finalize the research?" },
+        { "speaker": "Sarah", "text": "Oh, perfect. That leaves the slide design. I’m quite good with graphic software, so I’ll handle the visuals." },
+        { "speaker": "John", "text": "Sounds fair. What about the script for the actual speech?" },
+        { "speaker": "Sarah", "text": "I think we need to write that together so our voices match." },
+        { "speaker": "John", "text": "Agreed. We’ll draft the script over the weekend." }
+      ],
+      "questions": [
+        "1. Conduct the background research - ________",
+        "2. Design the presentation slides - ________",
+        "3. Write the speech script - ________"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["A"],
+        "3": ["C"]
+      },
+      "explanation": "Q1 involves a negotiation where Sarah offers, but John takes the task. Q3 relies on synonyms ('together' = Both).",
+      "sourceReferences": "British Council Part 3 conversational shifts.",
+      "curriculumAlignment": "Tracking speaker intentions, recognizing agreement/disagreement.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-006",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Flow-Chart Completion",
+      "topic": "Scientific Experiment Steps",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Write NO MORE THAN TWO WORDS for each answer.",
+      "script": [
+        { "speaker": "Tutor", "text": "Let's review the procedure for your chemistry lab tomorrow. Step one is preparation. You must ensure you wear your safety goggles before touching any equipment." },
+        { "speaker": "Student", "text": "Right. And then we measure the liquids?" },
+        { "speaker": "Tutor", "text": "Not immediately. Before measuring, you need to calibrate the scales. If you skip that, your data will be useless. Once calibrated, you pour the solution into the beaker and heat it." },
+        { "speaker": "Student", "text": "Do we heat it to a boil?" },
+        { "speaker": "Tutor", "text": "No, just simmer it gently for five minutes, then record the temperature changes on your worksheet." }
+      ],
+      "questions": [
+        "Step 1 - Put on safety 1. ________",
+        "Step 2 - 2. ________ the scales",
+        "Step 3 - Heat the solution and 3. ________ the results"
+      ],
+      "answerKey": {
+        "1": ["goggles"],
+        "2": ["calibrate"],
+        "3": ["record"]
+      },
+      "explanation": "Tests sequencing language ('Not immediately', 'Before measuring', 'Once calibrated').",
+      "sourceReferences": "IELTS.org Flow-chart tasks.",
+      "curriculumAlignment": "Process sequencing, catching imperative verbs.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-007",
+      "skill": "Listening",
+      "part": "Part 4",
+      "questionType": "Sentence Completion",
+      "topic": "The History of Concrete",
+      "difficulty": "High",
+      "targetBand": "7.5 to 8.5",
+      "instructions": "Write ONE WORD ONLY for each answer.",
+      "script": [
+        { "speaker": "Lecturer", "text": "Moving on to construction materials. While modern builders rely heavily on steel, the Romans revolutionized architecture through their unique formulation of concrete. Unlike modern concrete, which degrades over a few decades, Roman concrete actually becomes stronger over time. Researchers recently discovered their secret ingredient. It wasn't the type of sand they used, as previously thought, but rather the inclusion of volcanic ash. When seawater seeped into the concrete structures, it reacted with this ash to form new minerals, effectively healing any cracks." }
+      ],
+      "questions": [
+        "1. Roman concrete differs from modern versions because it grows ________ as it ages.",
+        "2. Scientists found that volcanic ________ was the secret component used by the Romans."
+      ],
+      "answerKey": {
+        "1": ["stronger"],
+        "2": ["ash"]
+      },
+      "explanation": "High-density academic monologue. Q1 requires paraphrasing 'becomes stronger' to 'grows stronger'. Q2 features a distractor ('sand') which is explicitly dismissed.",
+      "sourceReferences": "Official Part 4 Academic Monologue mechanics.",
+      "curriculumAlignment": "Academic vocabulary, dismissing false hypotheses.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-008",
+      "skill": "Listening",
+      "part": "Part 4",
+      "questionType": "Summary Completion",
+      "topic": "Deep Sea Exploration",
+      "difficulty": "Very High",
+      "targetBand": "8.0 to 9.0",
+      "instructions": "Write NO MORE THAN TWO WORDS for each answer.",
+      "script": [
+        { "speaker": "Lecturer", "text": "The midnight zone of the ocean, stretching below 1,000 meters, presents extreme challenges for marine biologists. The total absence of sunlight means that photosynthesis cannot occur. Consequently, the creatures here rely on 'marine snow'—organic debris falling from the upper layers—as their primary food source. To survive the crushing hydrostatic pressure, deep-sea fish possess highly flexible skeletal structures rather than rigid bones. Furthermore, to navigate and attract mates in the pitch black, many species have developed bioluminescence, producing their own light through chemical reactions." }
+      ],
+      "questions": [
+        "In the midnight zone, animals cannot rely on plants because there is no 1. ________. Instead, they eat organic matter falling from above. To cope with the immense water pressure, these fish have evolved 2. ________ skeletons. They also use bioluminescence to find a 3. ________ in the dark environment."
+      ],
+      "answerKey": {
+        "1": ["sunlight"],
+        "2": ["flexible"],
+        "3": ["mate"]
+      },
+      "explanation": "Mimics the intense paraphrasing of Part 4. The audio says 'attract mates', the question paraphrases to 'find a mate'. The audio says 'absence of sunlight', the summary says 'no sunlight'.",
+      "sourceReferences": "IELTS.org Summary Completion tasks.",
+      "curriculumAlignment": "Synthesizing information, grammatical matching in summaries.",
+      "estimatedTime": "3 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-009",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Short Answer",
+      "topic": "Local Library Upgrades",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Librarian", "text": "Thank you all for attending the re-opening of the central library. We’ve made several exciting changes. Firstly, the children's section has been relocated. It used to be on the ground floor, which was quite noisy, so we’ve moved it up to the second floor, right next to the multimedia room. We have also extended our opening hours. We are no longer closed on Sundays. In fact, we are open seven days a week, from 9 AM until 8 PM. Finally, late fees have been updated. The penalty for an overdue book is now 50 pence per day, capped at a maximum of ten pounds." }
+      ],
+      "questions": [
+        "1. On which floor is the children's section now located? 1. ________",
+        "2. What time does the library close? 2. ________",
+        "3. What is the daily fine for a late book? 3. ________"
+      ],
+      "answerKey": {
+        "1": ["second floor", "second", "2nd"],
+        "2": ["8 PM", "8.00 PM"],
+        "3": ["50 pence", "50p"]
+      },
+      "explanation": "Q1 contains a location change distractor (ground floor -> second floor). Q2 requires filtering the opening time to isolate the closing time.",
+      "sourceReferences": "IDP Short Answer formats.",
+      "curriculumAlignment": "Extracting concrete data, ignoring outdated information.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-010",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Multiple Choice (Multiple Answers)",
+      "topic": "Field Trip Planning",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Choose TWO letters, A-E.",
+      "script": [
+        { "speaker": "Tutor", "text": "For the geology field trip to the national park, we need to ensure everyone is prepared. Obviously, you'll need sturdy hiking boots." },
+        { "speaker": "Student", "text": "Should we bring rock hammers?" },
+        { "speaker": "Tutor", "text": "No, the park authorities have strictly forbidden the collection of geological samples this year to preserve the site. You must, however, bring a digital camera to document the strata layers." },
+        { "speaker": "Student", "text": "What about food? Do we pack a lunch?" },
+        { "speaker": "Tutor", "text": "The university is providing a catered lunch at the visitor center, so don't worry about food. But the weather up there is unpredictable, so a waterproof jacket is absolutely mandatory." }
+      ],
+      "questions": [
+        "Which TWO items MUST the students bring on the field trip?\nA. Rock hammer\nB. Digital camera\nC. Packed lunch\nD. Waterproof jacket\nE. Geological samples"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["D"]
+      },
+      "explanation": "Tests the candidate's ability to filter out explicitly rejected items (rock hammer, packed lunch, geological samples). The audio uses strong synonyms for necessity ('mandatory').",
+      "sourceReferences": "British Council Choose TWO letters format.",
+      "curriculumAlignment": "Identifying mandatory vs prohibited actions, processing multiple variables.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-011",
+      "skill": "Listening",
+      "part": "Part 1",
+      "questionType": "Form Completion",
+      "topic": "Gym Membership Registration",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Receptionist", "text": "Welcome to Apex Fitness. Are you looking to join today?" },
+        { "speaker": "Customer", "text": "Yes, I'd like to sign up for a monthly membership." },
+        { "speaker": "Receptionist", "text": "Great. Let me just get your details. What is your first and last name?" },
+        { "speaker": "Customer", "text": "It's Thomas Branston." },
+        { "speaker": "Receptionist", "text": "Is that B-R-A-N-S-T-O-N?" },
+        { "speaker": "Customer", "text": "Exactly. And I live at 42 Willow Way, if you need the address." },
+        { "speaker": "Receptionist", "text": "Thank you. Now, we have two tiers. The basic is $30 a month, and the premium, which includes pool access, is $45." },
+        { "speaker": "Customer", "text": "I don't swim, so the basic one is fine. Oh, wait, does the premium include fitness classes?" },
+        { "speaker": "Receptionist", "text": "Yes, it does." },
+        { "speaker": "Customer", "text": "In that case, I'll go with the premium." }
+      ],
+      "questions": [
+        "Surname - 1. ________",
+        "Address - 42 2. ________",
+        "Membership Type - 3. ________"
+      ],
+      "answerKey": {
+        "1": ["Branston"],
+        "2": ["Willow Way"],
+        "3": ["premium", "premium membership"]
+      },
+      "explanation": "Q1 tests phonetic spelling. Q2 requires catching a proper noun street name. Q3 features a classic mind-change distractor - the customer initially chooses basic, then switches to premium.",
+      "sourceReferences": "Official IELTS Part 1 Form Completion mechanics.",
+      "curriculumAlignment": "Tracking mind-changes, phonetic spelling.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-012",
+      "skill": "Listening",
+      "part": "Part 1",
+      "questionType": "Table Completion",
+      "topic": "Apartment Rental Inquiry",
+      "difficulty": "Easy",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Write ONE WORD AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Agent", "text": "We currently have two apartments available in the city center. The first is on Baker Street. It has two bedrooms and the rent is $1,200 per month." },
+        { "speaker": "Tenant", "text": "Does that include parking?" },
+        { "speaker": "Agent", "text": "No, parking is an extra $50. The second option is on Station Road. It's a bit smaller, just one bedroom, but it has a lovely balcony." },
+        { "speaker": "Tenant", "text": "How much is that one?" },
+        { "speaker": "Agent", "text": "That one is $950 a month, and water is included in the rent, though you pay for electricity separately." }
+      ],
+      "questions": [
+        "Location | Bedrooms | Rent | Special Feature",
+        "Baker Street | Two | $ 1. ________ | No parking included",
+        "2. ________ Road | One | $950 | Has a 3. ________"
+      ],
+      "answerKey": {
+        "1": ["1200", "1,200"],
+        "2": ["Station"],
+        "3": ["balcony"]
+      },
+      "explanation": "Q1 tests numerical listening, bypassing the $50 distractor. Q2 requires catching a street name from context. Q3 requires a specific singular noun ('balcony').",
+      "sourceReferences": "British Council Table Completion formats.",
+      "curriculumAlignment": "Scanning tables, filtering out extra numerical data.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-013",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Multiple Choice",
+      "topic": "Museum Rules Update",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Choose the correct letter, A, B, or C.",
+      "script": [
+        { "speaker": "Director", "text": "Good morning, volunteers. Before we open the doors today, I want to brief you on some new policies. Regarding photography, previously we allowed flash photography everywhere except the ancient manuscripts room. However, due to recent damage, flash is now strictly forbidden in all galleries. You may still take standard photos with your phones. Also, about the cloakroom - it is now free of charge for all visitors. We used to charge one pound per coat, but management decided to waive that fee starting this week." }
+      ],
+      "questions": [
+        "1. What is the new rule regarding photography?\nA. No photography is allowed at all.\nB. Flash photography is banned everywhere.\nC. Flash is only banned in the manuscripts room.",
+        "2. How much does it cost to use the cloakroom now?\nA. One pound\nB. It depends on the item\nC. It is free"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"]
+      },
+      "explanation": "Q1 uses a past-rule distractor (C) before clarifying the new universal ban (B). Q2 uses a past-price distractor ('one pound') before confirming it is now free (C).",
+      "sourceReferences": "IELTS.org Multiple Choice distractors.",
+      "curriculumAlignment": "Identifying policy changes, navigating past vs present distractors.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-014",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Map Labelling",
+      "topic": "Zoo Enclosure Changes",
+      "difficulty": "Medium to High",
+      "targetBand": "6.5 to 7.5",
+      "instructions": "Write the correct letter (A-D) next to questions 1 and 2.",
+      "script": [
+        { "speaker": "Guide", "text": "Welcome to the Riverside Zoo. If you look at your map, we are standing at the South Entrance. To find the penguins, don't go to the large pool on the west side - that's currently being renovated for the sea lions. Instead, walk straight up the main path, take the first right, and it's the curved building right in front of you. Now, for the tiger enclosure, walk back to the main path, continue north past the cafe, and it's the large fenced area on your left." }
+      ],
+      "questions": [
+        "Visual Reference - A is west pool, B is curved building on right, C is cafe, D is fenced area on left past cafe.",
+        "1. Penguin Enclosure - ________",
+        "2. Tiger Enclosure - ________"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["D"]
+      },
+      "explanation": "Tests spatial awareness. Q1 explicitly warns the listener away from the west pool (A) and guides them to the right (B). Q2 requires continuing past a landmark (C) to find the target (D).",
+      "sourceReferences": "IDP spatial labelling formats.",
+      "curriculumAlignment": "Following directional audio, bypassing 'under construction' distractors.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-015",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Matching",
+      "topic": "Group Project Allocation",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Which student will research the following topics? Write A (Leo), B (Maya), or C (Sam).",
+      "script": [
+        { "speaker": "Leo", "text": "Alright, we need to divide the topics for our urban planning project. Maya, do you want to look into public transport?" },
+        { "speaker": "Maya", "text": "Actually, Sam has a background in logistics, so he'd be much better suited for public transport. I’d prefer to research green spaces." },
+        { "speaker": "Sam", "text": "That works for me. I'll take transport. What about waste management, Leo?" },
+        { "speaker": "Leo", "text": "I can do that. I did a similar paper on recycling last year, so I already have some good sources." }
+      ],
+      "questions": [
+        "1. Public Transport - ________",
+        "2. Green Spaces - ________",
+        "3. Waste Management - ________"
+      ],
+      "answerKey": {
+        "1": ["C"],
+        "2": ["B"],
+        "3": ["A"]
+      },
+      "explanation": "Q1 features a suggestion directed at Maya, but it is ultimately assigned to Sam (C). Q2 is claimed by Maya (B). Q3 is claimed by Leo (A) based on his past experience.",
+      "sourceReferences": "British Council Part 3 conversational shifts.",
+      "curriculumAlignment": "Tracking task delegations, recognizing re-assignments.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-016",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Flow-Chart Completion",
+      "topic": "Software Development Cycle",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Write NO MORE THAN TWO WORDS for each answer.",
+      "script": [
+        { "speaker": "Tutor", "text": "When designing an app, you must follow the correct lifecycle. First is the planning phase. Once that's approved, you move to the design phase where you create wireframes." },
+        { "speaker": "Student", "text": "And after design, we start writing the code, right?" },
+        { "speaker": "Tutor", "text": "Exactly, that's the development phase. But crucially, before you release it to the public, you have to run it through strict quality assurance to catch any bugs." },
+        { "speaker": "Student", "text": "So, testing comes before the launch?" },
+        { "speaker": "Tutor", "text": "Yes, testing is absolutely mandatory. Only then can you proceed to deployment." }
+      ],
+      "questions": [
+        "Step 1 - Planning and approval",
+        "Step 2 - Design phase - create 1. ________",
+        "Step 3 - Development phase",
+        "Step 4 - 2. ________ to find bugs",
+        "Step 5 - 3. ________"
+      ],
+      "answerKey": {
+        "1": ["wireframes"],
+        "2": ["testing", "quality assurance"],
+        "3": ["deployment", "launch"]
+      },
+      "explanation": "Tests sequencing and synonymous phrasing. The audio uses 'quality assurance', which the student clarifies as 'testing' - both fit the gap. 'Deployment' or 'launch' fit the final step.",
+      "sourceReferences": "IELTS.org Flow-chart tasks.",
+      "curriculumAlignment": "Process sequencing, catching technical vocabulary.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-017",
+      "skill": "Listening",
+      "part": "Part 4",
+      "questionType": "Sentence Completion",
+      "topic": "The Impact of Microplastics",
+      "difficulty": "High",
+      "targetBand": "7.5 to 8.5",
+      "instructions": "Write ONE WORD ONLY for each answer.",
+      "script": [
+        { "speaker": "Lecturer", "text": "Let us turn our attention to marine pollution. Most people picture large items like bottles or fishing nets when they think of ocean plastic. However, the most insidious threat comes from microplastics. These are tiny fragments, less than five millimeters long, created when larger plastics degrade under the sun's ultraviolet rays. Because of their size, they are easily ingested by small marine organisms. Once consumed, these plastics block the digestive tracts of fish, leading to starvation, and they introduce toxic chemicals into the broader food chain." }
+      ],
+      "questions": [
+        "1. Microplastics are formed when larger plastic items break down due to exposure to ________ rays.",
+        "2. Fish may suffer from ________ because the plastics block their digestive systems."
+      ],
+      "answerKey": {
+        "1": ["ultraviolet", "sun's"],
+        "2": ["starvation"]
+      },
+      "explanation": "Q1 requires isolating the specific cause of degradation (ultraviolet). Q2 requires catching the direct result of the blockage (starvation). The vocabulary is dense and academic.",
+      "sourceReferences": "Official Part 4 Academic Monologue mechanics.",
+      "curriculumAlignment": "Academic vocabulary, isolating cause and effect.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-018",
+      "skill": "Listening",
+      "part": "Part 4",
+      "questionType": "Summary Completion",
+      "topic": "Ancient Irrigation Systems",
+      "difficulty": "Very High",
+      "targetBand": "8.0 to 9.0",
+      "instructions": "Write NO MORE THAN TWO WORDS for each answer.",
+      "script": [
+        { "speaker": "Lecturer", "text": "The Qanat system is a masterpiece of ancient Persian engineering. In arid regions where surface water evaporates rapidly, farmers needed a reliable water supply. Instead of building open canals, they dug underground tunnels tapping into aquifers situated in the mountains. This subterranean approach drastically minimized evaporation. To maintain these tunnels, engineers constructed vertical shafts at regular intervals. These shafts provided essential ventilation for the workers digging below and allowed them to extract excavated soil to the surface." }
+      ],
+      "questions": [
+        "The Qanat system solved the problem of rapid 1. ________ in hot climates by transporting water through underground tunnels. To keep the tunnels functional, builders created vertical shafts. These shafts were crucial because they offered 2. ________ for the laborers and a way to remove dirt."
+      ],
+      "answerKey": {
+        "1": ["evaporation"],
+        "2": ["ventilation"]
+      },
+      "explanation": "Mimics intense paraphrasing. 'Minimizes evaporation' becomes 'solved the problem of rapid evaporation'. 'Provided essential ventilation' becomes 'offered ventilation'.",
+      "sourceReferences": "IELTS.org Summary Completion tasks.",
+      "curriculumAlignment": "Synthesizing information, grammatical matching.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-019",
+      "skill": "Listening",
+      "part": "Part 1",
+      "questionType": "Short Answer",
+      "topic": "Car Rental Booking",
+      "difficulty": "Medium",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Agent", "text": "Welcome to City Wheels. Are you looking to rent a car for the weekend?" },
+        { "speaker": "Customer", "text": "Yes, from Friday morning until Sunday evening. Do you have any compact cars available?" },
+        { "speaker": "Agent", "text": "Let me check. We are out of compacts, I'm afraid. But I can offer you a mid-size sedan for the same price." },
+        { "speaker": "Customer", "text": "That's fine. What time do I need to return it on Sunday?" },
+        { "speaker": "Agent", "text": "Our office closes at 6 PM on Sundays, but you can use the drop-box for the keys if you return it later. Just make sure it's back before 8 PM to avoid a late fee." }
+      ],
+      "questions": [
+        "1. What type of vehicle will the customer rent? 1. ________",
+        "2. What is the latest time the car can be returned without a penalty? 2. ________"
+      ],
+      "answerKey": {
+        "1": ["mid-size sedan", "sedan"],
+        "2": ["8 PM", "8.00 PM"]
+      },
+      "explanation": "Q1 uses a negative distractor ('out of compacts') before the correct answer. Q2 requires distinguishing between the office closing time (6 PM) and the actual penalty cutoff time (8 PM).",
+      "sourceReferences": "IDP Short Answer formats.",
+      "curriculumAlignment": "Extracting concrete data, distinguishing between multiple times.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-020",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Multiple Choice (Multiple Answers)",
+      "topic": "Choosing a Dissertation Topic",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Choose TWO letters, A-E.",
+      "script": [
+        { "speaker": "Tutor", "text": "Your dissertation proposal looks interesting, but it's a bit too broad. You need to narrow your focus." },
+        { "speaker": "Student", "text": "I was thinking of looking at both economic factors and cultural impacts of tourism." },
+        { "speaker": "Tutor", "text": "You won't have the word count for both. I strongly advise you to drop the cultural aspect. It's too subjective for this specific module." },
+        { "speaker": "Student", "text": "Okay, I'll focus strictly on economics. What about my research methods? Should I do interviews?" },
+        { "speaker": "Tutor", "text": "Interviews take too much time to transcribe. For an economics focus, you should definitely rely on statistical analysis. And make sure you include a comprehensive literature review before analyzing the data." }
+      ],
+      "questions": [
+        "Which TWO elements does the tutor tell the student to include in the dissertation?\nA. Cultural impacts\nB. Economic factors\nC. Personal interviews\nD. Statistical analysis\nE. A pilot study"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["D"]
+      },
+      "explanation": "Tests filtering out explicitly rejected ideas. The tutor rejects 'cultural impacts' and 'interviews', and mandates 'economics' and 'statistical analysis'.",
+      "sourceReferences": "British Council Choose TWO letters format.",
+      "curriculumAlignment": "Identifying mandatory vs prohibited actions, processing multiple variables.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-021",
+      "skill": "Listening",
+      "part": "Part 1",
+      "questionType": "Form Completion",
+      "topic": "Hotel Reservation",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+      "script": [
+        { "speaker": "Receptionist", "text": "Good afternoon, Grand Horizon Hotel. How may I assist you today?" },
+        { "speaker": "Guest", "text": "Hello, I need to book a double room for two nights next month." },
+        { "speaker": "Receptionist", "text": "I can certainly help with that. What dates will you be joining us?" },
+        { "speaker": "Guest", "text": "I will be arriving on the 23rd of October. Oh, wait, my flight got pushed back a day. Make that the 24th of October." },
+        { "speaker": "Receptionist", "text": "The 24th of October for two nights. Understood. And may I have your last name for the booking?" },
+        { "speaker": "Guest", "text": "Yes, it is Harrison." },
+        { "speaker": "Receptionist", "text": "Is that H-A-R-I-S-O-N?" },
+        { "speaker": "Guest", "text": "Actually, it has a double R. H-A-R-R-I-S-O-N." },
+        { "speaker": "Receptionist", "text": "Thank you. Finally, would you like to include breakfast for an additional $15 per person?" },
+        { "speaker": "Guest", "text": "No, thank you, we plan to eat out in the mornings." }
+      ],
+      "questions": [
+        "Arrival Date - 1. ________ October",
+        "Surname - 2. ________",
+        "Breakfast Included - 3. ________"
+      ],
+      "answerKey": {
+        "1": ["24th", "24"],
+        "2": ["Harrison"],
+        "3": ["No", "no"]
+      },
+      "explanation": "Q1 uses a date-change distractor due to a delayed flight. Q2 features a spelling correction from the caller (double R). Q3 requires identifying a negative response to an upsell.",
+      "sourceReferences": "Official IELTS Part 1 Form Completion mechanics.",
+      "curriculumAlignment": "Identifying self-corrections, phonetic spelling corrections, listening for negatives.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-022",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Multiple Choice",
+      "topic": "Volunteer Beach Cleanup",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Choose the correct letter, A, B, or C.",
+      "script": [
+        { "speaker": "Coordinator", "text": "Thank you all for signing up for the annual coastal cleanup. We need to go over some logistics for this Saturday. We usually start our shifts at 8 AM, but because the tide will be unusually high, we are pushing the start time to 9 AM. Please gather at the main pier. Regarding equipment, many of you asked if you need to buy thick gloves. The council has actually donated a large box of safety gloves, so we will provide those. However, the sand will be quite wet and muddy, so it is absolutely essential that you bring your own waterproof boots." }
+      ],
+      "questions": [
+        "1. What time will the volunteers start working on Saturday?\nA. 8 AM\nB. 9 AM\nC. When the tide is high",
+        "2. What must the volunteers bring themselves?\nA. Thick gloves\nB. Trash bags\nC. Waterproof boots"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"]
+      },
+      "explanation": "Q1 uses a past/usual time distractor (8 AM) before stating the new time (9 AM) due to the tide. Q2 features an explicitly resolved distractor - gloves are provided, but boots must be brought.",
+      "sourceReferences": "IELTS.org Multiple Choice distractors.",
+      "curriculumAlignment": "Navigating time changes, identifying who provides what equipment.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-023",
+      "skill": "Listening",
+      "part": "Part 3",
+      "questionType": "Matching",
+      "topic": "Theatre Production Roles",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Who will manage the following production areas? Write A (Emma), B (Liam), or C (Noah).",
+      "script": [
+        { "speaker": "Emma", "text": "Alright team, the play opens in three weeks. We need to finalize who is heading each department. Noah, are you still managing the lighting design?" },
+        { "speaker": "Noah", "text": "I was going to, but the venue's light board is completely different from what I'm used to. I'd rather focus on the set design, building the backdrops." },
+        { "speaker": "Liam", "text": "I can take over lighting then. I worked at that venue last summer, so I know their system perfectly." },
+        { "speaker": "Emma", "text": "Brilliant, Liam. That leaves costumes. I haven't sewed in years, so I was hoping one of you might take it." },
+        { "speaker": "Noah", "text": "Don't worry, Emma. I'll handle the costumes as well. My aunt gave me a sewing machine recently." }
+      ],
+      "questions": [
+        "1. Lighting Design - ________",
+        "2. Set Design - ________",
+        "3. Costumes - ________"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"],
+        "3": ["C"]
+      },
+      "explanation": "Q1 involves Noah rejecting the role and Liam claiming it (B). Q2 is explicitly claimed by Noah (C). Q3 is offered to the group by Emma, and accepted by Noah (C). It tests the rule that letters can be used more than once.",
+      "sourceReferences": "British Council Part 3 conversational shifts.",
+      "curriculumAlignment": "Tracking task delegations, recognizing re-assignments, accepting reused options.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-024",
+      "skill": "Listening",
+      "part": "Part 4",
+      "questionType": "Sentence Completion",
+      "topic": "The Psychology of Habit Formation",
+      "difficulty": "High",
+      "targetBand": "7.5 to 8.5",
+      "instructions": "Write NO MORE THAN TWO WORDS for each answer.",
+      "script": [
+        { "speaker": "Lecturer", "text": "Today we delve into behavioral psychology, specifically how humans form habits. A popular myth circulates in self-help literature claiming that it takes exactly 21 days to form a new habit. However, rigorous academic studies conducted at University College London debunked this. Their data revealed that, on average, it takes 66 days for a new behavior to become automatic. The core mechanism behind this is the 'habit loop'. This loop consists of three stages. First is the cue, which triggers the brain. Second is the routine itself, and finally, the reward, which reinforces the behavior for the future." }
+      ],
+      "questions": [
+        "1. According to university research, an average of ________ days is required to make a behavior automatic.",
+        "2. The final stage of the habit loop is the ________, which ensures the behavior is repeated."
+      ],
+      "answerKey": {
+        "1": ["66", "sixty-six"],
+        "2": ["reward"]
+      },
+      "explanation": "Q1 uses a highly specific numerical distractor ('21 days myth') before delivering the correct academic finding ('66 days'). Q2 requires tracking a sequenced list (cue, routine, reward) to identify the final stage.",
+      "sourceReferences": "Official Part 4 Academic Monologue mechanics.",
+      "curriculumAlignment": "Academic vocabulary, dismissing false hypotheses, tracking sequences.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-LS-025",
+      "skill": "Listening",
+      "part": "Part 2",
+      "questionType": "Map Labelling",
+      "topic": "Community Garden Layout",
+      "difficulty": "Medium to High",
+      "targetBand": "6.5 to 7.5",
+      "instructions": "Write the correct letter (A-D) next to questions 1 and 2.",
+      "script": [
+        { "speaker": "Guide", "text": "Welcome to the Riverside Community Garden. Looking at the map on our noticeboard, you'll see we are at the main gate on the south side. If you walk straight up the central path, you'll see a small wooden building immediately on your left. That is the tool shed, where you can sign out trowels and spades. Now, if you need to dispose of organic waste, don't use the bins by the main gate. Walk past the tool shed, take the path branching off to the right, and you'll find the composting bins tucked away in the northeast corner." }
+      ],
+      "questions": [
+        "Visual Reference - A is building on left of central path, B is bins by main gate, C is benches on right of central path, D is bins in northeast corner.",
+        "1. Tool Shed - ________",
+        "2. Composting Bins - ________"
+      ],
+      "answerKey": {
+        "1": ["A"],
+        "2": ["D"]
+      },
+      "explanation": "Q1 uses directional cues ('straight up', 'immediately on your left'). Q2 explicitly warns against the distractor ('don't use the bins by the main gate' / B) and gives compound directions to D.",
+      "sourceReferences": "IDP spatial labelling formats.",
+      "curriculumAlignment": "Following directional audio, bypassing negative cues.",
+      "estimatedTime": "2 minutes",
+      "status": "draft"
+    }
+  ]
+}

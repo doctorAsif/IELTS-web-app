@@ -1,0 +1,773 @@
+{
+  "modules": [
+    {
+      "practiceId": "AKHL-RD-022",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "Matching Headings",
+      "topic": "The Architecture of Ant Colonies",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Choose the correct heading for sections A to C from the list of headings below. Write the correct roman numeral (i to v) next to each section.",
+      "passage": [
+        "Section A - The physical structure of an ant mound is an engineering marvel designed to maintain a stable internal temperature. Deep underground chambers are connected by a network of vertical shafts. As the sun heats the surface, warm air rises out of the central tunnels, drawing cooler air down through the side entrances, effectively acting as a sophisticated ventilation system.",
+        "Section B - Beyond their physical structures, these colonies thrive due to a highly organized social structure. There is a strict division of labor based on physical castes. The vast majority are sterile female worker ants who forage for food and maintain the nest, while larger soldier ants defend the entrances. At the heart of the colony resides a single queen, whose sole function is reproductive.",
+        "Section C - Lacking vocal cords or complex hearing, these insects communicate entirely through complex chemical signals known as pheromones. When a worker discovers a food source, she leaves a precise chemical trail on the ground as she returns to the nest. Other ants detect this invisible path using their highly sensitive antennae, allowing the entire colony to efficiently harvest the resource."
+      ],
+      "questions": [
+        "List of Headings -",
+        "i. Controlling the internal climate",
+        "ii. Navigating and communicating through scent",
+        "iii. The dietary habits of the queen",
+        "iv. Social structure and roles",
+        "v. Constructing the mound with mud",
+        "1. Section A - ________",
+        "2. Section B - ________",
+        "3. Section C - ________"
+      ],
+      "answerKey": {
+        "1": ["i"],
+        "2": ["iv"],
+        "3": ["ii"]
+      },
+      "evidenceSpans": {
+        "1": "designed to maintain a stable internal temperature... acting as a sophisticated ventilation system",
+        "2": "highly organized social structure. There is a strict division of labor based on physical castes.",
+        "3": "communicate entirely through complex chemical signals known as pheromones."
+      },
+      "explanation": "Section A describes the physical ventilation and temperature control (i). Section B details the 'division of labor' among workers, soldiers, and the queen (iv). Section C focuses on how they communicate using pheromones and antennae (ii).",
+      "sourceReferences": "British Council Matching Headings mechanics.",
+      "curriculumAlignment": "Identifying paragraph themes, matching paraphrased summaries to main ideas.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-023",
+      "skill": "Reading",
+      "part": "General Training Section 1",
+      "questionType": "True/False/Not Given",
+      "topic": "Store Return Policy",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Do the following statements agree with the information given in the text? Write TRUE if the statement agrees, FALSE if it contradicts, or NOT GIVEN if there is no information on this.",
+      "passage": [
+        "Customer Satisfaction and Return Policy - Horizon Electronics",
+        "If you are not entirely satisfied with your purchase, we are here to help. Returns will only be accepted within 14 days of the original purchase date. To process any refund or exchange, customers must present the original printed receipt. Bank statements will not be accepted as proof of purchase.",
+        "Please note that all electronic devices must be returned in their original packaging without cosmetic damage. A 15% restocking fee applies if the returned item is missing its original cables or manuals. Furthermore, for copyright reasons, software and video games cannot be refunded if the factory seal has been broken, unless the disc itself is proven to be faulty."
+      ],
+      "questions": [
+        "1. Customers can return an item after three weeks if they have the receipt.",
+        "2. Members of the store's loyalty program are exempt from the restocking fee.",
+        "3. You cannot get a refund for a video game if you have opened the packaging."
+      ],
+      "answerKey": {
+        "1": ["FALSE", "False", "F"],
+        "2": ["NOT GIVEN", "Not Given", "NG"],
+        "3": ["TRUE", "True", "T"]
+      },
+      "evidenceSpans": {
+        "1": "Returns will only be accepted within 14 days of the original purchase date.",
+        "2": "A 15% restocking fee applies if the returned item is missing its original cables.",
+        "3": "software and video games cannot be refunded if the factory seal has been broken"
+      },
+      "explanation": "Q1 is FALSE because three weeks (21 days) exceeds the strict 14-day window. Q2 is NOT GIVEN because the passage mentions the restocking fee but says nothing about a loyalty program. Q3 is TRUE because breaking the factory seal voids the refund.",
+      "sourceReferences": "IDP True/False/Not Given GT format.",
+      "curriculumAlignment": "Scanning for specific policies, identifying contradictory timelines, avoiding outside assumptions.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-024",
+      "skill": "Reading",
+      "part": "Academic Section 2",
+      "questionType": "Multiple Choice",
+      "topic": "The Psychology of Color in Marketing",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Choose the correct letter, A, B, C, or D.",
+      "passage": [
+        "Marketers heavily rely on color psychology to subconsciously influence consumer behavior. The color red, for example, is known to increase the heart rate and create a sense of urgency. Consequently, it is heavily utilized in fast-food restaurant logos to encourage rapid turnover, as well as on retail 'clearance' signs to trigger impulse buying.",
+        "Conversely, blue is frequently employed by financial institutions and banks because it instills a sense of security and reliability in the consumer. Green naturally evokes thoughts of nature and health. However, some brands exploit this association by packaging standard products in green to falsely imply environmental benefits, a deceptive practice known as 'greenwashing'."
+      ],
+      "questions": [
+        "1. According to the text, why do banks often use the color blue in their branding?\nA. To encourage rapid financial transactions.\nB. To establish a feeling of safety and trustworthiness.\nC. To stand out from competitors who use red.\nD. To imply that their investments are environmentally friendly.",
+        "2. What is the definition of 'greenwashing' as described in the passage?\nA. Making products using sustainable, plant-based materials.\nB. Using green packaging to trick consumers into thinking a product is eco-friendly.\nC. Painting retail stores green to create a calming shopping environment.\nD. Developing environmental initiatives to improve a company's public image."
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["B"]
+      },
+      "evidenceSpans": {
+        "1": "blue is frequently employed by financial institutions and banks because it instills a sense of security and reliability",
+        "2": "packaging standard products in green to falsely imply environmental benefits, a deceptive practice known as 'greenwashing'."
+      },
+      "explanation": "Q1 matches B, synthesizing 'security and reliability' into 'safety and trustworthiness'. Q2 matches B, accurately reflecting the passage's definition of packaging products deceptively to imply environmental benefits.",
+      "sourceReferences": "IELTS.org Academic Multiple Choice mechanics.",
+      "curriculumAlignment": "Identifying cause and effect, matching definitions to concepts.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-025",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "Sentence Completion",
+      "topic": "Desalination Technologies",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "passage": [
+        "As global freshwater scarcity accelerates, coastal nations are increasingly turning to desalination to convert seawater into drinkable water. The most widely adopted technology today is reverse osmosis. In this method, enormous pumps apply high pressure to seawater, forcing it through a semi-permeable membrane. This membrane contains microscopic pores that allow water molecules to pass while completely blocking salt and other impurities.",
+        "Despite its effectiveness, reverse osmosis has two significant drawbacks. Firstly, the high-pressure pumps require a massive energy consumption, making the water highly expensive to produce. Secondly, the process leaves behind a concentrated, toxic brine. If this hyper-saline waste is pumped directly back into the ocean without being properly diluted, it can severely damage local marine ecosystems by suffocating bottom-dwelling sea life."
+      ],
+      "questions": [
+        "1. Reverse osmosis works by pushing seawater through a ________ that catches the salt.",
+        "2. One major disadvantage of this technology is the high ________ required to run the pumps.",
+        "3. The process also generates a dangerous waste product known as ________."
+      ],
+      "answerKey": {
+        "1": ["semi-permeable membrane", "membrane"],
+        "2": ["energy consumption"],
+        "3": ["toxic brine", "brine"]
+      },
+      "evidenceSpans": {
+        "1": "forcing it through a semi-permeable membrane.",
+        "2": "the high-pressure pumps require a massive energy consumption",
+        "3": "the process leaves behind a concentrated, toxic brine."
+      },
+      "explanation": "Q1 requires identifying the filter ('semi-permeable membrane'). Q2 requires identifying what the pumps need ('energy consumption'). Q3 requires identifying the waste product ('toxic brine').",
+      "sourceReferences": "British Council Academic Sentence Completion.",
+      "curriculumAlignment": "Extracting technical terminology, adhering strictly to word count limits.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-026",
+      "skill": "Reading",
+      "part": "General Training Section 1",
+      "questionType": "Short Answer",
+      "topic": "Using the City Metro System",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Answer the questions below. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the text for each answer.",
+      "passage": [
+        "To ride the City Metro, passengers must first purchase a reusable Transit Card from the kiosks located at any station entrance. The physical card costs $5, after which you can load it with travel funds. Fares are deducted automatically when you tap your card at the platform gates.",
+        "Please be aware that travel fares fluctuate based on the time of day. A standard journey costs $2.50. However, if you travel during peak hours, which run from 7 AM to 9 AM and again from 5 PM to 7 PM, the fare increases to $3.50. For passenger safety, large items such as bicycles are strictly prohibited during these busy times. During off-peak hours, cyclists are welcome to bring their bikes, but they must board the train using only the last carriage."
+      ],
+      "questions": [
+        "1. How much does the initial Transit Card cost?",
+        "2. When do the highest travel fares apply?",
+        "3. Where are passengers required to put their bicycles on the train?"
+      ],
+      "answerKey": {
+        "1": ["$5", "5 dollars"],
+        "2": ["peak hours", "7 AM to 9 AM", "5 PM to 7 PM"],
+        "3": ["last carriage"]
+      },
+      "evidenceSpans": {
+        "1": "The physical card costs $5",
+        "2": "if you travel during peak hours... the fare increases to $3.50.",
+        "3": "cyclists are welcome to bring their bikes, but they must board the train using only the last carriage."
+      },
+      "explanation": "Q1 extracts the cost of the blank card ($5). Q2 asks when fares are highest ('peak hours'). Q3 requires locating the rule for bikes ('last carriage').",
+      "sourceReferences": "IDP GT Short Answer mechanics.",
+      "curriculumAlignment": "Scanning for specific numerical and location-based data.",
+      "estimatedTime": "4 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-002",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "True/False/Not Given",
+      "topic": "The Evolution of Synthetic Dyes",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Do the following statements agree with the information given in the reading passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+      "passage": [
+        "In 1856, an eighteen-year-old chemistry student named William Henry Perkin was tasked by his professor to synthesize quinine, a highly sought-after treatment for malaria. Working in his makeshift laboratory at home in London, Perkin's experiments with coal tar produced a thick, dark sludge. While attempting to clean his flasks with alcohol, he noticed that the sludge dissolved to form a brilliant, vivid purple solution.",
+        "Rather than discarding the failed medical experiment, Perkin realized the commercial potential of this vibrant color. Prior to his accidental discovery, dyes were derived exclusively from natural sources like insects, roots, and mollusk shells. The natural purple dye, Tyrian purple, was so labor-intensive to extract that it was reserved exclusively for royalty. Perkin’s synthetic alternative, which he named 'mauveine', suddenly democratized vibrant textiles, making colorful garments affordable for the working and middle classes.",
+        "Perkin quickly patented the process and opened a factory to mass-produce the dye, effectively launching the modern chemical industry. Despite facing initial skepticism from traditional British textile manufacturers, the dye became a massive commercial success after Queen Victoria wore a mauveine gown to the Royal Exhibition in 1862."
+      ],
+      "questions": [
+        "1. Perkin was attempting to create a dye for the textile industry when he discovered mauveine.",
+        "2. The discovery of synthetic dyes allowed ordinary people to afford brightly colored clothing.",
+        "3. Perkin's factory was entirely powered by new steam-engine technology."
+      ],
+      "answerKey": {
+        "1": ["FALSE", "False", "F"],
+        "2": ["TRUE", "True", "T"],
+        "3": ["NOT GIVEN", "Not Given", "NG"]
+      },
+      "explanation": "Q1 is FALSE because the text explicitly states he was trying to synthesize 'quinine, a highly sought-after treatment for malaria'. Q2 is TRUE based on the phrase 'democratized vibrant textiles, making colorful garments affordable for the working and middle classes'. Q3 is NOT GIVEN because, while he opened a factory, its power source is never mentioned.",
+      "sourceReferences": "British Council True/False/Not Given strategy.",
+      "curriculumAlignment": "Identifying contradictions vs missing information, scanning for proper nouns.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-003",
+      "skill": "Reading",
+      "part": "General Training Section 1",
+      "questionType": "Matching Information",
+      "topic": "Employee Code of Conduct",
+      "difficulty": "Easy",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Look at the four sections of the employee handbook (A-D). Which section contains the following information? Write the correct letter, A-D.",
+      "passage": [
+        "Section A - Dress Code. While our office promotes a comfortable working environment, employees are expected to maintain a 'smart casual' appearance. Jeans are permitted provided they are not ripped, but athletic wear and flip-flops are strictly prohibited during client-facing meetings.",
+        "Section B - Annual Leave. All full-time staff are entitled to 20 days of paid annual leave per calendar year. To ensure adequate staffing levels, any leave exceeding three consecutive days must be requested through the HR portal at least two weeks in advance.",
+        "Section C - Sick Leave. If you are unable to work due to illness, you must notify your line manager by 8.30 AM on the day of your absence. For any illness lasting longer than three consecutive workdays, a signed medical certificate from a registered doctor must be provided upon your return.",
+        "Section D - Remote Working. The company supports flexible working arrangements. Employees may request to work from home for up to two days a week. However, core hours (10.00 AM to 3.00 PM) must be strictly observed, during which staff must be online and available for virtual meetings."
+      ],
+      "questions": [
+        "1. the procedure for proving you were unwell",
+        "2. restrictions on the type of footwear allowed",
+        "3. the specific hours you must be reachable when not in the office"
+      ],
+      "answerKey": {
+        "1": ["C"],
+        "2": ["A"],
+        "3": ["D"]
+      },
+      "explanation": "Q1 matches C, which details providing a 'signed medical certificate'. Q2 matches A, which mentions 'flip-flops are strictly prohibited'. Q3 matches D, which outlines 'core hours... must be online and available' while working remotely.",
+      "sourceReferences": "IDP IELTS General Training formats.",
+      "curriculumAlignment": "Scanning short texts for specific policies, recognizing paraphrased workplace vocabulary.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-004",
+      "skill": "Reading",
+      "part": "Academic Section 2",
+      "questionType": "Multiple Choice",
+      "topic": "Avian Migration Navigation",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Choose the correct letter, A, B, C, or D.",
+      "passage": [
+        "For decades, biologists have marveled at the navigational precision of migratory birds, some of which travel thousands of miles to return to the exact tree they inhabited the previous year. Early hypotheses suggested visual landmarks guided them, but this failed to explain how young birds, making the journey for the first time without adult guidance, could find their way across featureless oceans.",
+        "Recent behavioral studies reveal that many avian species utilize a 'time-compensated sun compass'. The birds maintain an internal circadian rhythm, allowing them to adjust their flight angle relative to the sun’s shifting position throughout the day. However, since the sun is obscured on overcast days, this mechanism alone is insufficient. Consequently, researchers discovered that birds also possess magnetoreception. Special proteins in their retinas, known as cryptochromes, become sensitive to the Earth's magnetic field when exposed to blue light, effectively allowing the birds to 'see' magnetic lines of direction."
+      ],
+      "questions": [
+        "1. What problem did the 'visual landmark' hypothesis fail to solve?\nA. Why birds migrate over oceans instead of land.\nB. How birds remember the same tree year after year.\nC. How inexperienced birds navigate without knowing the route.\nD. Why adult birds abandon their young during migration.",
+        "2. What is the function of cryptochromes in migratory birds?\nA. They help the birds maintain a 24-hour internal clock.\nB. They allow the birds to navigate using the Earth's magnetic field.\nC. They protect the birds' eyes from intense blue light.\nD. They help the birds locate the sun on heavily overcast days."
+      ],
+      "answerKey": {
+        "1": ["C"],
+        "2": ["B"]
+      },
+      "explanation": "Q1 matches C, as the text states the visual hypothesis 'failed to explain how young birds, making the journey for the first time... could find their way'. Q2 matches B, as cryptochromes become sensitive to the magnetic field, allowing them to 'see' magnetic lines.",
+      "sourceReferences": "IELTS.org Academic Multiple Choice mechanics.",
+      "curriculumAlignment": "Filtering complex academic distractors, isolating cause-and-effect relationships.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-005",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "Sentence Completion",
+      "topic": "Geothermal Energy Extraction",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "passage": [
+        "Geothermal energy harnesses the immense heat stored beneath the Earth's crust to generate electricity. The most common type of extraction facility is the flash steam power plant. In these systems, water at temperatures exceeding 182 degrees Celsius is pumped up from deep underground reservoirs under high pressure. As the water reaches the surface, the sudden decrease in pressure causes it to rapidly boil, or 'flash', into steam.",
+        "The resulting steam is then directed through pipes to spin a large turbine, which is connected to an electrical generator. While geothermal energy is highly sustainable and produces a fraction of the greenhouse gases emitted by fossil fuels, it is not entirely without environmental impact. The extraction process can release trace amounts of hydrogen sulfide, a gas recognizable by its distinct odor of rotten eggs, into the atmosphere."
+      ],
+      "questions": [
+        "1. In a flash steam plant, underground water turns into steam due to a rapid drop in ________.",
+        "2. The steam is used to rotate a ________, which ultimately produces electricity.",
+        "3. One environmental drawback is the emission of ________, which has an unpleasant smell."
+      ],
+      "answerKey": {
+        "1": ["pressure"],
+        "2": ["turbine"],
+        "3": ["hydrogen sulfide"]
+      },
+      "explanation": "Q1 requires identifying the cause of the water flashing to steam ('sudden decrease in pressure'). Q2 requires identifying the machine spun by the steam ('spin a large turbine'). Q3 requires identifying the specific gas ('hydrogen sulfide').",
+      "sourceReferences": "British Council Sentence Completion formats.",
+      "curriculumAlignment": "Scanning for technical processes, adhering to strict word limits.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-006",
+      "skill": "Reading",
+      "part": "General Training Section 1",
+      "questionType": "Short Answer",
+      "topic": "Community Center Evening Classes",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Answer the questions below. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the text for each answer.",
+      "passage": [
+        "Autumn Evening Classes at Hillside Community Center",
+        "Pottery for Beginners - Tuesdays, 6.00 PM - 8.00 PM. Learn the basics of wheel throwing and glazing. The course fee is $50 for the term, which covers all clay and firing costs. Participants must bring their own heavy-duty apron to protect their clothing.",
+        "Introduction to Python Coding - Wednesdays, 7.00 PM - 9.00 PM. A highly practical course for tech novices. Thanks to a local government grant, this class is entirely free of charge. However, the center does not provide hardware, so you must bring a personal laptop.",
+        "Conversational Spanish - Thursdays, 6.30 PM - 8.00 PM. Focus on everyday speaking and listening skills for travel. The cost is $30, which includes a comprehensive textbook. No prior experience is necessary."
+      ],
+      "questions": [
+        "1. What protective item must pottery students supply themselves?",
+        "2. Why is there no fee for the coding class?",
+        "3. What learning material is provided with the Spanish class fee?"
+      ],
+      "answerKey": {
+        "1": ["heavy-duty apron", "apron"],
+        "2": ["government grant", "local government grant"],
+        "3": ["comprehensive textbook", "textbook"]
+      },
+      "explanation": "Q1 requires scanning the Pottery section for an item the student must bring ('heavy-duty apron'). Q2 requires scanning the Coding section for the reason it is free ('government grant'). Q3 targets the Spanish section for what is included ('comprehensive textbook').",
+      "sourceReferences": "IDP Short Answer General Training format.",
+      "curriculumAlignment": "Extracting concrete facts, ignoring descriptive filler, maintaining word count limits.",
+      "estimatedTime": "4 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-007",
+      "skill": "Reading",
+      "part": "Academic Section 2",
+      "questionType": "Yes/No/Not Given",
+      "topic": "The Paradox of Consumer Choice",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Do the following statements agree with the claims of the writer in the reading passage? Write YES if the statement agrees with the claims of the writer, NO if the statement contradicts the claims of the writer, or NOT GIVEN if it is impossible to say what the writer thinks about this.",
+      "passage": [
+        "In modern consumer societies, the prevailing dogma dictates that maximizing freedom requires maximizing choice. Supermarket aisles are famously stocked with dozens of variations of a single product, from toothpaste to breakfast cereal. The underlying assumption, championed by classical economists, is that offering a broader array of options inevitably increases consumer welfare, as buyers are more likely to find a product that perfectly matches their preferences.",
+        "However, psychologist Barry Schwartz strongly contests this notion. His research indicates that an overabundance of choice often induces paralysis rather than liberation. When faced with fifty varieties of olive oil, the cognitive load required to evaluate the alternatives becomes overwhelming. Consequently, many shoppers either abandon the purchase entirely or default to a familiar brand, defeating the purpose of the expanded selection.",
+        "Furthermore, Schwartz argues that even when consumers do make a choice, a vast array of alternatives diminishes their ultimate satisfaction. The knowledge that other unchosen options exist breeds 'buyer’s remorse' and fuels an unrealistic expectation that the chosen product should be absolutely perfect."
+      ],
+      "questions": [
+        "1. Classical economists believe that providing more choices improves the overall well-being of the consumer.",
+        "2. Shoppers presented with numerous options usually take longer to make a purchase.",
+        "3. Schwartz claims that having many alternatives makes people less happy with the item they eventually buy."
+      ],
+      "answerKey": {
+        "1": ["YES", "Yes", "Y"],
+        "2": ["NOT GIVEN", "Not Given", "NG"],
+        "3": ["YES", "Yes", "Y"]
+      },
+      "explanation": "Q1 is YES because the text states classical economists assume a broader array of options 'inevitably increases consumer welfare'. Q2 is NOT GIVEN - while the text mentions shoppers 'abandon the purchase' or 'default to a familiar brand', it never explicitly claims they take more time. Q3 is YES because Schwartz argues that a vast array of alternatives 'diminishes their ultimate satisfaction'.",
+      "sourceReferences": "IDP Yes/No/Not Given mechanics focusing on writer claims.",
+      "curriculumAlignment": "Distinguishing between writer claims and factual information, avoiding outside assumptions about time.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-008",
+      "skill": "Reading",
+      "part": "Academic Section 3",
+      "questionType": "Summary Completion",
+      "topic": "The Collapse of the Classic Maya Civilization",
+      "difficulty": "Very High",
+      "targetBand": "7.5 to 8.5",
+      "instructions": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "passage": [
+        "The sudden abandonment of the monumental stone cities of the Classic Maya civilization in the 9th century CE has long puzzled archaeologists. While early theories often pointed to single catastrophic events such as foreign invasions or volcanic eruptions, modern paleoclimatology provides a more complex, systemic explanation.",
+        "By analyzing sediment cores extracted from lakes in the Yucatán Peninsula, researchers have identified a severe, prolonged drought that coincided exactly with the period of societal collapse. However, this climatic shift was not entirely natural. The Maya had engaged in extensive deforestation to clear land for agriculture and to harvest firewood for burning the lime plaster used in their magnificent temples. This massive reduction in tree cover altered the local albedo, reflecting more sunlight back into the atmosphere and significantly reducing regional rainfall, thereby exacerbating the natural drought cycle."
+      ],
+      "questions": [
+        "Historically, researchers struggled to explain why the Maya left their impressive 1. ________ in the 9th century. Recent analysis of 2. ________ from regional lakes suggests that extreme dry weather was a primary factor. Furthermore, human activity worsened the situation. The Maya cut down vast forests to create farmland and to produce 3. ________ for their buildings, which inadvertently altered weather patterns and reduced rainfall."
+      ],
+      "answerKey": {
+        "1": ["stone cities", "cities"],
+        "2": ["sediment cores", "cores"],
+        "3": ["lime plaster", "plaster"]
+      },
+      "explanation": "Tests heavy paraphrasing. 'Monumental stone cities' fits the first gap. 'Sediment cores extracted from lakes' corresponds to 'analysis of ___ from regional lakes'. 'Harvest firewood for burning the lime plaster used in their magnificent temples' paraphrases to 'produce ___ for their buildings'.",
+      "sourceReferences": "IELTS.org Academic Summary Completion without a word bank.",
+      "curriculumAlignment": "Synthesizing complex paragraphs, grammatically matching nouns in a summary.",
+      "estimatedTime": "7 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-009",
+      "skill": "Reading",
+      "part": "General Training Section 2",
+      "questionType": "Matching Headings",
+      "topic": "Workplace Health and Safety Guidelines",
+      "difficulty": "Easy to Medium",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Choose the correct heading for sections A to C from the list of headings below. Write the correct roman numeral (i to v) next to each section.",
+      "passage": [
+        "Section A. Ensuring your workstation is correctly adjusted is vital for preventing musculoskeletal injuries. Your monitor should be positioned at eye level, approximately an arm's length away, to avoid neck strain. Chairs must provide adequate lumbar support, and your feet should rest flat on the floor or on a footrest if necessary.",
+        "Section B. In the event that the alarm sounds, all staff must immediately evacuate the building using the nearest designated stairwell. Under no circumstances should elevators be used. Once outside, proceed directly to the assembly point located in the south parking lot and await further instructions from the floor wardens.",
+        "Section C. We foster a proactive culture regarding potential dangers. If you notice frayed electrical cables, blocked emergency exits, or spilled liquids in common areas, you must immediately log the issue in the intranet portal under the 'Safety Alert' tab. Do not attempt to fix electrical faults yourself."
+      ],
+      "questions": [
+        "List of Headings:\ni. Emergency evacuation procedures\nii. The proper way to lift heavy objects\niii. Reporting hazards in the office\niv. First aid kit locations\nv. Ergonomic desk setup",
+        "1. Section A - ________",
+        "2. Section B - ________",
+        "3. Section C - ________"
+      ],
+      "answerKey": {
+        "1": ["v"],
+        "2": ["i"],
+        "3": ["iii"]
+      },
+      "explanation": "Section A describes adjusting chairs and monitors, matching 'Ergonomic desk setup' (v). Section B describes alarms and exiting the building, matching 'Emergency evacuation procedures' (i). Section C describes logging dangers like frayed cables, matching 'Reporting hazards in the office' (iii).",
+      "sourceReferences": "British Council GT Matching Headings mechanics.",
+      "curriculumAlignment": "Identifying main ideas in workplace texts, filtering out irrelevant distractors (ii and iv).",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-010",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "Table Completion",
+      "topic": "Early Writing Systems",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "passage": [
+        "The development of writing systems marked a crucial turning point in human history, allowing civilizations to record laws, trade transactions, and literature. In ancient Mesopotamia, the Sumerians developed cuneiform around 3200 BCE. This system utilized a wedge-shaped stylus pressed into soft clay tablets. Because clay was abundant and durable once baked in the sun, thousands of these administrative and legal records have survived to the present day.",
+        "Around the same time, the Egyptians developed hieroglyphs. Unlike the abstract wedges of cuneiform, hieroglyphs consisted of intricate pictorial symbols. While they were sometimes carved into stone monuments, they were predominantly written on papyrus scrolls using reed brushes and ink. Although papyrus was lightweight and highly portable, it was highly susceptible to decay, meaning far fewer everyday Egyptian records have survived compared to their Mesopotamian counterparts."
+      ],
+      "questions": [
+        "Writing System | Primary Material | Writing Tool | Survival Rate",
+        "Cuneiform | soft 1. ________ | wedge-shaped stylus | High (very durable)",
+        "Hieroglyphs | 2. ________ scrolls | 3. ________ and ink | Low (prone to decay)"
+      ],
+      "answerKey": {
+        "1": ["clay"],
+        "2": ["papyrus"],
+        "3": ["reed brushes"]
+      },
+      "explanation": "Q1 requires identifying the material for cuneiform ('soft clay'). Q2 requires identifying the material for hieroglyphs ('papyrus scrolls'). Q3 asks for the tool used with ink on papyrus ('reed brushes').",
+      "sourceReferences": "IELTS.org Table Completion guidelines.",
+      "curriculumAlignment": "Cross-referencing factual data sets, scanning for corresponding categories across paragraphs.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-011",
+      "skill": "Reading",
+      "part": "General Training Section 3",
+      "questionType": "Matching Features",
+      "topic": "Pioneers of Early Aviation",
+      "difficulty": "Medium to High",
+      "targetBand": "6.5 to 7.5",
+      "instructions": "Look at the following statements and the list of aviators below. Match each statement with the correct aviator, A, B, or C. You may use any letter more than once.",
+      "passage": [
+        "A - Otto Lilienthal\nOften referred to as the 'Glider King', the German engineer Otto Lilienthal was the first person to make well-documented, repeated, and successful gliding flights. In the late 19th century, he proved that heavier-than-air flight was possible without an engine. He rigorously documented his experiments, publishing data on wing shapes that would heavily influence future inventors.",
+        "B - The Wright Brothers\nOrville and Wilbur Wright achieved the first powered, sustained, and controlled airplane flight in 1903. While others had built powerful engines, the Wright brothers' true breakthrough was their invention of three-axis control, which enabled the pilot to steer the aircraft effectively and maintain its equilibrium. This control mechanism remains standard on fixed-wing aircraft today.",
+        "C - Bessie Coleman\nFacing racial and gender discrimination in the United States, Bessie Coleman traveled to France to earn her pilot's license in 1921, becoming the first African American woman to do so. Upon returning, she specialized in stunt flying and aerial tricks, drawing massive crowds to her exhibitions. She famously used her platform to advocate for equal rights, refusing to perform at venues that strictly segregated their audiences."
+      ],
+      "questions": [
+        "1. Demonstrated that human flight did not strictly require a motor.",
+        "2. Solved the problem of keeping a flying machine balanced and steerable.",
+        "3. Took a public stand against discriminatory practices at public events."
+      ],
+      "answerKey": {
+        "1": ["A"],
+        "2": ["B"],
+        "3": ["C"]
+      },
+      "explanation": "Q1 matches A (Lilienthal), who 'proved that heavier-than-air flight was possible without an engine'. Q2 matches B (Wright Brothers), who invented 'three-axis control... to steer the aircraft effectively and maintain its equilibrium'. Q3 matches C (Coleman), who 'refused to perform at venues that strictly segregated their audiences'.",
+      "sourceReferences": "British Council Matching Features mechanics.",
+      "curriculumAlignment": "Matching paraphrased achievements to specific individuals, dealing with historical texts.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-012",
+      "skill": "Reading",
+      "part": "Academic Section 3",
+      "questionType": "Matching Sentence Endings",
+      "topic": "Artificial Intelligence in Medical Diagnostics",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "Complete each sentence with the correct ending, A-E, below. Write the correct letter next to each question.",
+      "passage": [
+        "The integration of Artificial Intelligence (AI) into healthcare, particularly in the field of radiology, represents a paradigm shift in diagnostic medicine. Machine learning algorithms, trained on vast datasets of millions of medical images, can now detect anomalies such as early-stage tumors with a level of pixel-by-pixel precision that frequently surpasses human capability. These systems excel at identifying subtle visual patterns that the human eye might easily overlook due to fatigue.",
+        "However, the medical community remains cautious about entirely replacing human diagnosticians. One major limitation of current AI models is their lack of contextual intuition. An algorithm analyzes an image in isolation, whereas a human physician interprets the scan alongside the patient's comprehensive medical history, emotional state, and lifestyle factors.",
+        "Furthermore, the widespread clinical adoption of AI is currently hindered by complex regulatory hurdles. If an autonomous algorithm misdiagnoses a critical illness, the legal framework has not yet clearly established who bears the liability—the software developer, the hospital, or the attending physician."
+      ],
+      "questions": [
+        "List of Endings:",
+        "A. unresolved questions regarding legal liability.",
+        "B. analyzing visual data with extreme precision.",
+        "C. their inability to factor in a patient's broader life context.",
+        "D. a decrease in the overall cost of healthcare.",
+        "E. replacing human surgeons in operating rooms.",
+        "1. Medical AI algorithms are particularly effective at ________",
+        "2. One major limitation of diagnostic algorithms is ________",
+        "3. The widespread adoption of AI in hospitals is delayed by ________"
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"],
+        "3": ["A"]
+      },
+      "explanation": "Q1 matches B, as the text states algorithms can detect anomalies with a 'level of pixel-by-pixel precision'. Q2 matches C, reflecting the text's claim about a 'lack of contextual intuition' and not interpreting scans alongside a 'patient's comprehensive medical history'. Q3 matches A, aligning with the text regarding 'complex regulatory hurdles' and who 'bears the liability'.",
+      "sourceReferences": "British Council Matching Sentence Endings format.",
+      "curriculumAlignment": "Synthesizing half-sentences, filtering out distractor endings (D and E).",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-013",
+      "skill": "Reading",
+      "part": "General Training Section 2",
+      "questionType": "Flow-chart Completion",
+      "topic": "Staff Onboarding Process",
+      "difficulty": "Easy",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Complete the flow-chart below. Choose NO MORE THAN TWO WORDS from the text for each answer.",
+      "passage": [
+        "Welcome to Horizon Logistics. To ensure a smooth first day, all new employees must follow this mandatory onboarding sequence.",
+        "First, upon arriving at the building, you must report to the Security Desk in the main lobby. Here, you will have your photo taken and receive your photographic ID. You cannot access the elevators without it. Next, proceed to the IT Department on the second floor. The technicians there will provide you with your login credentials and set up your email account.",
+        "After your lunch break, you are required to attend the HR Orientation in Conference Room B, which covers payroll and benefits. Finally, before leaving at 5.00 PM, you must complete the online fire safety module on your new computer. Failure to do so will delay your building access for day two."
+      ],
+      "questions": [
+        "Step 1 - Go to the Security Desk to obtain your 1. ________.",
+        "Step 2 - Visit the IT Department to collect your 2. ________.",
+        "Step 3 - Attend the HR Orientation after lunch.",
+        "Step 4 - Finish the online 3. ________ module before the end of the day."
+      ],
+      "answerKey": {
+        "1": ["photographic ID", "ID"],
+        "2": ["login credentials", "credentials"],
+        "3": ["fire safety", "safety"]
+      },
+      "explanation": "Q1 requires finding the item obtained at security ('photographic ID'). Q2 requires identifying what IT provides ('login credentials'). Q3 requires locating the final online task ('fire safety' module).",
+      "sourceReferences": "IDP IELTS Flow-chart Completion guidelines.",
+      "curriculumAlignment": "Following chronological workplace processes, maintaining strict word limits.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-014",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "True/False/Not Given",
+      "topic": "The Evolution of the Bicycle",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Do the following statements agree with the information given in the reading passage? Write TRUE if the statement agrees, FALSE if it contradicts, or NOT GIVEN if there is no information on this.",
+      "passage": [
+        "The bicycle underwent radical transformations during the 19th century before resembling the modern machine we recognize today. Early iterations, such as the infamous 'penny-farthing', featured a massive front wheel designed to increase speed. However, this design was highly dangerous. Because the rider sat high above the center of gravity, any small obstacle in the road would cause the bicycle to pitch forward, throwing the rider over the handlebars.",
+        "In the 1880s, a major breakthrough occurred with the introduction of the 'safety bicycle'. This model featured two wheels of identical size and utilized a chain drive mechanism to transfer power from the pedals to the rear wheel. This dramatically lowered the rider's center of gravity, greatly reducing the risk of fatal accidents.",
+        "The subsequent addition of air-filled pneumatic tires, invented by Scottish veterinarian John Boyd Dunlop in 1888, revolutionized riding comfort by absorbing vibrations from cobblestone streets. This innovation ultimately cemented the bicycle's widespread global popularity."
+      ],
+      "questions": [
+        "1. The penny-farthing was considered a safe option for amateur riders.",
+        "2. The safety bicycle used a chain to transfer power to the wheels.",
+        "3. Dunlop's pneumatic tires were initially very expensive to manufacture."
+      ],
+      "answerKey": {
+        "1": ["FALSE", "False", "F"],
+        "2": ["TRUE", "True", "T"],
+        "3": ["NOT GIVEN", "Not Given", "NG"]
+      },
+      "explanation": "Q1 is FALSE because the passage explicitly states the penny-farthing 'was highly dangerous'. Q2 is TRUE because the safety bicycle 'utilized a chain drive mechanism to transfer power'. Q3 is NOT GIVEN; the text states Dunlop invented pneumatic tires and they revolutionized comfort, but makes no mention of their manufacturing cost.",
+      "sourceReferences": "IELTS.org True/False/Not Given mechanics.",
+      "curriculumAlignment": "Identifying direct contradictions and recognizing when assumed information is absent from the text.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-015",
+      "skill": "Reading",
+      "part": "General Training Section 3",
+      "questionType": "Multiple Choice",
+      "topic": "The Rise of E-Sports as a Profession",
+      "difficulty": "Medium to High",
+      "targetBand": "6.5 to 7.5",
+      "instructions": "Choose the correct letter, A, B, C, or D.",
+      "passage": [
+        "Competitive video gaming, universally known as e-sports, has transitioned over the last decade from a niche hobby into a billion-dollar global industry. Top players now earn substantial incomes, drawing comparisons to traditional professional athletes. Interestingly, while tournament prize pools can reach tens of millions of dollars, the primary source of steady income for most elite gamers actually comes through lucrative corporate sponsorships and daily streaming subscriptions.",
+        "However, the career of a professional gamer is notoriously short-lived. To maintain peak reflexes and strategic dominance, professionals undergo grueling practice regimens, often playing for up to 14 hours a day. This relentless schedule frequently leads to severe, career-ending repetitive strain injuries (RSI) in their wrists and hands. Consequently, it is highly unusual to see a top-tier e-sports competitor continue playing professionally past the age of twenty-five."
+      ],
+      "questions": [
+        "1. According to the text, what is the main source of steady income for top e-sports players?\nA. Huge tournament prize pools.\nB. Government athletic grants.\nC. Corporate sponsorships and streaming.\nD. Developing their own video games.",
+        "2. Why do e-sports professionals generally retire at a very young age?\nA. The prize money decreases as they get older.\nB. They suffer from severe physical injuries.\nC. They lose interest in competitive gaming.\nD. The games they play become outdated."
+      ],
+      "answerKey": {
+        "1": ["C"],
+        "2": ["B"]
+      },
+      "explanation": "Q1 matches C, as the text states the primary income comes 'through lucrative corporate sponsorships and daily streaming subscriptions', bypassing the distractor of prize pools. Q2 matches B, stating the grueling regimens lead to 'career-ending repetitive strain injuries (RSI) in their wrists and hands'.",
+      "sourceReferences": "British Council Academic/General Multiple Choice distractors.",
+      "curriculumAlignment": "Bypassing partial-truth distractors, identifying primary causes.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-016",
+      "skill": "Reading",
+      "part": "Academic Section 2",
+      "questionType": "Diagram Label Completion",
+      "topic": "How a Wind Turbine Works",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "passage": [
+        "Modern wind turbines are marvels of mechanical engineering designed to convert kinetic energy into electrical power. The process begins when wind strikes the massive aerodynamic blades, causing them to rotate. These blades are firmly attached to a central rotor hub.",
+        "The spinning rotor is connected to a low-speed shaft located inside the main protective housing at the top of the tower, known as the nacelle. Because this initial shaft turns too slowly to generate electricity efficiently, it is fed into a gearbox. The gearbox utilizes a series of gears to drastically increase the rotational speed. This amplified kinetic energy is then transferred to a high-speed shaft, which rapidly spins the electrical generator to produce usable power."
+      ],
+      "questions": [
+        "Visual Reference: A diagram of a wind turbine interior.",
+        "1. Outer spinning parts that catch the wind: aerodynamic 1. ________",
+        "2. Internal component that increases the rotational speed: 2. ________",
+        "3. Final component that produces the electricity: electrical 3. ________"
+      ],
+      "answerKey": {
+        "1": ["blades"],
+        "2": ["gearbox"],
+        "3": ["generator"]
+      },
+      "explanation": "Q1 targets 'aerodynamic blades' that catch the wind. Q2 targets the 'gearbox' which drastically increases rotational speed. Q3 targets the 'electrical generator' which produces the final power.",
+      "sourceReferences": "IDP IELTS Diagram Label Completion mechanics.",
+      "curriculumAlignment": "Translating descriptive technical text into visual spatial labels, strict word limits.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-017",
+      "skill": "Reading",
+      "part": "Academic Section 3",
+      "questionType": "Matching Features",
+      "topic": "Theories of Language Acquisition",
+      "difficulty": "High",
+      "targetBand": "7.5 to 8.5",
+      "instructions": "Look at the following statements and the list of theorists below. Match each statement with the correct theorist, A, B, or C.",
+      "passage": [
+        "A - B.F. Skinner. In the mid-20th century, behaviorist B.F. Skinner proposed that language acquisition is entirely a product of environmental conditioning. According to this model, infants learn to speak through trial and error, imitation, and positive reinforcement. When a child vocalizes a sound that resembles a recognizable word, caregivers respond with praise or attention, which encourages the child to repeat the behavior.",
+        "B - Noam Chomsky. Fiercely rejecting the behaviorist approach, linguist Noam Chomsky argued that human beings are born with an innate, biological capacity for language. He proposed the existence of a 'Language Acquisition Device' (LAD) in the brain, which contains a universal grammar. This theory explains why children naturally master complex grammatical rules so rapidly, even when they are exposed to fragmented or grammatically incorrect speech from adults.",
+        "C - Lev Vygotsky. The interactionist theory, pioneered by psychologist Lev Vygotsky, emphasizes the fundamental role of social and cultural context. Vygotsky argued that biological capacity alone is insufficient. Instead, a child's linguistic abilities develop primarily through collaborative dialogue with older, more capable members of their community, who provide essential 'scaffolding' to help the child understand complex linguistic structures."
+      ],
+      "questions": [
+        "1. Argued that humans possess an inherited, biological framework for understanding language.",
+        "2. Emphasized the essential role of social caregivers in guiding a child's linguistic development.",
+        "3. Believed that language is primarily learned through imitation and positive reward."
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"],
+        "3": ["A"]
+      },
+      "explanation": "Q1 matches B (Chomsky), who argued humans are 'born with an innate, biological capacity' and a 'universal grammar'. Q2 matches C (Vygotsky), who focused on 'collaborative dialogue' and the 'social and cultural context'. Q3 matches A (Skinner), who proposed learning through 'imitation, and positive reinforcement'.",
+      "sourceReferences": "British Council Matching Features mechanics.",
+      "curriculumAlignment": "Matching paraphrased theoretical concepts to specific academics, dealing with dense linguistic vocabulary.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-018",
+      "skill": "Reading",
+      "part": "General Training Section 1",
+      "questionType": "True/False/Not Given",
+      "topic": "Public Library Membership Rules",
+      "difficulty": "Easy",
+      "targetBand": "5.0 to 6.0",
+      "instructions": "Do the following statements agree with the information given in the text? Write TRUE if the statement agrees, FALSE if it contradicts, or NOT GIVEN if there is no information on this.",
+      "passage": [
+        "Joining the City Library is free for all local residents. To register for a library card, applicants must visit the front desk in person and present a valid photo ID alongside proof of address, such as a recent utility bill or bank statement.",
+        "Members may borrow up to ten books at a time for a standard period of three weeks. We also offer a wide selection of multimedia. DVDs and video games can be borrowed for one week, but please note there is a $2 rental fee per item. If materials are not returned by their due date, late fines will be applied at a rate of 20 cents per day. Children under the age of twelve are welcome, but they must be accompanied by an adult at all times while inside the building."
+      ],
+      "questions": [
+        "1. You must provide a document proving where you live to get a library card.",
+        "2. Borrowing DVDs from the library is free for the first week.",
+        "3. Senior citizens are exempt from paying late fees on overdue books."
+      ],
+      "answerKey": {
+        "1": ["TRUE", "True", "T"],
+        "2": ["FALSE", "False", "F"],
+        "3": ["NOT GIVEN", "Not Given", "NG"]
+      },
+      "explanation": "Q1 is TRUE because the text states applicants must present 'proof of address, such as a recent utility bill'. Q2 is FALSE because the text explicitly states 'there is a $2 rental fee per item' for DVDs. Q3 is NOT GIVEN because the text mentions late fines but says absolutely nothing about senior citizen exemptions.",
+      "sourceReferences": "IDP True/False/Not Given General Training format.",
+      "curriculumAlignment": "Scanning for specific institutional rules, avoiding assumptions about unmentioned groups.",
+      "estimatedTime": "4 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-019",
+      "skill": "Reading",
+      "part": "Academic Section 2",
+      "questionType": "Matching Information",
+      "topic": "The Deep Sea Carbon Sink",
+      "difficulty": "High",
+      "targetBand": "7.0 to 8.0",
+      "instructions": "The reading passage has three paragraphs, A-C. Which paragraph contains the following information? Write the correct letter, A-C.",
+      "passage": [
+        "Paragraph A. The global ocean acts as a massive carbon sink, absorbing approximately a quarter of all human-generated carbon dioxide emissions. The initial stage of this process is driven by phytoplankton - microscopic, plant-like organisms that drift in the sunlit surface waters. Through photosynthesis, these vast biological communities extract dissolved carbon dioxide from the water to build their cellular structures, fundamentally regulating the Earth's climate.",
+        "Paragraph B. The true climate benefit, however, occurs when these organisms die. As the phytoplankton perish, they slowly sink to the abyssal ocean floor, taking the trapped carbon with them. This phenomenon, known as the 'biological pump', effectively isolates millions of tons of carbon from the atmosphere, locking it in deep-sea sediment for centuries or even millennia.",
+        "Paragraph C. Unfortunately, this vital planetary mechanism is currently under threat. As the oceans absorb more CO2, the water undergoes a chemical shift, becoming significantly more acidic. This ocean acidification interferes with the ability of certain marine organisms to calcify and build their protective shells. Consequently, many of these creatures dissolve and release their carbon back into the upper water layers before they can successfully sink to the ocean floor."
+      ],
+      "questions": [
+        "1. A description of the mechanism that transports carbon to the bottom of the ocean.",
+        "2. The reason why warmer, altered waters are dangerous for microscopic sea life.",
+        "3. The initial process by which carbon dioxide is removed from the surface environment."
+      ],
+      "answerKey": {
+        "1": ["B"],
+        "2": ["C"],
+        "3": ["A"]
+      },
+      "explanation": "Q1 matches Paragraph B, which details how dead phytoplankton 'sink to the abyssal ocean floor' (the biological pump). Q2 matches Paragraph C, which explains how 'ocean acidification interferes with the ability... to build their protective shells'. Q3 matches Paragraph A, which introduces phytoplankton using photosynthesis to 'extract dissolved carbon dioxide'.",
+      "sourceReferences": "IELTS.org Matching Information mechanics.",
+      "curriculumAlignment": "Scanning for specific biological processes and mechanisms across paragraphs.",
+      "estimatedTime": "6 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-020",
+      "skill": "Reading",
+      "part": "General Training Section 2",
+      "questionType": "Sentence Completion",
+      "topic": "Registering for a Corporate Workshop",
+      "difficulty": "Medium",
+      "targetBand": "5.5 to 6.5",
+      "instructions": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the text for each answer.",
+      "passage": [
+        "Enrolling in the Annual Leadership Workshop",
+        "The upcoming management and leadership workshop will be held in the main auditorium on November 12th. To secure your spot in the seminar, employees must submit an approval form signed by their department head before the end of the week. The workshop costs $150 per person. However, the company’s training budget will cover this fee entirely for all permanent staff members. Participants should ensure they bring a digital tablet to access the interactive modules, as physical workbooks will not be provided this year."
+      ],
+      "questions": [
+        "1. Employees need an approval form signed by their ________ to attend.",
+        "2. The workshop fee is paid by the company's ________ for full-time employees.",
+        "3. Attendees are required to bring a ________ to use during the session."
+      ],
+      "answerKey": {
+        "1": ["department head"],
+        "2": ["training budget"],
+        "3": ["digital tablet", "tablet"]
+      },
+      "explanation": "Q1 requires locating who signs the form ('department head'). Q2 requires identifying what covers the fee ('training budget'). Q3 requires identifying the item to bring instead of a workbook ('digital tablet').",
+      "sourceReferences": "British Council Sentence Completion GT format.",
+      "curriculumAlignment": "Extracting exact workplace phrasing, adhering to strict two-word limits.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    },
+    {
+      "practiceId": "AKHL-RD-021",
+      "skill": "Reading",
+      "part": "Academic Section 1",
+      "questionType": "Summary Completion",
+      "topic": "The History of the Silk Road",
+      "difficulty": "Medium",
+      "targetBand": "6.0 to 7.0",
+      "instructions": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "passage": [
+        "The Silk Road was not a single, paved thoroughfare, but rather a complex, shifting network of trade routes connecting the East and West. Established formally during the Han Dynasty of China, it facilitated the exchange of highly lucrative commodities like silk, spices, and jade. However, its historical significance extends far beyond commerce; the network was a primary artery for the transmission of cultural and religious ideas. Buddhism, for example, traveled from India to China along these very paths.",
+        "The routes themselves were notoriously dangerous. The harsh terrain included unforgiving deserts and freezing mountain passes. Prompted by these threats, merchants rarely traveled alone. Instead, they moved in large caravans for mutual protection against both the severe weather and the constant threat of bandits who targeted isolated travelers."
+      ],
+      "questions": [
+        "The Silk Road was a vast network that linked different regions. It was vital for trading valuable goods such as silk and spices, as well as spreading new 1. ________ across continents. Because the journey was highly hazardous, traders usually traveled together in 2. ________ to defend themselves against 3. ________ and severe weather."
+      ],
+      "answerKey": {
+        "1": ["religious ideas", "ideas"],
+        "2": ["large caravans", "caravans"],
+        "3": ["bandits"]
+      },
+      "explanation": "Q1 paraphrases 'transmission of cultural and religious ideas' to 'spreading new religious ideas'. Q2 requires finding the group formation traders used ('large caravans'). Q3 requires identifying the human threat they defended against ('bandits').",
+      "sourceReferences": "IELTS.org Academic Summary Completion.",
+      "curriculumAlignment": "Synthesizing historical texts, grammatical noun matching in summaries.",
+      "estimatedTime": "5 minutes",
+      "status": "draft"
+    }
+  ]
+}
