@@ -12,41 +12,58 @@ import {
 } from 'lucide-react';
 import { WebLlmProvider } from '../../../services/webLlmProvider';
 import { IeltsTeachingRules } from '../../../services/ieltsTeachingRules';
+import { CurriculumService } from '../../../services/curriculumService';
+import { WritingPracticeItem } from '../../../types/curriculum';
 
 export const WritingTrainerPage: React.FC = () => {
   const [taskType, setTaskType] = useState<'Task 1' | 'Task 2'>('Task 1');
+  const [writingBank, setWritingBank] = useState<WritingPracticeItem[]>([]);
+  const [selectedTask, setSelectedTask] = useState<WritingPracticeItem | null>(null);
   const [text, setText] = useState('');
   const [isEvaluating, setIsEvaluating] = useState(false);
   const [evaluation, setEvaluation] = useState<any>(null);
   const [timerSeconds, setTimerSeconds] = useState(20 * 60);
   const [timerActive, setTimerActive] = useState(false);
 
-  const task1Prompt = {
-    title: 'The chart below shows the percentage of households with internet access in three European countries between 2010 and 2024.',
-    instructions: 'Summarize the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.',
-    rules: [
-      'Paragraph 1: Paraphrase the prompt.',
-      'Paragraph 2 (Overview): State 2 macro trends. STRICTLY APPLY THE ZERO NUMBER RULE (no specific percentages or dates).',
-      'Paragraph 3: Detailed comparison 1.',
-      'Paragraph 4: Detailed comparison 2.',
-    ],
-  };
+  useEffect(() => {
+    CurriculumService.loadAll().then(() => {
+      const bank = CurriculumService.getWritingBank();
+      setWritingBank(bank);
+      const firstTask1 = bank.find((w) => w.task_type?.toLowerCase().includes('task 1'));
+      if (firstTask1) setSelectedTask(firstTask1);
+    });
+  }, []);
 
-  const task2Prompt = {
-    title: 'Some people believe that artificial intelligence will replace human educators in language teaching, while others believe that the teacher-student human bond remains irreplaceable. Discuss both views and give your opinion.',
-    instructions: 'Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.',
-    rules: [
-      'Introduction: Paraphrase question & state clear thesis.',
-      'Body Paragraph 1 (PEE): Point -> Explain -> Example on View A.',
-      'Body Paragraph 2 (PEE): Point -> Explain -> Example on View B.',
-      'Conclusion: Balanced synthesis and personal verdict.',
-    ],
-  };
+  const filteredTasks = writingBank.filter((w) =>
+    taskType === 'Task 1'
+      ? w.task_type?.toLowerCase().includes('task 1')
+      : !w.task_type?.toLowerCase().includes('task 1')
+  );
 
-  const activePrompt = taskType === 'Task 1' ? task1Prompt : task2Prompt;
+  const activePromptTitle = selectedTask?.title || (taskType === 'Task 1'
+    ? 'The chart below shows the percentage of households with internet access in three European countries between 2010 and 2024.'
+    : 'Some people believe that artificial intelligence will replace human educators in language teaching, while others believe that the teacher-student human bond remains irreplaceable. Discuss both views and give your opinion.');
+
+  const activePromptInstructions = selectedTask?.prompt || (taskType === 'Task 1'
+    ? 'Summarize the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.'
+    : 'Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.');
+
+  const defaultRules = taskType === 'Task 1'
+    ? [
+        'Paragraph 1: Paraphrase the prompt accurately.',
+        'Paragraph 2 (Overview): State 2 macro trends. STRICTLY APPLY THE ZERO NUMBER RULE (no specific percentages or dates).',
+        'Paragraph 3: Key feature comparison 1.',
+        'Paragraph 4: Key feature comparison 2.',
+      ]
+    : [
+        'Introduction: Paraphrase question & state clear thesis position.',
+        'Body Paragraph 1 (PEE): Point -> Explain -> Example on View A.',
+        'Body Paragraph 2 (PEE): Point -> Explain -> Example on View B.',
+        'Conclusion: Balanced synthesis and definitive personal verdict.',
+      ];
 
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
-  const minWords = taskType === 'Task 1' ? 150 : 250;
+  const minWords = selectedTask?.minimum_word_count || (taskType === 'Task 1' ? 150 : 250);
 
   // Real-time Dr. Asif Zero Number Overview Checker for Task 1
   const paragraphs = text.split(/\n\s*\n/);
@@ -73,7 +90,7 @@ export const WritingTrainerPage: React.FC = () => {
     try {
       const prompt = IeltsTeachingRules.buildWritingEvaluationPrompt({
         taskType,
-        promptText: activePrompt.title,
+        promptText: `${activePromptTitle}\n\n${activePromptInstructions}`,
         studentText: text,
         targetBand: 7.5,
       });
@@ -95,7 +112,7 @@ export const WritingTrainerPage: React.FC = () => {
           <div className="flex items-center space-x-3 mb-1">
             <h1 className="text-2xl font-bold text-white tracking-tight">AI Writing Trainer Room</h1>
             <span className="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs px-2.5 py-0.5 rounded-full font-medium">
-              Zero Number Rule Validator
+              100 Authentic Tasks • Zero Number Rule Validator
             </span>
           </div>
           <p className="text-xs text-slate-400">
@@ -103,58 +120,111 @@ export const WritingTrainerPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Task Selector Tabs */}
-        <div className="flex items-center bg-slate-900 border border-slate-800 p-1.5 rounded-xl">
-          <button
-            onClick={() => {
-              setTaskType('Task 1');
-              setText('');
-              setEvaluation(null);
-              setTimerSeconds(20 * 60);
-              setTimerActive(false);
+        {/* Task Dropdown & Type Selector */}
+        <div className="flex flex-wrap items-center gap-3">
+          <select
+            value={selectedTask?.id || ''}
+            onChange={(e) => {
+              const found = writingBank.find((w) => w.id === e.target.value);
+              if (found) {
+                setSelectedTask(found);
+                setText('');
+                setEvaluation(null);
+                setTimerSeconds((found.recommended_time_minutes || (taskType === 'Task 1' ? 20 : 40)) * 60);
+              }
             }}
-            className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              taskType === 'Task 1' ? 'bg-sky-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'
-            }`}
+            className="bg-slate-900 border border-slate-800 text-xs text-white rounded-xl px-3 py-1.5 font-mono focus:outline-none focus:border-sky-500 cursor-pointer"
           >
-            Academic Task 1 (150w)
-          </button>
-          <button
-            onClick={() => {
-              setTaskType('Task 2');
-              setText('');
-              setEvaluation(null);
-              setTimerSeconds(40 * 60);
-              setTimerActive(false);
-            }}
-            className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              taskType === 'Task 2' ? 'bg-sky-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'
-            }`}
-          >
-            Essay Task 2 (250w)
-          </button>
+            {filteredTasks.map((w) => (
+              <option key={w.id} value={w.id} className="bg-slate-950 text-white">
+                {w.id}: {w.title.slice(0, 30)}...
+              </option>
+            ))}
+          </select>
+
+          {/* Task Selector Tabs */}
+          <div className="flex items-center bg-slate-900 border border-slate-800 p-1.5 rounded-xl">
+            <button
+              onClick={() => {
+                setTaskType('Task 1');
+                const t1 = writingBank.find((w) => w.task_type?.toLowerCase().includes('task 1'));
+                if (t1) setSelectedTask(t1);
+                setText('');
+                setEvaluation(null);
+                setTimerSeconds(20 * 60);
+                setTimerActive(false);
+              }}
+              className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                taskType === 'Task 1' ? 'bg-sky-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              Task 1 (150w)
+            </button>
+            <button
+              onClick={() => {
+                setTaskType('Task 2');
+                const t2 = writingBank.find((w) => !w.task_type?.toLowerCase().includes('task 1'));
+                if (t2) setSelectedTask(t2);
+                setText('');
+                setEvaluation(null);
+                setTimerSeconds(40 * 60);
+                setTimerActive(false);
+              }}
+              className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                taskType === 'Task 2' ? 'bg-sky-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              Task 2 (250w)
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Prompt Card & Pedagogical Architecture */}
       <div className="bg-[#0D182E] border border-slate-800 p-6 rounded-3xl space-y-4">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
-            {taskType === 'Task 1' ? 'IELTS Academic Writing Task 1' : 'IELTS Writing Task 2 Essay'}
-          </span>
+          <div className="flex items-center space-x-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
+              {selectedTask ? `${selectedTask.id}: ${selectedTask.task_type}` : taskType}
+            </span>
+            <span className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-md font-mono">
+              Min {minWords} words
+            </span>
+          </div>
           <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-lg font-mono">
-            {taskType === 'Task 1' ? '20 Minutes' : '40 Minutes'}
+            {selectedTask?.recommended_time_minutes || (taskType === 'Task 1' ? 20 : 40)} Minutes
           </span>
         </div>
 
-        <h2 className="text-base font-bold text-white leading-relaxed">{activePrompt.title}</h2>
-        <p className="text-xs text-slate-400 italic">{activePrompt.instructions}</p>
+        <h2 className="text-base font-bold text-white leading-relaxed">{activePromptTitle}</h2>
+        <div className="text-xs text-slate-300 whitespace-pre-line bg-slate-900/60 p-3 rounded-xl border border-slate-800/80">
+          {activePromptInstructions}
+        </div>
+
+        {selectedTask?.data_or_scenario_description && (
+          <div className="bg-sky-950/30 border border-sky-500/20 p-3 rounded-xl text-xs text-sky-200">
+            <strong>Data / Scenario Breakdown: </strong>
+            <span className="text-slate-300">{selectedTask.data_or_scenario_description}</span>
+          </div>
+        )}
+
+        {/* High Band Vocabulary pills */}
+        {selectedTask?.high_band_vocabulary && selectedTask.high_band_vocabulary.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            <span className="text-[10px] text-slate-400 font-bold mr-1 flex items-center">Collocations:</span>
+            {selectedTask.high_band_vocabulary.slice(0, 4).map((vocab, vIdx) => (
+              <span key={vIdx} className="text-[10px] bg-slate-900 text-sky-300 border border-slate-800 px-2 py-0.5 rounded-lg">
+                {vocab}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Dr. Asif 4-Paragraph Structure Checklist */}
         <div className="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl space-y-2">
           <span className="text-xs font-bold text-sky-300">Dr. Asif's Mandatory Paragraph Architecture:</span>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs text-slate-300">
-            {activePrompt.rules.map((rule, idx) => (
+            {defaultRules.map((rule, idx) => (
               <div key={idx} className="flex items-start space-x-2">
                 <span className="text-sky-400 font-bold">•</span>
                 <span>{rule}</span>

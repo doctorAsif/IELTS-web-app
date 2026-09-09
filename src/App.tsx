@@ -67,7 +67,7 @@ export default function App() {
       case 'listening':
         return <ListeningPracticePage />;
       case 'curriculum':
-        return <CurriculumPage />;
+        return <CurriculumPage onNavigate={(tab) => setActiveTab(tab)} />;
       case 'flashcards':
         return <FlashcardsPage />;
       case 'ai-setup':

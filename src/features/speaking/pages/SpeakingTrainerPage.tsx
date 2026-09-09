@@ -15,8 +15,12 @@ import {
 import { WebSpeechService } from '../../../services/webSpeechService';
 import { WebLlmProvider } from '../../../services/webLlmProvider';
 import { IeltsTeachingRules } from '../../../services/ieltsTeachingRules';
+import { CurriculumService } from '../../../services/curriculumService';
+import { SpeakingPracticeItem } from '../../../types/curriculum';
 
 export const SpeakingTrainerPage: React.FC = () => {
+  const [speakingBank, setSpeakingBank] = useState<SpeakingPracticeItem[]>([]);
+  const [selectedTest, setSelectedTest] = useState<SpeakingPracticeItem | null>(null);
   const [activePart, setActivePart] = useState<1 | 2 | 3>(2);
   const [isRecording, setIsRecording] = useState(false);
   const [transcript, setTranscript] = useState('');
@@ -25,15 +29,24 @@ export const SpeakingTrainerPage: React.FC = () => {
   const [timerSeconds, setTimerSeconds] = useState(120);
   const [timerActive, setTimerActive] = useState(false);
 
-  const cueCardTopic = {
-    title: 'Describe an ambitious project or goal you achieved successfully.',
-    prompts: [
-      'What the project or goal was',
-      'Why you decided to undertake it (5W1H: Why)',
-      'What difficulties or hurdles you encountered (5W1H: What/How)',
-      'And explain how you felt when you successfully completed it.',
-    ],
-  };
+  useEffect(() => {
+    CurriculumService.loadAll().then(() => {
+      const bank = CurriculumService.getSpeakingBank();
+      setSpeakingBank(bank);
+      if (bank.length > 0) {
+        setSelectedTest(bank[0]);
+      }
+    });
+  }, []);
+
+  const currentTopic = selectedTest?.topic || 'Describe an ambitious project or goal you achieved successfully.';
+  const currentCue = selectedTest?.part_2?.cue_card_topic || currentTopic;
+  const currentPrompts = selectedTest?.part_2?.prompts || [
+    'What the project or goal was',
+    'Why you decided to undertake it (5W1H: Why)',
+    'What difficulties or hurdles you encountered (5W1H: What/How)',
+    'And explain how you felt when you successfully completed it.',
+  ];
 
   useEffect(() => {
     let interval: any = null;
@@ -74,10 +87,16 @@ export const SpeakingTrainerPage: React.FC = () => {
   };
 
   const handleExaminerSpeak = () => {
-    const textToSpeak =
-      activePart === 2
-        ? `Here is your cue card: ${cueCardTopic.title}. You have one to two minutes for this, so please begin speaking.`
-        : 'Do you work or are you a student? Remember to use the ARE structure: Answer, Reason, and Example.';
+    let textToSpeak = '';
+    if (activePart === 1) {
+      const q1 = selectedTest?.part_1?.questions?.[0] || 'Do you work or are you a student?';
+      textToSpeak = `Part 1: Theme is ${selectedTest?.part_1?.theme || 'General'}. First question: ${q1}`;
+    } else if (activePart === 2) {
+      textToSpeak = `Here is your candidate cue card: ${currentCue}. You have one to two minutes for this, so please begin speaking.`;
+    } else {
+      const q1 = selectedTest?.part_3?.questions?.[0] || 'How do people in your society view this topic?';
+      textToSpeak = `Part 3 Discussion on ${selectedTest?.part_3?.discussion_theme || selectedTest?.topic}. Question: ${q1}`;
+    }
     WebSpeechService.speakText(textToSpeak);
   };
 
@@ -91,7 +110,7 @@ export const SpeakingTrainerPage: React.FC = () => {
     try {
       const prompt = IeltsTeachingRules.buildSpeakingEvaluationPrompt({
         partNumber: activePart,
-        topicQuestion: cueCardTopic.title,
+        topicQuestion: activePart === 2 ? currentCue : currentTopic,
         transcribedSpeech: transcript,
         targetBand: 7.5,
       });
@@ -113,7 +132,7 @@ export const SpeakingTrainerPage: React.FC = () => {
           <div className="flex items-center space-x-3 mb-1">
             <h1 className="text-2xl font-bold text-white tracking-tight">AI Speaking Trainer Room</h1>
             <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-0.5 rounded-full font-medium">
-              4-Criteria Examiner
+              100 Authentic Tests • 4-Criteria Examiner
             </span>
           </div>
           <p className="text-xs text-slate-400">
@@ -121,35 +140,64 @@ export const SpeakingTrainerPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Part Selector Tabs */}
-        <div className="flex items-center bg-slate-900 border border-slate-800 p-1.5 rounded-xl">
-          {([1, 2, 3] as const).map((part) => (
-            <button
-              key={part}
-              onClick={() => {
-                setActivePart(part);
+        {/* Test Dropdown & Part Selector */}
+        <div className="flex flex-wrap items-center gap-3">
+          <select
+            value={selectedTest?.id || ''}
+            onChange={(e) => {
+              const found = speakingBank.find((s) => s.id === e.target.value);
+              if (found) {
+                setSelectedTest(found);
                 setEvaluation(null);
                 setTranscript('');
-                setTimerSeconds(part === 2 ? 120 : 60);
-              }}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                activePart === part
-                  ? 'bg-sky-500 text-slate-950 font-bold shadow'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              Part {part}
-            </button>
-          ))}
+              }
+            }}
+            className="bg-slate-900 border border-slate-800 text-xs text-white rounded-xl px-3 py-1.5 font-mono focus:outline-none focus:border-sky-500 cursor-pointer"
+          >
+            {speakingBank.map((s) => (
+              <option key={s.id} value={s.id} className="bg-slate-950 text-white">
+                {s.id}: {s.topic.slice(0, 28)}...
+              </option>
+            ))}
+          </select>
+
+          {/* Part Selector Tabs */}
+          <div className="flex items-center bg-slate-900 border border-slate-800 p-1.5 rounded-xl">
+            {([1, 2, 3] as const).map((part) => (
+              <button
+                key={part}
+                onClick={() => {
+                  setActivePart(part);
+                  setEvaluation(null);
+                  setTranscript('');
+                  setTimerSeconds(part === 2 ? 120 : 60);
+                }}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                  activePart === part
+                    ? 'bg-sky-500 text-slate-950 font-bold shadow'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Part {part}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Cue Card / Prompt Display */}
       <div className="bg-[#0D182E] border border-slate-800 p-6 rounded-3xl space-y-4 relative">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
-            {activePart === 2 ? 'IELTS Speaking Part 2 Cue Card' : `Speaking Part ${activePart} Prompt`}
-          </span>
+          <div className="flex items-center space-x-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
+              {activePart === 2 ? 'IELTS Speaking Part 2 Cue Card' : `Speaking Part ${activePart} Prompt`}
+            </span>
+            {selectedTest && (
+              <span className="text-[10px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded-md font-mono font-bold">
+                {selectedTest.id}
+              </span>
+            )}
+          </div>
 
           <button
             onClick={handleExaminerSpeak}
@@ -160,16 +208,68 @@ export const SpeakingTrainerPage: React.FC = () => {
           </button>
         </div>
 
-        <h2 className="text-lg font-bold text-white">{cueCardTopic.title}</h2>
+        <h2 className="text-lg font-bold text-white">
+          {activePart === 2 ? currentCue : selectedTest?.topic || currentTopic}
+        </h2>
+
+        {activePart === 1 && selectedTest?.part_1 && (
+          <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-2xl space-y-2">
+            <span className="text-xs font-bold text-sky-400">Theme: {selectedTest.part_1.theme}</span>
+            <ul className="space-y-1.5 text-xs text-slate-200">
+              {selectedTest.part_1.questions.map((q, i) => (
+                <li key={i} className="flex items-start space-x-2">
+                  <span className="text-sky-400 font-bold">•</span>
+                  <span>{q}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {activePart === 2 && (
           <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-2xl space-y-2">
             <span className="text-xs font-medium text-slate-400">You should say:</span>
             <ul className="list-disc list-inside text-xs text-slate-300 space-y-1">
-              {cueCardTopic.prompts.map((p, i) => (
+              {currentPrompts.map((p, i) => (
                 <li key={i}>{p}</li>
               ))}
             </ul>
+            {selectedTest?.part_2?.follow_up_question && (
+              <p className="text-xs text-amber-300/90 pt-2 border-t border-slate-800">
+                <strong>Follow-up: </strong> {selectedTest.part_2.follow_up_question}
+              </p>
+            )}
+          </div>
+        )}
+
+        {activePart === 3 && selectedTest?.part_3 && (
+          <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-2xl space-y-2">
+            <span className="text-xs font-bold text-amber-400">Discussion Theme: {selectedTest.part_3.discussion_theme}</span>
+            <ul className="space-y-1.5 text-xs text-slate-200">
+              {selectedTest.part_3.questions.map((q, i) => (
+                <li key={i} className="flex items-start space-x-2">
+                  <span className="text-amber-400 font-bold">•</span>
+                  <span>{q}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Band 9 Lexical collocations tags preview */}
+        {selectedTest?.band_9_lexical_resource && selectedTest.band_9_lexical_resource.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            <span className="text-[10px] text-slate-400 mr-1 flex items-center font-bold">Collocations:</span>
+            {selectedTest.band_9_lexical_resource.slice(0, 4).map((c, i) => (
+              <button
+                key={i}
+                onClick={() => WebSpeechService.speakText(c)}
+                className="text-[10px] bg-slate-900 hover:bg-sky-950 text-sky-300 border border-slate-800 px-2 py-0.5 rounded-lg flex items-center space-x-1"
+              >
+                <span>{c}</span>
+                <Volume2 className="w-2.5 h-2.5 opacity-60" />
+              </button>
+            ))}
           </div>
         )}
 

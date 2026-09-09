@@ -14,11 +14,25 @@ import {
   Check,
 } from 'lucide-react';
 import { CurriculumService, PracticeModuleItem } from '../../../services/curriculumService';
-import { PracticeQuestion } from '../../../types/curriculum';
+import {
+  PracticeQuestion,
+  SpeakingPracticeItem,
+  WritingPracticeItem,
+  ReadingPracticeItem,
+  ListeningPracticeItem,
+} from '../../../types/curriculum';
 import { WebSpeechService } from '../../../services/webSpeechService';
+import { SpeakingDetailView } from '../components/SpeakingDetailView';
+import { WritingDetailView } from '../components/WritingDetailView';
+import { ReadingDetailView } from '../components/ReadingDetailView';
+import { ListeningDetailView } from '../components/ListeningDetailView';
 
-export const CurriculumPage: React.FC = () => {
-  const [bankTab, setBankTab] = useState<'modular1000' | 'comprehensive400'>('modular1000');
+interface Props {
+  onNavigate?: (tab: string) => void;
+}
+
+export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
+  const [bankTab, setBankTab] = useState<'comprehensive400' | 'modular1000'>('comprehensive400');
   const [activeSkill, setActiveSkill] = useState<'speaking' | 'writing' | 'reading' | 'listening' | 'vocabulary' | 'grammar'>('speaking');
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -33,8 +47,14 @@ export const CurriculumPage: React.FC = () => {
 
   useEffect(() => {
     CurriculumService.loadAll().then(() => {
-      setBank400(CurriculumService.getPracticeBank400());
-      setModularItems(CurriculumService.getModularPractices('speaking'));
+      const b400 = CurriculumService.getPracticeBank400();
+      setBank400(b400);
+      const mods = CurriculumService.getModularPractices('speaking');
+      setModularItems(mods);
+      
+      const firstSpeaking400 = b400.find((q) => q.section === 'speaking');
+      if (firstSpeaking400) setSelected400(firstSpeaking400);
+      if (mods.length > 0) setSelectedModular(mods[0]);
     });
   }, []);
 
@@ -43,6 +63,13 @@ export const CurriculumPage: React.FC = () => {
     const items = CurriculumService.getModularPractices(skill);
     setModularItems(items);
     setSelectedModular(items[0] || null);
+    
+    // Also select the first matching 400 bank item
+    if (skill === 'speaking' || skill === 'writing' || skill === 'reading' || skill === 'listening') {
+      const match = bank400.find((q) => q.section === skill);
+      if (match) setSelected400(match);
+    }
+
     setShowModelAnswer(false);
     setUserPracticeText('');
     setIsSelfEvaluated(false);
@@ -61,7 +88,9 @@ export const CurriculumPage: React.FC = () => {
     (q) =>
       (activeSkill === 'vocabulary' || activeSkill === 'grammar' ? true : q.section === activeSkill) &&
       (q.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        q.content?.toLowerCase().includes(searchQuery.toLowerCase()))
+        q.id?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        q.content?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        q.instructions?.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   return (
@@ -78,12 +107,27 @@ export const CurriculumPage: React.FC = () => {
             </span>
           </div>
           <p className="text-xs md:text-sm text-slate-300">
-            Dr. ABM Asif Kibria curriculum: <strong>400 Comprehensive Exam Questions</strong> + <strong>1,071 Modular Skill Drills</strong> with Instant Non-AI Offline Evaluation.
+            Dr. ABM Asif Kibria curriculum: <strong>400 Comprehensive Exam Questions</strong> (100 Speaking, 100 Writing, 100 Reading, 100 Listening) + <strong>1,071 Modular Skill Drills</strong> with Instant Non-AI Offline Evaluation.
           </p>
         </div>
 
-        {/* Bank Mode Switcher (1000+ Modular Drills vs 400 Comprehensive Bank) */}
+        {/* Bank Mode Switcher (400 Comprehensive Bank vs 1000+ Modular Drills) */}
         <div className="flex items-center bg-[#131B2E] border border-white/10 p-1.5 rounded-2xl shadow-liquid-card">
+          <button
+            onClick={() => {
+              setBankTab('comprehensive400');
+              setShowModelAnswer(false);
+              const match = bank400.find((q) => q.section === activeSkill);
+              if (match) setSelected400(match);
+            }}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+              bankTab === 'comprehensive400'
+                ? 'bg-gradient-to-r from-ielts-emerald to-teal-600 text-slate-950 shadow-liquid-glow-emerald'
+                : 'text-slate-400 hover:text-white'
+            }`}
+          >
+            400 Comprehensive Bank
+          </button>
           <button
             onClick={() => {
               setBankTab('modular1000');
@@ -97,23 +141,10 @@ export const CurriculumPage: React.FC = () => {
           >
             1,071 Modular Drills
           </button>
-          <button
-            onClick={() => {
-              setBankTab('comprehensive400');
-              setShowModelAnswer(false);
-            }}
-            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-              bankTab === 'comprehensive400'
-                ? 'bg-gradient-to-r from-ielts-emerald to-teal-600 text-slate-950 shadow-liquid-glow-emerald'
-                : 'text-slate-400 hover:text-white'
-            }`}
-          >
-            400 Comprehensive Bank
-          </button>
         </div>
       </div>
 
-      {/* Skill Filter Bar (Speaking, Writing, Reading, Listening, Vocabulary, Grammar) */}
+      {/* Skill Filter Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 bg-[#131B2E]/90 border border-white/10 p-3 rounded-2xl backdrop-blur-xl">
         <div className="flex flex-wrap items-center gap-1.5">
           {(['speaking', 'writing', 'reading', 'listening', 'vocabulary', 'grammar'] as const).map((skill) => (
@@ -127,6 +158,9 @@ export const CurriculumPage: React.FC = () => {
               }`}
             >
               {skill}
+              {bankTab === 'comprehensive400' && (skill === 'speaking' || skill === 'writing' || skill === 'reading' || skill === 'listening') && (
+                <span className="ml-1.5 opacity-60 text-[10px] font-mono">(100)</span>
+              )}
             </button>
           ))}
         </div>
@@ -138,7 +172,7 @@ export const CurriculumPage: React.FC = () => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder={`Search ${activeSkill} practices...`}
+            placeholder={`Search ${activeSkill} (${bankTab === 'comprehensive400' ? '400 Bank' : 'Modular'})...`}
             className="w-full bg-[#0B0F19] border border-white/10 rounded-xl pl-9 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-ielts-royalPurple"
           />
         </div>
@@ -146,17 +180,82 @@ export const CurriculumPage: React.FC = () => {
 
       {/* Master 2-Pane Practice Workspace */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Left Column: Practice Item Selection List */}
-        <div className="lg:col-span-5 space-y-3 max-h-[750px] overflow-y-auto pr-1">
+        {/* Left Column: Practice Item Selection List (4 cols) */}
+        <div className="lg:col-span-4 space-y-3 max-h-[800px] overflow-y-auto pr-1">
           <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-1 flex items-center justify-between">
             <span>
-              {bankTab === 'modular1000' ? `Modular Drills (${filteredModular.length})` : `Bank Questions (${filtered400.length})`}
+              {bankTab === 'comprehensive400' ? `Bank Tests (${filtered400.length})` : `Modular Drills (${filteredModular.length})`}
             </span>
-            <span className="text-ielts-emerald font-mono">100% Non-AI Offline Ready</span>
+            <span className="text-ielts-emerald font-mono">100% Offline Ready</span>
           </div>
 
-          {bankTab === 'modular1000'
-            ? filteredModular.map((m, idx) => {
+          {bankTab === 'comprehensive400'
+            ? filtered400.map((q, idx) => {
+                const isSelected = selected400?.id === q.id;
+                const spk = q.rawItem as SpeakingPracticeItem | undefined;
+                const wrt = q.rawItem as WritingPracticeItem | undefined;
+                const rdg = q.rawItem as ReadingPracticeItem | undefined;
+                const lis = q.rawItem as ListeningPracticeItem | undefined;
+
+                return (
+                  <div
+                    key={q.id || idx}
+                    onClick={() => {
+                      setSelected400(q);
+                      setShowModelAnswer(false);
+                      setUserPracticeText('');
+                      setIsSelfEvaluated(false);
+                    }}
+                    className={`liquid-glass-card p-4 rounded-2xl cursor-pointer transition-all ${
+                      isSelected
+                        ? 'border-ielts-emerald ring-1 ring-ielts-emerald/50 shadow-liquid-glow-emerald bg-[#1E293B]/90'
+                        : 'hover:border-white/20'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between text-[11px] mb-1.5">
+                      <span className="font-bold text-ielts-emerald uppercase font-mono">{q.id}</span>
+                      <span className="bg-white/10 text-slate-200 px-2 py-0.5 rounded-md font-mono text-[10px]">
+                        {q.section === 'speaking'
+                          ? spk?.difficulty || 'Band 6.5 - 9.0'
+                          : q.section === 'writing'
+                          ? `${wrt?.recommended_time_minutes || 40}m`
+                          : q.section === 'reading'
+                          ? `${rdg?.word_count || 350}w`
+                          : `Sec ${lis?.section || 1}`}
+                      </span>
+                    </div>
+                    <h3 className="text-xs font-bold text-white line-clamp-1">{q.title}</h3>
+                    
+                    {/* Subtitle / Preview details */}
+                    <p className="text-[11px] text-slate-400 line-clamp-2 mt-1">
+                      {q.section === 'speaking' && spk?.part_2
+                        ? `Cue Card: ${spk.part_2.cue_card_topic}`
+                        : q.section === 'writing' && wrt
+                        ? `Task: ${wrt.task_type}`
+                        : q.section === 'reading' && rdg
+                        ? `Academic: ${rdg.domain}`
+                        : q.section === 'listening' && lis
+                        ? `Scenario: ${lis.scenario}`
+                        : q.content}
+                    </p>
+
+                    {/* Collocations tags preview */}
+                    {q.section === 'speaking' && spk?.band_9_lexical_resource && (
+                      <div className="flex flex-wrap gap-1 mt-2 pt-2 border-t border-white/5">
+                        {spk.band_9_lexical_resource.slice(0, 2).map((colloc, cIdx) => (
+                          <span
+                            key={cIdx}
+                            className="bg-[#0B0F19] text-ielts-emerald/90 text-[10px] px-2 py-0.5 rounded-md font-medium"
+                          >
+                            {colloc}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })
+            : filteredModular.map((m, idx) => {
                 const isSelected = selectedModular?.practiceId === m.practiceId;
                 return (
                   <div
@@ -187,41 +286,47 @@ export const CurriculumPage: React.FC = () => {
                     </div>
                   </div>
                 );
-              })
-            : filtered400.map((q, idx) => {
-                const isSelected = selected400?.id === q.id;
-                return (
-                  <div
-                    key={q.id || idx}
-                    onClick={() => {
-                      setSelected400(q);
-                      setShowModelAnswer(false);
-                      setUserPracticeText('');
-                      setIsSelfEvaluated(false);
-                    }}
-                    className={`liquid-glass-card p-4 rounded-2xl cursor-pointer transition-all ${
-                      isSelected
-                        ? 'border-ielts-emerald ring-1 ring-ielts-emerald/50 shadow-liquid-glow-emerald bg-[#1E293B]/80'
-                        : 'hover:border-white/20'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between text-[11px] mb-1.5">
-                      <span className="font-bold text-ielts-emerald uppercase">{q.section}</span>
-                      <span className="bg-white/10 text-white px-2 py-0.5 rounded-md font-mono text-[10px]">
-                        Band {q.difficulty_band}
-                      </span>
-                    </div>
-                    <h3 className="text-xs font-bold text-white line-clamp-1">{q.title}</h3>
-                    <p className="text-[11px] text-slate-400 line-clamp-2 mt-1">{q.content}</p>
-                  </div>
-                );
               })}
         </div>
 
-        {/* Right Column: Liquid Non-AI Practice Simulator Pane */}
-        <div className="lg:col-span-7 liquid-glass-card p-6 md:p-8 rounded-3xl space-y-6 min-h-[600px] border border-white/15">
-          {bankTab === 'modular1000' && selectedModular ? (
-            <div className="space-y-5">
+        {/* Right Column: Multi-Module Cambridge Practice Viewer (8 cols) */}
+        <div className="lg:col-span-8 min-h-[650px]">
+          {bankTab === 'comprehensive400' && selected400 ? (
+            <div>
+              {selected400.section === 'speaking' ? (
+                <SpeakingDetailView
+                  item={
+                    (selected400.rawItem as SpeakingPracticeItem) ||
+                    CurriculumService.getSpeakingById(selected400.id)!
+                  }
+                  onOpenTrainer={() => onNavigate?.('speaking')}
+                />
+              ) : selected400.section === 'writing' ? (
+                <WritingDetailView
+                  item={
+                    (selected400.rawItem as WritingPracticeItem) ||
+                    CurriculumService.getWritingById(selected400.id)!
+                  }
+                  onOpenTrainer={() => onNavigate?.('writing')}
+                />
+              ) : selected400.section === 'reading' ? (
+                <ReadingDetailView
+                  item={
+                    (selected400.rawItem as ReadingPracticeItem) ||
+                    CurriculumService.getReadingById(selected400.id)!
+                  }
+                />
+              ) : selected400.section === 'listening' ? (
+                <ListeningDetailView
+                  item={
+                    (selected400.rawItem as ListeningPracticeItem) ||
+                    CurriculumService.getListeningById(selected400.id)!
+                  }
+                />
+              ) : null}
+            </div>
+          ) : bankTab === 'modular1000' && selectedModular ? (
+            <div className="liquid-glass-card p-6 md:p-8 rounded-3xl space-y-6 border border-white/15">
               {/* Card Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-2">
                 <div>
@@ -283,7 +388,7 @@ export const CurriculumPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Student Practice Input (Instant Non-AI Self-Test) */}
+              {/* Student Practice Input */}
               <div className="space-y-2">
                 <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                   Your Answer / Speaking Notes (Non-AI Mode)
@@ -296,7 +401,7 @@ export const CurriculumPage: React.FC = () => {
                 />
               </div>
 
-              {/* Action Buttons: Show Model Answer & Non-AI Evaluation */}
+              {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-between pt-2 gap-3 border-t border-white/10">
                 <button
                   onClick={() => setShowModelAnswer(!showModelAnswer)}
@@ -346,49 +451,12 @@ export const CurriculumPage: React.FC = () => {
                 </div>
               )}
             </div>
-          ) : bankTab === 'comprehensive400' && selected400 ? (
-            <div className="space-y-5">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <div>
-                  <span className="text-xs font-bold uppercase text-ielts-emerald">{selected400.section} Task</span>
-                  <h2 className="text-lg font-bold text-white mt-0.5">{selected400.title}</h2>
-                </div>
-                <span className="text-xs font-bold bg-[#0B0F19] text-white px-3 py-1 rounded-xl border border-white/10">
-                  Target Band {selected400.difficulty_band}
-                </span>
-              </div>
-
-              <div className="space-y-2">
-                <span className="text-[11px] font-bold text-slate-400 uppercase">Exam Prompt</span>
-                <div className="text-sm text-slate-100 bg-[#0B0F19] p-5 rounded-2xl border border-white/10 leading-relaxed font-serif">
-                  {selected400.content}
-                </div>
-              </div>
-
-              <div className="flex justify-between items-center pt-3 border-t border-white/10">
-                <button
-                  onClick={() => setShowModelAnswer(!showModelAnswer)}
-                  className="bg-gradient-to-r from-ielts-emerald to-teal-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs shadow-liquid-glow-emerald"
-                >
-                  {showModelAnswer ? 'Hide Sample' : 'Show Band 9 Model Response'}
-                </button>
-              </div>
-
-              {showModelAnswer && selected400.sample_response_band_9 && (
-                <div className="bg-ielts-emerald/10 border border-ielts-emerald/30 p-5 rounded-2xl space-y-2 animate-in fade-in">
-                  <span className="text-xs font-bold text-ielts-emerald uppercase">Dr. Asif Band 9 Model Response:</span>
-                  <div className="text-xs text-slate-200 leading-relaxed whitespace-pre-wrap">
-                    {selected400.sample_response_band_9}
-                  </div>
-                </div>
-              )}
-            </div>
           ) : (
-            <div className="h-full flex flex-col items-center justify-center text-center p-12 text-slate-500 space-y-3">
+            <div className="liquid-glass-card h-full flex flex-col items-center justify-center text-center p-12 text-slate-500 space-y-3 rounded-3xl border border-white/10">
               <GraduationCap className="w-14 h-14 text-slate-600" />
-              <h3 className="text-base font-bold text-white">Select Any Practice Drill from the 1,500+ Bank</h3>
+              <h3 className="text-base font-bold text-white">Select Any Test from the 400 Comprehensive Bank</h3>
               <p className="text-xs text-slate-400 max-w-md">
-                Browse through Speaking, Writing, Reading, Listening, Vocabulary, and Grammar drills. Practice in 100% Non-AI mode with instant model answers!
+                Browse through 100 Speaking tests, 100 Writing tasks, 100 Reading passages, and 100 Listening scenarios with interactive Cambridge evaluation!
               </p>
             </div>
           )}
@@ -397,3 +465,4 @@ export const CurriculumPage: React.FC = () => {
     </div>
   );
 };
+

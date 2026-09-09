@@ -1,161 +1,71 @@
-import React, { useState } from 'react';
-import { Headphones, Play, Pause, RotateCcw, Award, CheckCircle2, AlertCircle } from 'lucide-react';
-import { WebSpeechService } from '../../../services/webSpeechService';
+import React, { useState, useEffect } from 'react';
+import { Headphones, Search, Layers, ChevronRight, Award } from 'lucide-react';
+import { CurriculumService } from '../../../services/curriculumService';
+import { ListeningPracticeItem } from '../../../types/curriculum';
+import { ListeningDetailView } from '../../curriculum/components/ListeningDetailView';
 
 export const ListeningPracticePage: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [answers, setAnswers] = useState<Record<number, string>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [listeningItems, setListeningItems] = useState<ListeningPracticeItem[]>([]);
+  const [selectedItem, setSelectedItem] = useState<ListeningPracticeItem | null>(null);
+  const [search, setSearch] = useState('');
 
-  const audioScript = `
-Good morning everyone, and welcome to the Orientation Session for the International Student World Program.
-My name is Dr. Harrison and I am the Academic Director.
-Today I will outline three key areas of campus life: first, registration and student identity cards; second, library borrowing entitlements; and third, local transport discounts.
-Please note that all registration forms must be submitted to Room 204 in the North Wing no later than Friday, October 14th at 4:00 PM.
-`;
+  useEffect(() => {
+    CurriculumService.loadAll().then(() => {
+      const bank = CurriculumService.getListeningBank();
+      setListeningItems(bank);
+      if (bank.length > 0) setSelectedItem(bank[0]);
+    });
+  }, []);
 
-  const questions = [
-    { id: 1, prompt: 'What room should registration forms be submitted to?', answer: '204' },
-    { id: 2, prompt: 'Which campus wing is Room 204 located in?', answer: 'North Wing' },
-    { id: 3, prompt: 'What is the final day for submission of registration forms?', answer: 'Friday' },
-  ];
-
-  const handlePlayAudio = () => {
-    if (isPlaying) {
-      WebSpeechService.stopSpeaking();
-      setIsPlaying(false);
-    } else {
-      setIsPlaying(true);
-      WebSpeechService.speakText(audioScript, () => setIsPlaying(false));
-    }
-  };
-
-  const handleInputChange = (id: number, val: string) => {
-    if (submitted) return;
-    setAnswers((prev) => ({ ...prev, [id]: val }));
-  };
-
-  const correctCount = questions.filter(
-    (q) => (answers[q.id] || '').trim().toLowerCase() === q.answer.toLowerCase()
-  ).length;
+  const filtered = listeningItems.filter(
+    (l) =>
+      l.scenario.toLowerCase().includes(search.toLowerCase()) ||
+      l.context.toLowerCase().includes(search.toLowerCase()) ||
+      l.id.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="max-w-4xl mx-auto space-y-6 p-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800 pb-5 gap-4">
+      {/* Top Selector Bar */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-5 gap-4">
         <div>
           <div className="flex items-center space-x-3 mb-1">
-            <h1 className="text-2xl font-bold text-white tracking-tight">IELTS Listening Practice Simulator</h1>
-            <span className="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs px-2.5 py-0.5 rounded-full font-medium">
-              Section 1 & 4 Drills
+            <h1 className="text-2xl font-black text-white tracking-tight">IELTS Listening Practice Simulator</h1>
+            <span className="bg-purple-500/20 text-purple-300 border border-purple-500/40 text-xs px-2.5 py-0.5 rounded-full font-bold">
+              100 Authentic Sections • Cambridge Format
             </span>
           </div>
           <p className="text-xs text-slate-400">
-            Listen once only, exactly as in the official IELTS test. Complete the notes using NO MORE THAN TWO WORDS AND/OR A NUMBER.
+            Listen once only, exactly as in the official IELTS test. Complete the notes using British Speech audio synthesis.
           </p>
         </div>
 
-        {submitted && (
-          <div className="bg-slate-900 border border-slate-800 px-4 py-2 rounded-2xl flex items-center space-x-2">
-            <Award className="w-5 h-5 text-purple-400" />
-            <span className="text-xs text-slate-300">
-              Score: <strong className="text-white text-sm">{correctCount}/{questions.length}</strong>
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* Audio Controller Bar */}
-      <div className="bg-[#0D182E] border border-slate-800 p-6 rounded-3xl flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <button
-            onClick={handlePlayAudio}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all ${
-              isPlaying ? 'bg-amber-500 text-slate-950 font-bold animate-pulse' : 'bg-purple-500 hover:bg-purple-400 text-white'
-            }`}
+        {/* Test Dropdown Selector */}
+        <div className="flex items-center space-x-2">
+          <span className="text-xs text-slate-400 font-medium">Select Section:</span>
+          <select
+            value={selectedItem?.id || ''}
+            onChange={(e) => {
+              const found = listeningItems.find((l) => l.id === e.target.value);
+              if (found) setSelectedItem(found);
+            }}
+            className="bg-[#131B2E] border border-white/15 text-xs text-white rounded-xl px-3 py-2 font-mono focus:outline-none focus:border-purple-400 max-w-xs cursor-pointer"
           >
-            {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5" />}
-          </button>
-
-          <div>
-            <h3 className="font-bold text-white text-sm">
-              {isPlaying ? 'Playing Official Audio Track (British English)...' : 'Section 1: University Orientation Audio'}
-            </h3>
-            <p className="text-xs text-slate-400">Recorded at standard IELTS Cambridge speech rate (140 wpm)</p>
-          </div>
-        </div>
-
-        <span className="text-xs font-mono bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-xl text-slate-300">
-          Audio Track 1/4
-        </span>
-      </div>
-
-      {/* Interactive Note Completion Questions */}
-      <div className="bg-[#0B1327] border border-slate-800/90 p-6 rounded-3xl space-y-6">
-        <h2 className="text-sm font-bold text-sky-400 uppercase tracking-wider">
-          Questions 1–3: Complete the Notes Below
-        </h2>
-
-        <div className="space-y-4">
-          {questions.map((q) => {
-            const userAns = answers[q.id] || '';
-            const isCorrect = userAns.trim().toLowerCase() === q.answer.toLowerCase();
-
-            return (
-              <div key={q.id} className="bg-slate-900/70 border border-slate-800 p-4 rounded-2xl space-y-2">
-                <label className="text-xs text-slate-200 block font-medium">
-                  {q.id}. {q.prompt}
-                </label>
-                <div className="flex items-center space-x-3">
-                  <input
-                    type="text"
-                    disabled={submitted}
-                    value={userAns}
-                    onChange={(e) => handleInputChange(q.id, e.target.value)}
-                    placeholder="Type your answer here..."
-                    className="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-purple-500 flex-1"
-                  />
-                  {submitted && (
-                    <span className="shrink-0">
-                      {isCorrect ? (
-                        <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                      ) : (
-                        <AlertCircle className="w-5 h-5 text-rose-400" />
-                      )}
-                    </span>
-                  )}
-                </div>
-
-                {submitted && !isCorrect && (
-                  <div className="text-[11px] text-amber-300">
-                    Correct Answer: <strong>{q.answer}</strong>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="flex justify-end">
-          {!submitted ? (
-            <button
-              onClick={() => setSubmitted(true)}
-              className="bg-purple-500 hover:bg-purple-400 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition-all shadow-md"
-            >
-              Check Answers
-            </button>
-          ) : (
-            <button
-              onClick={() => {
-                setAnswers({});
-                setSubmitted(false);
-              }}
-              className="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-5 py-2 rounded-xl text-xs transition-all"
-            >
-              Reset Drill
-            </button>
-          )}
+            {listeningItems.map((l) => (
+              <option key={l.id} value={l.id} className="bg-[#0B0F19] text-white">
+                {l.id}: Sec {l.section} - {l.scenario.slice(0, 30)}...
+              </option>
+            ))}
+          </select>
         </div>
       </div>
+
+      {selectedItem ? (
+        <ListeningDetailView item={selectedItem} />
+      ) : (
+        <div className="text-center p-12 text-slate-400">Loading Listening Bank...</div>
+      )}
     </div>
   );
 };
+

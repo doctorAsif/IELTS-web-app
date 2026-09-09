@@ -1,4 +1,11 @@
-import { CurriculumMaster, PracticeQuestion } from '../types/curriculum';
+import {
+  CurriculumMaster,
+  PracticeQuestion,
+  SpeakingPracticeItem,
+  WritingPracticeItem,
+  ReadingPracticeItem,
+  ListeningPracticeItem,
+} from '../types/curriculum';
 
 export interface PracticeModuleItem {
   practiceId: string;
@@ -21,6 +28,13 @@ export class CurriculumService {
   private static isLoaded = false;
   private static master: CurriculumMaster | null = null;
   private static practiceBank400: PracticeQuestion[] = [];
+  
+  // Dedicated typed 400 Bank repositories
+  private static speaking400: SpeakingPracticeItem[] = [];
+  private static writing400: WritingPracticeItem[] = [];
+  private static reading400: ReadingPracticeItem[] = [];
+  private static listening400: ListeningPracticeItem[] = [];
+
   private static modularPractices: Record<string, PracticeModuleItem[]> = {
     speaking: [],
     writing: [],
@@ -59,23 +73,79 @@ export class CurriculumService {
       if (bankRes.ok) {
         const rawBank = await bankRes.json();
         if (rawBank.modules) {
+          this.speaking400 = (rawBank.modules.speaking?.data || []) as SpeakingPracticeItem[];
+          this.writing400 = (rawBank.modules.writing?.data || []) as WritingPracticeItem[];
+          this.reading400 = (rawBank.modules.reading?.data || []) as ReadingPracticeItem[];
+          this.listening400 = (rawBank.modules.listening?.data || []) as ListeningPracticeItem[];
+
           const extracted: PracticeQuestion[] = [];
-          for (const sec of ['speaking', 'writing', 'reading', 'listening'] as const) {
-            const items = rawBank.modules[sec]?.data || [];
-            items.forEach((it: any, idx: number) => {
-              extracted.push({
-                id: it.id || `${sec}_${idx + 1}`,
-                section: sec,
-                type: it.task_type || it.type || 'Practice Task',
-                title: it.topic || it.title || `${sec.toUpperCase()} Drill #${idx + 1}`,
-                instructions: it.instructions || '',
-                difficulty_band: it.difficulty_band || 7.0,
-                content: it.content || it.prompt || '',
-                sample_response_band_9: it.sample_response_band_9 || it.model_answer || '',
-                criteria_hints: it.criteria_hints || {},
-              });
+
+          // Convert speaking items into PracticeQuestion with rich prompt preview
+          this.speaking400.forEach((spk) => {
+            const cueText = spk.part_2?.cue_card_topic
+              ? `Cue Card: ${spk.part_2.cue_card_topic}\n\nYou should say:\n${(spk.part_2.prompts || []).map((p) => `• ${p}`).join('\n')}\n\nFollow-up: ${spk.part_2.follow_up_question || ''}`
+              : (spk.part_1?.questions || []).join('\n');
+
+            extracted.push({
+              id: spk.id,
+              section: 'speaking',
+              type: 'Speaking Test (Parts 1, 2, 3)',
+              title: spk.topic,
+              instructions: `Difficulty: ${spk.difficulty} | Band 9 Collocations: ${(spk.band_9_lexical_resource || []).slice(0, 3).join(', ')}`,
+              difficulty_band: 8.0,
+              content: cueText,
+              sample_response_band_9: spk.examiner_tips,
+              criteria_hints: {
+                lexicalResource: (spk.band_9_lexical_resource || []).join(', '),
+                examinerTips: spk.examiner_tips,
+              },
+              rawItem: spk,
             });
-          }
+          });
+
+          // Convert writing items
+          this.writing400.forEach((wrt) => {
+            extracted.push({
+              id: wrt.id,
+              section: 'writing',
+              type: wrt.task_type || 'Writing Task',
+              title: wrt.title,
+              instructions: `Time: ${wrt.recommended_time_minutes || 40} mins | Min Words: ${wrt.minimum_word_count || 250}`,
+              difficulty_band: 7.5,
+              content: wrt.prompt + (wrt.data_or_scenario_description ? `\n\nData / Scenario:\n${wrt.data_or_scenario_description}` : ''),
+              sample_response_band_9: wrt.high_band_vocabulary ? `High-Band Collocations: ${wrt.high_band_vocabulary.join(', ')}` : '',
+              rawItem: wrt,
+            });
+          });
+
+          // Convert reading items
+          this.reading400.forEach((rdg) => {
+            extracted.push({
+              id: rdg.id,
+              section: 'reading',
+              type: 'Academic Passage',
+              title: rdg.title,
+              instructions: `Domain: ${rdg.domain} | Word Count: ${rdg.word_count} words | ${rdg.questions?.length || 0} Questions`,
+              difficulty_band: 8.0,
+              content: rdg.passage,
+              rawItem: rdg,
+            });
+          });
+
+          // Convert listening items
+          this.listening400.forEach((lis) => {
+            extracted.push({
+              id: lis.id,
+              section: 'listening',
+              type: `Section ${lis.section}`,
+              title: lis.scenario || `Listening Section ${lis.section}`,
+              instructions: `Context: ${lis.context} | ${lis.questions?.length || 0} Questions`,
+              difficulty_band: 7.5,
+              content: lis.audio_script,
+              rawItem: lis,
+            });
+          });
+
           this.practiceBank400 = extracted;
         }
       }
@@ -119,6 +189,38 @@ export class CurriculumService {
     return this.practiceBank400;
   }
 
+  static getSpeakingBank(): SpeakingPracticeItem[] {
+    return this.speaking400;
+  }
+
+  static getWritingBank(): WritingPracticeItem[] {
+    return this.writing400;
+  }
+
+  static getReadingBank(): ReadingPracticeItem[] {
+    return this.reading400;
+  }
+
+  static getListeningBank(): ListeningPracticeItem[] {
+    return this.listening400;
+  }
+
+  static getSpeakingById(id: string): SpeakingPracticeItem | undefined {
+    return this.speaking400.find((s) => s.id.toLowerCase() === id.toLowerCase());
+  }
+
+  static getWritingById(id: string): WritingPracticeItem | undefined {
+    return this.writing400.find((w) => w.id.toLowerCase() === id.toLowerCase());
+  }
+
+  static getReadingById(id: string): ReadingPracticeItem | undefined {
+    return this.reading400.find((r) => r.id.toLowerCase() === id.toLowerCase());
+  }
+
+  static getListeningById(id: string): ListeningPracticeItem | undefined {
+    return this.listening400.find((l) => l.id.toLowerCase() === id.toLowerCase());
+  }
+
   static getModularPractices(skill: 'speaking' | 'writing' | 'reading' | 'listening' | 'vocabulary' | 'grammar'): PracticeModuleItem[] {
     return this.modularPractices[skill] || [];
   }
@@ -130,12 +232,11 @@ export class CurriculumService {
   static getTotalPracticeCount(): { bank400: number; modularQuestions: number; grandTotal: number } {
     const bank400 = this.practiceBank400.length || 400;
     let modularQuestions = 0;
-    Object.values(this.modularPractices).forEach(mods => {
-      mods.forEach(m => {
+    Object.values(this.modularPractices).forEach((mods) => {
+      mods.forEach((m) => {
         modularQuestions += Array.isArray(m.questions) ? m.questions.length : 1;
       });
     });
-    // If not loaded yet, fallback to recorded numbers
     if (modularQuestions === 0) modularQuestions = 1071;
     return {
       bank400,
@@ -144,3 +245,4 @@ export class CurriculumService {
     };
   }
 }
+
