@@ -178,7 +178,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
       </div>
 
       {/* 3. BENTO GRID OF CORE EXAM ENGINES */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {/* Speaking Examiner Bento Card (speaking_examiner_bento_card.dart) */}
         <div
           onClick={() => onNavigate('speaking')}
@@ -195,15 +195,15 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
           <div className="space-y-1">
             <h3 className="text-base font-extrabold text-white group-hover:text-ielts-crimson transition-colors flex items-center space-x-2">
               <Mic className="w-5 h-5 text-ielts-crimson" />
-              <span>Speaking Examiner Room</span>
+              <span>Speaking Examiner</span>
             </h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Full Part 1, 2, 3 interview simulator with live audio speech recognition, British examiner voice, and 4-criteria diagnostic scoring.
+              Full Part 1, 2, 3 interview simulator with live audio speech recognition and British examiner voice.
             </p>
           </div>
 
           <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-ielts-crimson font-bold">
-            <span>Launch Speaking Test</span>
+            <span>Launch Test</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>
@@ -223,15 +223,15 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
           <div className="space-y-1">
             <h3 className="text-base font-extrabold text-white group-hover:text-sky-400 transition-colors flex items-center space-x-2">
               <PenTool className="w-5 h-5 text-sky-400" />
-              <span>Writing Rubric Simulator</span>
+              <span>Writing Rubric</span>
             </h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Timed Academic Task 1 & Task 2 workspace with live word counter, paragraph structural guidance, and Band 9 C1/C2 upgrades.
+              Timed Task 1 & 2 workspace with live word counter, paragraph structure guidance, and Band 9 C1/C2 upgrades.
             </p>
           </div>
 
           <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-sky-400 font-bold">
-            <span>Open Writing Workspace</span>
+            <span>Open Workspace</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>
@@ -259,7 +259,36 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-bold">
-            <span>Practice Reading & Listening</span>
+            <span>Practice Receptive</span>
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </div>
+
+        {/* Creative Mastery Bento Card */}
+        <div
+          onClick={() => onNavigate('creative')}
+          className="liquid-glass-card p-6 rounded-3xl border border-white/10 hover:border-ielts-royalPurple/50 transition-all cursor-pointer group space-y-4"
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] font-extrabold uppercase bg-ielts-royalPurple/20 text-ielts-royalPurple border border-ielts-royalPurple/40 px-2.5 py-0.5 rounded-full flex items-center space-x-1">
+              <Sparkles className="w-3 h-3 text-ielts-royalPurple" />
+              <span>200 Creative Units</span>
+            </span>
+            <span className="text-xs text-slate-400 font-mono">4 Pillars</span>
+          </div>
+
+          <div className="space-y-1">
+            <h3 className="text-base font-extrabold text-white group-hover:text-ielts-royalPurple transition-colors flex items-center space-x-2">
+              <Sparkles className="w-5 h-5 text-ielts-royalPurple" />
+              <span>Creative Mastery</span>
+            </h3>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Mnemonic poems, grammar blueprints, Band 5 to 8.5 makeover showdowns, and academic stories with audio pronunciation.
+            </p>
+          </div>
+
+          <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-ielts-royalPurple font-bold">
+            <span>Explore 4 Pillars</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>

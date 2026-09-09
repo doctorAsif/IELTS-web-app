@@ -10,6 +10,7 @@ import { CurriculumPage } from './features/curriculum/pages/CurriculumPage';
 import { FlashcardsPage } from './features/flashcards/pages/FlashcardsPage';
 import { AiSetupPage } from './features/ai-setup/pages/AiSetupPage';
 import { LicensingPage } from './features/licensing/pages/LicensingPage';
+import { CreativeMasteryPage } from './features/creative/pages/CreativeMasteryPage';
 
 import { detectHardwareProfile } from './services/hardwareDetector';
 import { WebLlmProvider } from './services/webLlmProvider';
@@ -70,6 +71,8 @@ export default function App() {
         return <CurriculumPage onNavigate={(tab) => setActiveTab(tab)} />;
       case 'flashcards':
         return <FlashcardsPage />;
+      case 'creative':
+        return <CreativeMasteryPage />;
       case 'ai-setup':
         return (
           <AiSetupPage

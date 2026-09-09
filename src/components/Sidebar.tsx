@@ -10,6 +10,8 @@ import {
   Sparkles,
   KeyRound,
   FileText,
+  Wand2,
+  Cpu,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -20,13 +22,14 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
   const navItems = [
     { id: 'dashboard', label: 'Daily Teacher', icon: LayoutDashboard, badge: 'Daily' },
+    { id: 'creative', label: 'Creative Mastery', icon: Wand2, badge: '200 Units' },
     { id: 'speaking', label: 'Speaking Trainer', icon: Mic, badge: 'AI Live' },
     { id: 'writing', label: 'Writing Trainer', icon: PenTool, badge: 'Task 1&2' },
     { id: 'reading', label: 'Reading Practice', icon: BookOpen },
     { id: 'listening', label: 'Listening Practice', icon: Headphones },
     { id: 'curriculum', label: '16 Master Classes', icon: GraduationCap },
     { id: 'flashcards', label: 'Academic Vocab', icon: Layers },
-    { id: 'ai-setup', label: 'Edge AI & RAM', icon: Sparkles, badge: 'Hardware' },
+    { id: 'ai-setup', label: 'Edge AI & RAM', icon: Cpu, badge: 'Hardware' },
     { id: 'licensing', label: 'Licensing & Anti-Share', icon: KeyRound },
   ];
 

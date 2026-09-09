@@ -1,0 +1,57 @@
+{
+  "manifest_version": "1.0",
+  "dataset_title": "IELTS Creative Mastery Suite Assets",
+  "generated_date": "2026-09-10",
+  "total_units": 200,
+  "modules": {
+    "mnemonic_poems": {
+      "file": "ielts_mnemonic_poems.json",
+      "items": 50,
+      "categories": [
+        "Prepositions",
+        "Common L1 Traps",
+        "Spelling & Homophones",
+        "Conditionals & Tenses",
+        "Band 9 Collocations"
+      ],
+      "id_range": "POE-001 to POE-050"
+    },
+    "grammar_mastery": {
+      "file": "ielts_grammar_mastery.json",
+      "items": 50,
+      "special_features": [
+        "grammatical_formula",
+        "bengali_mental_bridge",
+        "clunky_band_5_draft",
+        "polished_band_8_upgrade",
+        "practice_exercise"
+      ],
+      "id_range": "GRM-001 to GRM-050"
+    },
+    "story_adventures": {
+      "file": "ielts_story_adventures.json",
+      "items": 50,
+      "special_features": [
+        "target_band_9_lexicon",
+        "grammatical_structures_spotlight",
+        "bengali_mentor_takeaway",
+        "interactive_application_challenge"
+      ],
+      "id_range": "STY-001 to STY-050"
+    },
+    "band_makeovers": {
+      "file": "ielts_band_makeovers.json",
+      "items": 50,
+      "special_features": [
+        "band_5_draft",
+        "band_6_5_upgrade",
+        "band_8_5_masterpiece",
+        "examiner_band_8_5_rubric_analysis",
+        "mentor_takeaway_rule"
+      ],
+      "id_range": "MAK-001 to MAK-050"
+    }
+  },
+  "consolidated_archive": "ielts_creative_mastery.zip",
+  "consolidated_json": "ielts_creative_mastery_all.json"
+}

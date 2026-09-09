@@ -1,0 +1,502 @@
+[
+  {
+    "id": "POE-001",
+    "title": "The Preposition Vehicle Rule (In vs On)",
+    "category": "Prepositions",
+    "poem_type": "Rhyme",
+    "poem_verse": "You get IN a car, you get IN a cab,\nWhere you sit down low and hail with a grab.\nYou get IN a helicopter, helicopter, truck, or van,\nWhere you crouch down small as tight as you can!\n\nBut you get ON a bus, and you get ON a train,\nON a ship, ON a ferry, or ON an airplane!\nIf you can stand up and walk down the floor,\nUse ON for your ride right out the door!",
+    "the_rule_explained": "Use 'IN' for small private enclosed vehicles where you cannot walk upright (in a car, in a taxi). Use 'ON' for larger public transport or open platforms where you can physically stand and walk (on a bus, on a train, on a plane, on a ship, on a bicycle).",
+    "bengali_mentor_tip": "Bengali uses a single locative case marker '-e' / '-te' (গাড়িতে, বাসে) for both situations. In English, you must distinguish between sitting trapped ('in') vs boarding a walking deck ('on').",
+    "quick_quiz": "Fill in the blank: 'After waiting for thirty minutes at the terminal, we finally got [ ___ ] the intercity bus.' (Answer: ON)"
+  },
+  {
+    "id": "POE-002",
+    "title": "The 'I Agree' Limerick",
+    "category": "Common L1 Traps",
+    "poem_type": "Limerick",
+    "poem_verse": "A student once spoke with a confident plea,\n\"Dear examiner, sir, I am totally agree!\"\nThe examiner sighed with a sorrowful frown,\nAnd ticked off a point as the mark went right down!\nRemember the verb needs no 'am' to be free:\nSay 'I firmly concur' or just say 'I AGREE!'",
+    "the_rule_explained": "'Agree' is already a verb in English. It does not require the auxiliary 'am'. You say 'I agree', 'I disagreed', or 'I have agreed'.",
+    "bengali_mentor_tip": "Bengali speakers translate 'ami ekmot' (where 'ekmot' feels like an adjective) into 'I am agree'. Always treat 'agree' as an action verb!",
+    "quick_quiz": "Which sentence is grammatically correct? A) 'I am agree with the author.' B) 'I agree with the author.' (Answer: B)"
+  },
+  {
+    "id": "POE-003",
+    "title": "The 'Discuss About' Preposition Banisher",
+    "category": "Common L1 Traps",
+    "poem_type": "Couplet & Rhyme",
+    "poem_verse": "When talking of problems or matters of clout,\nNever say that you're going to 'discuss about'!\nFor 'discuss' takes its object directly and clean:\n'Let's discuss the dilemma,' is what you should mean!\n\nThe same goes for 'order'—don't 'order for tea',\nJust 'order a cup' and be happy and free!",
+    "the_rule_explained": "Transitive verbs like 'discuss', 'order', 'reach', and 'emphasize' take a direct object without prepositions. Never say 'discuss about the essay' or 'ordered for food'.",
+    "bengali_mentor_tip": "In Bengali, we say 'eta niye alochona kora' ('about this discuss'). In English, 'discuss' already incorporates the 'about'.",
+    "quick_quiz": "Correct this sentence: 'In this essay, I will discuss about the environmental impacts.' (Correct: 'In this essay, I will discuss the environmental impacts.')"
+  },
+  {
+    "id": "POE-004",
+    "title": "The Third Conditional Regret Song",
+    "category": "Conditionals & Tenses",
+    "poem_type": "Ballad",
+    "poem_verse": "If you had revised with devotion and care,\nYou would have succeeded without a despair!\nRemember the past that can never return,\nTakes HAD and PAST PARTICIPLE—listen and learn!\n\nIn the consequence clause, put WOULD HAVE and DONE,\nAnd your Band 8 complexity battle is won!",
+    "the_rule_explained": "Third conditional expresses past counter-factuals (regrets or alternate history): 'If + had + past participle, ... would have + past participle'.",
+    "bengali_mentor_tip": "Bengali speakers often use 'If I would study, I would pass'. In English, never put 'would' in the 'if' condition clause!",
+    "quick_quiz": "Complete the sentence: 'If local authorities [ ___ ] (build) the embankment sooner, the floodwaters [ ___ ] (not destroy) the village.' (Answer: had built / would not have destroyed)"
+  },
+  {
+    "id": "POE-005",
+    "title": "The Inversion Drama Spell",
+    "category": "Band 9 Grammar",
+    "poem_type": "Dramatic Chant",
+    "poem_verse": "Seldom have I witnessed such glorious sight,\nRarely do scholars surrender the fight!\nNot only did technology quicken the pace,\nBut it also transformed the whole human race!\n\nWhen negative adverbs begin your bold line,\nSwap auxiliary and subject to make your text shine!",
+    "the_rule_explained": "Negative and restrictive adverbs (Seldom, Rarely, Never, Scarcely, Not only, Little) at the beginning of a sentence trigger question word order (auxiliary verb + subject + main verb).",
+    "bengali_mentor_tip": "Using one accurate inversion in IELTS Writing Task 2 or Speaking Part 3 instantly signals a Band 8.5+ command of grammatical range to the examiner.",
+    "quick_quiz": "Invert this sentence: 'Governments rarely invest in preventive healthcare.' (Answer: 'Rarely do governments invest in preventive healthcare.')"
+  },
+  {
+    "id": "POE-006",
+    "title": "The 'Stationary vs Stationery' Rhyme",
+    "category": "Spelling & Homophones",
+    "poem_type": "Rhyme",
+    "poem_verse": "Station-ERY with an E is for Envelope and pen,\nThe paper and ink that you write with again!\nWhile station-ARY with an A means staying in place,\nLike a car at red lights that is paused in its space!",
+    "the_rule_explained": "Stationery (with an E) = writing materials (envelopes, pens). Stationary (with an A) = not moving, fixed in place.",
+    "bengali_mentor_tip": "Spelling errors in IELTS Listening Section 1 cost full marks! Remember: 'E' is for Envelope!",
+    "quick_quiz": "Fill in: 'The train remained [ ___ ] on the platform for ten minutes.' (Answer: stationary)"
+  },
+  {
+    "id": "POE-007",
+    "title": "The 'Affect vs Effect' Battle",
+    "category": "Spelling & Homophones",
+    "poem_type": "Rhyme",
+    "poem_verse": "Affect with an A is an Action you start,\nAn active verb moving straight to the heart!\nEffect with an E is the End result shown,\nThe noun or outcome that clearly is known!\n\nHeavy rain can AFFECT your commute on the train,\nAnd traffic congestion's the common EFFECT of the rain!",
+    "the_rule_explained": "Affect is predominantly a Verb (to influence). Effect is predominantly a Noun (the result/consequence). Remember RAVEN: Remember Affect Verb Effect Noun.",
+    "bengali_mentor_tip": "Bengali speakers often mix these up in Writing Task 2. Look at the word before it: if it follows 'the' or 'an', it MUST be 'effect'!",
+    "quick_quiz": "Choose the correct word: 'Pollution has a detrimental [affect/effect] on marine biodiversity.' (Answer: effect)"
+  },
+  {
+    "id": "POE-008",
+    "title": "The Preposition of Time Triangle (At, On, In)",
+    "category": "Prepositions",
+    "poem_type": "Rhyme",
+    "poem_verse": "AT is the point, like a clock on the wall,\nAt noon, at five-thirty, at night when stars fall!\nON is the day, on a Tuesday so bright,\nOn dates, on my birthday, on weekends in sight!\nIN is the season, the month, and the year,\nIn summer, in August, in centuries near!\n\nFrom specific to broad as the pyramid climbs:\nAT the hour, ON the day, IN the seasons and times!",
+    "the_rule_explained": "AT = precise point in time (at 5 PM, at midnight). ON = specific days and calendar dates (on Monday, on July 14th). IN = longer periods (in June, in 2026, in the 21st century, in winter).",
+    "bengali_mentor_tip": "Don't say 'in Monday' or 'at 2024'. Follow the pyramid: Point (At) -> Line/Day (On) -> Space/Year (In).",
+    "quick_quiz": "Fill in: 'The lecture will begin [ ___ ] 9:00 AM [ ___ ] Monday morning.' (Answer: at / on)"
+  },
+  {
+    "id": "POE-009",
+    "title": "The 'Since vs For' Timeline Chant",
+    "category": "Conditionals & Tenses",
+    "poem_type": "Chant",
+    "poem_verse": "SINCE marks the start when the clock started ticking:\nSince Monday, since morning, since childhood began!\nFOR counts the span of the time that is kicking:\nFor three days, for ten years, for as long as a man!\n\nSince tells the origin, crystal and plain,\nFor counts the duration of pleasure or pain!",
+    "the_rule_explained": "Use 'SINCE' with a specific starting point in time (since 2015, since yesterday, since graduating). Use 'FOR' with a measurable duration of time (for 5 hours, for two decades).",
+    "bengali_mentor_tip": "Avoid the common Bengali error: 'I am living in Dhaka since five years.' Correct: 'I have been living in Dhaka for five years.'",
+    "quick_quiz": "Fill in: 'She has been practicing for the IELTS exam [ ___ ] six consecutive months.' (Answer: for)"
+  },
+  {
+    "id": "POE-010",
+    "title": "The 'Complement vs Compliment' Distiction",
+    "category": "Spelling & Homophones",
+    "poem_type": "Limerick",
+    "poem_verse": "A compl-I-ment praised her with words from the heart,\n\"Your spoken test fluency sets you apart!\"\nWhile compl-E-ment with an E means to complete and enhance,\nLike wine and good cheese in a flavorful dance!",
+    "the_rule_explained": "Compliment (with 'i') = words of praise or admiration. Complement (with 'e') = something that completes or goes well with something else.",
+    "bengali_mentor_tip": "Remember: 'I' love receiving a compl'I'ment!",
+    "quick_quiz": "Choose: 'The new subway line serves as an essential [complement/compliment] to the existing bus routes.' (Answer: complement)"
+  },
+  {
+    "id": "POE-011",
+    "title": "Dependent Prepositions: Depend ON, Rely ON",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling dependent prepositions: depend on, rely on, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nNever say 'depend over' or 'rely with',\n trust the ground you stand upon: depend ON and rely ON.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Dependent Prepositions: Depend ON, Rely ON: Never say 'depend over' or 'rely with'; trust the ground you stand upon: depend ON and rely ON..",
+    "bengali_mentor_tip": "Bengali learners often stumble on dependent prepositions: depend on, rely on due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Dependent Prepositions: Depend ON, Rely ON': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-012",
+    "title": "Preposition of Place: At the door, In the room",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling preposition of place: at the door, in the room, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nAt the bus stop, at the corner, in the building, on the street.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Preposition of Place: At the door, In the room: At the bus stop, at the corner, in the building, on the street..",
+    "bengali_mentor_tip": "Bengali learners often stumble on preposition of place: at the door, in the room due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Preposition of Place: At the door, In the room': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-013",
+    "title": "Responsible FOR vs Accountable TO",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling responsible for vs accountable to, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nYou are responsible FOR an action, but accountable TO an authority or court.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Responsible FOR vs Accountable TO: You are responsible FOR an action, but accountable TO an authority or court..",
+    "bengali_mentor_tip": "Bengali learners often stumble on responsible for vs accountable to due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Responsible FOR vs Accountable TO': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-014",
+    "title": "Deprive OF vs Rob OF",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling deprive of vs rob of, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nThey deprived the poor OF basic rights,\n never say 'deprived from'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Deprive OF vs Rob OF: They deprived the poor OF basic rights; never say 'deprived from'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on deprive of vs rob of due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Deprive OF vs Rob OF': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-015",
+    "title": "Prevent FROM vs Stop FROM",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling prevent from vs stop from, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nStrict laws prevent corporations FROM polluting rivers,\n always pair prevent with FROM + -ing.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Prevent FROM vs Stop FROM: Strict laws prevent corporations FROM polluting rivers; always pair prevent with FROM + -ing..",
+    "bengali_mentor_tip": "Bengali learners often stumble on prevent from vs stop from due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Prevent FROM vs Stop FROM': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-016",
+    "title": "Familiar WITH vs Familiar TO",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling familiar with vs familiar to, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nI am familiar WITH this software,\n this software sounds familiar TO my ears.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Familiar WITH vs Familiar TO: I am familiar WITH this software; this software sounds familiar TO my ears..",
+    "bengali_mentor_tip": "Bengali learners often stumble on familiar with vs familiar to due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Familiar WITH vs Familiar TO': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-017",
+    "title": "Consist OF vs Composed OF",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling consist of vs composed of, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nA water molecule consists OF hydrogen and oxygen,\n never 'consists with'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Consist OF vs Composed OF: A water molecule consists OF hydrogen and oxygen; never 'consists with'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on consist of vs composed of due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Consist OF vs Composed OF': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-018",
+    "title": "Congratulate ON, Not For",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling congratulate on, not for, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nI congratulate you ON your Band 8 score,\n never 'congratulate for'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Congratulate ON, Not For: I congratulate you ON your Band 8 score; never 'congratulate for'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on congratulate on, not for due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Congratulate ON, Not For': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-019",
+    "title": "Different FROM, Rarely Than",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling different from, rarely than, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nBritish English prefers different FROM,\n keep your writing elegant and clear.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Different FROM, Rarely Than: British English prefers different FROM; keep your writing elegant and clear..",
+    "bengali_mentor_tip": "Bengali learners often stumble on different from, rarely than due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Different FROM, Rarely Than': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-020",
+    "title": "Married TO, Never Married With",
+    "category": "Prepositions",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling married to, never married with, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nShe is married TO an engineer,\n never say 'married with' in English.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Married TO, Never Married With: She is married TO an engineer; never say 'married with' in English..",
+    "bengali_mentor_tip": "Bengali learners often stumble on married to, never married with due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Married TO, Never Married With': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-021",
+    "title": "The 'Passed HSC' Tense Fix",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'passed hsc' tense fix, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nDon't say 'I have passed in 2022',\n specific past years require the simple past: 'I completed my college in 2022'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Passed HSC' Tense Fix: Don't say 'I have passed in 2022'; specific past years require the simple past: 'I completed my college in 2022'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'passed hsc' tense fix due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Passed HSC' Tense Fix': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-022",
+    "title": "The 'Return Back' Redundancy",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'return back' redundancy, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nReturn already means go back,\n saying 'return back' is a wasteful repetition.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Return Back' Redundancy: Return already means go back; saying 'return back' is a wasteful repetition..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'return back' redundancy due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Return Back' Redundancy': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-023",
+    "title": "The 'Revert Back' Email Blunder",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'revert back' email blunder, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nIn professional writing, say 'I will reply' or 'I will revert', never 'revert back'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Revert Back' Email Blunder: In professional writing, say 'I will reply' or 'I will revert', never 'revert back'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'revert back' email blunder due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Revert Back' Email Blunder': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-024",
+    "title": "The 'Cousin Brother' Family Trap",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'cousin brother' family trap, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nIn English, he is simply your cousin,\n drop 'brother' or 'sister' to sound natural.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Cousin Brother' Family Trap: In English, he is simply your cousin; drop 'brother' or 'sister' to sound natural..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'cousin brother' family trap due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Cousin Brother' Family Trap': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-025",
+    "title": "The 'Blunder Mistake' Double Up",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'blunder mistake' double up, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nA blunder is a huge mistake,\n don't say 'blunder mistake', choose one or the other.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Blunder Mistake' Double Up: A blunder is a huge mistake; don't say 'blunder mistake', choose one or the other..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'blunder mistake' double up due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Blunder Mistake' Double Up': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-026",
+    "title": "The 'Order For Food' Eraser",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'order for food' eraser, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nCall the waiter and order the biryani,\n never 'order for' your meal.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Order For Food' Eraser: Call the waiter and order the biryani; never 'order for' your meal..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'order for food' eraser due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Order For Food' Eraser': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-027",
+    "title": "The 'Realize vs Release' Confusion",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'realize vs release' confusion, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nDon't say 'I released my mistake',\n you *realized* your error and released the bird.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Realize vs Release' Confusion: Don't say 'I released my mistake'; you *realized* your error and released the bird..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'realize vs release' confusion due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Realize vs Release' Confusion': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-028",
+    "title": "The 'Hear vs Listen' Distinction",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'hear vs listen' distinction, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nYou hear a sudden loud thunder sound, but you *listen* attentively to your teacher.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Hear vs Listen' Distinction: You hear a sudden loud thunder sound, but you *listen* attentively to your teacher..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'hear vs listen' distinction due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Hear vs Listen' Distinction': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-029",
+    "title": "The 'Look, See, Watch' Trio",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'look, see, watch' trio, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nSee with open eyes, look with intentional gaze, watch moving drama on screen.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Look, See, Watch' Trio: See with open eyes, look with intentional gaze, watch moving drama on screen..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'look, see, watch' trio due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Look, See, Watch' Trio': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-030",
+    "title": "The 'Lend vs Borrow' Exchange",
+    "category": "Common L1 Traps",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the 'lend vs borrow' exchange, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nLend gives money out, borrow takes money in,\n don't say 'can you borrow me money?'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The 'Lend vs Borrow' Exchange: Lend gives money out, borrow takes money in; don't say 'can you borrow me money?'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the 'lend vs borrow' exchange due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The 'Lend vs Borrow' Exchange': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-031",
+    "title": "The Cleft Sentence Highlighter",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the cleft sentence highlighter, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nWhat concerns us most is unchecked pollution,\n it was the government that acted first.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The Cleft Sentence Highlighter: What concerns us most is unchecked pollution; it was the government that acted first..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the cleft sentence highlighter due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The Cleft Sentence Highlighter': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-032",
+    "title": "Participle Clauses for Sentence Economy",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling participle clauses for sentence economy, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nHaving reviewed the data, the team drew conclusions,\n combine clauses with sleek elegance.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Participle Clauses for Sentence Economy: Having reviewed the data, the team drew conclusions; combine clauses with sleek elegance..",
+    "bengali_mentor_tip": "Bengali learners often stumble on participle clauses for sentence economy due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Participle Clauses for Sentence Economy': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-033",
+    "title": "Subjunctive Mood in Recommendations",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling subjunctive mood in recommendations, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nIt is essential that every student BE present,\n drop the 's' in formal subjunctive clauses.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Subjunctive Mood in Recommendations: It is essential that every student BE present; drop the 's' in formal subjunctive clauses..",
+    "bengali_mentor_tip": "Bengali learners often stumble on subjunctive mood in recommendations due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Subjunctive Mood in Recommendations': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-034",
+    "title": "Not Only... But Also Parallelism",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling not only... but also parallelism, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nBalance verbs with verbs and nouns with nouns when wielding 'not only... but also'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Not Only... But Also Parallelism: Balance verbs with verbs and nouns with nouns when wielding 'not only... but also'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on not only... but also parallelism due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Not Only... But Also Parallelism': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-035",
+    "title": "Neither... Nor Subject Agreement",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling neither... nor subject agreement, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nNeither the teacher nor the students WERE ready,\n the verb matches the closest noun.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Neither... Nor Subject Agreement: Neither the teacher nor the students WERE ready; the verb matches the closest noun..",
+    "bengali_mentor_tip": "Bengali learners often stumble on neither... nor subject agreement due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Neither... Nor Subject Agreement': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-036",
+    "title": "The Passive Voice in Scientific Reports",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the passive voice in scientific reports, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nThe beaker was heated and the solution was filtered,\n eliminate personal pronouns in Task 1.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The Passive Voice in Scientific Reports: The beaker was heated and the solution was filtered; eliminate personal pronouns in Task 1..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the passive voice in scientific reports due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The Passive Voice in Scientific Reports': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-037",
+    "title": "Relative Clauses: Which vs That",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling relative clauses: which vs that, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nThat defines without a comma,\n which adds non-essential extra info surrounded by commas.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Relative Clauses: Which vs That: That defines without a comma; which adds non-essential extra info surrounded by commas..",
+    "bengali_mentor_tip": "Bengali learners often stumble on relative clauses: which vs that due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Relative Clauses: Which vs That': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-038",
+    "title": "Although vs Despite Balance",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling although vs despite balance, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nAlthough takes a subject and verb,\n despite takes a noun phrase or gerund -ing.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Although vs Despite Balance: Although takes a subject and verb; despite takes a noun phrase or gerund -ing..",
+    "bengali_mentor_tip": "Bengali learners often stumble on although vs despite balance due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Although vs Despite Balance': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-039",
+    "title": "Used To vs Be Used To Doing",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling used to vs be used to doing, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nI used to wake up late (past habit),\n I am used to waking up early (accustomed today).\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Used To vs Be Used To Doing: I used to wake up late (past habit); I am used to waking up early (accustomed today)..",
+    "bengali_mentor_tip": "Bengali learners often stumble on used to vs be used to doing due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Used To vs Be Used To Doing': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-040",
+    "title": "Hardly Had... When Temporal Marker",
+    "category": "Band 9 Grammar",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling hardly had... when temporal marker, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nHardly had the bell rung when the downpour began,\n an inverted narrative masterpiece.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Hardly Had... When Temporal Marker: Hardly had the bell rung when the downpour began; an inverted narrative masterpiece..",
+    "bengali_mentor_tip": "Bengali learners often stumble on hardly had... when temporal marker due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Hardly Had... When Temporal Marker': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-041",
+    "title": "The Double-Edged Sword Collocation",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling the double-edged sword collocation, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nA double-edged sword brings benefit and bite,\n wield this idiom to show nuanced debate.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding The Double-Edged Sword Collocation: A double-edged sword brings benefit and bite; wield this idiom to show nuanced debate..",
+    "bengali_mentor_tip": "Bengali learners often stumble on the double-edged sword collocation due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'The Double-Edged Sword Collocation': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-042",
+    "title": "Paradigm Shift in Academic Writing",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling paradigm shift in academic writing, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nA fundamental paradigm shift transforms our worldview,\n use it for major technological revolutions.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Paradigm Shift in Academic Writing: A fundamental paradigm shift transforms our worldview; use it for major technological revolutions..",
+    "bengali_mentor_tip": "Bengali learners often stumble on paradigm shift in academic writing due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Paradigm Shift in Academic Writing': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-043",
+    "title": "Catalyze Systemic Transformation",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling catalyze systemic transformation, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nPolicies that catalyze change,\n avoid 'make big change' and sound profoundly academic.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Catalyze Systemic Transformation: Policies that catalyze change; avoid 'make big change' and sound profoundly academic..",
+    "bengali_mentor_tip": "Bengali learners often stumble on catalyze systemic transformation due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Catalyze Systemic Transformation': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-044",
+    "title": "Exacerbate Existing Disparities",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling exacerbate existing disparities, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nPoverty exacerbates inequality,\n pair 'exacerbate' with negative problems and crises.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Exacerbate Existing Disparities: Poverty exacerbates inequality; pair 'exacerbate' with negative problems and crises..",
+    "bengali_mentor_tip": "Bengali learners often stumble on exacerbate existing disparities due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Exacerbate Existing Disparities': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-045",
+    "title": "Mitigate Adverse Repercussions",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling mitigate adverse repercussions, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nDon't just 'reduce bad results',\n write 'mitigate adverse repercussions'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Mitigate Adverse Repercussions: Don't just 'reduce bad results'; write 'mitigate adverse repercussions'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on mitigate adverse repercussions due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Mitigate Adverse Repercussions': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-046",
+    "title": "Indispensable Asset to Society",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling indispensable asset to society, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nPublic libraries are an indispensable asset,\n far superior to 'very important thing'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Indispensable Asset to Society: Public libraries are an indispensable asset; far superior to 'very important thing'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on indispensable asset to society due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Indispensable Asset to Society': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-047",
+    "title": "Paucity vs Abundance Antonyms",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling paucity vs abundance antonyms, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nA paucity of resources contrasts with an abundance of wealth,\n elevate your lexical range.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Paucity vs Abundance Antonyms: A paucity of resources contrasts with an abundance of wealth; elevate your lexical range..",
+    "bengali_mentor_tip": "Bengali learners often stumble on paucity vs abundance antonyms due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Paucity vs Abundance Antonyms': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-048",
+    "title": "Shed Light Upon Complex Issues",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling shed light upon complex issues, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nResearch sheds light upon forgotten mysteries,\n illuminate your arguments with clarity.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Shed Light Upon Complex Issues: Research sheds light upon forgotten mysteries; illuminate your arguments with clarity..",
+    "bengali_mentor_tip": "Bengali learners often stumble on shed light upon complex issues due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Shed Light Upon Complex Issues': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-049",
+    "title": "Precipitate Acute Crises",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling precipitate acute crises, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nDrought precipitates famine,\n strong causative verbs replace weak 'causes'.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Precipitate Acute Crises: Drought precipitates famine; strong causative verbs replace weak 'causes'..",
+    "bengali_mentor_tip": "Bengali learners often stumble on precipitate acute crises due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Precipitate Acute Crises': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  },
+  {
+    "id": "POE-050",
+    "title": "Foster Grassroots Social Cohesion",
+    "category": "Band 9 Collocations",
+    "poem_type": "Mnemonic Rhyme",
+    "poem_verse": "Remember this rhythm, commit it to mind,\nThe clearest expression you ever will find!\nWhen tackling foster grassroots social cohesion, don't hesitate or doubt,\nFor accurate English is what we're about!\n\nCommunity sports foster social cohesion,\n unite your paragraphs with meaningful collocations.\nSpeak with precision, let confidence grow,\nAnd watch your high IELTS band brilliantly glow!",
+    "the_rule_explained": "Understanding Foster Grassroots Social Cohesion: Community sports foster social cohesion; unite your paragraphs with meaningful collocations..",
+    "bengali_mentor_tip": "Bengali learners often stumble on foster grassroots social cohesion due to mother-tongue translation habits. Memorize this rhyme to automate your instinct.",
+    "quick_quiz": "Fill in the blank using the rule of 'Foster Grassroots Social Cohesion': Apply the principle correctly in a sentence. (Answer: Reference the poem's core principle)"
+  }
+]

@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center space-x-2">
             <span className="font-extrabold text-lg text-white tracking-tight">AKHL IELTS</span>
             <span className="text-[10px] font-bold bg-gradient-to-r from-ielts-royalPurple/30 to-indigo-500/20 text-ielts-royalPurple border border-ielts-royalPurple/40 px-2.5 py-0.5 rounded-full shadow-liquid-glow-purple">
-              Liquid UI • 1,870+ Practices (Vol 1 & 2)
+              Liquid UI • 2,070+ Practices & Creative Units
             </span>
           </div>
           <p className="text-[11px] text-slate-400 font-medium">Student World Bangladesh • Dr. ABM Asif Kibria</p>
