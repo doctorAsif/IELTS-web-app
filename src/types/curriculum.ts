@@ -70,7 +70,10 @@ export interface SpeakingPracticeItem {
   part_2: SpeakingPart2Data;
   part_3: SpeakingPart3Data;
   band_9_lexical_resource: string[];
-  examiner_tips: string;
+  examiner_tips?: string;
+  mentor_technique?: string;
+  deshi_pitfall_alert?: string;
+  model_answer_snippet?: string;
 }
 
 export interface WritingPracticeItem {
@@ -84,6 +87,9 @@ export interface WritingPracticeItem {
   key_features_to_report?: string[] | any;
   suggested_outline?: Record<string, string> | any;
   high_band_vocabulary: string[];
+  mentor_technique?: string;
+  deshi_pitfall_alert?: string;
+  model_answer_snippet?: string;
 }
 
 export interface ReadingPracticeQuestion {
@@ -103,6 +109,8 @@ export interface ReadingPracticeItem {
   word_count: number;
   passage: string;
   questions: ReadingPracticeQuestion[];
+  mentor_technique?: string;
+  deshi_pitfall_alert?: string;
 }
 
 export interface ListeningPracticeQuestion {
@@ -122,13 +130,20 @@ export interface ListeningPracticeItem {
   scenario: string;
   audio_script: string;
   questions: ListeningPracticeQuestion[];
+  mentor_technique?: string;
+  deshi_pitfall_alert?: string;
 }
 
 export interface IeltsComprehensiveBank {
   dataset_name: string;
+  edition?: string;
   version: string;
   created_at: string;
   total_practice_items: number;
+  pedagogical_focus?: {
+    deshi_pitfall_alerts?: string;
+    mentor_frameworks?: string;
+  };
   modules: {
     speaking: {
       description: string;

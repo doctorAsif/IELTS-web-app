@@ -17,7 +17,8 @@ import { WritingPracticeItem } from '../../../types/curriculum';
 
 export const WritingTrainerPage: React.FC = () => {
   const [taskType, setTaskType] = useState<'Task 1' | 'Task 2'>('Task 1');
-  const [writingBank, setWritingBank] = useState<WritingPracticeItem[]>([]);
+  const [writingBankV1, setWritingBankV1] = useState<WritingPracticeItem[]>([]);
+  const [writingBankV2, setWritingBankV2] = useState<WritingPracticeItem[]>([]);
   const [selectedTask, setSelectedTask] = useState<WritingPracticeItem | null>(null);
   const [text, setText] = useState('');
   const [isEvaluating, setIsEvaluating] = useState(false);
@@ -27,14 +28,23 @@ export const WritingTrainerPage: React.FC = () => {
 
   useEffect(() => {
     CurriculumService.loadAll().then(() => {
-      const bank = CurriculumService.getWritingBank();
-      setWritingBank(bank);
-      const firstTask1 = bank.find((w) => w.task_type?.toLowerCase().includes('task 1'));
+      const v1 = CurriculumService.getWritingBank(1);
+      const v2 = CurriculumService.getWritingBank(2);
+      setWritingBankV1(v1);
+      setWritingBankV2(v2);
+      const firstTask1 = v2.find((w) => w.task_type?.toLowerCase().includes('task 1')) ||
+                         v1.find((w) => w.task_type?.toLowerCase().includes('task 1'));
       if (firstTask1) setSelectedTask(firstTask1);
     });
   }, []);
 
-  const filteredTasks = writingBank.filter((w) =>
+  const filteredTasksV1 = writingBankV1.filter((w) =>
+    taskType === 'Task 1'
+      ? w.task_type?.toLowerCase().includes('task 1')
+      : !w.task_type?.toLowerCase().includes('task 1')
+  );
+
+  const filteredTasksV2 = writingBankV2.filter((w) =>
     taskType === 'Task 1'
       ? w.task_type?.toLowerCase().includes('task 1')
       : !w.task_type?.toLowerCase().includes('task 1')
@@ -112,11 +122,11 @@ export const WritingTrainerPage: React.FC = () => {
           <div className="flex items-center space-x-3 mb-1">
             <h1 className="text-2xl font-bold text-white tracking-tight">AI Writing Trainer Room</h1>
             <span className="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs px-2.5 py-0.5 rounded-full font-medium">
-              100 Authentic Tasks • Zero Number Rule Validator
+              200 Tasks (Vol 1 & Vol 2) • Zero Number Rule
             </span>
           </div>
           <p className="text-xs text-slate-400">
-            Timed IELTS Academic writing simulation with Band 9 rubric evaluation & C1/C2 vocabulary diagnostics.
+            Timed IELTS Academic writing simulation with Band 9 rubric evaluation, Deshi Pitfalls & "So What?" framework.
           </p>
         </div>
 
@@ -125,7 +135,8 @@ export const WritingTrainerPage: React.FC = () => {
           <select
             value={selectedTask?.id || ''}
             onChange={(e) => {
-              const found = writingBank.find((w) => w.id === e.target.value);
+              const val = e.target.value;
+              const found = writingBankV2.find((w) => w.id === val) || writingBankV1.find((w) => w.id === val);
               if (found) {
                 setSelectedTask(found);
                 setText('');
@@ -133,13 +144,22 @@ export const WritingTrainerPage: React.FC = () => {
                 setTimerSeconds((found.recommended_time_minutes || (taskType === 'Task 1' ? 20 : 40)) * 60);
               }
             }}
-            className="bg-slate-900 border border-slate-800 text-xs text-white rounded-xl px-3 py-1.5 font-mono focus:outline-none focus:border-sky-500 cursor-pointer"
+            className="bg-slate-900 border border-slate-800 text-xs text-white rounded-xl px-3 py-1.5 font-mono focus:outline-none focus:border-sky-500 cursor-pointer max-w-[280px]"
           >
-            {filteredTasks.map((w) => (
-              <option key={w.id} value={w.id} className="bg-slate-950 text-white">
-                {w.id}: {w.title.slice(0, 30)}...
-              </option>
-            ))}
+            <optgroup label="🇧🇩 Vol 2: Bangladesh Mentor Edition (50 Tasks)">
+              {filteredTasksV2.map((w) => (
+                <option key={w.id} value={w.id} className="bg-slate-950 text-white">
+                  {w.id}: {w.title.slice(0, 30)}...
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="📘 Vol 1: Cambridge Standard Bank (50 Tasks)">
+              {filteredTasksV1.map((w) => (
+                <option key={w.id} value={w.id} className="bg-slate-950 text-white">
+                  {w.id}: {w.title.slice(0, 30)}...
+                </option>
+              ))}
+            </optgroup>
           </select>
 
           {/* Task Selector Tabs */}
@@ -147,7 +167,8 @@ export const WritingTrainerPage: React.FC = () => {
             <button
               onClick={() => {
                 setTaskType('Task 1');
-                const t1 = writingBank.find((w) => w.task_type?.toLowerCase().includes('task 1'));
+                const t1 = writingBankV2.find((w) => w.task_type?.toLowerCase().includes('task 1')) ||
+                           writingBankV1.find((w) => w.task_type?.toLowerCase().includes('task 1'));
                 if (t1) setSelectedTask(t1);
                 setText('');
                 setEvaluation(null);
@@ -163,7 +184,8 @@ export const WritingTrainerPage: React.FC = () => {
             <button
               onClick={() => {
                 setTaskType('Task 2');
-                const t2 = writingBank.find((w) => !w.task_type?.toLowerCase().includes('task 1'));
+                const t2 = writingBankV2.find((w) => !w.task_type?.toLowerCase().includes('task 1')) ||
+                           writingBankV1.find((w) => !w.task_type?.toLowerCase().includes('task 1'));
                 if (t2) setSelectedTask(t2);
                 setText('');
                 setEvaluation(null);
@@ -232,6 +254,28 @@ export const WritingTrainerPage: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* 🇧🇩 Deshi Pitfall Alert for Writing */}
+        {selectedTask?.deshi_pitfall_alert && (
+          <div className="bg-rose-500/10 border border-rose-500/30 p-3 rounded-xl flex items-start space-x-2 text-xs text-rose-200">
+            <span className="text-sm">🇧🇩</span>
+            <div className="space-y-0.5">
+              <strong className="text-rose-400 font-bold block">Deshi Pitfall Alert (Writing Trap to Eliminate):</strong>
+              <p className="text-[11px] leading-relaxed">{selectedTask.deshi_pitfall_alert}</p>
+            </div>
+          </div>
+        )}
+
+        {/* 🎓 Mentor Strategy ("So What?" Framework) */}
+        {selectedTask?.mentor_technique && (
+          <div className="bg-cyan-500/10 border border-cyan-500/30 p-3 rounded-xl flex items-start space-x-2 text-xs text-cyan-200">
+            <span className="text-sm">🎓</span>
+            <div className="space-y-0.5">
+              <strong className="text-cyan-300 font-bold block">Mentor Framework ("So What?" Expansion):</strong>
+              <p className="text-[11px] leading-relaxed">{selectedTask.mentor_technique}</p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Editor & Real-Time Rule Feedback */}

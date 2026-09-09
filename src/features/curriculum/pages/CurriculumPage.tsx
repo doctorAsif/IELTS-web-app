@@ -33,6 +33,7 @@ interface Props {
 
 export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
   const [bankTab, setBankTab] = useState<'comprehensive400' | 'modular1000'>('comprehensive400');
+  const [selectedVolume, setSelectedVolume] = useState<1 | 2>(2);
   const [activeSkill, setActiveSkill] = useState<'speaking' | 'writing' | 'reading' | 'listening' | 'vocabulary' | 'grammar'>('speaking');
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -47,7 +48,8 @@ export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
 
   useEffect(() => {
     CurriculumService.loadAll().then(() => {
-      const b400 = CurriculumService.getPracticeBank400();
+      CurriculumService.setActiveVolume(selectedVolume);
+      const b400 = CurriculumService.getPracticeBank400(selectedVolume);
       setBank400(b400);
       const mods = CurriculumService.getModularPractices('speaking');
       setModularItems(mods);
@@ -57,6 +59,18 @@ export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
       if (mods.length > 0) setSelectedModular(mods[0]);
     });
   }, []);
+
+  const handleVolumeChange = (vol: 1 | 2) => {
+    setSelectedVolume(vol);
+    CurriculumService.setActiveVolume(vol);
+    const b = CurriculumService.getPracticeBank400(vol);
+    setBank400(b);
+    const match = b.find((q) => q.section === activeSkill);
+    if (match) setSelected400(match);
+    setShowModelAnswer(false);
+    setUserPracticeText('');
+    setIsSelfEvaluated(false);
+  };
 
   const handleSkillChange = (skill: typeof activeSkill) => {
     setActiveSkill(skill);
@@ -103,15 +117,15 @@ export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
               <span>IELTS Master Practice Repository</span>
             </h1>
             <span className="bg-ielts-royalPurple/20 text-ielts-royalPurple border border-ielts-royalPurple/40 text-xs px-3 py-1 rounded-full font-bold shadow-liquid-glow-purple">
-              1,500+ Authentic Practices
+              1,870+ Authentic Practices
             </span>
           </div>
           <p className="text-xs md:text-sm text-slate-300">
-            Dr. ABM Asif Kibria curriculum: <strong>400 Comprehensive Exam Questions</strong> (100 Speaking, 100 Writing, 100 Reading, 100 Listening) + <strong>1,071 Modular Skill Drills</strong> with Instant Non-AI Offline Evaluation.
+            Dr. ABM Asif Kibria curriculum: <strong>800 Comprehensive Exam Tests</strong> (Vol 1 Cambridge Standard + Vol 2 Bangladesh Mentor Edition) + <strong>1,071 Modular Skill Drills</strong> with Instant Non-AI Offline Evaluation.
           </p>
         </div>
 
-        {/* Bank Mode Switcher (400 Comprehensive Bank vs 1000+ Modular Drills) */}
+        {/* Bank Mode Switcher (Comprehensive Bank vs Modular Drills) */}
         <div className="flex items-center bg-[#131B2E] border border-white/10 p-1.5 rounded-2xl shadow-liquid-card">
           <button
             onClick={() => {
@@ -126,7 +140,7 @@ export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            400 Comprehensive Bank
+            Comprehensive Bank ({counts.totalBank})
           </button>
           <button
             onClick={() => {
@@ -143,6 +157,50 @@ export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
           </button>
         </div>
       </div>
+
+      {/* Volume Selector for Comprehensive Bank */}
+      {bankTab === 'comprehensive400' && (
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-gradient-to-r from-[#131E35] via-[#101726] to-[#131E35] border border-white/10 p-3.5 rounded-2xl shadow-liquid-card">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-xs font-bold text-slate-300">Practice Edition:</span>
+            <div className="inline-flex bg-[#0B0F19] p-1 rounded-xl border border-white/10">
+              <button
+                onClick={() => handleVolumeChange(1)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1.5 ${
+                  selectedVolume === 1
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>📘</span>
+                <span>Vol 1: Cambridge Standard ({counts.bank400_v1})</span>
+              </button>
+              <button
+                onClick={() => handleVolumeChange(2)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1.5 ${
+                  selectedVolume === 2
+                    ? 'bg-gradient-to-r from-rose-600 via-pink-600 to-red-600 text-white shadow-liquid-glow-rose'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>🇧🇩</span>
+                <span>Vol 2: Bangladesh Mentor Edition ({counts.bank400_v2})</span>
+              </button>
+            </div>
+          </div>
+          <div className="text-[11px] font-medium flex items-center space-x-2">
+            {selectedVolume === 2 ? (
+              <span className="text-rose-300 bg-rose-500/15 px-2.5 py-1 rounded-lg border border-rose-500/30">
+                ✨ Includes Deshi Pitfall Alerts & PPF / AREA Frameworks
+              </span>
+            ) : (
+              <span className="text-blue-300 bg-blue-500/15 px-2.5 py-1 rounded-lg border border-blue-500/30">
+                ⭐ Official Cambridge Test Structure & Band 9 Lexicon
+              </span>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Skill Filter Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 bg-[#131B2E]/90 border border-white/10 p-3 rounded-2xl backdrop-blur-xl">
@@ -213,7 +271,10 @@ export const CurriculumPage: React.FC<Props> = ({ onNavigate }) => {
                     }`}
                   >
                     <div className="flex items-center justify-between text-[11px] mb-1.5">
-                      <span className="font-bold text-ielts-emerald uppercase font-mono">{q.id}</span>
+                      <div className="flex items-center space-x-1.5">
+                        {q.id.startsWith('BD-') && <span className="text-xs">🇧🇩</span>}
+                        <span className="font-bold text-ielts-emerald uppercase font-mono">{q.id}</span>
+                      </div>
                       <span className="bg-white/10 text-slate-200 px-2 py-0.5 rounded-md font-mono text-[10px]">
                         {q.section === 'speaking'
                           ? spk?.difficulty || 'Band 6.5 - 9.0'

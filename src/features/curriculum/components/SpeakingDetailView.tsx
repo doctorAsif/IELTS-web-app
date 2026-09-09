@@ -123,6 +123,12 @@ export const SpeakingDetailView: React.FC<Props> = ({ item, onOpenTrainer }) => 
             <span className="bg-ielts-electricBlue/20 text-ielts-electricBlue border border-ielts-electricBlue/40 text-xs px-3 py-1 rounded-xl font-mono font-black tracking-wider">
               {item.id}
             </span>
+            {item.id.startsWith('BD-') && (
+              <span className="bg-rose-500/20 text-rose-300 border border-rose-500/40 text-[11px] px-2.5 py-0.5 rounded-full font-bold flex items-center space-x-1">
+                <span>🇧🇩</span>
+                <span>Bangladesh Mentor Edition</span>
+              </span>
+            )}
             <span className="bg-ielts-emerald/20 text-ielts-emerald border border-ielts-emerald/30 text-xs px-3 py-1 rounded-xl font-bold">
               {item.difficulty}
             </span>
@@ -457,6 +463,63 @@ export const SpeakingDetailView: React.FC<Props> = ({ item, onOpenTrainer }) => 
           </span>
           <p className="text-xs text-slate-200 leading-relaxed">
             {item.examiner_tips}
+          </p>
+        </div>
+      )}
+
+      {/* 🇧🇩 Bangladesh Mentor Deshi Pitfall Alert (Common Bengali Errors) */}
+      {item.deshi_pitfall_alert && (
+        <div className="bg-gradient-to-r from-rose-500/20 via-red-500/10 to-[#101726] border-2 border-rose-500/40 p-5 md:p-6 rounded-3xl space-y-2.5 shadow-liquid-card">
+          <div className="flex items-center space-x-2">
+            <span className="text-lg">🇧🇩</span>
+            <span className="text-xs font-black uppercase tracking-wider text-rose-400 flex items-center space-x-1.5">
+              <AlertCircle className="w-4 h-4 text-rose-400" />
+              <span>Deshi Pitfall Alert (Common Bengali Error to Eliminate):</span>
+            </span>
+          </div>
+          <p className="text-xs md:text-sm text-rose-100 font-medium leading-relaxed bg-black/30 p-3.5 rounded-2xl border border-rose-500/20">
+            {item.deshi_pitfall_alert}
+          </p>
+        </div>
+      )}
+
+      {/* 🎓 Mentor Strategy & Framework (PPF / AREA / 5W1H) */}
+      {item.mentor_technique && (
+        <div className="bg-gradient-to-r from-sky-500/20 via-cyan-500/10 to-[#101726] border border-sky-500/40 p-5 md:p-6 rounded-3xl space-y-2.5 shadow-liquid-card">
+          <div className="flex items-center space-x-2">
+            <span className="text-lg">🎓</span>
+            <span className="text-xs font-black uppercase tracking-wider text-sky-300 flex items-center space-x-1.5">
+              <Sparkles className="w-4 h-4 text-sky-400" />
+              <span>Mentor Strategy & Delivery Framework:</span>
+            </span>
+          </div>
+          <p className="text-xs md:text-sm text-sky-100 font-medium leading-relaxed bg-black/30 p-3.5 rounded-2xl border border-sky-500/20">
+            {item.mentor_technique}
+          </p>
+        </div>
+      )}
+
+      {/* 💡 Band 9 Model Answer Snippet with Speech Audio Player */}
+      {item.model_answer_snippet && (
+        <div className="bg-gradient-to-r from-emerald-500/15 via-teal-500/10 to-[#101726] border border-emerald-500/30 p-5 md:p-6 rounded-3xl space-y-3 shadow-liquid-card">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">💡</span>
+              <span className="text-xs font-black uppercase tracking-wider text-emerald-300 flex items-center space-x-1.5">
+                <Award className="w-4 h-4 text-emerald-400" />
+                <span>Band 9 Model Answer Snippet</span>
+              </span>
+            </div>
+            <button
+              onClick={() => WebSpeechService.speakText(item.model_answer_snippet!)}
+              className="flex items-center space-x-1.5 text-xs text-emerald-300 hover:text-white bg-emerald-500/20 hover:bg-emerald-500/30 px-3.5 py-1.5 rounded-xl border border-emerald-500/30 transition-all font-bold"
+            >
+              <Volume2 className="w-3.5 h-3.5" />
+              <span>Listen to Model Delivery</span>
+            </button>
+          </div>
+          <p className="text-xs md:text-sm text-emerald-100/90 leading-relaxed italic bg-black/30 p-4 rounded-2xl border border-emerald-500/20">
+            "{item.model_answer_snippet}"
           </p>
         </div>
       )}

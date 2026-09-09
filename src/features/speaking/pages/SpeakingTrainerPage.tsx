@@ -19,7 +19,8 @@ import { CurriculumService } from '../../../services/curriculumService';
 import { SpeakingPracticeItem } from '../../../types/curriculum';
 
 export const SpeakingTrainerPage: React.FC = () => {
-  const [speakingBank, setSpeakingBank] = useState<SpeakingPracticeItem[]>([]);
+  const [speakingBankV1, setSpeakingBankV1] = useState<SpeakingPracticeItem[]>([]);
+  const [speakingBankV2, setSpeakingBankV2] = useState<SpeakingPracticeItem[]>([]);
   const [selectedTest, setSelectedTest] = useState<SpeakingPracticeItem | null>(null);
   const [activePart, setActivePart] = useState<1 | 2 | 3>(2);
   const [isRecording, setIsRecording] = useState(false);
@@ -31,10 +32,14 @@ export const SpeakingTrainerPage: React.FC = () => {
 
   useEffect(() => {
     CurriculumService.loadAll().then(() => {
-      const bank = CurriculumService.getSpeakingBank();
-      setSpeakingBank(bank);
-      if (bank.length > 0) {
-        setSelectedTest(bank[0]);
+      const v1 = CurriculumService.getSpeakingBank(1);
+      const v2 = CurriculumService.getSpeakingBank(2);
+      setSpeakingBankV1(v1);
+      setSpeakingBankV2(v2);
+      if (v2.length > 0) {
+        setSelectedTest(v2[0]);
+      } else if (v1.length > 0) {
+        setSelectedTest(v1[0]);
       }
     });
   }, []);
@@ -132,11 +137,11 @@ export const SpeakingTrainerPage: React.FC = () => {
           <div className="flex items-center space-x-3 mb-1">
             <h1 className="text-2xl font-bold text-white tracking-tight">AI Speaking Trainer Room</h1>
             <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-0.5 rounded-full font-medium">
-              100 Authentic Tests • 4-Criteria Examiner
+              200 Tests (Vol 1 & Vol 2) • 4-Criteria Examiner
             </span>
           </div>
           <p className="text-xs text-slate-400">
-            Real-time microphone transcription with Dr. Asif’s ARE method & 5W1H narrative feedback.
+            Real-time microphone transcription with Dr. Asif’s ARE method, 5W1H strategy & Deshi Pitfall alerts.
           </p>
         </div>
 
@@ -145,20 +150,30 @@ export const SpeakingTrainerPage: React.FC = () => {
           <select
             value={selectedTest?.id || ''}
             onChange={(e) => {
-              const found = speakingBank.find((s) => s.id === e.target.value);
+              const val = e.target.value;
+              const found = speakingBankV2.find((s) => s.id === val) || speakingBankV1.find((s) => s.id === val);
               if (found) {
                 setSelectedTest(found);
                 setEvaluation(null);
                 setTranscript('');
               }
             }}
-            className="bg-slate-900 border border-slate-800 text-xs text-white rounded-xl px-3 py-1.5 font-mono focus:outline-none focus:border-sky-500 cursor-pointer"
+            className="bg-slate-900 border border-slate-800 text-xs text-white rounded-xl px-3 py-1.5 font-mono focus:outline-none focus:border-sky-500 cursor-pointer max-w-[280px]"
           >
-            {speakingBank.map((s) => (
-              <option key={s.id} value={s.id} className="bg-slate-950 text-white">
-                {s.id}: {s.topic.slice(0, 28)}...
-              </option>
-            ))}
+            <optgroup label="🇧🇩 Vol 2: Bangladesh Mentor Edition (100 Tests)">
+              {speakingBankV2.map((s) => (
+                <option key={s.id} value={s.id} className="bg-slate-950 text-white">
+                  {s.id}: {s.topic.slice(0, 30)}...
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="📘 Vol 1: Cambridge Standard Bank (100 Tests)">
+              {speakingBankV1.map((s) => (
+                <option key={s.id} value={s.id} className="bg-slate-950 text-white">
+                  {s.id}: {s.topic.slice(0, 30)}...
+                </option>
+              ))}
+            </optgroup>
           </select>
 
           {/* Part Selector Tabs */}
@@ -282,6 +297,28 @@ export const SpeakingTrainerPage: React.FC = () => {
               : 'Dr. Asif ARE Method: Structure every response as Answer directly -> Reason/Why -> Concrete Example.'}
           </span>
         </div>
+
+        {/* 🇧🇩 Deshi Pitfall Alert */}
+        {selectedTest?.deshi_pitfall_alert && (
+          <div className="bg-rose-500/10 border border-rose-500/30 p-3 rounded-xl flex items-start space-x-2 text-xs text-rose-200">
+            <span className="text-sm">🇧🇩</span>
+            <div className="space-y-0.5">
+              <strong className="text-rose-400 font-bold block">Deshi Pitfall Alert:</strong>
+              <p className="text-[11px] leading-relaxed">{selectedTest.deshi_pitfall_alert}</p>
+            </div>
+          </div>
+        )}
+
+        {/* 🎓 Mentor Technique */}
+        {selectedTest?.mentor_technique && (
+          <div className="bg-cyan-500/10 border border-cyan-500/30 p-3 rounded-xl flex items-start space-x-2 text-xs text-cyan-200">
+            <span className="text-sm">🎓</span>
+            <div className="space-y-0.5">
+              <strong className="text-cyan-300 font-bold block">Mentor Framework:</strong>
+              <p className="text-[11px] leading-relaxed">{selectedTest.mentor_technique}</p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Recording Room & Live Waveform Interface */}
