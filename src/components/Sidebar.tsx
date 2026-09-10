@@ -8,10 +8,11 @@ import {
   GraduationCap,
   Layers,
   Sparkles,
-  KeyRound,
-  FileText,
   Wand2,
   Cpu,
+  Globe,
+  KeyRound,
+  FileText,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -22,6 +23,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab }) => {
   const navItems = [
     { id: 'dashboard', label: 'Daily Teacher', icon: LayoutDashboard, badge: 'Daily' },
+    { id: 'about-founder', label: 'Founder & Global', icon: Globe, badge: '138+ Unis' },
     { id: 'creative', label: 'Creative Mastery', icon: Wand2, badge: '200 Units' },
     { id: 'speaking', label: 'Speaking Trainer', icon: Mic, badge: 'AI Live' },
     { id: 'writing', label: 'Writing Trainer', icon: PenTool, badge: 'Task 1&2' },

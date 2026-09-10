@@ -1,17 +1,19 @@
 import React from 'react';
-import { Cpu, HardDrive, ShieldCheck, Sparkles, Zap, Award } from 'lucide-react';
+import { Cpu, HardDrive, ShieldCheck, Sparkles, Zap, Award, Globe } from 'lucide-react';
 import { HardwareProfile } from '../types/ai';
 
 interface NavbarProps {
   hardwareProfile: HardwareProfile | null;
   isAiReady: boolean;
   onOpenAiSetup: () => void;
+  onOpenAbout?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   hardwareProfile,
   isAiReady,
   onOpenAiSetup,
+  onOpenAbout,
 }) => {
   return (
     <header className="h-16 border-b border-white/10 bg-[#0B0F19]/85 backdrop-blur-2xl px-6 flex items-center justify-between sticky top-0 z-40">
@@ -65,6 +67,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           <Zap className="w-3.5 h-3.5" />
           <span>Non-AI Mode Active</span>
         </div>
+
+        {/* Study Abroad & Founder Bio Button */}
+        {onOpenAbout && (
+          <button
+            onClick={onOpenAbout}
+            className="flex items-center space-x-1.5 bg-gradient-to-r from-purple-600/20 to-sky-500/20 hover:from-purple-600/30 hover:to-sky-500/30 border border-purple-500/40 text-purple-300 hover:text-white px-3.5 py-1.5 rounded-2xl text-xs font-bold transition-all shadow-sm group"
+          >
+            <Globe className="w-3.5 h-3.5 text-purple-400 group-hover:rotate-45 transition-transform" />
+            <span>Study Abroad & Bio</span>
+          </button>
+        )}
 
         {/* Student Target Band Indicator */}
         <div className="hidden sm:flex items-center space-x-2 bg-[#131B2E] border border-white/10 px-3.5 py-1.5 rounded-2xl">

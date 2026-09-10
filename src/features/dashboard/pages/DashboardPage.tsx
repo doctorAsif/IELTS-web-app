@@ -23,6 +23,11 @@ import {
   BarChart3,
   Volume2,
   RefreshCw,
+  Globe,
+  GraduationCap,
+  Plane,
+  MapPin,
+  ExternalLink,
 } from 'lucide-react';
 import { DailyActivity, DailyStudyPlan, DailyTeacherService } from '../../../services/dailyTeacherService';
 
@@ -80,6 +85,16 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
 
           {/* Right Header Status Controls: Streak & Target Band Selector */}
           <div className="flex flex-wrap items-center gap-3">
+            {/* Founder Bio & Global Pathways Quick Action */}
+            <button
+              onClick={() => onNavigate('about-founder')}
+              className="flex items-center space-x-1.5 bg-gradient-to-r from-purple-600/30 to-sky-500/30 hover:from-purple-600/50 hover:to-sky-500/50 border border-purple-500/40 hover:border-purple-400 text-white px-3 py-1.5 rounded-2xl text-xs font-bold transition-all shadow-sm group"
+            >
+              <Globe className="w-3.5 h-3.5 text-sky-400 group-hover:rotate-45 transition-transform" />
+              <span>Founder Bio & Global</span>
+              <span className="bg-amber-500/20 text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full border border-amber-500/40">138+ Unis</span>
+            </button>
+
             {/* Streak Counter */}
             <div className="flex items-center space-x-1.5 bg-[#0B0F19]/90 border border-amber-500/30 px-3.5 py-1.5 rounded-2xl shadow-sm">
               <Flame className="w-4 h-4 text-amber-400 animate-bounce" />
@@ -399,45 +414,167 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* 5. OFFICIAL FOUNDER SUPPORT CARD (Identical to founder_support_card.dart) */}
-      <div className="liquid-glass-card p-6 md:p-8 rounded-3xl border border-white/15 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-3">
-          <div>
-            <span className="text-[10px] font-extrabold uppercase bg-sky-500/20 text-sky-400 border border-sky-500/30 px-2.5 py-0.5 rounded-full">
-              OFFICIAL ACADEMIC HELPLINE
-            </span>
-            <h3 className="text-lg font-black text-white mt-1">Dr. ABM ASIF KIBRIA</h3>
-            <p className="text-xs text-slate-400 font-medium">FOUNDER & CEO • Student World Bangladesh</p>
+      {/* 5. OFFICIAL FOUNDER, EDUCATION CONSULTANCY & GLOBAL REPRESENTATION SHOWCASE */}
+      <div className="bg-gradient-to-r from-[#0F172A] via-[#161F38] to-[#0F172A] p-6 md:p-8 rounded-3xl border border-sky-500/30 space-y-6 shadow-2xl relative overflow-hidden">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-white/10 pb-6 relative z-10">
+          <div className="space-y-2 max-w-2xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[10px] font-extrabold uppercase bg-sky-500/20 text-sky-400 border border-sky-500/40 px-3 py-0.5 rounded-full">
+                OFFICIAL ACADEMIC HELPLINE & CONSULTANCY
+              </span>
+              <span className="text-[10px] font-extrabold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/40 px-3 py-0.5 rounded-full">
+                138+ GLOBAL UNIVERSITIES
+              </span>
+            </div>
+
+            <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">
+              Dr. ABM ASIF KIBRIA
+            </h3>
+            <p className="text-xs md:text-sm text-sky-300 font-semibold">
+              FOUNDER & CEO • Asif Kibria Help Line (AKHL) | Official Partner: Student World Australia
+            </p>
+            <p className="text-xs text-slate-300 leading-relaxed font-normal">
+              PhD (UniKL) • Former Research Trainer (University of Essex, UK) • Assoc. Professor for MBA (UODA) • 
+              Global University Counselor for Malaysia, Australia, USA, Canada, Cyprus, UK & Europe.
+            </p>
           </div>
 
-          <span className="text-xs bg-ielts-emerald/20 text-ielts-emerald border border-ielts-emerald/40 px-3 py-1 rounded-xl font-bold">
-            Support Available 24/7
-          </span>
+          <div className="flex flex-wrap items-center gap-2 shrink-0">
+            <button
+              onClick={() => onNavigate('about-founder')}
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition-all flex items-center space-x-1.5"
+            >
+              <GraduationCap className="w-4 h-4" />
+              <span>Full Biography & Credentials</span>
+            </button>
+            <button
+              onClick={() => onNavigate('about-founder')}
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition-all flex items-center space-x-1.5"
+            >
+              <Plane className="w-4 h-4" />
+              <span>Study Abroad Pathways</span>
+            </button>
+          </div>
         </div>
 
-        <p className="text-xs text-slate-300 leading-relaxed">
-          Need personalized guidance, Band 8+ essay evaluations, or institutional partnership inquiries? Contact Dr. Asif’s academic helpline directly:
-        </p>
-
-        <div className="flex flex-wrap items-center gap-3 pt-2">
-          <a
-            href="https://wa.me/8801313529988"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-slate-950 font-bold px-4 py-2.5 rounded-2xl text-xs transition-all shadow-liquid-glow-emerald"
+        {/* Poster Highlight & Country Representation Banner */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative z-10">
+          {/* Poster Card */}
+          <div
+            onClick={() => onNavigate('about-founder')}
+            className="md:col-span-4 bg-slate-950/80 border border-white/15 hover:border-purple-500/60 p-3 rounded-2xl cursor-pointer group transition-all flex items-center space-x-4 shadow-lg"
           >
-            <MessageCircle className="w-4 h-4" />
-            <span>WhatsApp: +8801313529988</span>
-          </a>
+            <img
+              src="/images/asif_kibria_study_abroad_poster.jpg"
+              alt="Asif Kibria Help Line Study Abroad Poster"
+              className="w-20 h-28 object-cover rounded-xl border border-white/20 group-hover:scale-105 transition-transform shrink-0"
+            />
+            <div className="space-y-1">
+              <span className="text-[10px] font-black uppercase text-amber-400 block tracking-wide">
+                OFFICIAL CONSULTANCY POSTER
+              </span>
+              <h4 className="text-xs font-black text-white group-hover:text-sky-300 transition-colors">
+                We Convert Your Study Abroad Dreams Into Reality
+              </h4>
+              <p className="text-[11px] text-slate-400 leading-tight">
+                Direct admission & visa processing for 5 key destinations.
+              </p>
+              <span className="text-[10px] font-bold text-sky-400 flex items-center space-x-1 pt-0.5">
+                <span>View Full Poster & Details</span>
+                <ChevronRight className="w-3 h-3" />
+              </span>
+            </div>
+          </div>
 
-          <a
-            href="mailto:info@asifkibriahelpline.com"
-            className="flex items-center space-x-2 bg-[#0B0F19] hover:bg-white/10 border border-white/15 text-white font-semibold px-4 py-2.5 rounded-2xl text-xs transition-colors"
-          >
-            <Mail className="w-4 h-4 text-sky-400" />
-            <span>info@asifkibriahelpline.com</span>
-          </a>
+          {/* Countries & Processing Feature Box */}
+          <div className="md:col-span-8 bg-slate-900/70 border border-white/10 p-4 rounded-2xl space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/5 pb-2">
+              <div className="flex items-center space-x-2 text-xs font-bold text-slate-200">
+                <Globe className="w-4 h-4 text-sky-400" />
+                <span>Authorized Representation Across:</span>
+              </div>
+              <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">
+                Fastest Processing in Months
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs">
+              <div className="bg-slate-950/60 p-2 rounded-xl border border-white/5">
+                <span className="text-lg block">🇲🇾</span>
+                <strong className="text-white font-bold block text-[11px]">Malaysia</strong>
+                <span className="text-[9px] text-slate-400">UniKL & Top Unis</span>
+              </div>
+              <div className="bg-slate-950/60 p-2 rounded-xl border border-white/5">
+                <span className="text-lg block">🇦🇺</span>
+                <strong className="text-white font-bold block text-[11px]">Australia</strong>
+                <span className="text-[9px] text-slate-400">Go8 & Student World</span>
+              </div>
+              <div className="bg-slate-950/60 p-2 rounded-xl border border-white/5">
+                <span className="text-lg block">🇺🇸</span>
+                <strong className="text-white font-bold block text-[11px]">USA</strong>
+                <span className="text-[9px] text-slate-400">STEM OPT & Assistantships</span>
+              </div>
+              <div className="bg-slate-950/60 p-2 rounded-xl border border-white/5">
+                <span className="text-lg block">🇨🇦</span>
+                <strong className="text-white font-bold block text-[11px]">Canada</strong>
+                <span className="text-[9px] text-slate-400">SDS & 3-Yr PGWP</span>
+              </div>
+              <div className="bg-slate-950/60 p-2 rounded-xl border border-white/5 col-span-2 sm:col-span-1">
+                <span className="text-lg block">🇨🇾</span>
+                <strong className="text-white font-bold block text-[11px]">Cyprus</strong>
+                <span className="text-[9px] text-slate-400">European Degrees</span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-1 text-xs">
+              <div className="text-slate-300">
+                <strong className="text-amber-400">Degrees Offered:</strong> Foundation • Bachelor • Master & PhD
+              </div>
+              <div className="flex items-center space-x-3 text-slate-300">
+                <a href="tel:+8801313529988" className="hover:text-white font-bold text-emerald-400 flex items-center space-x-1">
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>01313-529988</span>
+                </a>
+                <a href="tel:+8801749307575" className="hover:text-white font-bold text-amber-400 flex items-center space-x-1">
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>01749-307575</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Bottom Contact Badges */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs border-t border-white/10 relative z-10">
+          <div className="flex items-center space-x-1.5 text-slate-400 text-[11px]">
+            <MapPin className="w-3.5 h-3.5 text-rose-400" />
+            <span>Flat 6A, 121/5 Auto One AC Market (Opposite Janakantha Bhaban), New Eskaton Road, Dhaka, Bangladesh</span>
+          </div>
+
+          <div className="flex items-center space-x-3">
+            <a
+              href="https://wa.me/8801313529988?text=Hello%20Dr.%20Asif,%20I%20would%20like%20to%20inquire%20about%20IELTS%20and%20Study%20Abroad."
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center space-x-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-slate-950 font-bold px-3.5 py-1.5 rounded-xl transition-all shadow-md"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>WhatsApp Direct</span>
+            </a>
+            <a
+              href="https://asifkibriahelpline.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center space-x-1 text-sky-400 hover:text-white font-semibold"
+            >
+              <span>asifkibriahelpline.com</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+
+        {/* Decorative background glow */}
+        <div className="absolute -top-12 -right-12 w-64 h-64 bg-sky-600/10 rounded-full blur-3xl pointer-events-none" />
       </div>
     </div>
   );

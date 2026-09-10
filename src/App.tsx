@@ -11,6 +11,7 @@ import { FlashcardsPage } from './features/flashcards/pages/FlashcardsPage';
 import { AiSetupPage } from './features/ai-setup/pages/AiSetupPage';
 import { LicensingPage } from './features/licensing/pages/LicensingPage';
 import { CreativeMasteryPage } from './features/creative/pages/CreativeMasteryPage';
+import { AboutFounderPage } from './features/about/pages/AboutFounderPage';
 
 import { detectHardwareProfile } from './services/hardwareDetector';
 import { WebLlmProvider } from './services/webLlmProvider';
@@ -73,6 +74,8 @@ export default function App() {
         return <FlashcardsPage />;
       case 'creative':
         return <CreativeMasteryPage />;
+      case 'about-founder':
+        return <AboutFounderPage onNavigate={(tab) => setActiveTab(tab)} />;
       case 'ai-setup':
         return (
           <AiSetupPage
@@ -95,6 +98,7 @@ export default function App() {
         hardwareProfile={hardwareProfile}
         isAiReady={isAiReady}
         onOpenAiSetup={() => setActiveTab('ai-setup')}
+        onOpenAbout={() => setActiveTab('about-founder')}
       />
 
       <div className="flex-1 flex overflow-hidden">
