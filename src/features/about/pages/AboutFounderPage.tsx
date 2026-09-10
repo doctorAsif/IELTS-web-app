@@ -486,10 +486,10 @@ export const AboutFounderPage: React.FC<AboutFounderPageProps> = ({
                   <span>Physical Head Office</span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed font-medium">
-                  Flat 6A, 121/5 Auto One AC Market (Opposite Janakantha Bhaban), New Eskaton Road, Dhaka, Bangladesh.
+                  Student World, Level 4, Awal Centre, Kamal Ataturk Avenue, Banani, Dhaka, Bangladesh (Bata Showroom Building).
                 </p>
                 <button
-                  onClick={() => copyToClipboard('Flat 6A, 121/5 Auto One AC Market, New Eskaton Road, Dhaka', 'address')}
+                  onClick={() => copyToClipboard('Student World, Level 4, Awal Centre, Kamal Ataturk Avenue, Banani, Dhaka (Bata Showroom Building)', 'address')}
                   className="text-[11px] text-sky-400 hover:text-white flex items-center space-x-1 pt-1 font-semibold"
                 >
                   {copiedField === 'address' ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}

@@ -548,7 +548,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
         <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs border-t border-white/10 relative z-10">
           <div className="flex items-center space-x-1.5 text-slate-400 text-[11px]">
             <MapPin className="w-3.5 h-3.5 text-rose-400" />
-            <span>Flat 6A, 121/5 Auto One AC Market (Opposite Janakantha Bhaban), New Eskaton Road, Dhaka, Bangladesh</span>
+            <span>Student World, Level 4, Awal Centre, Kamal Ataturk Avenue, Banani, Dhaka, Bangladesh (Bata Showroom Building)</span>
           </div>
 
           <div className="flex items-center space-x-3">
