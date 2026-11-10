@@ -1,0 +1,24 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.studentworld.ielts",
+      "sha256_cert_fingerprints": [
+        "06:5D:23:14:8E:15:57:64:86:3A:2C:1C:AA:55:2B:83:89:C0:8F:BA:D6:10:E0:86:73:87:DD:77:ED:58:31:85",
+        "12:57:A4:C1:1D:80:A6:85:F3:F9:20:4B:FA:DD:20:DE:6A:F5:02:0B:DE:61:38:FA:39:FD:06:6B:20:7B:D5:6A"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ielts_akhl_studentworld.com",
+      "sha256_cert_fingerprints": [
+        "06:5D:23:14:8E:15:57:64:86:3A:2C:1C:AA:55:2B:83:89:C0:8F:BA:D6:10:E0:86:73:87:DD:77:ED:58:31:85",
+        "12:57:A4:C1:1D:80:A6:85:F3:F9:20:4B:FA:DD:20:DE:6A:F5:02:0B:DE:61:38:FA:39:FD:06:6B:20:7B:D5:6A"
+      ]
+    }
+  }
+]
